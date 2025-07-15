@@ -1,0 +1,422 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <title> {% block title %}Das And Partners (DAP)- Engineering Consultants in Abu Dhabi{% endblock %} </title> {% endcomment %}
+    <title> Das And Partners (DAP)- Engineering Consultants in Abu Dhabi </title>
+
+    <!-- google fonts  -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %} " type="image/x-icon">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!-- slick-slider  -->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <!-- megnific popup  -->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <!-- aso  -->
+    <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+</head>
+<body>
+
+    <!--============================ Preloader ======================================== -->
+
+
+
+    <div class="preloader">
+        <div class="loader-img">
+            <img src="{% static 'assets/images/logo_big_white.png' %}" alt="">
+        </div>
+        <div class="loader"></div>
+    </div>
+    <!--========== Preloader ======================== -->
+
+    <!-- start off-canvas mneu  -->
+    <div class="canvas-wrapper">
+        <nav class="side-slide">
+            <div class="off-cavas-menu-overly side-box-bar"></div>
+            <div class="offcanvas-wrap">
+                <div class="off-canvas-logo">
+                    <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo_sm_white.png' %}" alt=""></a>
+                </div>
+            </div>
+            <div class="off-canvas-content">
+                <!-- <h4>Best Development & Construction Company</h4> -->
+                <div class="off-canvas-desc">Best Development & <br> Construction Company</div>
+                <div class="off-canvas-contact-info">
+                    <h4 class="info-title"> Contact Info </h4>
+                    <ul class="info-list">
+                        <li><i class="fas fa-map-marker-alt"></i>Salam & - Office 1701, 17th Floor, Abdulla Darwish Building - C-1 Hamdan Bin Mohammed St - Junction - E15 - Abu Dhabi</li>
+                        <li> <i aria-hidden="true" class="fas fa-envelope"></i><a href="mailto:info@dasandpartners.com" class="text-lowercase">info@dasandpartners.com</a> </li>
+                        <li> <i aria-hidden="true" class="fas fa-envelope"></i><a href="mailto:hr.energy@dasandpartners.com" class="text-lowercase">hr.energy@dasandpartners.com</a> </li>
+                        <li> <i aria-hidden="true" class="fas fa-phone"></i><a href="tel:028779490">+97128779490</a></li>
+                    </ul>
+                </div>
+                <div class="off-canvas-social-links">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/das-and-partners-engineering-consultancy/"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="close-icon"><h3 class="nav01 side-box-bar">x</h3></div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- ===========================Mobile menu ================================== -->
+    <div class="das-menu-wrapper">
+        <div class="das-menu-area text-center">
+            <button class="das-menu-toggle"><i class="fas fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="{% url 'home' %}"><img decoding="async" src="{% static 'assets/images/logo_sm_white.png' %}" alt="" title=" DAS-logo"></a>
+            </div>
+            <div class="das-mobile-menu">
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'our_expertise' %}">Our Expertise</a></li>
+                    <li><a href="{% url 'our_work' %}">Our Work</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                    <li><a href="{% url 'life_at_dap' %}">Life at DAP</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="das_btn">
+                <a href="{% url 'login' %}" > <button class="get-btn mob_get_btn">Login</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade searchBox-menu" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form method="get" class="searchform pop_search" action="#">
+                        <input type="search" value="" name="s" placeholder="Search here... " title="Search for:">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--================== Start Header Area  =======================-->
+    <header id="header_area-wrapper">
+        <!-- <div class="header_top home-two-top-menu">
+            <div class="header_top_left">
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 55 Main Street, 2nd Block, USA</li>
+                    <li><i class="fas fa-envelope" aria-hidden="true"></i> Email us: <a href="#">info@das-ins.com</a></li>
+                </ul>
+            </div>
+            <div class="header_top_right">
+                <ul>
+                    <li>Follow Us On:</li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="stickey-wrapper">
+            <!-- start header menu  -->
+            <!-- Start header menu  -->
+            <div class="header_menu home-two-menubar">
+                <div class="container-fluid">
+                    <div class="header-two-main-wrapper row">
+                        <div class="col-auto col-xxl-3 col-xl-3 col-lg-3 logo_center all-padding-0">
+                            <div class="brands_logo">
+                                <div class="side-box-icon">
+                                    <a href="#" class="side-box-bar baricon-left"><i class="fas fa-bars"></i></a>
+                                </div>
+                                <a href="{% url 'home' %}" class="barnds"><img src="{% static 'assets/images/logo_sm.png' %}" alt=""></a>
+                                <!-- <a href="{% url 'home' %}" class="barnds"><img src="{% static 'assets/images/logo.png' %}" alt=""></a> -->
+                            </div>
+                        </div>
+                        <div class="col-auto col-xxl-6 col-xl-9 col-lg-9 menu_center text-center all-padding-0">
+                            <div class="main-menu">
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'our_expertise' %}">Our Expertise</a></li>
+                                    <li><a href="{% url 'our_work' %}">Our Work</a></li>
+                                    <li><a href="{% url 'news' %}">News</a></li>
+                                    <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                                    <li><a href="{% url 'life_at_dap' %}">Life at DAP</a></li>
+                                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+                                <!-- <li>
+                                        <a href="#">Home <i class="fas fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="{% url 'home' %}">Home Two</a></li>
+                                            <li><a href="home-three.html">Home Three</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Services <i class="fas fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="service.html">Service</a></li>
+                                            <li><a href="service-details.html">Service Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page <i class="fas fa-angle-down"></i></a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Project <i class="fas fa-angle-right"></i></a>
+                                                <ul>
+                                                    <li><a href="project.html">Project</a></li>
+                                                    <li><a href="project-details.html">Project Details</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">Team <i class="fas fa-angle-right"></i></a>
+                                                <ul>
+                                                    <li><a href="team.html">Team</a></li>
+                                                    <li><a href="team-details.html">Team Details</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">Shop <i class="fas fa-angle-right"></i></a>
+                                                <ul>
+                                                    <li><a href="shop.html">Shop</a></li>
+                                                    <li><a href="shop-details.html">Shop Details</a></li>
+                                                    <li><a href="checkout.html">checkout</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="appointment.html">Appointment</a></li>
+                                            <li><a href="404.html">404 page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blog <i class="fas fa-angle-down"></i></a>
+                                        <ul>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li> 
+                                    -->
+                                </ul>
+                            </div>
+                            <button type="button" class="das-menu-toggle menuShow d-inline-block d-lg-none"><i class="fas fa-bars"></i></button>
+                        </div>
+                        <div class="col-auto col-xxl-3 d-none d-xxl-block all-padding-0 align-items-center ">
+                            <div class="right_menu">
+                                <div class="das_btn">
+                                   <a href="{% url 'login' %}" > <button class="get-btn">Login</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+        {% block content %}
+        <!-- Default content -->
+        {% endblock %}
+
+
+<!-- ======================================================================================================================================================== -->
+
+
+    <a href="https://api.whatsapp.com/send?phone=971505983733&text=Hi.. Das And Partners (DAP) Engineering Consultancy" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <img src="{% static 'assets/images/whatsapp.png' %}" alt="WhatsApp">
+    </a>
+
+
+    
+    <!-- ============================= Start Footer Area Section =============================================== -->
+    <section class="footer-bg-img footer_section" style="background: url({% static 'assets/images/footer_bg.png' %})">
+        <!-- <div class="footer-menu-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-menu-wrap">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Mission</a></li>
+                                <li><a href="#">Update</a></li>
+                                <li><a href="#">Inside</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">History</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="footer-widget-area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                        <div class="footer-widget widget1">
+                            <div class="footer-logo">
+                                <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo_sm_white.png' %}" alt=""></a>
+                            </div>
+                            <p class="text">Discover how Das And Partners (DAP) Engineering Consultancy turns your ideas into reality. Our collaborative approach and cutting-edge technologies ensure that your vision becomes a successful, sustainable reality.</p>
+                            <div class="footer-social-link">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6 col-12">
+                        <div class="footer-widget widget2">
+                            <div class="footer-title">
+                                <h3 class="title">Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'about' %}"><i class="fas fa-angle-double-right"></i> About Us</a></li>
+                                <li><a href="{% url 'our_expertise' %}"><i class="fas fa-angle-double-right"></i> Our Expertise</a></li>
+                                <li><a href="{% url 'our_work' %}"><i class="fas fa-angle-double-right"></i> Our Work</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6 col-12">
+                        <div class="footer-widget widget3">
+                            <div class="footer-title">
+                                <h3 class="title">Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="{% url 'news' %}"><i class="fas fa-angle-double-right"></i> News</a></li>
+                                <li><a href="{% url 'blogs' %}"><i class="fas fa-angle-double-right"></i> Blogs</a></li>
+                                <li><a href="{% url 'careers' %}"><i class="fas fa-angle-double-right"></i> careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-12">
+                        <div class="footer-widget widget4">
+                            <div class="footer-title">
+                                <h3 class="title">Newsletter</h3>
+                            </div>
+                            <p class="text">Subscribe to our newsletter to get the latest updates.</p>
+                            <form class="newsletter" action="/subscribe/" method="post">
+                                {% csrf_token %}
+                                <input type="email" name="email" placeholder="Enter your email address" required>
+                                <button class="button-one border-0" type="submit">Subscribe now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyuright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-copyright text-center">
+                            <p class="mb-0">&copy; 2025 <a href="{% url 'home' %}">DAS And Partners</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% if messages %}
+        {% for message in messages %}
+            <div id="django-message" data-message="{{ message }}" data-tags="{{ message.tags }}"></div>
+        {% endfor %}
+    {% endif %}
+
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+                <div class="off-canvas-logo">
+                    <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo_sm.png' %}" alt=""></a>
+                </div>
+      </div>
+      <div class="modal-body" id="modalMessage">
+        <!-- JS will inject the message here -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-magnific-popup-min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            const loader = document.querySelector('.preloader');
+
+            if (form && loader) {
+                form.addEventListener('submit', function () {
+                    loader.style.display = 'block';
+                });
+            }
+
+            const msgElement = document.getElementById('django-message');
+            if (msgElement) {
+            const message = msgElement.dataset.message;
+            const messageTags = msgElement.dataset.tags;
+
+            // Set the message in the modal
+            document.getElementById('modalMessage').textContent = message;
+
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('successModal'));
+            modal.show();
+            }
+            });
+            </script>
+
+
+</body>
+</html>

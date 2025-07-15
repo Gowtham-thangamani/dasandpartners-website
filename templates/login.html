@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% block content %}
+
+
+<!-- ================================== Start Contact Page Area Section ================================================ -->
+    <section class="get-in-touch-area home-two-appointment section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-12 col-md-12"></div>
+
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <div class="appoinment-form-wrap team-title">
+                        <div id="error-message" class="alert alert-danger d-none" role="alert">
+                            Invalid credentials. Please try again.
+                        </div>
+                        <h2 class="title">Login <span class="sub-title">as</span></h2>
+                        <form id="login_form" method="post">
+                            <div class="mb-4">
+                                {% comment %} <label class="form-label me-3 sub-title">as</label> {% endcomment %}
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="login_as" id="employee" value="employee" required>
+                                    <label class="form-check-label" for="employee">Employee</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="login_as" id="client" value="client" required>
+                                    <label class="form-check-label" for="client">Client</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="login_as" id="management" value="management" required>
+                                    <label class="form-check-label" for="management">Management</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control style" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <div class="mb-3">
+                                            <input type="password" class="form-control style" placeholder="******" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-btn">
+                                    <button type="submit" class="button-one">Login <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-12 col-md-12"></div>
+
+            </div>
+        </div>
+    </section>
+
+<script>
+    document.getElementById("login_form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent real form submission
+
+        // Show error message
+        document.getElementById("error-message").classList.remove("d-none");
+    });
+</script>
+
+
+{% endblock %}

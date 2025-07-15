@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+
+{% load static %}
+{% block content %}
+
+<!-- ======================================================================================================================================================== -->
+
+
+    <!-- ============== start-breadcumb-area =============== -->
+    <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-content">
+                        <h1 class="breadcumb-title">Our Work</h1>
+                        <ul class="breadcumb-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
+                            <li>Our Work</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== end-breadcumb-area =============== -->
+
+<section class="project-page-area section-padding pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="team-title">
+                    <h6 class="sub-title"><span class=""></span>Our Work &nbsp;&nbsp; <span class=""></span></h6>
+                    <h2 class="title">We Provide The Best Services</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4 filter-active" style="position: relative; height: 848px;">
+            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 460px; top: 0px;">
+                <div class="project-card-item">
+                    <div class="project-card-img">
+                        <img src={% static "assets/images/our_expertise/structural-engineering.jpg"%} alt="">
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-title"><a>Commercial</a></h4>
+                        <p class="project-sub-title"><span>Building</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 460px; top: 0px;">
+                <div class="project-card-item">
+                    <div class="project-card-img">
+                        <img src={% static "assets/images/our_expertise/leed-consultant.jpg"%} alt="">
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-title"><a>Commercial</a></h4>
+                        <p class="project-sub-title"><span>Structure</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 460px; top: 424px;">
+                <div class="project-card-item">
+                    <div class="project-card-img">
+                        <img src={% static "assets/images/our_expertise/architectural-engineering.jpg"%} alt="">
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-title"><a>Architecture</a></h4>
+                        <p class="project-sub-title"><span>Best Engineering</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 920px; top: 424px;">
+                <div class="project-card-item project-top">
+                    <div class="project-card-img">
+                        <img src={% static "assets/images/our_expertise/project-management.jpg"%} alt="">
+                    </div>
+                    <div class="project-card-details">
+                        <h4 class="project-title"><a>Architecture</a></h4>
+                        <p class="project-sub-title"><span>Engineering</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+{% endblock %}

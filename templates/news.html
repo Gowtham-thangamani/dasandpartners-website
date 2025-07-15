@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock %}
+
+{% load static %}
+{% block content %}
+
+<!-- ======================================================================================================================================================== -->
+
+
+    <!-- ============== start-breadcumb-area =============== -->
+    <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-content">
+                        <h1 class="breadcumb-title">News</h1>
+                        <ul class="breadcumb-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
+                            <li>News</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== end-breadcumb-area =============== -->
+
+  <!-- ================================================== Start Blog Post Area ====================================================== -->
+  <section class="blog-post-area-section home-two-blog-area section-padding pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="team-title">
+                    <h6 class="sub-title"><span class=""></span>Our News &nbsp;&nbsp; <span class=""></span></h6>
+                    <h2 class="title">Read Our Latest News</h2>
+                </div>
+            </div>
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                <div class="row">
+                    {% for obj_new in news %}
+                        <div class="col-xxl-3 col-xl-3 pb-4">
+                            <div class="recent-post-thumb-wrap">
+                                <div class="thumb">
+                                    <img src="{{ obj_new.image.url }}" alt="">
+                                </div>
+                                <div class="author-deatils">
+                                    <div class="usersdate">
+                                        <a><i class="fa fa-calendar" aria-hidden="true"></i> {{ obj_new.added_date|date:"d-M-Y" }}</a>
+                                    </div>
+                                    <strong>{{ obj_new.title|truncatechars:60 }}</strong>
+                                    <div class="usersdate">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

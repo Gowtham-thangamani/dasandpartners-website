@@ -1,0 +1,318 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% block content %}
+
+
+<!-- ============== start-breadcumb-area =============== -->
+<section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg' %});">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bread-content">
+                    <h1 class="breadcumb-title">Our Expertise</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
+                        <li>Our Expertise</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============== end-breadcumb-area =============== -->
+
+<!-- ================================================== Start Blog Post Area ====================================================== -->
+<section class="blog-post-area-section home-two-blog-area section-padding pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="team-title">
+                    <h6 class="sub-title"><span class=""></span>Our Services &nbsp;&nbsp; <span class=""></span></h6>
+                    <h2 class="title">We Provide The Best Services</h2>
+                </div>
+            </div>
+            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'architectural_engineering' %}"><img src={% static "assets/images/our_expertise/architectural-engineering.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'architectural_engineering' %}">Architectural Engineering</a></h5>
+                                <p>At Das And Partners (DAP) Engineering Consultancy, We blend artistry with precision engineering to create spaces...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'architectural_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'architect_of_record' %}"><img src={% static "assets/images/our_expertise/architect-of-record.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'architect_of_record' %}">Architect Of Record (AOR)</a></h5>
+                                <p>The Architect of Record (AOR) is the licensed architect or architectural firm officially designated...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'architect_of_record' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'oil_and_gas_engineering' %}"><img src={% static "assets/images/our_expertise/oil-and-gas-engineering.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'oil_and_gas_engineering' %}">Oil And Gas Engineering</a></h5>
+                                <p>Das And Partners (DAP) Engineering Consultancy may conduct feasibility studies to assess the viability of oil and gas projects...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'oil_and_gas_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'structural_engineering' %}"><img src={% static "assets/images/our_expertise/structural-engineering.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'structural_engineering' %}">Structural Engineering</a></h5>
+                                <p>Structural Engineering involves the analysis, design, and construction of structures to ensure they can withstand applied...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'structural_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'infrastructure' %}"><img src={% static "assets/images/our_expertise/infrastructure.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'infrastructure' %}">Infrastructure</a></h5>
+                                <p>Infrastructure services encompass a broad range of essential facilities and systems that support societal functions...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'infrastructure' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'construction_engineering' %}"><img src={% static "assets/images/our_expertise/constrution-engineering.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'construction_engineering' %}">Constrution Engineering</a></h5>
+                                <p>In Das And Partners (DAP) Engineering Consultancy Abu Dhabi, our construction engineering services ensure precise, efficient...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'construction_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'mep_engineering' %}"><img src={% static "assets/images/our_expertise/mep-engineering.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'mep_engineering' %}">MEP Engineering</a></h5>
+                                <p>MEP (Mechanical, Electrical, and Plumbing) engineering is a crucial aspect of building design and construction...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'mep_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'project_management' %}"><img src={% static "assets/images/our_expertise/project-management.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'project_management' %}">Project Management</a></h5>
+                                <p>At DAP Engineering Consultants, we specialize in delivering top-notch project management services in the architectural...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'project_management' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'villa_design_abu_dhabi' %}"><img src={% static "assets/images/our_expertise/luxury-villa-design.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'villa_design_abu_dhabi' %}">Villa Design</a></h5>
+                                <p>At Das And Partners (DAP), we specialize in creating luxurious, tailored environments that reflect your unique style and preferences...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'villa_design_abu_dhabi' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'villa_design' %}"><img src={% static "assets/images/our_expertise/villa-design.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'villa_design' %}">Villa Design in Abu Dhabi</a></h5>
+                                <p>When it comes to villa design in Abu Dhabi, Das And Partners (DAP) Engineering Consultancy stands as a beacon of innovation and excellence...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'villa_design' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'interior_design' %}"><img src={% static "assets/images/our_expertise/interior-design.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'interior_design' %}">Interior Design</a></h5>
+                                <p>Transforming spaces into personalized havens through innovative design solutions. From conceptualization to execution,...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'interior_design' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'building_information_modeling' %}"><img src={% static "assets/images/our_expertise/building-information-modeling.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'building_information_modeling' %}">Building Information Modeling</a></h5>
+                                <p>By leveraging advanced digital technology, BIM allows architects, engineers, and construction professionals...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'building_information_modeling' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'lead_consultant' %}"><img src={% static "assets/images/our_expertise/lead-consultant.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'lead_consultant' %}">Lead Consultant</a></h5>
+                                <p>As the cornerstone of our architectural team, our Lead Consultant brings a unique blend of creativity...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'lead_consultant' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'contract_cost_consultancy' %}"><img src={% static "assets/images/our_expertise/contract-cost-consultancy.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'contract_cost_consultancy' %}">Contract & Cost Consultancy</a></h5>
+                                <p>We specialize in providing comprehensive Contracts and Cost Consultancy services tailored to meet the unique needs of our clients...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'contract_cost_consultancy' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'facilities_management_consultancy' %}"><img src={% static "assets/images/our_expertise/facilities-management-consultancy.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'facilities_management_consultancy' %}">Facilities Management</a></h5>
+                                <p>From strategic planning to operational excellence, we provide tailored solutions that maximize value and enhance the overall...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'facilities_management_consultancy' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                      
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'renewable_energy_consultants' %}"><img src={% static "assets/images/our_expertise/renewable-energy-consultants.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'renewable_energy_consultants' %}">Renewable Energy Consultants</a></h5>
+                                <p>Renewable Energy Consultants provide expert guidance and strategic solutions to organizations seeking to adopt renewable energy...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'renewable_energy_consultants' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'mall_management_consultants' %}"><img src={% static "assets/images/our_expertise/mall-management-consultants.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'mall_management_consultants' %}">Mall Management Consultants</a></h5>
+                                <p>At Das And Partners (DAP) Engineering Consultancy, we specialize in optimizing mall operations, enhancing visitor experiences...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'mall_management_consultants' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'leed_consultants' %}"><img src={% static "assets/images/our_expertise/leed-consultant.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'leed_consultants' %}">Leed Consultants</a></h5>
+                                <p>LEED (Leadership in Energy and Environmental Design) Consultants are experts in sustainable building practices...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'leed_consultants' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-4 col-xl-4 pb-4">
+                        <div class="recent-post-thumb-wrap">
+                            <div class="thumb">
+                                <a href="{% url 'electrical_engineering_consultancy' %}"><img src={% static "assets/images/our_expertise/electrical-engineering-consultancy.jpg" %} alt=""></a>
+                            </div>
+                            <div class="author-deatils">
+                                <h5><a href="{% url 'electrical_engineering_consultancy' %}">Electrical Engineering</a></h5>
+                                <p>At Das And Partners (DAP) Engineering Consultancy, our Electrical Engineering Consultancy services are designed to deliver innovative solutions...</p>
+                                <div class="usersdate">
+                                    <a href="{% url 'electrical_engineering_consultancy' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% block content %}
+
+    <section class="hero-area-wrapper">
+        <div class="hero-slider" id="hero1" style="background: url({% static 'assets/images/main-banner.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-8 col-md-12">
+                        <div class="hero-single hero_single_banner">
+                            <h6 class="sub-title">Welcome to Das And Partners (DAP) Engineering Consultancy, where expertise meets innovation. Explore our tailored engineering solutions designed to propel your projects to new heights.</h6>
+                            <h1 class="title">Engineering Consultancy Expertise</h1>
+                            <p class="text">Empowering Your Vision, Innovations in Oil & Gas</p>
+                            <div class="das-hero-btn">
+                                <a href="{% url 'our_expertise' %}" class="button-one">Our expertise <i class="fas fa-arrow-right"></i></a>
+                                <a href="{% url 'our_work' %}" class="button-two">Our work <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="socials-links">
+            <ul>
+                <li class="ulta invisible">Follow Us</li>
+                <li class="dash invisible"></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ====================
+    =================== Start Process Section Area ======================== -->
+    <!-- <section class="proecess-section-area home-two-process section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="process-title-area">
+                        <h6 class="sub-title"><span class="dash"></span>Special Process
+                        </h6>
+                        <h2 class="title">Creative features from production industry.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="process-card">
+                        <div class="process-img">
+                            <img class="" src="assets/img/process/img.png" alt="">
+                        </div>
+                        <h5>Our Mission</h5>
+                        <p class="text">Imperdiet ante vulputate pharetra metus odio aliquet habitant laoreet torquent gravida fringilla ad, fringilla eget non urna ac quisque quis. metus odio aliquet habitant laoreet torquent gravida ad, fringilla eget non urna ac quisque quis</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                    <div class="process-card">
+                        <div class="process-img">
+                            <img class="" src="assets/img/process/img.png" alt="">
+                        </div>
+                        <h5>Our Mission</h5>
+                        <p class="text">Imperdiet ante vulputate pharetra metus odio aliquet habitant laoreet torquent gravida fringilla ad, fringilla eget non urna ac quisque quis. metus odio aliquet habitant laoreet torquent gravida ad, fringilla eget non urna ac quisque quis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- =================================== Start Future Area Section ====================================== -->
+    <section class="future-area-wrapper home-two-future section-padding">
+        <div class="bg-iamge"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="future-card-wrap">
+                        <div class="future-card future__card" style="background: url({% static 'assets/images/future-img/Architectural-Engineering.jpg' %});">
+                            <div class="overlay"></div> 
+                            <h5>Architectural Engineering</h5>
+                        </div>
+                        <div class="future-icon-area">
+                            <div class="future-btn">
+                                <a href="{% url 'architectural_engineering' %}" class="button-one">Read More details <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="future-card-wrap">
+                        <div class="future-card" style="background: url({% static 'assets/images/future-img/aor.jpg' %});">
+                            <div class="overlay"></div> 
+                            <h5>Architect Of Record (AOR)</h5>
+                        </div>
+                        <div class="future-icon-area">
+                            <div class="future-btn">
+                                <a href="{% url 'architect_of_record' %}" class="button-one">Read More details <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="future-card-wrap">
+                        <div class="future-card" style="background: url({% static 'assets/images/future-img/oil-and-gas.jpg' %});">
+                            <div class="overlay"></div> 
+                            <h5>Oil And Gas Engineering</h5>
+                        </div>
+                        <div class="future-icon-area">
+                            
+                            <div class="future-btn">
+                                <a href="{% url 'oil_and_gas_engineering' %}" class="button-one">Read More details<i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====================================== Start About US Section Area ========================== -->
+    <div class="section about-us-area home-two-about-area section-padding" style="background: url({% static 'assets/images/future-img/feature_bg.jpg' %});">
+        <div class="container">
+            <div class="row g-0 about-card-box">
+                <div class="col-xl-7 col-lg-12 col-md-12">
+                    <div class="about-content">
+                        <h6 class="sub-title"><span class=""></span>Welcome To Das And Partners (DAP)- Engineering Consultants in Abu Dhabi.
+                        </h6>
+                        <h2 class="title">Providing Engineering Consultants Solutions For All types of Construction, Management & Restoration.</h2>
+                        <p class="text"></p>
+                        <div class="about-list-wrap">
+                            <ul>
+                                <li><i class="fa fa-check" aria-hidden="true"></i>Certified & Awards winner</li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i>Work with energetic team</li>
+                                <li><i class="fa fa-check" aria-hidden="true"></i>Professional engineers</li>
+                                <!-- <li><i class="fa fa-check" aria-hidden="true"></i>Financial Consulting</li> -->
+                            </ul>
+                        </div>
+                        <div class="about-btn">
+                            <a href="{% url 'about' %}" class="button-one">More About Us <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-lg-12 col-md-12 about0thumb">
+                    <!-- <div class="about-img">
+                        <img src={% static "assets/images/future-img/construction.jpeg" alt="">
+                    </div> -->
+
+                    <div class="about-img">
+                        <div class="img-hover-wrapper">
+                            <img src="{% static 'assets/images/future-img/construction.jpeg' %}" alt="">
+                            {% comment %} <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}"> {% endcomment %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================= Start Skills Area Section ============================== -->
+    <section class="skills-area-section home-two-skill section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-7 col-lg-12 col-md-12">
+                    <div class="skills-content">
+                        <h6 class="sub-title"><span class=""></span>Our Mission
+                        </h6>
+                        <h2 class="title">Ready to bring bigger and stronger projects than before.</h2>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="skills-box">
+                                    <div class="skill-icon">
+                                        <img src="{% static 'assets/images/extra/s1.png' %}" alt="">
+                                    </div>
+                                    <div class="counter-number">
+                                        <div class="counter-timer counter" data-to="3879" data-speed="3000">3879</div>
+                                        <span class="counter-symble">+</span>
+                                    </div>
+                                    <small>Success Project</small>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <div class="skills-box">
+                                    <div class="skill-icon">
+                                        <img src="{% static 'assets/images/extra/s2.png' %}" alt="">
+                                    </div>
+                                    <div class="counter-number d-flex">
+                                        <div class="counter-timer counter" data-to="2587" data-speed="3000">2587</div>
+                                        <span class="counter-symble">+</span>
+                                    </div>
+                                    <small>Obstacles Overcome</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-bg-img bg-side-img" style="background: url({% static 'assets/images/future-img/future.jpeg' %}) no-repeat;"></div>
+    </section>
+
+    <!-- =================================================== Start Team Work Section Area =================================================== -->
+    <section class="team-area-section home-two-team-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="team-title">
+                        <h6 class="sub-title"><span class=""></span>Creative team &nbsp;&nbsp; <span class=""></span></h6>
+                        <h2 class="title">The best team to work with you.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="team-card-wrap" style="background: url({% static 'assets/images/extra/team1.jpg' %});">
+                        <div class="team-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-text">
+                            <p class="team-designation">ARCHITECT</p>
+                            <h6 class="team-name"><a href="{% url 'contact' %}">DD  Smith</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="team-card-wrap" style="background: url({% static 'assets/images/extra/team2.jpg' %});">
+                        <div class="team-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-text">
+                            <p class="team-designation">ARCHITECT</p>
+                            <h6 class="team-name"><a href="{% url 'contact' %}">DD  Smith</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="team-card-wrap" style="background: url({% static 'assets/images/extra/team3.jpg' %});">
+                        <div class="team-social-links">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-text">
+                            <p class="team-designation">ARCHITECT</p>
+                            <h6 class="team-name"><a href="{% url 'contact' %}">DD  Smith</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-in-touch-area home-two-appointment section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <div class="appoinment-form-wrap team-title">
+
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div style="color: green;">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <h6 class="sub-title"><span class=""></span>Get In Touch</h6>
+                        <h2 class="title">Let’s discuss about your project.</h2>
+                        <form id="contactForm" method="post">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                       <div class="mb-3">
+                                                {{ form.name.errors }}
+                                                {{ form.name }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <div class="mb-3">
+                                            {{ form.email.errors }}
+                                            {{ form.email }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <div class="mb-3">
+                                             {{ form.subject.errors }}
+                                            {{ form.subject }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-5">
+                                        {{ form.message.errors }}
+                                        {{ form.message }}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-5">
+                                        {{ form.captcha }}
+                                        <div class="text-danger">{{ form.captcha.errors }}</div>
+                                    </div>
+                                </div>
+                                 <div class="about-btn">
+                                    <button type="submit" class="button-one">Sent Message <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12 col-md-12">
+                    <div class="lets-discuss team-title">
+                        <h6 class="sub-title"><span class=""></span>Let's Discuss</h6>
+                        <h2 class="title">We’re always here to assist you with any questions.</h2>
+                        <!-- <p class="text">Our transportation division offers reliable and efficient solutions for all your transportation needs. Whether you are shipping goods domestically or services internationally.</p> -->
+                        <div class="author-content">
+                            <div class="author-img">
+                                <img src="{% static "assets/images/user/user_img.png" %}" alt="">
+                            </div>
+                            <div class="author-text">
+                                <h3>DAS</h3>
+                                <p>CEO & Founder</p>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <h2 class="acuda-stroke-title-two">
+                                <span class="acuda-stroke-title">D</span><span class="acuda-stroke-title">A</span><span class="acuda-stroke-title">S</span>
+                                <span class="acuda-stroke-title"> </span>
+                                <span class="acuda-stroke-title">A</span><span class="acuda-stroke-title">N</span><span class="acuda-stroke-title">D</span>
+                                <span class="acuda-stroke-title"> </span>
+                                <br>
+                                <span class="acuda-stroke-title">P</span>
+                                <span class="acuda-stroke-title">A</span>
+                                <span class="acuda-stroke-title">R</span>
+                                <span class="acuda-stroke-title">T</span>
+                                <span class="acuda-stroke-title">N</span>
+                                <span class="acuda-stroke-title">E</span>
+                                <span class="acuda-stroke-title">R</span>
+                                <span class="acuda-stroke-title">S</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================== Start Blog Post Area ====================================================== -->
+    <section class="blog-post-area-section home-two-blog-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                    <div class="recent-post-wrap team-title">
+                        <h6 class="sub-title"><span class=""></span>Let's Discuss</h6>
+                        <h2 class="title">Read the latest News and Blogs of Das And Partners.</h2>
+                        <p class="text">Check the best marketing resources and the latest news and blogs about our company.</p>
+
+                        <div class="das-hero-btn">
+                            <a href="{% url 'news' %}" class="button-one">Our News <i class="fas fa-arrow-right"></i></a>
+                            <a href="{% url 'blogs' %}" class="button-two">Our Blogs <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+                    <div class="row">
+
+                        {% for obj_blog in latest_blogs %}
+                            <div class="col-xxl-6 col-xl-6">
+                                <div class="recent-post-thumb-wrap">
+                                    <div class="thumb">
+                                        <a href="{% url 'blog_details' obj_blog.slug %}"><img src="{{ obj_blog.image.url }}" alt=""></a>
+                                    </div>
+                                    <div class="author-deatils">
+                                        <div class="usersdate">
+                                            <a href="{% url 'blog_details' obj_blog.slug %}"><i class="fa fa-calendar" aria-hidden="true"></i> {{ obj_blog.added_date|date:"d-M-Y" }}</a>
+                                        </div>
+                                        <h5><a href="{% url 'blog_details' obj_blog.slug %}" class="blog_title">{{ obj_blog.title|truncatechars:60 }}</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% block content %}
+
+<!-- ======================================================================================================================================================== -->
+
+
+    <!-- ============== start-breadcumb-area =============== -->
+    <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-content">
+                        <h1 class="breadcumb-title">Blog</h1>
+                        <ul class="breadcumb-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
+                            <li>Blogs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== end-breadcumb-area =============== -->
+
+    <section class="blog-post-area section-padding pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"> </div>
+
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <div class="post-details-earpper">
+                        <article>
+                            <div class="single-post-item bg-none">
+                                <div class="post-thumb">
+                                    <img src="{{ blog_obj.image.url }}" alt="">
+                                </div>
+                                <div class="post-content-wrap p-0">
+                                    <div class="post-meta">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{ blog_obj.added_date|date:"d-M-Y" }}</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="entry-post-content">
+                                        <h3 class="post-title">{{ blog_obj.title|truncatechars:60 }}</h3>
+                                        <p class="post-excerpt">
+                                            {{ blog_obj.content|safe }}
+                                        </p>
+
+                                        <div class="post-footer-tag">
+                                            <div class="post-tags">
+                                                <h6>Tags</h6>
+                                                {% for tag in blog_obj.get_tag_list %}
+                                                    <a href="#">{{ tag }}</a>
+                                                {% empty %}
+                                                    <span>No tags</span>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+
+
+                                        <div class="share-media pt-5">
+                                            <ul class="social-share">
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
+                                                <li><a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/"><i class="fab fa-linkedin"></i></a></li>
+                                                <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"> </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
