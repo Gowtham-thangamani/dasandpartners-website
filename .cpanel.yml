@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cdas/dap/
+    - /usr/bin/rsync -a --delete --exclude='.git' --exclude='.env' --exclude='db.sqlite3' --exclude='media/' --exclude='staticfiles/' ./ $DEPLOYPATH
+    - source /home/cdas/virtualenv/dap/3.9/bin/activate && cd $DEPLOYPATH && python manage.py collectstatic --noinput
+    - source /home/cdas/virtualenv/dap/3.9/bin/activate && cd $DEPLOYPATH && python manage.py migrate --noinput
+    - touch $DEPLOYPATH/tmp/restart.txt
