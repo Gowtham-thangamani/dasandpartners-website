@@ -198,6 +198,33 @@
         speed: 1500,
     });
 
+    // Life and Work at DAP Slick Slider
+    $('.dap-life-slider-track').slick({
+      centerMode: true,
+      centerPadding: '40px',
+      slidesToShow: 3,
+      dots: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            centerPadding: '20px',
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '0px',
+          }
+        }
+      ]
+    });
+
     // ------------------------- 08 Magnific Popup ------------------------- //
     if ($(".image-link").length){
         $(document).ready(function() {
@@ -287,4 +314,254 @@
 
 })(jQuery);
 
+// Enhanced Client Slider with Interactive Effects
+$(document).ready(function() {
+    // Client Slider Enhancement
+    if ($('#clientSlider').length > 0) {
+        const slider = $('#clientSlider');
+        const slides = slider.find('.client-slide');
+        
+        // Add random delay to each slide for staggered animation
+        slides.each(function(index) {
+            $(this).css('animation-delay', (index * 0.1) + 's');
+        });
+        
+        // Add mouse tracking effect
+        slider.on('mousemove', function(e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Move slides slightly based on mouse position
+            slides.each(function(index) {
+                const offset = (x / rect.width - 0.5) * 10;
+                $(this).css('transform', `translateX(${offset}px)`);
+            });
+        });
+        
+        // Reset position on mouse leave
+        slider.on('mouseleave', function() {
+            slides.css('transform', 'translateX(0)');
+        });
+        
+        // Add click effect
+        slides.on('click', function() {
+            $(this).addClass('clicked');
+            setTimeout(() => {
+                $(this).removeClass('clicked');
+            }, 300);
+        });
+    }
+});
 
+// Add CSS for click effect
+const clickEffectCSS = `
+.client-slide.clicked {
+    animation: clickPulse 0.3s ease;
+}
+
+@keyframes clickPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+`;
+
+// Inject the CSS
+$('<style>').prop('type', 'text/css').html(clickEffectCSS).appendTo('head');
+
+
+
+// Open Positions Section Enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate position cards on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all position cards
+    const positionCards = document.querySelectorAll('.position-card');
+    positionCards.forEach(card => {
+        observer.observe(card);
+    });
+
+    // Add hover effects for better interactivity
+    positionCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Smooth scroll for apply buttons
+    const applyButtons = document.querySelectorAll('.apply-btn');
+    applyButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Add a small delay to show the click effect
+            this.style.transform = 'translateY(-2px) scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = 'translateY(-2px) scale(1)';
+            }, 150);
+        });
+    });
+
+    // Add category filtering functionality (optional enhancement)
+    const categoryButtons = document.querySelectorAll('[data-category-filter]');
+    positionCards = document.querySelectorAll('.position-card');
+
+    if (categoryButtons.length > 0) {
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category-filter');
+                
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Filter position cards
+                positionCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'slideInUp 0.6s ease-out';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // Add search functionality (optional enhancement)
+    const searchInput = document.querySelector('#position-search');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            positionCards.forEach(card => {
+                const title = card.querySelector('.position-title').textContent.toLowerCase();
+                const description = card.querySelector('.position-description').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'slideInUp 0.6s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // Add loading animation for apply buttons
+    const applyButtons = document.querySelectorAll('.apply-btn');
+    applyButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening Email...';
+            this.style.pointerEvents = 'none';
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.pointerEvents = 'auto';
+            }, 2000);
+        });
+    });
+
+    // Add parallax effect to section header
+    const sectionHeader = document.querySelector('.section-header');
+    if (sectionHeader) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            sectionHeader.style.transform = `translateY(${rate}px)`;
+        });
+    }
+
+    // Add counter animation for statistics (if any)
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter').forEach(counter => {
+        counterObserver.observe(counter);
+    });
+});
+
+// Add smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Add keyboard navigation for position cards
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+        const focusedElement = document.activeElement;
+        if (focusedElement.classList.contains('position-card')) {
+            focusedElement.style.outline = '2px solid #377f4b';
+            focusedElement.style.outlineOffset = '2px';
+        }
+    }
+});
+
+// Remove outline when clicking
+document.addEventListener('click', function(e) {
+    const focusedElement = document.activeElement;
+    if (focusedElement && focusedElement.style.outline) {
+        focusedElement.style.outline = 'none';
+    }
+});
+
+// Simple dropdown click functionality
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".modern-navbar .dropdown-toggle").forEach(toggle => {
+        toggle.addEventListener("click", function(e) {
+            e.preventDefault();
+            const parent = this.closest(".nav-item.dropdown");
+            parent.classList.toggle("show");
+        });
+    });
+});

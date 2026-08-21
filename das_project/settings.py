@@ -24,23 +24,17 @@ except:
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
-
-# # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-your-secret-key-here-change-this-in-production')
 
-
-ALLOWED_HOSTS = []
-
+# Hosts
+ALLOWED_HOSTS = os.getenv(
+    'ALLOWED_HOSTS',
+    'dasandpartners.com,www.dasandpartners.com,68.178.168.194,127.0.0.1,localhost'
+).split(',')
 
 # Application definition
-
 INSTALLED_APPS = [
     'admin_interface',
     'colorfield',
@@ -56,7 +50,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'cloudinary_storage',
     'captcha',
-
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -89,99 +85,72 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'das_project.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'dasandpartners_db_2',
-    #     'USER': 'dasandpartners_db_user_2',
-    #     'PASSWORD': '2KKpEs7dVJu73dHSXVSoDk7F5tA3kqOZ',  # or whatever you set
-    #     'HOST': 'dpg-d1cj53h5pdvs73etuqbg-a',
-    #     'PORT': '5432',
-    # }
+    # For PostgreSQL in future, switch to a DB config via envs.
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',},
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Serve collected static and media from public_html for cPanel/Apache
+STATIC_ROOT = os.getenv('STATIC_ROOT', '/home/cdas/public_html/static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.getenv('MEDIA_ROOT', '/home/cdas/public_html/media')
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# ManifestStaticFilesStorage fingerprints filenames (e.g. style.a3f1c9.css) so
+# browsers can cache them indefinitely; WhiteNoise only issues long-lived
+# Cache-Control headers for storages that do this hashing. The Lenient
+# variant additionally tolerates {% static %} references to files that don't
+# exist on disk (see das_project/storage.py for why that matters here).
+STATICFILES_STORAGE = "das_project.storage.LenientManifestStaticFilesStorage"
 
 
+# Whitenoise
+WHITENOISE_USE_FINDERS = True
+WHITENOISE_AUTOREFRESH = True
 
-Media_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# File storage
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
-
-# Cloudinary settings
+# Cloudinary dummy config (kept for old migrations compatibility)
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dzjfptgek',
-    'API_KEY': '334436628432739',
-    'API_SECRET': 's2Xl4VL9mtN2Rnau6gM1SbsDZSI',
+    'CLOUD_NAME': 'dummy',
+    'API_KEY': '000000000000000',
+    'API_SECRET': 'dummysecret123',
 }
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-# Optional: if you want to serve static files locally in development
-# MEDIA_URL = '/media/'
-
-
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'findmejoinme.com'
 EMAIL_PORT = 587
@@ -190,9 +159,40 @@ EMAIL_HOST_USER = 'no-reply@findmejoinme.com'
 EMAIL_HOST_PASSWORD = 'ZH1B[8}0)Qsf'
 DEFAULT_FROM_EMAIL = 'no-reply@findmejoinme.com'
 
-
-
+# CAPTCHA
 CAPTCHA_FONT_SIZE = 40
 CAPTCHA_LENGTH = 5
 CAPTCHA_IMAGE_SIZE = (150, 50)
 CAPTCHA_TIMEOUT = 5  # minutes
+
+# CKEditor Settings
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_UPLOAD_SLUGIFY_FILENAME = True
+CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_BROWSE_SHOW_DIRS = True
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote'],
+            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
+            ['Styles', 'Format', 'Font', 'FontSize'],
+            ['TextColor', 'BGColor'],
+            ['Undo', 'Redo'],
+            ['Source', 'Maximize'],
+        ],
+        'height': 400,
+        'width': '100%',
+        'removePlugins': 'elementspath',
+        'resize_enabled': True,
+        'forcePasteAsPlainText': False,
+        'format_tags': 'p;h1;h2;h3;h4;h5;h6;pre;address;div',
+        'removeDialogTabs': 'image:advanced;link:advanced',
+    },
+}

@@ -2,6 +2,7 @@
 {% block title %}Home Page{% endblock %}
 
 {% load static %}
+{% load custom_filters %}
 {% block content %}
 
 
@@ -25,224 +26,2855 @@
     </section>
     <!-- ============== end-breadcumb-area =============== -->
 
+
+    <section class="company-overview py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ec 100%); position: relative; overflow: hidden;">
+      <!-- Background Elements -->
+      <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(20,130,85,0.1); border-radius: 50%;"></div>
+      <div style="position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; background: rgba(30,194,139,0.08); border-radius: 50%;"></div>
+      
+      <div class="container-fluid position-relative" style="max-width: 1400px;">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="company-card p-5 rounded-4 shadow-lg" style="background: white; border: 1px solid rgba(20,130,85,0.1);">
+              
+              <!-- Header -->
+              <div class="text-center mb-5">
+                <div class="section-badge mb-3">
+                  <span class="badge bg-success-subtle text-success px-4 py-2 rounded-pill" style="font-size: 0.95rem; font-weight: 600;">
+                    <i class="fas fa-building me-2"></i>About Das And Partners
+                  </span>
+                </div>
+                <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 800; color: #148255; line-height: 1.2;">
+                  Multidisciplinary Engineering Excellence
+                </h2>
+              </div>
+    
+              <!-- Main Content - Single Beautiful Paragraph -->
+              <div class="company-description">
+                <div class="description-content p-5 rounded-3" style="background: #f8f9fa; border-left: 4px solid #148255; position: relative;">
+                  
+                  <!-- Decorative Quote Icon -->
+                  <div style="position: absolute; top: -10px; left: 30px; background: #148255; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 5px 15px rgba(20,130,85,0.3);">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  
+                  <p class="mb-0" style="color: #148255; line-height: 2; font-size: 1.15rem; text-align: justify; padding-top: 30px; font-weight: 400;">
+                    Das And Partners Engineering Consultancy is multidisciplinary Engineering Consultant in UAE, with a team of 100+ Engineers across corporate offices in Dubai, Abu Dhabi & Sharjah having a client base of ADNOC, Borouge, Tabreed, MCC, ITC, ENOC, Emarat Petroleum, Petrofac, Veolia, Rotary, HQC, Aldar, Dubai Holding, Veolia, VTTI, Etihad Airways, Abu Dhabi Airport, Dubai International Airport, Shell, BP, Taqa, Lulu, Engie Cofely Energy, TotalEnergies, Omniyat, & several other prestigious Clients. With a strong footprint of working in Projects across Abu Dhabi, Ruwais, Sila, Habshan, Gayathi, CICPA Refinery Areas, Al Ain, Dubai, Sharjah, Ras Al Khaimah, Fujairah, Ajman, Fujairah & Umm Al Quwain, we deliver end-to-end engineering services and our specialization includes wide range of service from concept design & feasibility studies to FEED, pre-FEED, HAZID, HAZOP, authority approvals, site supervision, Project Management, EPCM, PM-CM, Tendering, Costing, Contract Administration, Structural Strengthening, Evaluation, Retrofitting, & advanced BIM solutions. We cater to both Greenfield & Brownfield projects across various sectors such as Oil & Gas, Power Generation, Petrochemical, Marine & Offshore, Warehouses, Infrastructure, District Cooling, Roads, Wet & Dry Utilities, Bridges, Interchanges, Viaducts, Tunnels, Underpasses, Underground, Transport Structures, Process & Non-Process Plant Buildings, Blast Resistant Structures, Hydrocarbon Tanks, Hydraulic Structures, Horizontal Vessel, Onshore Piperacks / sleepers, equipment foundations, shelters, substations, tank farms, packaged buildings (E-house, analyzer shelters), modular pipe racks, Offshore structures (topsides + substructure) Fixed 4-leg jackets, tripods, GBS (gravity-based), compliant towers, Floating FPSO/FSO, semi-submersible, spar, TLP Modules on topsides, process, utilities, power gen, LQ, flare/vent, E-house Subsea, manifolds, PLEM/PLET, risers, umbilicals, Skid Package, Industrial, Airport, Commercial Projects including Mixed Use, High Rise Buildings, Recreational Facilities & Luxury Residential Buildings / Villas / Mansions.
+                  </p>
+                  
+                  <!-- Bottom Decorative Element -->
+                  <div style="position: absolute; bottom: -10px; right: 30px; background: #148255; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 5px 15px rgba(20,130,85,0.3);">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== Company Overview Section ================================================ -->
+    <section class="company-overview-section py-5" style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 100%);position:relative;overflow:hidden;">
+      <div class="container">
+        <!-- Main Introduction -->
+        
+
+        <!-- Key Stats Cards -->
+        <div class="row g-4 mb-5">
+          
+        </div>
+
+        <!-- Prestigious Clients Section -->
+        <div class="row mb-5">
+          <div class="col-12" data-aos="fade-up">
+           
+          </div>
+        </div>
+
+        <!-- Geographic Footprint -->
+        <div class="row mb-5">
+          <div class="col-12" data-aos="fade-up">
+           
+          </div>
+        </div>
+
+        <!-- Services Overview -->
+        <div class="row mb-5">
+          <div class="col-12" data-aos="fade-up">
+            <div class="services-overview p-5 rounded-4" style="background:white;box-shadow:0 15px 50px rgba(0,0,0,0.08);">
+              <h3 class="text-center mb-4" style="font-size:2rem;font-weight:800;color:#148255;">
+                <i class="fas fa-cogs me-2"></i>Comprehensive Engineering Services
+              </h3>
+              <p class="text-center mb-4" style="font-size:1.1rem;color:#666;max-width:900px;margin:0 auto;">
+                We deliver <strong>end-to-end engineering services</strong> with specialization ranging from concept design & feasibility studies to execution & final commissioning.
+              </p>
+              <div class="services-grid">
+                <div class="row g-3">
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-pencil-ruler mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Concept Design</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-clipboard-check mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Feasibility Studies</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-drafting-compass mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">FEED & Pre-FEED</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-shield-alt mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">HAZID & HAZOP</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-file-signature mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Authority Approvals</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-hard-hat mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Site Supervision</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-tasks mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Project Management</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-industry mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">EPCM & PM-CM</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-gavel mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Tendering & Costing</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-file-contract mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Contract Administration</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-wrench mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Structural Strengthening</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="service-item" style="background:#f8f9fa;padding:15px;border-radius:10px;text-align:center;border:1px solid rgba(20,130,85,0.1);">
+                      <i class="fas fa-cube mb-2" style="color:#148255;font-size:1.5rem;"></i>
+                      <p class="mb-0" style="color:#666;font-weight:600;font-size:0.9rem;">Advanced BIM Solutions</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Types & Sectors -->
+        <div class="row g-4 mb-5">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="project-types p-4 rounded-4 h-100" style="background:white;box-shadow:0 15px 50px rgba(0,0,0,0.08);border-left:4px solid #148255;">
+              <h4 class="mb-4" style="font-size:1.5rem;font-weight:800;color:#148255;">
+                <i class="fas fa-project-diagram me-2"></i>Project Types
+              </h4>
+              <div class="project-badges">
+                <span class="badge-green">Greenfield Projects</span>
+                <span class="badge-green">Brownfield Projects</span>
+                <span class="badge-green">Master Development</span>
+                <span class="badge-green">New Construction</span>
+                <span class="badge-green">Modification</span>
+                <span class="badge-green">Addition</span>
+                <span class="badge-green">Renovation</span>
+                <span class="badge-green">Retrofitting</span>
+                <span class="badge-green">Rehabilitation</span>
+                <span class="badge-green">Structural Strengthening</span>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="sectors p-4 rounded-4 h-100" style="background:white;box-shadow:0 15px 50px rgba(0,0,0,0.08);border-left:4px solid #1ec28b;">
+              <h4 class="mb-4" style="font-size:1.5rem;font-weight:800;color:#148255;">
+                <i class="fas fa-building me-2"></i>Key Sectors
+              </h4>
+              <div class="sector-list">
+                <div class="row g-2">
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-oil-can me-2"></i>Oil & Gas</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-bolt me-2"></i>Power Generation</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-flask me-2"></i>Petrochemical</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-ship me-2"></i>Marine & Offshore</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-solar-panel me-2"></i>Solar Energy</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-warehouse me-2"></i>Warehouses</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-road me-2"></i>Infrastructure</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-snowflake me-2"></i>District Cooling</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-plane me-2"></i>Airport Projects</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-building me-2"></i>High Rise Buildings</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-home me-2"></i>Luxury Residential</span></div>
+                  <div class="col-md-6"><span class="sector-item"><i class="fas fa-store me-2"></i>Retail Outlets</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialized Structures -->
+        <div class="row">
+          <div class="col-12" data-aos="fade-up">
+            <div class="specialized-structures p-5 rounded-4" style="background:linear-gradient(135deg,#f8f9fa,#e6f2ec);border:2px solid rgba(20,130,85,0.2);">
+              <h3 class="text-center mb-4" style="font-size:2rem;font-weight:800;color:#148255;">
+                <i class="fas fa-tools me-2"></i>Specialized Structural Expertise
+              </h3>
+              <div class="structure-categories">
+                <div class="row g-4">
+                  <div class="col-lg-4 col-md-6">
+                    <div class="structure-category">
+                      <h5 style="color:#148255;font-weight:700;font-size:1rem;margin-bottom:10px;">
+                        <i class="fas fa-water me-2"></i>Offshore & Marine
+                      </h5>
+                      <ul style="font-size:0.85rem;color:#666;line-height:2;">
+                        <li>Fixed 4-leg Jackets</li>
+                        <li>FPSO/FSO Systems</li>
+                        <li>Semi-submersible</li>
+                        <li>Subsea Manifolds</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="structure-category">
+                      <h5 style="color:#148255;font-weight:700;font-size:1rem;margin-bottom:10px;">
+                        <i class="fas fa-industry me-2"></i>Industrial Structures
+                      </h5>
+                      <ul style="font-size:0.85rem;color:#666;line-height:2;">
+                        <li>Blast Resistant Structures</li>
+                        <li>Hydrocarbon Tanks</li>
+                        <li>Equipment Foundations</li>
+                        <li>Tank Farms</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="structure-category">
+                      <h5 style="color:#148255;font-weight:700;font-size:1rem;margin-bottom:10px;">
+                        <i class="fas fa-road me-2"></i>Infrastructure
+                      </h5>
+                      <ul style="font-size:0.85rem;color:#666;line-height:2;">
+                        <li>Bridges & Viaducts</li>
+                        <li>Tunnels & Underpasses</li>
+                        <li>Interchanges</li>
+                        <li>Transport Structures</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="structure-category">
+                      <h5 style="color:#148255;font-weight:700;font-size:1rem;margin-bottom:10px;">
+                        <i class="fas fa-building me-2"></i>Process Buildings
+                      </h5>
+                      <ul style="font-size:0.85rem;color:#666;line-height:2;">
+                        <li>E-house Solutions</li>
+                        <li>Analyzer Shelters</li>
+                        <li>Modular Pipe Racks</li>
+                        <li>Substations</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="structure-category">
+                      <h5 style="color:#148255;font-weight:700;font-size:1rem;margin-bottom:10px;">
+                        <i class="fas fa-wrench me-2"></i>Equipment & Utilities
+                      </h5>
+                      <ul style="font-size:0.85rem;color:#666;line-height:2;">
+                        <li>Horizontal Vessels</li>
+                        <li>Onshore Piperacks</li>
+                        <li>Skid Packages</li>
+                        <li>Wet & Dry Utilities</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="structure-category">
+                      <h5 style="color:#148255;font-weight:700;font-size:1rem;margin-bottom:10px;">
+                        <i class="fas fa-home me-2"></i>Commercial & Residential
+                      </h5>
+                      <ul style="font-size:0.85rem;color:#666;line-height:2;">
+                        <li>High Rise Buildings</li>
+                        <li>Mixed Use Projects</li>
+                        <li>Luxury Villas/Mansions</li>
+                        <li>Recreational Facilities</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .client-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #148255, #1ec28b);
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 15px rgba(20, 130, 85, 0.2);
+        transition: all 0.3s ease;
+      }
+      .client-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(20, 130, 85, 0.3);
+      }
+      .location-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+      .location-badge:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+      .badge-green {
+        display: inline-block;
+        background: #148255;
+        color: white;
+        padding: 12px 25px;
+        margin: 8px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 4px 15px rgba(20, 130, 85, 0.2);
+      }
+      .sector-item {
+        display: block;
+        padding: 10px 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        color: #666;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-left: 3px solid #148255;
+        transition: all 0.3s ease;
+      }
+      .sector-item:hover {
+        background: rgba(20, 130, 85, 0.05);
+        transform: translateX(5px);
+      }
+      .structure-category ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .structure-category ul li {
+        padding: 5px 0;
+        padding-left: 25px;
+        position: relative;
+      }
+      .structure-category ul li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #148255;
+        font-weight: bold;
+      }
+    </style>
+    <!-- ========================================== End Company Overview Section ================================================ -->
+
+    <!-- ========================================== About Us Story Section ================================================ -->
+    <section class="about-story-section py-5 position-relative" style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 50%,#e6f2ec 100%);">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="about-story-image position-relative" data-aos="fade-right">
+                              <div class="image-wrapper rounded-4 overflow-hidden shadow-lg" style="position:relative;">
+                  <img src="{% static 'assets/images/about/dr_group_big.jpg' %}" alt="DAS & Partners Journey" class="img-fluid w-100" style="height:500px;object-fit:cover;">
+                  <div class="image-overlay" style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(45deg,rgba(20,130,85,0.3),rgba(30,194,139,0.3));"></div>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-story-content" data-aos="fade-left">
+              <div class="section-badge mb-3">
+                <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill" style="font-size:0.9rem;font-weight:600;">
+                  <i class="fas fa-building me-2"></i>Our Story
+                </span>
+              </div>
+              <h2 class="section-title mb-4" style="font-size:2.8rem;font-weight:900;color:#148255;line-height:1.2;">
+                Building Dreams, 
+                <span class="text-gradient" style="background:linear-gradient(45deg,#148255,#1ec28b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Delivering Excellence</span>
+              </h2>
+              <p class="lead mb-4" style="font-size:1.2rem;color:#3a5d4c;line-height:1.6;">
+                Das & Partners emerged from a vision to revolutionize engineering consultancy in the UAE and beyond. What started as a team of passionate engineers has grown into a dynamic force of innovation and excellence.
+              </p>
+              <div class="story-highlights mb-4">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="highlight-item d-flex align-items-center p-3 rounded-3" style="background:rgba(20,130,85,0.05);border-left:3px solid #148255;">
+                      <div class="highlight-icon me-3" style="width:40px;height:40px;background:#148255;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">
+                        <i class="fas fa-rocket"></i>
+                      </div>
+                      <div>
+                        <div class="highlight-title" style="font-weight:700;color:#148255;font-size:0.9rem;">Rapid Growth</div>
+                        <div class="highlight-desc" style="font-size:0.85rem;color:#666;">From startup to industry leader</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="highlight-item d-flex align-items-center p-3 rounded-3" style="background:rgba(20,130,85,0.05);border-left:3px solid #148255;">
+                      <div class="highlight-icon me-3" style="width:40px;height:40px;background:#148255;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">
+                        <i class="fas fa-globe"></i>
+                      </div>
+                      <div>
+                        <div class="highlight-title" style="font-weight:700;color:#148255;font-size:0.9rem;">Global Reach</div>
+                        <div class="highlight-desc" style="font-size:0.85rem;color:#666;">Projects across 8+ countries</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="highlight-item d-flex align-items-center p-3 rounded-3" style="background:rgba(20,130,85,0.05);border-left:3px solid #148255;">
+                      <div class="highlight-icon me-3" style="width:40px;height:40px;background:#148255;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <div>
+                        <div class="highlight-title" style="font-weight:700;color:#148255;font-size:0.9rem;">Expert Team</div>
+                        <div class="highlight-desc" style="font-size:0.85rem;color:#666;">100+ skilled professionals</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="highlight-item d-flex align-items-center p-3 rounded-3" style="background:rgba(20,130,85,0.05);border-left:3px solid #148255;">
+                      <div class="highlight-icon me-3" style="width:40px;height:40px;background:#148255;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;">
+                        <i class="fas fa-trophy"></i>
+                      </div>
+                      <div>
+                        <div class="highlight-title" style="font-weight:700;color:#148255;font-size:0.9rem;">95% Success</div>
+                        <div class="highlight-desc" style="font-size:0.85rem;color:#666;">Outstanding project delivery</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="mb-4" style="color:#666;line-height:1.7;">
+                Our journey began with a simple mission: to deliver exceptional engineering solutions that transform visions into reality. Today, we stand as a testament to innovation, quality, and unwavering commitment to our clients' success. From humble beginnings to becoming a trusted partner for major projects across the MENA region, our story is one of passion, perseverance, and professional excellence.
+              </p>
+              <div class="story-cta">
+                <a href="#leadership" class="btn btn-success btn-lg me-3" style="background:#148255;border:#148255;padding:12px 30px;border-radius:8px;font-weight:600;box-shadow:0 4px 15px rgba(20,130,85,0.3);">
+                  <i class="fas fa-users me-2"></i>Meet Our Team
+                </a>
+                <a href="#process" class="btn btn-outline-success btn-lg" style="border:2px solid #148255;color:#148255;padding:12px 30px;border-radius:8px;font-weight:600;">
+                  <i class="fas fa-cogs me-2"></i>Our Process
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Decorative Elements -->
+      <div class="decorative-shapes">
+        <div class="shape shape-1" style="position:absolute;top:10%;left:5%;width:100px;height:100px;background:rgba(20,130,85,0.1);border-radius:50%;animation:float 6s ease-in-out infinite;"></div>
+        <div class="shape shape-2" style="position:absolute;bottom:20%;right:10%;width:60px;height:60px;background:rgba(30,194,139,0.1);border-radius:50%;animation:float 8s ease-in-out infinite reverse;"></div>
+        
+      </div>
+    </section>
+    <!-- ========================================== End About Us Story Section ================================================ -->
+
+    <!-- ========================================== Growth Journey Timeline Section ================================================ -->
+    <section class="growth-timeline-section py-5" style="background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 50%,#e6f2ec 100%);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="section-badge mb-3">
+              <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill" style="font-size:0.9rem;font-weight:600;">
+                <i class="fas fa-chart-line me-2"></i>Our Journey
+              </span>
+            </div>
+            <h2 class="section-title mb-4" style="font-size:2.8rem;font-weight:900;color:#148255;line-height:1.2;">
+              Growth <span class="text-gradient">Timeline</span>
+            </h2>
+            <p class="lead" style="color:#666;font-size:1.1rem;">
+              From humble beginnings to industry leadership - our remarkable journey of innovation and excellence
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-container position-relative">
+          <!-- Timeline Line -->
+          <div class="timeline-line" style="position:absolute;left:50%;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#148255,#1ec28b);transform:translateX(-50%);border-radius:2px;"></div>
+          
+          <!-- Timeline Items -->
+          <div class="timeline-items">
+            <!-- 2024 - Foundation -->
+            <div class="timeline-item mb-5" data-aos="fade-up">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="timeline-content text-lg-end pe-lg-4">
+                    <div class="timeline-date mb-2">
+                      <span class="badge bg-success text-white px-3 py-2" style="font-size:1rem;font-weight:600;"></span>
+                    </div>
+                    <h4 class="timeline-title mb-3" style="color:#148255;font-weight:700;">Company Foundation</h4>
+                    <p class="timeline-desc mb-3" style="color:#666;line-height:1.6;">
+                      Das & Partners was established with a vision to revolutionize engineering consultancy. Started with a team of passionate engineers committed to excellence.
+                    </p>
+                    <div class="timeline-achievements">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="timeline-image ps-lg-4">
+                    <div class="timeline-icon-wrapper" style="width:80px;height:80px;background:#148255;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                      <i class="fas fa-rocket text-white" style="font-size:2rem;"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2024 - Rapid Growth -->
+            <div class="timeline-item mb-5" data-aos="fade-up" data-aos-delay="100">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="timeline-image pe-lg-4">
+                    <div class="timeline-icon-wrapper" style="width:80px;height:80px;background:#1ec28b;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(30,194,139,0.3);">
+                      <i class="fas fa-chart-line text-white" style="font-size:2rem;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="timeline-content ps-lg-4">
+                    <div class="timeline-date mb-2">
+                      <span class="badge bg-success text-white px-3 py-2" style="font-size:1rem;font-weight:600;"></span>
+                    </div>
+                    <h4 class="timeline-title mb-3" style="color:#148255;font-weight:700;">Rapid Expansion</h4>
+                    <p class="timeline-desc mb-3" style="color:#666;line-height:1.6;">
+                      Expanded team to 25+ professionals and secured major projects across UAE. Established strong client relationships and industry reputation.
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2024 - International Reach -->
+            <div class="timeline-item mb-5" data-aos="fade-up" data-aos-delay="200">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="timeline-content text-lg-end pe-lg-4">
+                    <div class="timeline-date mb-2">
+                      <span class="badge bg-success text-white px-3 py-2" style="font-size:1rem;font-weight:600;"></span>
+                    </div>
+                    <h4 class="timeline-title mb-3" style="color:#148255;font-weight:700;">Global Expansion</h4>
+                    <p class="timeline-desc mb-3" style="color:#666;line-height:1.6;">
+                      Extended services to 8+ countries across MENA region. Achieved ISO certifications and established international partnerships.
+                    </p>
+                    
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="timeline-image ps-lg-4">
+                    <div class="timeline-icon-wrapper" style="width:80px;height:80px;background:#148255;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                      <i class="fas fa-globe text-white" style="font-size:2rem;"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2025 - Future Vision -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="timeline-image pe-lg-4">
+                    <div class="timeline-icon-wrapper" style="width:80px;height:80px;background:#1ec28b;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(30,194,139,0.3);">
+                      <i class="fas fa-eye text-white" style="font-size:2rem;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="timeline-content ps-lg-4">
+                    <div class="timeline-date mb-2">
+                      <span class="badge bg-warning text-dark px-3 py-2" style="font-size:1rem;font-weight:600;">2025</span>
+                    </div>
+                    <h4 class="timeline-title mb-3" style="color:#148255;font-weight:700;">Future Vision</h4>
+                    <p class="timeline-desc mb-3" style="color:#666;line-height:1.6;">
+                      Targeting 250+ Engineers Team Specialized in Infrastructure and Oil & Gas.
+                    </p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========================================== End Growth Journey Timeline Section ================================================ -->
+
+    <!-- ========================================== Global Presence & Offices Section ================================================ -->
+    <section class="global-presence-section py-5" style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 50%,#e6f2ec 100%);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="section-badge mb-3">
+              <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill" style="font-size:0.9rem;font-weight:600;">
+                <i class="fas fa-globe me-2"></i>Global Reach
+              </span>
+            </div>
+            <h2 class="section-title mb-4" style="font-size:2.8rem;font-weight:900;color:#148255;line-height:1.2;">
+              Global <span class="text-gradient">Presence</span>
+            </h2>
+            <p class="lead" style="color:#666;font-size:1.1rem;">
+              Serving clients across the MENA region with local expertise and international standards
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- UAE - Dubai Office -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="office-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="office-header mb-4 text-center">
+                <div class="office-icon-wrapper mb-3" style="width:80px;height:80px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                  <i class="fas fa-building text-white" style="font-size:2rem;"></i>
+                </div>
+                <h4 class="office-title mb-2" style="color:#148255;font-weight:700;">Dubai Office</h4>
+                <p class="office-subtitle mb-0" style="color:#666;font-size:0.9rem;">Cooporate Office & Project Site Offices</p>
+              </div>
+              <div class="office-content">
+                <div class="office-details mb-3">
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-map-marker-alt text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">Dubai, UAE</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-users text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">20+ Team Members</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-project-diagram text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">50+ Projects</span>
+                  </div>
+                </div>
+                <div class="office-services">
+                  <h6 class="services-title mb-2" style="color:#148255;font-weight:600;">Services:</h6>
+                  <div class="service-tags">
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Architectural Engineering</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">MEP Design</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Project Management</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UAE - Abu Dhabi Office -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="office-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="office-header mb-4 text-center">
+                <div class="office-icon-wrapper mb-3" style="width:80px;height:80px;background:linear-gradient(45deg,#1ec28b,#148255);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(30,194,139,0.3);">
+                  <i class="fas fa-city text-white" style="font-size:2rem;"></i>
+                </div>
+                <h4 class="office-title mb-2" style="color:#148255;font-weight:700;">Abu Dhabi Office</h4>
+                <p class="office-subtitle mb-0" style="color:#666;font-size:0.9rem;">Cooporate Office, Branch Offices & Project Site Offices</p>
+              </div>
+              <div class="office-content">
+                <div class="office-details mb-3">
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-map-marker-alt text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">Abu Dhabi, UAE</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-users text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">55+ Team Members</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-project-diagram text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">500+ Projects</span>
+                  </div>
+                </div>
+                <div class="office-services">
+                  <h6 class="services-title mb-2" style="color:#148255;font-weight:600;">Services:</h6>
+                  <div class="service-tags">
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Oil & Gas</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Infrastructure</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Consultancy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- sharjah office -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="office-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="office-header mb-4 text-center">
+                <div class="office-icon-wrapper mb-3" style="width:80px;height:80px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                  <i class="fas fa-building text-white" style="font-size:2rem;"></i>
+                </div>
+                <h4 class="office-title mb-2" style="color:#148255;font-weight:700;">Sharjah Office</h4>
+                <p class="office-subtitle mb-0" style="color:#666;font-size:0.9rem;">Cooporate Office & Project Site Offices</p>
+              </div>
+              <div class="office-content">
+                <div class="office-details mb-3">
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-map-marker-alt text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">Sharjah, UAE</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-users text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">20+ Team Members</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-project-diagram text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">25+ Projects</span>
+                  </div>
+                </div>
+                <div class="office-services">
+                  <h6 class="services-title mb-2" style="color:#148255;font-weight:600;">Services:</h6>
+                  <div class="service-tags">
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Architectural Engineering</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">MEP Design</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Project Management</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- International Presence -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="office-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="office-header mb-4 text-center">
+                <div class="office-icon-wrapper mb-3" style="width:80px;height:80px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                  <i class="fas fa-globe-americas text-white" style="font-size:2rem;"></i>
+                </div>
+                <h4 class="office-title mb-2" style="color:#148255;font-weight:700;">International</h4>
+                <p class="office-subtitle mb-0" style="color:#666;font-size:0.9rem;">Global Network</p>
+              </div>
+              <div class="office-content">
+                <div class="office-details mb-3">
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-flag text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">8+ Countries</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-handshake text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">Strategic Partners</span>
+                  </div>
+                  <div class="detail-item d-flex align-items-center mb-2">
+                    <i class="fas fa-project-diagram text-success me-2" style="width:20px;"></i>
+                    <span style="font-size:0.9rem;color:#666;">25+ Projects</span>
+                  </div>
+                </div>
+                <div class="office-services">
+                  <h6 class="services-title mb-2" style="color:#148255;font-weight:600;">Regions:</h6>
+                  <div class="service-tags">
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Algeria</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Saudi Arabia</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Qatar</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Kuwait</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Oman</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Singapore</span>
+                    <span class="badge bg-success-subtle text-success me-1 mb-1" style="font-size:0.8rem;">Netherlands</span>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Global Stats -->
+        
+      </div>
+    </section>
+    <!-- ========================================== End Global Presence & Offices Section ================================================ -->
+
+    <!-- ========================================== Team Development & Training Section ================================================ -->
+    <section class="team-development-section py-5" style="background:linear-gradient(135deg,#f8f9fa 0%,#ffffff 50%,#e6f2ec 100%);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mb-5">
+            <div class="section-badge mb-3">
+              <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill" style="font-size:0.9rem;font-weight:600;">
+                <i class="fas fa-graduation-cap me-2"></i>Professional Growth
+              </span>
+            </div>
+            <h2 class="section-title mb-4" style="font-size:2.8rem;font-weight:900;color:#148255;line-height:1.2;">
+              Team <span class="text-gradient">Development</span>
+            </h2>
+            <p class="lead" style="color:#666;font-size:1.1rem;">
+              Investing in our people through continuous learning, professional development, and industry-leading training programs
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Professional Development -->
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="development-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="card-header mb-4">
+                <div class="icon-wrapper mb-3" style="width:60px;height:60px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                  <i class="fas fa-chart-line text-white" style="font-size:1.5rem;"></i>
+                </div>
+                <h4 class="card-title mb-3" style="color:#148255;font-weight:700;">Professional Development</h4>
+              </div>
+              <div class="card-content">
+                <ul class="development-list list-unstyled">
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Certification Programs</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Industry-recognized certifications in BIM, PMP, LEED, and more</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Skill Enhancement</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Regular training on latest software, tools, and methodologies</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Career Progression</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Clear career paths with regular performance reviews and promotions</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Training Programs -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="development-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="card-header mb-4">
+                <div class="icon-wrapper mb-3" style="width:60px;height:60px;background:linear-gradient(45deg,#1ec28b,#148255);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(30,194,139,0.3);">
+                  <i class="fas fa-laptop-code text-white" style="font-size:1.5rem;"></i>
+                </div>
+                <h4 class="card-title mb-3" style="color:#148255;font-weight:700;">Training Programs</h4>
+              </div>
+              <div class="card-content">
+                <ul class="development-list list-unstyled">
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Technical Training</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Advanced courses in AutoCAD, Revit, BIM, and specialized software</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Leadership Development</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Management skills, team building, and strategic thinking workshops</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Industry Knowledge</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Latest industry trends, regulations, and best practices</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentorship & Knowledge Sharing -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="development-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="card-header mb-4">
+                <div class="icon-wrapper mb-3" style="width:60px;height:60px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+                  <i class="fas fa-users text-white" style="font-size:1.5rem;"></i>
+                </div>
+                <h4 class="card-title mb-3" style="color:#148255;font-weight:700;">Mentorship Programs</h4>
+              </div>
+              <div class="card-content">
+                <ul class="development-list list-unstyled">
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Senior Mentorship</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">One-on-one guidance from experienced professionals</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Knowledge Sharing</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Regular internal workshops and knowledge transfer sessions</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Peer Learning</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Collaborative learning through project-based teams</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Industry Leadership -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="development-card h-100 p-4 rounded-4 shadow-sm" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;">
+              <div class="card-header mb-4">
+                <div class="icon-wrapper mb-3" style="width:60px;height:60px;background:linear-gradient(45deg,#1ec28b,#148255);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(30,194,139,0.3);">
+                  <i class="fas fa-trophy text-white" style="font-size:1.5rem;"></i>
+                </div>
+                <h4 class="card-title mb-3" style="color:#148255;font-weight:700;">Industry Leadership</h4>
+              </div>
+              <div class="card-content">
+                <ul class="development-list list-unstyled">
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Conference Speaking</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Team members present at industry conferences and events</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Publications</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Research papers and articles in industry journals</p>
+                    </div>
+                  </li>
+                  <li class="development-item d-flex align-items-start mb-3">
+                    <i class="fas fa-check-circle text-success me-3 mt-1" style="font-size:1.1rem;"></i>
+                    <div>
+                      <h6 class="item-title mb-1" style="color:#148255;font-weight:600;">Professional Networks</h6>
+                      <p class="item-desc mb-0" style="color:#666;font-size:0.9rem;">Active participation in industry associations and forums</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Training Stats -->
+        
+      </div>
+    </section>
+    <!-- ========================================== End Team Development & Training Section ================================================ -->
+
+
+
     <!-- ========================================== Start Appoiment Form Area ================================================ -->
     <section class="about-company-area section-padding pt-0">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-12">
+                <!-- <div class="col-xl-6 col-lg-12">
                     <div class="about-thumb">
                         <div class="img-hover-wrapper">
-                            <img src={% static "assets/images/about/about.jpg" %} alt="">
+                            <img src={% static "assets/images/about/1752898799508.jpg" %} alt="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-xl-6 col-lg-12">
-                    <div class="lets-discuss team-title home-three-title">
-                        <h6 class="sub-title"><span class=""></span>About Company</h6>
-                        <h2 class="title">We Assess Each Plan And Offer <span>Optimal Solutions</span>.</h2>
-                        <p class="text">Architects and engineers design and build the structure with that location in mind.</p>
-                        <div class="author-content d-flex">
-                            <div class="about-author d-flex align-items-center">
-                                <div class="author-img me-3">
-                                    <img src={% static "assets/images/user/user_img.png" %} alt="">
-                                </div>
-                                <div class="author-text">
-                                    <h3>DAS</h3>
-                                    <p>CEO & Founder</p>
-                                </div>
-                            </div>
-                            <div class="about-btn">
-                                <a href="{% url 'contact' %}" class="button-one">Contact us <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-xl-12 col-lg-12">
+                  <!-- This section will be moved to after the DAS & PARTNERS Excellence section -->
                 </div>
             </div>
         </div>
     </section>
     <!-- ========================================== End Appoiment Form Area ================================================ -->
 
-    <!-- ============================== Start Working Process Section Area ====================================================== -->
-    <section class="work-process-area pt-0 section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="work-process-title team-title">
-                        <h6 class="sub-title"><span class=""></span>Our process</h6>
-                        <h2 class="title">Our Working Plan.</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
-                    <div class="work-process-card">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="45" viewBox="0 0 49 45" fill="none"><g><path d="M46.1833 20.9363C46.3138 19.098 45.0062 17.415 43.1619 17.1697L42.2057 17.0156C41.7125 7.5555 33.9224 0 24.4174 0C14.9013 0 7.11343 7.5555 6.63032 17.0167L5.67413 17.1709C3.81754 17.4161 2.50989 19.0991 2.6527 20.9599C1.91743 21.2051 1.25803 21.6697 0.784957 22.3121C0.159027 23.1536 -0.104287 24.1954 0.0374115 25.2371C0.170184 26.2327 0.685656 27.1204 1.48899 27.7189C2.13723 28.2049 2.90486 28.4726 3.70819 28.4929C3.88337 29.3141 4.33412 30.0679 5.01584 30.5752C5.64177 31.0399 6.37704 31.3076 7.13575 31.3076C7.30199 31.3076 8.99234 31.0624 8.99234 31.0624C9.92844 30.9307 10.7519 30.4425 11.3231 29.6899C11.8944 28.9361 12.1354 27.9832 12.0026 27.054L11.0152 20.007C10.8824 19.0541 10.3982 18.2351 9.64281 17.6591C9.19094 17.3048 8.66431 17.1056 8.11537 16.9942C8.61745 8.3745 15.7269 1.50638 24.4174 1.50638C33.0968 1.50638 40.2163 8.3745 40.7106 16.9931C40.1728 17.1045 39.6462 17.3036 39.1831 17.658C38.4356 18.234 37.9547 19.053 37.8219 20.0059L36.8345 27.0529C36.7017 27.9832 36.9427 28.9361 37.514 29.6887C38.0428 30.3964 38.8105 30.8621 39.6674 31.0387C39.1296 34.6961 37.2841 37.9744 34.4044 40.2997C32.1317 42.1402 29.4383 43.2034 26.5942 43.4464C26.8799 43.0267 27.055 42.561 27.1097 42.0514C27.209 41.1874 26.968 40.3447 26.4302 39.681C25.9014 38.9936 25.1427 38.5965 24.2858 38.4851C23.44 38.3962 22.6044 38.6393 21.9349 39.1702C21.2666 39.7035 20.8482 40.4798 20.76 41.3415C20.5626 43.1156 21.8267 44.7109 23.584 44.8875C24.1854 44.9775 24.7801 45 25.3848 45C28.9875 45 32.4708 43.7816 35.3283 41.4765C38.5036 38.9059 40.5354 35.2935 41.129 31.2626H41.1937C41.3577 31.2851 41.5217 31.3076 41.6891 31.3076C42.4589 31.3076 43.1942 31.0399 43.809 30.5752C44.513 30.0442 44.9638 29.2916 45.1389 28.449C46.9732 28.3601 48.5542 26.9854 48.8198 25.0796C49.0842 23.1964 47.9183 21.4695 46.1833 20.9363ZM2.37712 26.5207C1.89289 26.1664 1.58494 25.6354 1.4968 25.0144C1.40866 24.372 1.57602 23.7307 1.9576 23.22C2.20083 22.9095 2.49762 22.644 2.83792 22.4899L3.46385 26.9662C3.08115 26.9201 2.70849 26.7649 2.37712 26.5207ZM9.55355 20.2061L10.5298 27.2531C10.6068 27.8066 10.4651 28.3376 10.1337 28.7798C9.80571 29.2241 9.32148 29.5121 8.78369 29.601L7.43142 29.7787C6.89363 29.8676 6.35584 29.7135 5.91513 29.3794C5.47664 29.0486 5.19101 28.5806 5.11403 28.0271L4.12437 20.9824C3.97151 19.8529 4.75253 18.7886 5.87273 18.6345L6.608 18.5231V24.327C6.608 24.7489 6.93603 25.0807 7.34327 25.0807C7.75052 25.0807 8.09082 24.75 8.09082 24.327V18.5231C8.32289 18.5884 8.55162 18.6998 8.75022 18.8539C9.18871 19.188 9.47434 19.6751 9.55355 20.2061ZM22.5932 42.7837C22.3076 42.4069 22.177 41.9647 22.2194 41.5001C22.2752 41.0355 22.5051 40.6361 22.8587 40.347C23.2214 40.059 23.671 39.9251 24.1318 39.9701C24.5814 40.0354 24.9887 40.2581 25.2754 40.6125C25.5611 40.9669 25.6916 41.4338 25.6381 41.8759C25.5934 42.3405 25.3636 42.7612 25.0121 43.0492C24.6473 43.3372 24.1976 43.4711 23.748 43.4261C23.2861 43.3597 22.8788 43.137 22.5932 42.7837ZM42.9209 29.3794C42.4801 29.7124 41.9424 29.8676 41.4046 29.7787L40.0411 29.6021C39.5033 29.5132 39.0303 29.2252 38.7022 28.7809C38.372 28.3387 38.218 27.8077 38.3062 27.2542L39.2824 20.2072C39.3616 19.6762 39.6473 19.188 40.0858 18.855C40.2833 18.7009 40.5131 18.5895 40.7452 18.5242V24.3281C40.7452 24.75 41.0732 25.0819 41.4927 25.0819C41.9 25.0819 42.228 24.7511 42.228 24.3281V18.5242L42.9521 18.6356C44.0723 18.7897 44.8645 19.854 44.7005 20.9835L43.722 28.0282C43.645 28.5806 43.3593 29.0475 42.9209 29.3794ZM47.3582 24.8591C47.2053 25.9436 46.3819 26.7649 45.3688 26.9415L45.997 22.4426C46.3596 22.599 46.6787 22.842 46.9197 23.175C47.2812 23.6621 47.434 24.2606 47.3582 24.8591Z" fill="#148255"></path><path d="M22.3065 30.8194C22.3511 31.1501 22.5921 31.3954 22.9123 31.4393C23.4077 31.5281 23.9109 31.5731 24.4174 31.5731C24.924 31.5731 25.4283 31.5281 25.9226 31.4393C26.2305 31.3965 26.4715 31.1512 26.5251 30.8194L26.9212 28.3376L28.944 29.8215C29.1961 29.9981 29.5465 29.9981 29.8098 29.8215C30.6355 29.2253 31.3372 28.5142 31.9319 27.6727C32.1183 27.4297 32.1183 27.0742 31.9319 26.8087L30.4603 24.7714L32.9305 24.372C33.2496 24.327 33.4906 24.0615 33.5475 23.7521C33.6245 23.2414 33.6669 22.7306 33.6669 22.2435C33.6669 21.7575 33.6245 21.2243 33.5475 20.7169C33.4917 20.4064 33.2507 20.1634 32.9305 20.1184L30.4603 19.719L31.9319 17.6816C32.1183 17.4161 32.1183 17.0595 31.9319 16.794C31.3495 15.975 30.6355 15.2651 29.8009 14.6677C29.5465 14.4686 29.195 14.4686 28.944 14.6677L26.9212 16.1291L26.5251 13.6474C26.4715 13.3391 26.2305 13.0939 25.9103 13.0275C24.9229 12.8734 23.9098 12.8734 22.9112 13.0275C22.5921 13.0928 22.3511 13.338 22.3053 13.6474L21.9115 16.1291L19.8886 14.6677C19.6253 14.4686 19.2739 14.4686 19.0206 14.6677C18.1972 15.264 17.4842 15.975 16.9007 16.794C16.7144 17.0595 16.7144 17.4161 16.9007 17.6816L18.3634 19.719L15.9021 20.1184C15.583 20.1634 15.342 20.4064 15.2851 20.7169C15.197 21.2254 15.1657 21.7361 15.1657 22.2435C15.1657 22.7317 15.197 23.265 15.2851 23.7521C15.3409 24.0604 15.5819 24.3259 15.9021 24.372L18.3634 24.7714L16.9007 26.8087C16.7144 27.0742 16.7144 27.4309 16.9007 27.6727C17.4831 28.4917 18.1972 29.2241 19.0117 29.8215C19.275 29.9981 19.6264 29.9981 19.8898 29.8215L21.9126 28.3376L22.3065 30.8194ZM21.3849 26.8762L19.4636 28.2712C19.0898 27.9607 18.7394 27.6064 18.4192 27.2295L19.8251 25.2787C19.9891 25.0582 20.0114 24.7702 19.8786 24.5047C19.7793 24.3056 19.6923 24.0829 19.6153 23.8601C19.5271 23.5946 19.2984 23.3955 19.0329 23.3516L16.682 22.9748C16.6619 22.7295 16.6396 22.4865 16.6396 22.2424C16.6396 21.9994 16.6619 21.7564 16.682 21.4886L19.0329 21.1117C19.2984 21.069 19.5283 20.8687 19.6153 20.6032C19.6923 20.4041 19.7793 20.1814 19.8898 19.9609C20.0114 19.7156 19.9891 19.4051 19.8251 19.1846L18.4192 17.2564C18.7383 16.857 19.0786 16.5263 19.4636 16.1921L21.396 17.6096C21.6169 17.766 21.9137 17.7885 22.1547 17.6782C22.3868 17.5669 22.5932 17.4555 22.803 17.4128C23.0663 17.3239 23.2638 17.0798 23.2983 16.8143L23.6833 14.4439C24.1787 14.3989 24.6595 14.3989 25.1549 14.4439L25.5287 16.8143C25.5733 17.0798 25.7608 17.325 26.0241 17.4128C26.2339 17.4555 26.4514 17.5669 26.6723 17.6782C26.9245 17.8099 27.2101 17.7671 27.4422 17.6096L29.3635 16.1921C29.7484 16.5026 30.0988 16.857 30.4078 17.2564L29.0132 19.1846C28.8492 19.4051 28.8268 19.7156 28.9485 19.9609C29.0589 20.2039 29.1459 20.403 29.2229 20.6257C29.3111 20.8912 29.5286 21.0679 29.8053 21.1117L32.154 21.4886C32.1763 21.7564 32.1874 21.9994 32.1874 22.2424C32.1874 22.4876 32.1763 22.7306 32.154 22.9748L29.8053 23.3516C29.5286 23.3944 29.31 23.5946 29.2229 23.8601C29.1459 24.0592 29.0589 24.282 28.9485 24.5047C28.8268 24.7702 28.8492 25.0582 29.0132 25.2787L30.4078 27.2295C30.0999 27.6064 29.7484 27.9596 29.3635 28.2712L27.4422 26.8762C27.2101 26.6974 26.9245 26.6771 26.6723 26.8076C26.4626 26.919 26.245 27.0068 26.0241 27.0731C25.7608 27.162 25.5745 27.3836 25.5287 27.6716L25.1549 30.042C24.6707 30.087 24.1675 30.087 23.6833 30.042L23.2983 27.6716C23.2649 27.3836 23.0663 27.1609 22.803 27.0731C22.5843 27.0079 22.3645 26.919 22.1659 26.8076C21.9126 26.6771 21.627 26.6974 21.3849 26.8762Z" fill="#148255"></path><path d="M24.4174 25.2135C26.0442 25.2135 27.3719 23.8837 27.3719 22.2435C27.3719 20.583 26.0442 19.2533 24.4174 19.2533C22.7795 19.2533 21.4518 20.583 21.4518 22.2435C21.4518 23.8837 22.7795 25.2135 24.4174 25.2135ZM24.4174 20.7371C25.2297 20.7371 25.8891 21.402 25.8891 22.2435C25.8891 23.0647 25.2297 23.7296 24.4174 23.7296C23.594 23.7296 22.9346 23.0647 22.9346 22.2435C22.9346 21.402 23.594 20.7371 24.4174 20.7371Z" fill="#148255"></path></g></svg>
-                        </div>
-                        <h3 class="title">Client Needs</h3>
-                        <!-- <p class="text">Portitor aptent sociosqu per etiam inceptos posuere lobortis.</p> -->
-                        <div class="work-process-count"><h1>01</h1></div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
-                    <div class="work-process-card">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.0623 4.31324V11.5006C33.0623 13.8818 34.9929 15.813 37.3749 15.813H44.5625V39.5314C44.5625 42.31 42.3099 44.5625 39.5312 44.5625H20.8434C18.0647 44.5625 15.8121 42.31 15.8121 39.5314V25.8754C15.8121 25.4786 15.4901 25.1566 15.0933 25.1566C14.6966 25.1566 14.3746 25.4786 14.3746 25.8754V39.5314C14.3746 43.1035 17.2712 46 20.8434 46H39.5312C43.1034 46 46 43.1035 46 39.5314V15.0943C46 14.9038 45.9245 14.7206 45.7894 14.5862L34.2893 3.08636C34.1548 2.95124 33.9716 2.87577 33.7811 2.87577H28.031C27.6343 2.87577 27.3123 3.19776 27.3123 3.59451C27.3123 3.99125 27.6343 4.31324 28.031 4.31324H33.0623ZM38.0936 40.2501H40.2499C40.6467 40.2501 40.9687 39.9281 40.9687 39.5314C40.9687 39.1346 40.6467 38.8126 40.2499 38.8126H38.0936C37.6969 38.8126 37.3749 39.1346 37.3749 39.5314C37.3749 39.9281 37.6969 40.2501 38.0936 40.2501ZM35.2186 38.8126H25.8747C25.478 38.8126 25.156 39.1346 25.156 39.5314C25.156 39.9281 25.478 40.2501 25.8747 40.2501H35.2186C35.6154 40.2501 35.9374 39.9281 35.9374 39.5314C35.9374 39.1346 35.6154 38.8126 35.2186 38.8126ZM22.9997 38.8126H20.8434C20.4467 38.8126 20.1247 39.1346 20.1247 39.5314C20.1247 39.9281 20.4467 40.2501 20.8434 40.2501H22.9997C23.3965 40.2501 23.7185 39.9281 23.7185 39.5314C23.7185 39.1346 23.3965 38.8126 22.9997 38.8126ZM8.7007 20.9031L7.61969 23.0234C6.51855 23.1787 5.50006 23.8291 4.90134 24.8785L0.558592 32.4906C-0.625204 34.5663 0.138118 37.2285 2.22899 38.3354C4.33136 39.4473 6.92033 38.5503 7.91078 36.3581L11.524 28.36C12.0206 27.2604 11.956 26.0392 11.4456 25.0366L12.5231 22.9221C17.7082 24.5054 23.4317 22.1717 26.0185 17.096C28.9402 11.3626 26.7437 4.30174 21.118 1.3233C15.4815 -1.6609 8.53682 0.571499 5.60931 6.31708C3.02394 11.3885 4.44421 17.4992 8.7007 20.9031ZM2.90175 37.0647C1.52101 36.3344 1.02579 34.5735 1.8078 33.2036L6.14982 25.5915C6.76436 24.5141 8.0991 24.1137 9.18442 24.6887C10.2798 25.2687 10.7305 26.625 10.2144 27.7678L6.6012 35.7659C5.95576 37.1948 4.2717 37.7899 2.90175 37.0647ZM34.4998 35.2189H32.3436C31.9468 35.2189 31.6248 35.5409 31.6248 35.9377C31.6248 36.3344 31.9468 36.6564 32.3436 36.6564H34.4998C34.8966 36.6564 35.2186 36.3344 35.2186 35.9377C35.2186 35.5409 34.8966 35.2189 34.4998 35.2189ZM23.7185 35.2189H20.8434C20.4467 35.2189 20.1247 35.5409 20.1247 35.9377C20.1247 36.3344 20.4467 36.6564 20.8434 36.6564H23.7185C24.1152 36.6564 24.4372 36.3344 24.4372 35.9377C24.4372 35.5409 24.1152 35.2189 23.7185 35.2189ZM29.4685 35.2189H26.5935C26.1967 35.2189 25.8747 35.5409 25.8747 35.9377C25.8747 36.3344 26.1967 36.6564 26.5935 36.6564H29.4685C29.8653 36.6564 30.1873 36.3344 30.1873 35.9377C30.1873 35.5409 29.8653 35.2189 29.4685 35.2189ZM37.3749 36.6564H40.2499C40.6467 36.6564 40.9687 36.3344 40.9687 35.9377C40.9687 35.5409 40.6467 35.2189 40.2499 35.2189H37.3749C36.9781 35.2189 36.6561 35.5409 36.6561 35.9377C36.6561 36.3344 36.9781 36.6564 37.3749 36.6564ZM22.9997 31.6253H20.8434C20.4467 31.6253 20.1247 31.9473 20.1247 32.344C20.1247 32.7407 20.4467 33.0627 20.8434 33.0627H22.9997C23.3965 33.0627 23.7185 32.7407 23.7185 32.344C23.7185 31.9473 23.3965 31.6253 22.9997 31.6253ZM37.3749 33.0627H40.2499C40.6467 33.0627 40.9687 32.7407 40.9687 32.344C40.9687 31.9473 40.6467 31.6253 40.2499 31.6253H37.3749C36.9781 31.6253 36.6561 31.9473 36.6561 32.344C36.6561 32.7407 36.9781 33.0627 37.3749 33.0627ZM34.4998 31.6253H25.8747C25.478 31.6253 25.156 31.9473 25.156 32.344C25.156 32.7407 25.478 33.0627 25.8747 33.0627H34.4998C34.8966 33.0627 35.2186 32.7407 35.2186 32.344C35.2186 31.9473 34.8966 31.6253 34.4998 31.6253ZM23.7185 28.0316H20.8434C20.4467 28.0316 20.1247 28.3536 20.1247 28.7503C20.1247 29.1471 20.4467 29.469 20.8434 29.469H23.7185C24.1152 29.469 24.4372 29.1471 24.4372 28.7503C24.4372 28.3536 24.1152 28.0316 23.7185 28.0316ZM31.6248 28.0316H26.5935C26.1967 28.0316 25.8747 28.3536 25.8747 28.7503C25.8747 29.1471 26.1967 29.469 26.5935 29.469H31.6248C32.0216 29.469 32.3436 29.1471 32.3436 28.7503C32.3436 28.3536 32.0216 28.0316 31.6248 28.0316ZM40.2499 28.0316H34.4998C34.1031 28.0316 33.7811 28.3536 33.7811 28.7503C33.7811 29.1471 34.1031 29.469 34.4998 29.469H40.2499C40.6467 29.469 40.9687 29.1471 40.9687 28.7503C40.9687 28.3536 40.6467 28.0316 40.2499 28.0316ZM29.4685 24.4379H27.3123C26.9155 24.4379 26.5935 24.7599 26.5935 25.1566C26.5935 25.5534 26.9155 25.8754 27.3123 25.8754H29.4685C29.8653 25.8754 30.1873 25.5534 30.1873 25.1566C30.1873 24.7599 29.8653 24.4379 29.4685 24.4379ZM24.4372 24.4379H20.8434C20.4467 24.4379 20.1247 24.7599 20.1247 25.1566C20.1247 25.5534 20.4467 25.8754 20.8434 25.8754H24.4372C24.834 25.8754 25.156 25.5534 25.156 25.1566C25.156 24.7599 24.834 24.4379 24.4372 24.4379ZM40.2499 24.4379H32.3436C31.9468 24.4379 31.6248 24.7599 31.6248 25.1566C31.6248 25.5534 31.9468 25.8754 32.3436 25.8754H40.2499C40.6467 25.8754 40.9687 25.5534 40.9687 25.1566C40.9687 24.7599 40.6467 24.4379 40.2499 24.4379ZM9.88809 21.7362C9.88521 21.7419 9.88234 21.7491 9.87947 21.7556L9.20742 23.0737L10.4868 23.7515L11.1589 22.4326C11.1617 22.4261 11.1646 22.419 11.1675 22.4118C10.9461 22.3119 10.7269 22.2048 10.5091 22.0891C10.2978 21.9776 10.0908 21.8598 9.88809 21.7362ZM33.0623 20.8442H30.9061C30.5093 20.8442 30.1873 21.1662 30.1873 21.5629C30.1873 21.9597 30.5093 22.2817 30.9061 22.2817H33.0623C33.4591 22.2817 33.7811 21.9597 33.7811 21.5629C33.7811 21.1662 33.4591 20.8442 33.0623 20.8442ZM28.031 20.8442H25.156C24.7592 20.8442 24.4372 21.1662 24.4372 21.5629C24.4372 21.9597 24.7592 22.2817 25.156 22.2817H28.031C28.4278 22.2817 28.7498 21.9597 28.7498 21.5629C28.7498 21.1662 28.4278 20.8442 28.031 20.8442ZM40.2499 20.8442H35.9374C35.5406 20.8442 35.2186 21.1662 35.2186 21.5629C35.2186 21.9597 35.5406 22.2817 35.9374 22.2817H40.2499C40.6467 22.2817 40.9687 21.9597 40.9687 21.5629C40.9687 21.1662 40.6467 20.8442 40.2499 20.8442ZM11.2695 20.865L11.0949 20.7723C6.22026 18.131 4.33927 11.9728 6.89014 6.9697C9.44965 1.94644 15.5174 -0.0157098 20.4452 2.59331C25.3838 5.20807 27.3029 11.4101 24.7377 16.4434C22.1932 21.4357 16.1808 23.4036 11.2695 20.865ZM11.8338 19.4894C16.0558 21.7247 21.2754 20.0478 23.4676 15.7455C25.6548 11.4539 24.0038 6.15105 19.7933 3.92297C15.572 1.6877 10.3524 3.36451 8.15947 7.66615C5.97157 11.9585 7.62328 17.2606 11.8338 19.4894ZM12.5065 18.2194C8.98173 16.3528 7.6089 11.9117 9.4403 8.31948C11.266 4.73802 15.6073 3.33289 19.1206 5.19298C22.6446 7.05882 24.0175 11.5006 22.1868 15.0929C20.3619 18.6743 16.0205 20.0795 12.5065 18.2194ZM40.2499 17.2505H35.9374C35.5406 17.2505 35.2186 17.5725 35.2186 17.9692C35.2186 18.366 35.5406 18.688 35.9374 18.688H40.2499C40.6467 18.688 40.9687 18.366 40.9687 17.9692C40.9687 17.5725 40.6467 17.2505 40.2499 17.2505ZM33.0623 17.2505H28.031C27.6343 17.2505 27.3123 17.5725 27.3123 17.9692C27.3123 18.366 27.6343 18.688 28.031 18.688H33.0623C33.4591 18.688 33.7811 18.366 33.7811 17.9692C33.7811 17.5725 33.4591 17.2505 33.0623 17.2505ZM30.9061 13.6568H29.4685C29.0718 13.6568 28.7498 13.9788 28.7498 14.3756C28.7498 14.7723 29.0718 15.0943 29.4685 15.0943H30.9061C31.3028 15.0943 31.6248 14.7723 31.6248 14.3756C31.6248 13.9788 31.3028 13.6568 30.9061 13.6568ZM20.7212 11.901C20.8844 11.6587 20.8844 11.3425 20.7212 11.1003C20.7212 11.1003 19.9651 9.97114 18.7986 9.06913C17.9641 8.4237 16.9262 7.90693 15.8121 7.90693C14.698 7.90693 13.6601 8.4237 12.8257 9.06913C11.6591 9.97114 10.903 11.1003 10.903 11.1003C10.7398 11.3425 10.7398 11.6587 10.903 11.901C10.903 11.901 11.6591 13.0301 12.8257 13.9321C13.6601 14.5775 14.698 15.0943 15.8121 15.0943C16.9262 15.0943 17.9641 14.5775 18.7986 13.9321C19.9651 13.0301 20.7212 11.901 20.7212 11.901ZM43.5462 14.3756L34.4998 5.33026V11.5006C34.4998 13.0883 35.7871 14.3756 37.3749 14.3756H43.5462ZM19.2255 11.5006C18.9473 11.8442 18.4924 12.3523 17.9195 12.7951C17.3265 13.2536 16.6035 13.6568 15.8121 13.6568C15.0208 13.6568 14.2977 13.2536 13.7047 12.7951C13.1319 12.3516 12.6769 11.8442 12.3987 11.5006C12.6769 11.1571 13.1319 10.6489 13.7047 10.2062C14.2977 9.74762 15.0208 9.3444 15.8121 9.3444C16.6035 9.3444 17.3265 9.74762 17.9195 10.2062C18.4924 10.6496 18.9473 11.1571 19.2255 11.5006ZM16.5309 11.5006C16.5309 11.8974 16.2089 12.2194 15.8121 12.2194C15.4153 12.2194 15.0933 11.8974 15.0933 11.5006C15.0933 11.1039 15.4153 10.7819 15.8121 10.7819C16.2089 10.7819 16.5309 11.1039 16.5309 11.5006ZM30.9061 10.0631H30.1873C29.7905 10.0631 29.4685 10.3851 29.4685 10.7819C29.4685 11.1786 29.7905 11.5006 30.1873 11.5006H30.9061C31.3028 11.5006 31.6248 11.1786 31.6248 10.7819C31.6248 10.3851 31.3028 10.0631 30.9061 10.0631Z" fill="#148255"></path></svg>
-                        </div>
-                        <h3 class="title">Planning Design </h3>
-                        <!-- <p class="text">Portitor aptent sociosqu per etiam inceptos posuere lobortis.</p> -->
-                        <div class="work-process-count"><h1>02</h1></div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
-                    <div class="work-process-card">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M33.0623 4.31324V11.5006C33.0623 13.8818 34.9929 15.813 37.3749 15.813H44.5625V39.5314C44.5625 42.31 42.3099 44.5625 39.5312 44.5625H20.8434C18.0647 44.5625 15.8121 42.31 15.8121 39.5314V25.8754C15.8121 25.4786 15.4901 25.1566 15.0933 25.1566C14.6966 25.1566 14.3746 25.4786 14.3746 25.8754V39.5314C14.3746 43.1035 17.2712 46 20.8434 46H39.5312C43.1034 46 46 43.1035 46 39.5314V15.0943C46 14.9038 45.9245 14.7206 45.7894 14.5862L34.2893 3.08636C34.1548 2.95124 33.9716 2.87577 33.7811 2.87577H28.031C27.6343 2.87577 27.3123 3.19776 27.3123 3.59451C27.3123 3.99125 27.6343 4.31324 28.031 4.31324H33.0623ZM38.0936 40.2501H40.2499C40.6467 40.2501 40.9687 39.9281 40.9687 39.5314C40.9687 39.1346 40.6467 38.8126 40.2499 38.8126H38.0936C37.6969 38.8126 37.3749 39.1346 37.3749 39.5314C37.3749 39.9281 37.6969 40.2501 38.0936 40.2501ZM35.2186 38.8126H25.8747C25.478 38.8126 25.156 39.1346 25.156 39.5314C25.156 39.9281 25.478 40.2501 25.8747 40.2501H35.2186C35.6154 40.2501 35.9374 39.9281 35.9374 39.5314C35.9374 39.1346 35.6154 38.8126 35.2186 38.8126ZM22.9997 38.8126H20.8434C20.4467 38.8126 20.1247 39.1346 20.1247 39.5314C20.1247 39.9281 20.4467 40.2501 20.8434 40.2501H22.9997C23.3965 40.2501 23.7185 39.9281 23.7185 39.5314C23.7185 39.1346 23.3965 38.8126 22.9997 38.8126ZM8.7007 20.9031L7.61969 23.0234C6.51855 23.1787 5.50006 23.8291 4.90134 24.8785L0.558592 32.4906C-0.625204 34.5663 0.138118 37.2285 2.22899 38.3354C4.33136 39.4473 6.92033 38.5503 7.91078 36.3581L11.524 28.36C12.0206 27.2604 11.956 26.0392 11.4456 25.0366L12.5231 22.9221C17.7082 24.5054 23.4317 22.1717 26.0185 17.096C28.9402 11.3626 26.7437 4.30174 21.118 1.3233C15.4815 -1.6609 8.53682 0.571499 5.60931 6.31708C3.02394 11.3885 4.44421 17.4992 8.7007 20.9031ZM2.90175 37.0647C1.52101 36.3344 1.02579 34.5735 1.8078 33.2036L6.14982 25.5915C6.76436 24.5141 8.0991 24.1137 9.18442 24.6887C10.2798 25.2687 10.7305 26.625 10.2144 27.7678L6.6012 35.7659C5.95576 37.1948 4.2717 37.7899 2.90175 37.0647ZM34.4998 35.2189H32.3436C31.9468 35.2189 31.6248 35.5409 31.6248 35.9377C31.6248 36.3344 31.9468 36.6564 32.3436 36.6564H34.4998C34.8966 36.6564 35.2186 36.3344 35.2186 35.9377C35.2186 35.5409 34.8966 35.2189 34.4998 35.2189ZM23.7185 35.2189H20.8434C20.4467 35.2189 20.1247 35.5409 20.1247 35.9377C20.1247 36.3344 20.4467 36.6564 20.8434 36.6564H23.7185C24.1152 36.6564 24.4372 36.3344 24.4372 35.9377C24.4372 35.5409 24.1152 35.2189 23.7185 35.2189ZM29.4685 35.2189H26.5935C26.1967 35.2189 25.8747 35.5409 25.8747 35.9377C25.8747 36.3344 26.1967 36.6564 26.5935 36.6564H29.4685C29.8653 36.6564 30.1873 36.3344 30.1873 35.9377C30.1873 35.5409 29.8653 35.2189 29.4685 35.2189ZM37.3749 36.6564H40.2499C40.6467 36.6564 40.9687 36.3344 40.9687 35.9377C40.9687 35.5409 40.6467 35.2189 40.2499 35.2189H37.3749C36.9781 35.2189 36.6561 35.5409 36.6561 35.9377C36.6561 36.3344 36.9781 36.6564 37.3749 36.6564ZM22.9997 31.6253H20.8434C20.4467 31.6253 20.1247 31.9473 20.1247 32.344C20.1247 32.7407 20.4467 33.0627 20.8434 33.0627H22.9997C23.3965 33.0627 23.7185 32.7407 23.7185 32.344C23.7185 31.9473 23.3965 31.6253 22.9997 31.6253ZM37.3749 33.0627H40.2499C40.6467 33.0627 40.9687 32.7407 40.9687 32.344C40.9687 31.9473 40.6467 31.6253 40.2499 31.6253H37.3749C36.9781 31.6253 36.6561 31.9473 36.6561 32.344C36.6561 32.7407 36.9781 33.0627 37.3749 33.0627ZM34.4998 31.6253H25.8747C25.478 31.6253 25.156 31.9473 25.156 32.344C25.156 32.7407 25.478 33.0627 25.8747 33.0627H34.4998C34.8966 33.0627 35.2186 32.7407 35.2186 32.344C35.2186 31.9473 34.8966 31.6253 34.4998 31.6253ZM23.7185 28.0316H20.8434C20.4467 28.0316 20.1247 28.3536 20.1247 28.7503C20.1247 29.1471 20.4467 29.469 20.8434 29.469H23.7185C24.1152 29.469 24.4372 29.1471 24.4372 28.7503C24.4372 28.3536 24.1152 28.0316 23.7185 28.0316ZM31.6248 28.0316H26.5935C26.1967 28.0316 25.8747 28.3536 25.8747 28.7503C25.8747 29.1471 26.1967 29.469 26.5935 29.469H31.6248C32.0216 29.469 32.3436 29.1471 32.3436 28.7503C32.3436 28.3536 32.0216 28.0316 31.6248 28.0316ZM40.2499 28.0316H34.4998C34.1031 28.0316 33.7811 28.3536 33.7811 28.7503C33.7811 29.1471 34.1031 29.469 34.4998 29.469H40.2499C40.6467 29.469 40.9687 29.1471 40.9687 28.7503C40.9687 28.3536 40.6467 28.0316 40.2499 28.0316ZM29.4685 24.4379H27.3123C26.9155 24.4379 26.5935 24.7599 26.5935 25.1566C26.5935 25.5534 26.9155 25.8754 27.3123 25.8754H29.4685C29.8653 25.8754 30.1873 25.5534 30.1873 25.1566C30.1873 24.7599 29.8653 24.4379 29.4685 24.4379ZM24.4372 24.4379H20.8434C20.4467 24.4379 20.1247 24.7599 20.1247 25.1566C20.1247 25.5534 20.4467 25.8754 20.8434 25.8754H24.4372C24.834 25.8754 25.156 25.5534 25.156 25.1566C25.156 24.7599 24.834 24.4379 24.4372 24.4379ZM40.2499 24.4379H32.3436C31.9468 24.4379 31.6248 24.7599 31.6248 25.1566C31.6248 25.5534 31.9468 25.8754 32.3436 25.8754H40.2499C40.6467 25.8754 40.9687 25.5534 40.9687 25.1566C40.9687 24.7599 40.6467 24.4379 40.2499 24.4379ZM9.88809 21.7362C9.88521 21.7419 9.88234 21.7491 9.87947 21.7556L9.20742 23.0737L10.4868 23.7515L11.1589 22.4326C11.1617 22.4261 11.1646 22.419 11.1675 22.4118C10.9461 22.3119 10.7269 22.2048 10.5091 22.0891C10.2978 21.9776 10.0908 21.8598 9.88809 21.7362ZM33.0623 20.8442H30.9061C30.5093 20.8442 30.1873 21.1662 30.1873 21.5629C30.1873 21.9597 30.5093 22.2817 30.9061 22.2817H33.0623C33.4591 22.2817 33.7811 21.9597 33.7811 21.5629C33.7811 21.1662 33.4591 20.8442 33.0623 20.8442ZM28.031 20.8442H25.156C24.7592 20.8442 24.4372 21.1662 24.4372 21.5629C24.4372 21.9597 24.7592 22.2817 25.156 22.2817H28.031C28.4278 22.2817 28.7498 21.9597 28.7498 21.5629C28.7498 21.1662 28.4278 20.8442 28.031 20.8442ZM40.2499 20.8442H35.9374C35.5406 20.8442 35.2186 21.1662 35.2186 21.5629C35.2186 21.9597 35.5406 22.2817 35.9374 22.2817H40.2499C40.6467 22.2817 40.9687 21.9597 40.9687 21.5629C40.9687 21.1662 40.6467 20.8442 40.2499 20.8442ZM11.2695 20.865L11.0949 20.7723C6.22026 18.131 4.33927 11.9728 6.89014 6.9697C9.44965 1.94644 15.5174 -0.0157098 20.4452 2.59331C25.3838 5.20807 27.3029 11.4101 24.7377 16.4434C22.1932 21.4357 16.1808 23.4036 11.2695 20.865ZM11.8338 19.4894C16.0558 21.7247 21.2754 20.0478 23.4676 15.7455C25.6548 11.4539 24.0038 6.15105 19.7933 3.92297C15.572 1.6877 10.3524 3.36451 8.15947 7.66615C5.97157 11.9585 7.62328 17.2606 11.8338 19.4894ZM12.5065 18.2194C8.98173 16.3528 7.6089 11.9117 9.4403 8.31948C11.266 4.73802 15.6073 3.33289 19.1206 5.19298C22.6446 7.05882 24.0175 11.5006 22.1868 15.0929C20.3619 18.6743 16.0205 20.0795 12.5065 18.2194ZM40.2499 17.2505H35.9374C35.5406 17.2505 35.2186 17.5725 35.2186 17.9692C35.2186 18.366 35.5406 18.688 35.9374 18.688H40.2499C40.6467 18.688 40.9687 18.366 40.9687 17.9692C40.9687 17.5725 40.6467 17.2505 40.2499 17.2505ZM33.0623 17.2505H28.031C27.6343 17.2505 27.3123 17.5725 27.3123 17.9692C27.3123 18.366 27.6343 18.688 28.031 18.688H33.0623C33.4591 18.688 33.7811 18.366 33.7811 17.9692C33.7811 17.5725 33.4591 17.2505 33.0623 17.2505ZM30.9061 13.6568H29.4685C29.0718 13.6568 28.7498 13.9788 28.7498 14.3756C28.7498 14.7723 29.0718 15.0943 29.4685 15.0943H30.9061C31.3028 15.0943 31.6248 14.7723 31.6248 14.3756C31.6248 13.9788 31.3028 13.6568 30.9061 13.6568ZM20.7212 11.901C20.8844 11.6587 20.8844 11.3425 20.7212 11.1003C20.7212 11.1003 19.9651 9.97114 18.7986 9.06913C17.9641 8.4237 16.9262 7.90693 15.8121 7.90693C14.698 7.90693 13.6601 8.4237 12.8257 9.06913C11.6591 9.97114 10.903 11.1003 10.903 11.1003C10.7398 11.3425 10.7398 11.6587 10.903 11.901C10.903 11.901 11.6591 13.0301 12.8257 13.9321C13.6601 14.5775 14.698 15.0943 15.8121 15.0943C16.9262 15.0943 17.9641 14.5775 18.7986 13.9321C19.9651 13.0301 20.7212 11.901 20.7212 11.901ZM43.5462 14.3756L34.4998 5.33026V11.5006C34.4998 13.0883 35.7871 14.3756 37.3749 14.3756H43.5462ZM19.2255 11.5006C18.9473 11.8442 18.4924 12.3523 17.9195 12.7951C17.3265 13.2536 16.6035 13.6568 15.8121 13.6568C15.0208 13.6568 14.2977 13.2536 13.7047 12.7951C13.1319 12.3516 12.6769 11.8442 12.3987 11.5006C12.6769 11.1571 13.1319 10.6489 13.7047 10.2062C14.2977 9.74762 15.0208 9.3444 15.8121 9.3444C16.6035 9.3444 17.3265 9.74762 17.9195 10.2062C18.4924 10.6496 18.9473 11.1571 19.2255 11.5006ZM16.5309 11.5006C16.5309 11.8974 16.2089 12.2194 15.8121 12.2194C15.4153 12.2194 15.0933 11.8974 15.0933 11.5006C15.0933 11.1039 15.4153 10.7819 15.8121 10.7819C16.2089 10.7819 16.5309 11.1039 16.5309 11.5006ZM30.9061 10.0631H30.1873C29.7905 10.0631 29.4685 10.3851 29.4685 10.7819C29.4685 11.1786 29.7905 11.5006 30.1873 11.5006H30.9061C31.3028 11.5006 31.6248 11.1786 31.6248 10.7819C31.6248 10.3851 31.3028 10.0631 30.9061 10.0631Z" fill="#148255"></path></svg>
-                        </div>
-                        <h3 class="title">Architect Sketch</h3>
-                        <!-- <p class="text">Portitor aptent sociosqu per etiam inceptos posuere lobortis.</p> -->
-                        <div class="work-process-count"><h1>03</h1></div>
-                    </div>
-                </div>
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6">
-                    <div class="work-process-card">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none"><g><path d="M10.0862 19.3966H28.7069C29.1357 19.3966 29.4828 19.0495 29.4828 18.6207C29.4828 18.1918 29.1357 17.8448 28.7069 17.8448H10.0862C9.65736 17.8448 9.31034 18.1918 9.31034 18.6207C9.31034 19.0495 9.65736 19.3966 10.0862 19.3966Z" fill="#148255"></path><path d="M10.0862 23.2759H25.6034C26.0323 23.2759 26.3793 22.9288 26.3793 22.5C26.3793 22.0712 26.0323 21.7241 25.6034 21.7241H10.0862C9.65736 21.7241 9.31034 22.0712 9.31034 22.5C9.31034 22.9288 9.65736 23.2759 10.0862 23.2759Z" fill="#148255"></path><path d="M10.0862 15.5172H21.7241C22.153 15.5172 22.5 15.1702 22.5 14.7414C22.5 14.3125 22.153 13.9655 21.7241 13.9655H10.0862C9.65736 13.9655 9.31034 14.3125 9.31034 14.7414C9.31034 15.1702 9.65736 15.5172 10.0862 15.5172Z" fill="#148255"></path><path d="M10.0862 34.9138H19.3966C19.8254 34.9138 20.1724 34.5668 20.1724 34.1379C20.1724 33.7091 19.8254 33.3621 19.3966 33.3621H10.0862C9.65736 33.3621 9.31034 33.7091 9.31034 34.1379C9.31034 34.5668 9.65736 34.9138 10.0862 34.9138Z" fill="#148255"></path><path d="M10.0862 31.0345H20.1724C20.6013 31.0345 20.9483 30.6875 20.9483 30.2586C20.9483 29.8298 20.6013 29.4828 20.1724 29.4828H10.0862C9.65736 29.4828 9.31034 29.8298 9.31034 30.2586C9.31034 30.6875 9.65736 31.0345 10.0862 31.0345Z" fill="#148255"></path><path d="M10.0862 27.1552H22.5C22.9288 27.1552 23.2759 26.8082 23.2759 26.3793C23.2759 25.9505 22.9288 25.6034 22.5 25.6034H10.0862C9.65736 25.6034 9.31034 25.9505 9.31034 26.3793C9.31034 26.8082 9.65736 27.1552 10.0862 27.1552Z" fill="#148255"></path><path d="M34.1379 23.2759V8.53448C34.1379 8.43077 34.1169 8.32958 34.0777 8.23586C34.0382 8.14129 33.9811 8.0561 33.9096 7.98492L26.153 0.22829C26.0818 0.156833 25.9966 0.099675 25.9021 0.0601836C25.8084 0.0210724 25.7072 0 25.6034 0H6.98276C5.69925 0 4.65517 1.04408 4.65517 2.32759V4.65517H2.32759C1.04408 4.65517 0 5.69925 0 6.98276V42.6724C0 43.9559 1.04408 45 2.32759 45H27.1552C28.0306 45 28.7855 44.5085 29.1829 43.7924C30.6705 44.559 32.3523 45 34.1379 45C40.1274 45 45 40.1274 45 34.1379C45 28.1485 40.1274 23.2759 34.1379 23.2759ZM26.3793 2.64884L31.4891 7.75862H26.3793V2.64884ZM6.2069 2.32759C6.2069 1.8995 6.55467 1.55172 6.98276 1.55172H24.8276V8.53448C24.8276 8.96333 25.1746 9.31034 25.6034 9.31034H32.5862V23.3998C27.3311 24.1568 23.2759 28.6766 23.2759 34.1379C23.2759 35.8053 23.6646 37.3798 24.3388 38.7931H6.98276C6.55467 38.7931 6.2069 38.4453 6.2069 38.0172V2.32759ZM27.1552 43.4483H2.32759C1.8995 43.4483 1.55172 43.1005 1.55172 42.6724V6.98276C1.55172 6.55467 1.8995 6.2069 2.32759 6.2069H4.65517V38.0172C4.65517 39.3008 5.69925 40.3448 6.98276 40.3448H25.2367C25.9534 41.3696 26.8427 42.2623 27.8614 42.987C27.7402 43.2578 27.4707 43.4483 27.1552 43.4483ZM34.1379 43.4483C29.0039 43.4483 24.8276 39.272 24.8276 34.1379C24.8276 29.0039 29.0039 24.8276 34.1379 24.8276C39.272 24.8276 43.4483 29.0039 43.4483 34.1379C43.4483 39.272 39.272 43.4483 34.1379 43.4483Z" fill="#148255"></path><path d="M39.0204 29.7101L32.6506 36.0799L30.0889 32.8772C29.8207 32.5423 29.3327 32.4877 28.9978 32.7559C28.6637 33.0241 28.6092 33.5121 28.8766 33.847L31.9801 37.7263C32.118 37.8983 32.3233 38.0036 32.543 38.0157C32.7617 38.0278 32.9803 37.9452 33.1348 37.7899L40.1175 30.8072C40.4206 30.5041 40.4206 30.0131 40.1175 29.7101C39.8144 29.407 39.3235 29.407 39.0204 29.7101Z" fill="#148255"></path></g></svg>
-                        </div>
-                        <h3 class="title">Start Bulding</h3>
-                        <!-- <p class="text">Portitor aptent sociosqu per etiam inceptos posuere lobortis.</p> -->
-                        <div class="work-process-count"><h1>04</h1></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
 
     
-  <section class="home-one about-us-area pb-5 pt-5 section-padding">
-    <div class="container">
-        <div class="row about-card-box">
-            <div class="col-xl-7 col-lg-12 col-auto">
-                <div class="about-content">
-                    <h6 class="sub-title"><span class=""></span>Why Choose Us
-                    </h6>
-                    <h2 class="title">Reason for people choosing Das And Partners (DAP) Engineering Consultancy.</h2>
-                    <div class="about-list-wrap">
-                        <ul>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Modern Technology</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Financial Consulting</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Awards winner</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Tiling & Painiting</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Expert Engineer</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Best Quality</li>
-                        </ul>
-                    </div>
-                    <div class="about-btn">
-                        <a href="{% url 'contact' %}" class="button-one"> Contact Us <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-5 col-lg-12 col-auto">
-                <div class="about-img">
-                    <div class="img-hover-wrapper">
-                        <img src={% static "assets/images/about/reason.jpg" %} alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Why Choose Us: Ultra-Modern Animated Section -->
+<section class="why-choose-animated-section position-relative py-5" style="background:linear-gradient(120deg,#f8f9fa 60%,#e6f2ec 100%);overflow:hidden;">
+  <!-- Animated Background Elements -->
+  <div class="why-choose-bg-pattern"></div>
+  <div class="why-choose-particles">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+  </div>
+  <div class="why-choose-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="leadership-heading-icon mb-2" style="font-size:2.5rem;">
+        <!-- Star/Badge SVG Icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="#148255" fill-opacity="0.12"/><path d="M24 12L26.4721 19.5279L34 22L26.4721 24.4721L24 32L21.5279 24.4721L14 22L21.5279 19.5279L24 12Z" fill="#148255"/></svg>
+      </div>
+      <h2 class="section-title mb-2 leadership-gradient-text" style="font-weight:900;letter-spacing:2px;font-size:2.3rem;line-height:1.1;display:inline-block;">Why Choose Us <span class="leadership-underline"></span></h2>
+      <p class="section-description mb-0 animate__animated animate__fadeInUp" style="color:#3a5d4c;font-size:1.18rem;max-width:650px;margin:0 auto 0.5rem auto;letter-spacing:0.2px;">Experience the Das & Partners difference: innovation, expertise, and a passion for excellence in every project.</p>
+      <div class="why-choose-decoration"><div class="decoration-dot"></div></div>
     </div>
+    <div class="row g-4 justify-content-center align-items-stretch">
+      <!-- Feature Card 1 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/w5.jpg' %}" alt="Expert Team" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-users"></i>
+                <h5>75+ Skilled Engineers & Experts</h5>
+                <p>A dynamic, multidisciplinary team driving innovation, precision, and quality at every stage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 2 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/e2.jpeg' %}" alt="Corporate Presence" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-building"></i>
+                <h5>Strategic Corporate Presence</h5>
+                <p>Offices located in Dubai, Abu Dhabi, Sharjah, and other strategic locations to serve our clients seamlessly across the region.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 3 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/s2.jpeg' %}" alt="Trusted by Industry Leaders" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-handshake"></i>
+                <h5>Collaborative Learning Experience</h5>
+                <p>Fostering teamwork, communication, and mutual support in every step of the activity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 4 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/w1.jpg' %}" alt="Multidisciplinary Expertise" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-cogs"></i>
+                <h5>Multidisciplinary Expertise</h5>
+                <p>Comprehensive solutions across all project stages—Pre-FEED, EPC, Turnkey, Design & Build, and more.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 5 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/w2.jpeg' %}" alt="Technology-Driven Approach" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-robot"></i>
+                <h5>Technology-Driven Approach</h5>
+                <p>Future-ready engineering powered by BIM, AI, and smart systems integration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 6 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/w3.jpeg' %}" alt="Client-Centric Delivery" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-user-cog"></i>
+                <h5>Client-Centric Delivery</h5>
+                <p>Tailored, transparent, and agile solutions built around your project vision and performance goals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 7 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/w4.jpeg' %}" alt="Innovative & Smart Engineering" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-lightbulb"></i>
+                <h5>Innovative & Smart Engineering</h5>
+                <p>Pioneering the future of consultancy with digital workflows, sustainability focus, and cutting-edge engineering practices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Feature Card 8 -->
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
+        <div class="why-choose-img-card">
+          <div class="img-animated-wrap">
+            <img src="{% static 'assets/images/new/ofc.jpeg' %}" alt="Visionary Leadership" class="img-fluid">
+            <div class="img-overlay">
+              <div class="overlay-content">
+                <i class="fas fa-crown"></i>
+                <h5>Visionary Leadership</h5>
+                <p>Steered by leadership team committed to building a legacy of engineering excellence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
-    <section class="blog-post-area pt-0 section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <div class="post-details-earpper">
-                        <article>
-                            <div class="single-post-item bg-none">
-                                <div class="post-content-wrap p-0 pt-5">
-                                    <div class="entry-post-content">
-                                        <h6 class="sub-title"><span class=""></span>DAS & PARTNERS</h6>
-
-                                        <h3 class="post-title">Delivering Excellence in Engineering Solutions</h3>
-                                        <p class="post-excerpt">
-                                            At Das And Partners (DAP) Engineering Consultancy, we are committed to pushing the boundaries of innovation and excellence in the engineering and construction industry in Abu Dhabi. With a dedicated team of specialized professionals boasting expertise in Structural, Architectural, Construction Engineering, MEP Engineering, Project Management, AOR. We offer comprehensive one-stop solutions tailored to meet the unique needs of our clients.
-                                        </p>
-                                        <p class="post-excerpt">
-                                            Our architects and engineers bring extensive knowledge and aptitude to every project, ensuring that we remain at the forefront of engineering consultancy in the UAE. By leveraging our collective skills and experience, we consistently deliver superior results, earning us a reputation as one of the premier engineering consultants in the region.
-                                        </p>
-                                        <blockquote>From conceptualization to completion, we are committed to exceeding expectations and setting new standards of excellence in every endeavor. At Das And Partners (DAP) Engineering Consultancy, we don't just meet requirements; we inspire innovation and redefine possibilities in Abu Dhabi.
-                                        </blockquote>
-                                        <p class="post-excerpt">
-                                            DAS has assembled a comprehensive team of experts across various disciplines within the engineering and construction industry. Their combination of structural, architectural, MEP (mechanical, electrical, plumbing) engineering, project management expertise suggests they can offer end-to-end solutions for a wide range of projects in the UAE. With such a diverse skill set under one roof, it's no wonder they're considered one of the top engineering consultants in the region. Their ability to provide innovative solutions likely sets them apart in a competitive market like the UAE's construction industry.
-                                        </p>
-                                        <p class="post-excerpt">
-                                            The exceptional acknowledgment of our services by our clients fuels our dedication to continuous improvement. We are motivated by their satisfaction to remain steadfast in our pursuit of progress and excellence.
-                                        </p>
-                                        <p class="post-excerpt">
-                                            At Das And Partners (DAP) Engineering Consultancy, we don't just envision the future; we help build it. With a commitment to innovation, we transform ideas into reality, shaping the landscape of possibility one project at a time.
-                                        </p>
-
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+<!-- DAS & PARTNERS: Excellence & Trust Section -->
+<section class="dap-excellence-section py-5 position-relative" style="background:linear-gradient(120deg,#f8f9fa 60%,#e6f2ec 100%);overflow:hidden;">
+  <div class="container">
+    <!-- Main Excellence Feature -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="excellence-feature text-center animate__animated animate__fadeInDown" data-aos="fade-down">
+          <div class="excellence-icon mx-auto mb-3">
+            <i class="fas fa-trophy"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <h3 class="excellence-title mb-3 leadership-gradient-text" style="font-weight:900;letter-spacing:2px;font-size:2.1rem;">Demonstrated Excellence</h3>
+          <p class="excellence-text mb-4" style="color:#3a5d4c;font-size:1.13rem;max-width:700px;margin:0 auto;">In the past year alone, we've proudly secured and delivered landmark, signature prestigious engineering consultancy and construction projects across the UAE, Algeria, KSA, Oman, Qatar and MENA Region. Our footprint spans Buildings, Infrastructure, Petrochemical, and Oil & Gas sectors—a testament to our commitment to quality, innovation, and trusted partnerships.</p>
+          <div class="excellence-stats d-flex justify-content-center gap-4 mb-2">
+            <div class="stat-item text-center">
+              <span class="stat-number" data-count="8">7+</span>
+              <span class="stat-label">Countries</span>
             </div>
+            <div class="stat-item text-center">
+              <span class="stat-number" data-count="4">4+</span>
+              <span class="stat-label">Sectors</span>
+            </div>
+            <div class="stat-item text-center">
+              <span class="stat-number" data-count="100">95%</span>
+              <span class="stat-label">Success Rate</span>
+            </div>
+          </div>
         </div>
-    </section>
-
-        <section class="about-company-area pt-0 pb-5 section-padding">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-lg-12">
-                        <div class="about-thumb">
-                            <div class="img-hover-wrapper">
-                                <img src={% static "assets/images/about/dr-group.jpg" %} alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-12">
-                        <div class="lets-discuss team-title home-three-title">
-                            <h6 class="sub-title"><span class=""></span>With Our Advanced Engineering Services</h6>
-                            <h2 class="title">Innovative Engineering Solutions: Building Trust, <span>Creating Reality</span>.</h2>
-                            <p class="text">At Das And Partners (DAP) Engineering Consultancy, we go beyond mere solutions; we craft compelling reasons for our clients to choose us time and again. Our commitment to excellence is evident in every aspect of our work, from the simplest projects to the most ambitious endeavors.</p>
-
-                            <p class="text">We understand that trust is earned, which is why we go above and beyond to provide diverse, creative, and unique design solutions for projects ranging from the simplest to the most ambitious. From inception to completion, we are committed to delivering trustworthy services that exceed expectations.</p>
-
-                            <p class="text">At Das And Partners (DAP) Engineering Consultancy, our vision is clear: to lead the way as the premier Engineering Consultants in the UAE. With a team of passionate associates who are masters in crafting ultra-modern and innovative design solutions, we strive to redefine the boundaries of possibility in our industry.</p>
-                           
-                        </div>
-                    </div>
-
-                    <div class="col-xl-12 pt-3 col-lg-12">
-                        <div class="team-title home-three-title">
-                            <p class="text">We envision a future where creativity knows no limits and where innovation is the cornerstone of every project we undertake. By harnessing the collective expertise and enthusiasm of our team, we aim to set new standards of excellence and inspire the next generation of engineering marvels.</p>
-
-                            <p class="text">At Das And Partners (DAP) Engineering Consultancy, we are not just building structures; we are shaping the future. Join us on this journey as we continue to push the boundaries of what's possible and create a world where imagination takes flight.</p>
-
-                            <p class="text">We understand the weight of responsibility that accompanies our work. We believe that with great challenges come great opportunities for growth. That's why we are committed to being the best version of ourselves every single day.</p>
-                            
-                            <p class="text">We recognize that success is not just about achieving goals; it's about constantly evolving and improving. Our dedication to continuous learning and development allows us to upgrade our capabilities and stay at the forefront of our industry.</p>
-
-                            <p class="text">Moreover, we are champions of innovation. We believe that by promoting innovative solutions, we can not only meet the needs of today but also anticipate the challenges of tomorrow. It is through our relentless pursuit of excellence and our unwavering commitment to innovation that we can truly make a difference in the world.</p>
-
-                            <p class="text">At Das And Partners (DAP) Engineering Consultancy, we embrace responsibility as an opportunity to shine. We are dedicated to pushing boundaries, challenging norms, and creating a brighter future for generations to come.</p>
-                           
-                        </div>
-                    </div>
-
-                </div>
+      </div>
+    </div>
+    <!-- Feature Grid -->
+    <div class="row g-4 mb-5 justify-content-center align-items-stretch">
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-choose-card feature-card h-100">
+          <div class="card-inner text-center">
+            <div class="feature-icon mx-auto mb-3"><div class="icon-ring"></div><div class="icon-core"><i class="fas fa-users"></i></div></div>
+            <h4 class="feature-title">75+ Skilled Engineers & Experts</h4>
+            <p class="feature-text">A dynamic, multidisciplinary team driving innovation, precision, and quality at every stage.</p>
+            <div class="feature-highlight"><span class="highlight-number">75+</span><span class="highlight-label">Experts</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-choose-card feature-card h-100">
+          <div class="card-inner text-center">
+            <div class="feature-icon mx-auto mb-3"><div class="icon-ring"></div><div class="icon-core"><i class="fas fa-building"></i></div></div>
+            <h4 class="feature-title">Strategic Corporate Presence</h4>
+            <p class="feature-text">Offices located in Dubai, Abu Dhabi, Sharjah, and other strategic locations to serve our clients seamlessly across the region.</p>
+            <div class="feature-highlight"><span class="highlight-number">4</span><span class="highlight-label">Offices</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-choose-card feature-card h-100">
+          <div class="card-inner text-center">
+            <div class="feature-icon mx-auto mb-3"><div class="icon-ring"></div><div class="icon-core"><i class="fas fa-handshake" style="font-size: 2.5rem;"></i></div></div>
+            <h4 class="feature-title">Trusted by Industry Leaders</h4>
+            <p class="feature-text">Proven performance in major projects for ADNOC, TAZIZ, and other top-tier clients.</p>
+            <div class="feature-highlight"><span class="highlight-number">95%</span><span class="highlight-label">Trust</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="why-choose-card feature-card h-100 expertise-card">
+          <div class="card-inner text-center">
+            <div class="feature-icon mx-auto mb-3"><div class="icon-ring"></div><div class="icon-core"><i class="fas fa-cogs"></i></div></div>
+            <h4 class="feature-title">Multidisciplinary Expertise</h4>
+            <p class="feature-text">Comprehensive solutions across all project stages—Pre-FEED, EPC, Turnkey, Design & Build, and more.</p>
+            <div class="expertise-list">
+              <div class="expertise-item"><i class="fas fa-check"></i><span>High-rise, Mid-rise & Low-rise Developments</span></div>
+              <div class="expertise-item"><i class="fas fa-check"></i><span>Residential, Commercial & Mixed-Use Projects</span></div>
+              <div class="expertise-item"><i class="fas fa-check"></i><span>Roads, Bridges, Tunnels & Infrastructure</span></div>
+              <div class="expertise-item"><i class="fas fa-check"></i><span>Petrochemical, Power, Energy, Marine & Oil & Gas Onshore & Offshore</span></div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="why-choose-card feature-card h-100 tech-card">
+          <div class="card-inner text-center">
+            <div class="feature-icon mx-auto mb-3"><div class="icon-ring"></div><div class="icon-core"><i class="fas fa-robot"></i></div></div>
+            <h4 class="feature-title">Technology-Driven Approach</h4>
+            <p class="feature-text">Future-ready engineering powered by BIM, AI, and smart systems integration.</p>
+            <div class="tech-highlights d-flex justify-content-center gap-3 mt-2">
+              <div class="tech-item"><i class="fas fa-cube"></i><span>BIM</span></div>
+              <div class="tech-item"><i class="fas fa-brain"></i><span>AI</span></div>
+              <div class="tech-item"><i class="fas fa-microchip"></i><span>Smart Systems</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Client Logo Slider -->
+    <!-- <div class="row mt-5">
+      <div class="col-12">
+        <div class="client-slider-wrapper">
+          <div class="client-slider-track"> -->
+            <!-- First set of logos -->
+            <!-- <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/01.png' %}" alt="Client 1" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/02.png' %}" alt="Client 2" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/03.png' %}" alt="Client 3" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/04.png' %}" alt="Client 4" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/05.png' %}" alt="Client 5" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/06.png' %}" alt="Client 6" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/07.png' %}" alt="Client 7" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/08.png' %}" alt="Client 8" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/09.png' %}" alt="Client 9" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/10.png' %}" alt="Client 10" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/11.png' %}" alt="Client 11" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/12.png' %}" alt="Client 12" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/13.png' %}" alt="Client 13" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/14.png' %}" alt="Client 14" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/15.png' %}" alt="Client 15" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/16.png' %}" alt="Client 16" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/17.png' %}" alt="Client 17" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/18.png' %}" alt="Client 18" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/19.png' %}" alt="Client 19" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/20.png' %}" alt="Client 20" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/21.png' %}" alt="Client 21" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/22.png' %}" alt="Client 22" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/23.png' %}" alt="Client 23" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/24.png' %}" alt="Client 24" class="img-fluid"></div></div>
+            uplicate set for seamless loop -->
+            <!-- <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/01.png' %}" alt="Client 1" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/02.png' %}" alt="Client 2" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/03.png' %}" alt="Client 3" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/04.png' %}" alt="Client 4" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/05.png' %}" alt="Client 5" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/06.png' %}" alt="Client 6" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/07.png' %}" alt="Client 7" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/08.png' %}" alt="Client 8" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/09.png' %}" alt="Client 9" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/10.png' %}" alt="Client 10" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/11.png' %}" alt="Client 11" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/12.png' %}" alt="Client 12" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/13.png' %}" alt="Client 13" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/14.png' %}" alt="Client 14" class="img-fluid"></div></div>
+            <div class="client-slide"><div class="client-logo"><img src="{% static 'assets/images/clients/15.png' %}" alt="Client 15" class="img-fluid"></div></div>  -->
+            <!-- ... (rest of duplicate set) ... -->
+          <!-- </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- End Client Logo Slider -->
+  </div>
+</section>
 
+<!-- Our Process Section: Horizontal Flowchart -->
+<section class="our-process-section py-5 position-relative" style="background:linear-gradient(120deg,#f8f9fa 60%,#e6f2ec 100%);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="leadership-heading-icon mb-2" style="font-size:2.5rem;">
+        <!-- Gear/Cog SVG Icon -->
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="24" fill="#148255" fill-opacity="0.12"/>
+          <g>
+            <path d="M24 16a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm13.2 6.5l-2.1-.3a9.9 9.9 0 0 0-.7-1.7l1.2-1.8a1 1 0 0 0-.1-1.2l-2-2a1 1 0 0 0-1.2-.1l-1.8 1.2a9.9 9.9 0 0 0-1.7-.7l-.3-2.1A1 1 0 0 0 26 12h-2a1 1 0 0 0-1 .9l-.3 2.1a9.9 9.9 0 0 0-1.7.7l-1.8-1.2a1 1 0 0 0-1.2.1l-2 2a1 1 0 0 0-.1 1.2l1.2 1.8a9.9 9.9 0 0 0-.7 1.7l-2.1.3A1 1 0 0 0 12 22v2a1 1 0 0 0 .9 1l2.1.3a9.9 9.9 0 0 0 .7 1.7l-1.2 1.8a1 1 0 0 0 .1 1.2l2 2a1 1 0 0 0 1.2.1l1.8-1.2a9.9 9.9 0 0 0 1.7.7l.3 2.1A1 1 0 0 0 22 36h2a1 1 0 0 0 1-.9l.3-2.1a9.9 9.9 0 0 0 1.7-.7l1.8 1.2a1 1 0 0 0 1.2-.1l2-2a1 1 0 0 0 .1-1.2l-1.2-1.8a9.9 9.9 0 0 0 .7-1.7l2.1-.3A1 1 0 0 0 36 26v-2a1 1 0 0 0-.8-1.1z" fill="#148255"/>
+          </g>
+        </svg>
+      </div>
+      <h2 class="section-title mb-2 leadership-gradient-text" style="font-weight:900;letter-spacing:2px;font-size:2.3rem;line-height:1.1;display:inline-block;">
+        Our Process
+        <span class="leadership-underline"></span>
+      </h2>
+      <p class="section-description mb-0 animate__animated animate__fadeInUp" style="color:#3a5d4c;font-size:1.18rem;max-width:650px;margin:0 auto 0.5rem auto;letter-spacing:0.2px;">A step-by-step journey from concept to completion</p>
+    </div>
+    <div class="process-horizontal d-flex flex-wrap align-items-stretch justify-content-center">
+      <!-- Step 1 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="100">
+        
+        <div>
+          <div class="process-step-title">Project Information</div>
+          <div class="process-step-desc">Client needs, project info, data gathering, concepts</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 2 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="200">
+     
+        <div>
+          <div class="process-step-title">Quotation</div>
+          <div class="process-step-desc">Technical & financial proposal, price, payment terms, client feedback</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 3 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="300">
+       
+        <div>
+          <div class="process-step-title">Concept Design</div>
+          <div class="process-step-desc">Preliminary designs, sketches, models, approval & amendments</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 4 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="400">
+       
+        <div>
+          <div class="process-step-title">Schematic Design</div>
+          <div class="process-step-desc">Site plans, elevations, renders, client confirmation, approval & amendments</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 5 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="500">
+      
+        <div>
+          <div class="process-step-title">Design Development</div>
+          <div class="process-step-desc">Working drawings, details, technical confirmation, approval & amendments</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 6 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="600">
+     
+        <div>
+          <div class="process-step-title">Detailed Design</div>
+          <div class="process-step-desc">Detailed design for structure & MEP,CSA,EIT,P&ID, final approval, amendments</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 7 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="700">
+        
+        <div>
+          <div class="process-step-title">Tender Documentation</div>
+          <div class="process-step-desc">BOQ, tenders, contractor selection, award</div>
+        </div>
+      </div>
+      <div class="process-horizontal-arrow"><svg viewBox="0 0 60 30"><path d="M5 15 Q30 0 55 15" stroke="#148255" stroke-width="2.5" fill="none" marker-end="url(#arrowhead)"/></svg></div>
+      <!-- Step 8 -->
+      <div class="process-step-card-horizontal" data-aos="fade-up" data-aos-delay="800">
+      
+        <div>
+          <div class="process-step-title">Construction Supervision</div>
+          <div class="process-step-desc">Supervision, snagging, handover</div>
+        </div>
+      </div>
+      <!-- SVG Arrowhead Marker Defs -->
+      <svg width="0" height="0">
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,8 L8,4 Z" fill="#148255" />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS AT Das and Partners - CLEAN PROFESSIONAL VERSION -->
+
+<!-- ========================================== Leadership Team Section ================================================ -->
+
+
+<!-- ========================================== ISO Certification Section ================================================ -->
+<section class="iso-certification-section py-5" style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 50%,#e6f2ec 100%);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <div class="section-badge mb-3">
+          <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill" style="font-size:0.9rem;font-weight:600;">
+            <i class="fas fa-certificate me-2"></i>Quality Standards
+          </span>
+        </div>
+        <h2 class="section-title mb-4" style="font-size:2.8rem;font-weight:900;color:#148255;line-height:1.2;">
+          ISO <span class="text-gradient">Certifications</span>
+        </h2>
+        <p class="lead" style="color:#666;font-size:1.1rem;">
+          Committed to international quality standards and best practices in all our operations
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- ISO 9001 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="iso-card h-100 p-4 rounded-4 shadow-lg" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+          <div class="iso-badge" style="position:absolute;top:20px;right:20px;background:#148255;color:white;padding:8px 15px;border-radius:20px;font-size:0.8rem;font-weight:600;">
+            <i class="fas fa-check-circle me-1"></i>Certified
+          </div>
+          <div class="card-header mb-4 text-center">
+            <div class="iso-icon-wrapper mb-3" style="width:100px;height:100px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+              <i class="fas fa-award text-white" style="font-size:2.5rem;"></i>
+            </div>
+            <h4 class="iso-title mb-2" style="color:#148255;font-weight:700;font-size:1.5rem;">ISO 9001</h4>
+            <p class="iso-subtitle mb-0" style="color:#666;font-size:1rem;">Quality Management System</p>
+          </div>
+          <div class="card-content">
+            <div class="iso-details mb-4">
+              <div class="detail-item d-flex align-items-center mb-3">
+                <i class="fas fa-calendar-alt text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Valid Period</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">2024 - 2025</div>
+                </div>
+              </div>
+              <div class="detail-item d-flex align-items-center mb-3">
+                <i class="fas fa-shield-alt text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Scope</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">Engineering Consultancy</div>
+                </div>
+              </div>
+              <div class="detail-item d-flex align-items-center">
+                <i class="fas fa-globe text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Standard</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">International</div>
+                </div>
+              </div>
+            </div>
+            <div class="iso-description">
+              <p style="color:#666;font-size:0.9rem;line-height:1.6;">
+                Ensures consistent quality in all our engineering services, from project planning to delivery, with continuous improvement processes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ISO 14001 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="iso-card h-100 p-4 rounded-4 shadow-lg" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+          <div class="iso-badge" style="position:absolute;top:20px;right:20px;background:#148255;color:white;padding:8px 15px;border-radius:20px;font-size:0.8rem;font-weight:600;">
+            <i class="fas fa-check-circle me-1"></i>Certified
+          </div>
+          <div class="card-header mb-4 text-center">
+            <div class="iso-icon-wrapper mb-3" style="width:100px;height:100px;background:linear-gradient(45deg,#1ec28b,#148255);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(30,194,139,0.3);">
+              <i class="fas fa-leaf text-white" style="font-size:2.5rem;"></i>
+            </div>
+            <h4 class="iso-title mb-2" style="color:#148255;font-weight:700;font-size:1.5rem;">ISO 14001</h4>
+            <p class="iso-subtitle mb-0" style="color:#666;font-size:1rem;">Environmental Management</p>
+          </div>
+          <div class="card-content">
+            <div class="iso-details mb-4">
+              <div class="detail-item d-flex align-items-center mb-3">
+                <i class="fas fa-calendar-alt text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Valid Period</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">2024 - 2025</div>
+                </div>
+              </div>
+              <div class="detail-item d-flex align-items-center mb-3">
+                <i class="fas fa-shield-alt text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Scope</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">Sustainable Engineering</div>
+                </div>
+              </div>
+              <div class="detail-item d-flex align-items-center">
+                <i class="fas fa-globe text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Standard</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">International</div>
+                </div>
+              </div>
+            </div>
+            <div class="iso-description">
+              <p style="color:#666;font-size:0.9rem;line-height:1.6;">
+                Demonstrates our commitment to environmental responsibility and sustainable engineering practices in all projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ISO 45001 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="iso-card h-100 p-4 rounded-4 shadow-lg" style="background:white;border:1px solid rgba(20,130,85,0.1);transition:all 0.3s ease;position:relative;overflow:hidden;">
+          <div class="iso-badge" style="position:absolute;top:20px;right:20px;background:#148255;color:white;padding:8px 15px;border-radius:20px;font-size:0.8rem;font-weight:600;">
+            <i class="fas fa-check-circle me-1"></i>Certified
+          </div>
+          <div class="card-header mb-4 text-center">
+            <div class="iso-icon-wrapper mb-3" style="width:100px;height:100px;background:linear-gradient(45deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 8px 25px rgba(20,130,85,0.3);">
+              <i class="fas fa-hard-hat text-white" style="font-size:2.5rem;"></i>
+            </div>
+            <h4 class="iso-title mb-2" style="color:#148255;font-weight:700;font-size:1.5rem;">ISO 45001</h4>
+            <p class="iso-subtitle mb-0" style="color:#666;font-size:1rem;">Occupational Health & Safety</p>
+          </div>
+          <div class="card-content">
+            <div class="iso-details mb-4">
+              <div class="detail-item d-flex align-items-center mb-3">
+                <i class="fas fa-calendar-alt text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Valid Period</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">2024 - 2025</div>
+                </div>
+              </div>
+              <div class="detail-item d-flex align-items-center mb-3">
+                <i class="fas fa-shield-alt text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Scope</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">Workplace Safety</div>
+                </div>
+              </div>
+              <div class="detail-item d-flex align-items-center">
+                <i class="fas fa-globe text-success me-3" style="width:20px;"></i>
+                <div>
+                  <div class="detail-label" style="font-size:0.9rem;color:#666;">Standard</div>
+                  <div class="detail-value" style="font-weight:600;color:#148255;">International</div>
+                </div>
+              </div>
+            </div>
+            <div class="iso-description">
+              <p style="color:#666;font-size:0.9rem;line-height:1.6;">
+                Ensures the highest standards of workplace safety and health for our team members and project stakeholders.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISO Benefits -->
+   
+  </div>
+</section>
+<!-- ========================================== End ISO Certification Section ================================================ -->
+
+<link rel="stylesheet" href="{% static 'assets/css/life_at_dap.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/departments.css' %}">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Ensure social media links are clickable on card flip
+  const socialButtons = document.querySelectorAll('.clean-social-btn');
+  
+  socialButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent card flip when clicking links
+    });
     
+    // Additional mobile click handler
+    if (isMobile()) {
+      button.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Simulate click for mobile
+        this.click();
+      }, { passive: false });
+    }
+  });
+  
+  // Add click event to card backs to ensure they're interactive
+  const cardBacks = document.querySelectorAll('.card-clean-back');
+  cardBacks.forEach(cardBack => {
+    cardBack.addEventListener('click', function(e) {
+      // Allow clicks to pass through to links
+      if (e.target.closest('.clean-social-btn')) {
+        return;
+      }
+    });
+  });
+  
+  // Device-specific auto-flip functionality
+  function isMobile() {
+    return window.innerWidth <= 1023; // Include tablets for auto-flip
+  }
+  
+  function isTablet() {
+    return window.innerWidth >= 768 && window.innerWidth <= 1023;
+  }
+  
+  function isPhone() {
+    return window.innerWidth <= 767;
+  }
+  
+  // Auto-flip cards on scroll for mobile only
+  function handleMobileScroll() {
+    if (!isMobile()) return;
+    
+    const cards = document.querySelectorAll('.clean-department-card');
+    const windowHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+    
+    cards.forEach((card, index) => {
+      const cardTop = card.offsetTop;
+      const cardHeight = card.offsetHeight;
+      const cardCenter = cardTop + cardHeight / 2;
+      const scrollCenter = scrollY + windowHeight / 2;
+      
+      // Check if card is in viewport center
+      if (Math.abs(cardCenter - scrollCenter) < windowHeight / 3) {
+        // Add delay based on card index for staggered effect
+        setTimeout(() => {
+          card.classList.add('auto-flip');
+        }, index * 200);
+      } else {
+        card.classList.remove('auto-flip');
+      }
+    });
+  }
+  
+  // Throttle scroll events for better performance
+  let scrollTimeout;
+  function throttledScroll() {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => {
+      handleMobileScroll();
+      scrollTimeout = null;
+    }, 100);
+  }
+  
+  // Add scroll listener for mobile
+  if (isMobile()) {
+    window.addEventListener('scroll', throttledScroll);
+    // Initial check
+    handleMobileScroll();
+  }
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    if (isMobile()) {
+      window.addEventListener('scroll', throttledScroll);
+      handleMobileScroll();
+    } else {
+      window.removeEventListener('scroll', throttledScroll);
+      // Remove auto-flip class on desktop
+      document.querySelectorAll('.clean-department-card').forEach(card => {
+        card.classList.remove('auto-flip');
+      });
+    }
+  });
+  
+  // Initialize based on current screen size
+  if (isMobile()) {
+    window.addEventListener('scroll', throttledScroll);
+    handleMobileScroll();
+  }
+  
+  // Handle image loading errors
+  const images = document.querySelectorAll('.clean-dept-img');
+  images.forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.background = 'linear-gradient(135deg, #148255, #1a5f3a)';
+      this.style.display = 'flex';
+      this.style.alignItems = 'center';
+      this.style.justifyContent = 'center';
+      this.style.color = 'white';
+      this.style.fontSize = '2rem';
+      this.innerHTML = '👤';
+    });
+  });
+  
+  // Ensure proper mobile touch behavior for buttons
+  if (isMobile()) {
+    const socialButtons = document.querySelectorAll('.clean-social-btn');
+    socialButtons.forEach(button => {
+      button.addEventListener('touchstart', function(e) {
+        // Allow touch events on buttons
+        e.stopPropagation();
+      }, { passive: true });
+      
+      button.addEventListener('touchend', function(e) {
+        // Ensure click works on touch devices
+        e.stopPropagation();
+      }, { passive: true });
+    });
+  }
+});
+</script>
+
+<style>
+/* ABOUT US STORY SECTION ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #148255, #1ec28b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(20,130,85,0.15);
+}
+
+.about-story-image:hover .image-wrapper {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.floating-badge {
+  animation: float 4s ease-in-out infinite;
+}
+
+.experience-badge {
+  animation: float 5s ease-in-out infinite reverse;
+}
+
+/* CLEAN PROFESSIONAL DEPARTMENTS SECTION STYLES */
+
+/* Clean Background */
+.departments-clean-section {
+  position: relative;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Clean Section Title */
+.clean-section-title {
+  position: relative;
+  z-index: 10;
+}
+
+.title-brand-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.clean-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  color: #148255;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.clean-main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: #148255;
+}
+
+.clean-description {
+  color: #666;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Clean Departments Grid */
+.departments-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Grid for All Devices */
+
+/* Large Tablets (iPad Pro, etc.) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .departments-clean-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .clean-department-card {
+    height: 500px;
+  }
+  
+  .clean-image-container {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.6rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 1rem;
+  }
+}
+
+/* Medium Tablets (iPad, etc.) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .departments-clean-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .clean-department-card {
+    height: 450px;
+  }
+  
+  .clean-image-container {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.5rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Tablets and Large Phones */
+@media (min-width: 576px) and (max-width: 767px) {
+  .departments-clean-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .clean-department-card {
+    height: 420px;
+    margin-bottom: 1rem;
+  }
+  
+  .clean-image-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.4rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 575px) {
+  .departments-clean-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .clean-department-card {
+    height: 380px;
+  }
+  
+  .clean-image-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.3rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 0.85rem;
+  }
+}
 
 
 
-{% endblock %}
+/* Clean Department Cards */
+.clean-department-card {
+  position: relative;
+  height: 550px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.card-clean-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.clean-department-card:hover .card-clean-inner {
+  transform: rotateY(180deg);
+}
+
+/* Auto-flip for mobile and tablets */
+@media (max-width: 1023px) {
+  .clean-department-card.auto-flip .card-clean-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Disable hover flip on mobile and tablets */
+  .clean-department-card:hover .card-clean-inner {
+    transform: none;
+  }
+}
+
+.card-clean-front, .card-clean-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+}
+
+.card-clean-front {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+.clean-image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 3px solid #148255;
+  box-shadow: 0 5px 15px rgba(20, 130, 85, 0.2);
+  aspect-ratio: 1 / 1;
+}
+
+.clean-dept-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Fallback for broken images */
+.clean-dept-img:not([src]), 
+.clean-dept-img[src=""],
+.clean-dept-img[src*="no-pic"] {
+  background: linear-gradient(135deg, #148255, #1a5f3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.clean-dept-img:not([src])::after, 
+.clean-dept-img[src=""]::after,
+.clean-dept-img[src*="no-pic"]::after {
+  content: "👤";
+  font-size: 2rem;
+}
+
+.clean-department-card:hover .clean-dept-img {
+  transform: scale(1.1);
+}
+
+.clean-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 130, 85, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.clean-department-card:hover .clean-image-overlay {
+  opacity: 1;
+}
+
+.clean-overlay-content {
+  color: white;
+  text-align: center;
+}
+
+.clean-overlay-content i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.clean-overlay-content span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.clean-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clean-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #148255;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(20, 130, 85, 0.3);
+}
+
+/* Responsive icon wrapper sizes */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .clean-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .clean-icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .clean-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .clean-icon-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.4rem;
+  }
+}
+
+.clean-icon-wrapper i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.clean-card-title {
+  color: #148255;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.clean-card-desc {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.card-clean-back {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 8px 32px rgba(20, 130, 85, 0.3);
+  position: relative;
+  pointer-events: auto;
+}
+
+.card-clean-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.clean-back-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 130, 85, 0.9), rgba(26, 95, 58, 0.9));
+  z-index: 2;
+}
+
+.card-clean-back > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Crazy Image Container */
+.crazy-image-container {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(20, 130, 85, 0.2);
+}
+
+.crazy-dept-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.crazy-department-card:hover .crazy-dept-img {
+  transform: scale(1.1);
+}
+
+.crazy-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 130, 85, 0.8), rgba(26, 95, 58, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.crazy-department-card:hover .crazy-image-overlay {
+  opacity: 1;
+}
+
+.crazy-overlay-content {
+  text-align: center;
+  color: white;
+}
+
+.crazy-overlay-content i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Crazy Card Content */
+.crazy-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crazy-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #148255, #1a5f3a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: icon-rotate 3s linear infinite;
+  box-shadow: 0 4px 16px rgba(20, 130, 85, 0.3);
+}
+
+.crazy-icon-wrapper i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@keyframes icon-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.crazy-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #148255;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(20, 130, 85, 0.3);
+}
+
+.crazy-card-desc {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Crazy Back Content */
+.crazy-back-content h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.crazy-back-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.crazy-back-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.crazy-back-features span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.crazy-back-features i {
+  color: #ffff00;
+}
+
+/* Crazy Card Effects */
+.crazy-card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(20, 130, 85, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.crazy-department-card:hover .crazy-card-glow {
+  width: 300px;
+  height: 300px;
+}
+
+.crazy-card-sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #148255;
+  border-radius: 50%;
+  animation: sparkle-animation 2s ease-in-out infinite;
+}
+
+.sparkle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 60%; right: 20%; animation-delay: 0.5s; }
+.sparkle:nth-child(3) { bottom: 30%; left: 50%; animation-delay: 1s; }
+
+@keyframes sparkle-animation {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Clean Back Content Styles */
+.clean-back-content {
+  pointer-events: auto;
+  z-index: 5;
+  position: relative;
+}
+
+.clean-back-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  text-shadow: 0 2px 4px rgba(255,255,255,0.8);
+}
+
+.clean-back-role {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+}
+
+.clean-back-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.clean-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+}
+
+.clean-social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.clean-social-btn:hover::before {
+  left: 100%;
+}
+
+.linkedin-btn {
+  background: linear-gradient(135deg, #0077b5, #005885);
+  color: white;
+  border: 2px solid #0077b5;
+}
+
+.linkedin-btn:hover {
+  background: linear-gradient(135deg, #005885, #003d5a);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+}
+
+.youtube-btn {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: white;
+  border: 2px solid #ff0000;
+}
+
+.youtube-btn:hover {
+  background: linear-gradient(135deg, #cc0000, #990000);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+.clean-social-btn i {
+  font-size: 1.1rem;
+}
+
+.clean-social-btn span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+/* Responsive improvements for all devices */
+
+/* Tablets and Mobile */
+@media (max-width: 1023px) {
+  .clean-back-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .clean-social-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 120px;
+  }
+  
+  .clean-back-title {
+    font-size: 1.5rem;
+  }
+  
+  .clean-back-role {
+    font-size: 0.9rem;
+  }
+  
+  /* Additional improvements */
+  .clean-department-card {
+    margin-bottom: 2rem;
+  }
+  
+  .clean-card-content {
+    padding: 1rem;
+  }
+  
+  .clean-back-content {
+    padding: 1rem;
+  }
+  
+  /* Ensure images load properly */
+  .clean-dept-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 767px) {
+  .crazy-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .departments-crazy-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .crazy-department-card {
+    height: 350px;
+  }
+  
+  .crazy-image-container {
+    width: 180px;
+    height: 135px;
+  }
+  
+  .crazy-card-title {
+    font-size: 1.3rem;
+  }
+  
+  /* Enhanced mobile button styling */
+  .clean-social-btn {
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    min-height: 48px;
+    min-width: 140px;
+    margin: 0.25rem 0;
+  }
+  
+  .clean-back-buttons {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .crazy-main-title {
+    font-size: 2rem;
+  }
+  
+  .crazy-department-card {
+    height: 300px;
+  }
+  
+  .crazy-image-container {
+    width: 160px;
+    height: 120px;
+  }
+  
+  .clean-back-buttons {
+    gap: 0.5rem;
+  }
+  
+  .clean-social-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .clean-back-title {
+    font-size: 1.3rem;
+  }
+  
+  .clean-back-role {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+
+
+<!-- ========================================== Latest Insights & Updates Section ================================================ -->
+<section class="insights-section py-5" style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 100%);">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center" data-aos="fade-up">
+        <div class="section-badge mb-3">
+          <span class="badge bg-success-subtle text-success px-4 py-2 rounded-pill" style="font-size:0.95rem;font-weight:600;">
+            <i class="fas fa-newspaper me-2"></i>Stay Updated
+          </span>
+        </div>
+        <h2 class="section-title mb-4" style="font-size:3rem;font-weight:900;color:#148255;line-height:1.2;">
+          Latest <span class="text-gradient" style="background:linear-gradient(45deg,#148255,#1ec28b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Insights & Updates</span>
+        </h2>
+        <p class="lead mb-4" style="font-size:1.1rem;color:#666;">
+          Explore our latest blogs and news to stay informed about industry trends and company updates
+        </p>
+      </div>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="row mb-4">
+      <div class="col-12 text-center">
+        <ul class="nav nav-pills justify-content-center" id="insightsTabs" role="tablist" style="gap:15px;">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="blogs-tab" data-bs-toggle="pill" data-bs-target="#blogs-content" type="button" role="tab" style="background:#148255;color:white;border-radius:50px;padding:12px 30px;font-weight:600;border:none;transition:all 0.3s;">
+              <i class="fas fa-blog me-2"></i>Latest Blogs
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="project-news-tab" data-bs-toggle="pill" data-bs-target="#project-news-content" type="button" role="tab" style="background:#f8f9fa;color:#666;border-radius:50px;padding:12px 30px;font-weight:600;border:none;transition:all 0.3s;">
+              <i class="fas fa-project-diagram me-2"></i>Project News
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="overall-news-tab" data-bs-toggle="pill" data-bs-target="#overall-news-content" type="button" role="tab" style="background:#f8f9fa;color:#666;border-radius:50px;padding:12px 30px;font-weight:600;border:none;transition:all 0.3s;">
+              <i class="fas fa-newspaper me-2"></i>Overall News
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tabs Content -->
+    <div class="tab-content" id="insightsTabContent">
+      <!-- Blogs Tab -->
+      <div class="tab-pane fade show active" id="blogs-content" role="tabpanel">
+        <div class="row g-4">
+          {% if latest_blogs %}
+            {% for blog in latest_blogs %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1|mul:100 }}">
+              <div class="insight-card h-100 rounded-4 overflow-hidden shadow" style="background:white;transition:all 0.3s ease;">
+                {% if blog.featured_image %}
+                <div class="insight-image" style="height:200px;overflow:hidden;">
+                  <img src="{{ blog.featured_image.url }}" alt="{{ blog.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                </div>
+                {% else %}
+                <div class="insight-image" style="height:200px;background:linear-gradient(135deg,#148255,#1ec28b);display:flex;align-items:center;justify-content:center;">
+                  <i class="fas fa-blog" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+                </div>
+                {% endif %}
+                <div class="insight-content p-4">
+                  <div class="insight-meta mb-2">
+                    <span class="badge" style="background:rgba(20,130,85,0.1);color:#148255;font-size:0.75rem;">
+                      <i class="far fa-calendar me-1"></i>{{ blog.added_date|date:"M d, Y" }}
+                    </span>
+                    {% if blog.category %}
+                    <span class="badge ms-2" style="background:rgba(30,194,139,0.1);color:#1ec28b;font-size:0.75rem;">
+                      <i class="fas fa-tag me-1"></i>{{ blog.category.name }}
+                    </span>
+                    {% endif %}
+                  </div>
+                  <h4 class="insight-title mb-3" style="font-size:1.3rem;font-weight:700;color:#148255;line-height:1.4;">
+                    {{ blog.title|truncatewords:10 }}
+                  </h4>
+                  {% if blog.excerpt %}
+                  <p class="insight-excerpt mb-3" style="color:#666;font-size:0.9rem;line-height:1.6;">
+                    {{ blog.excerpt|truncatewords:15 }}
+                  </p>
+                  {% endif %}
+                  <a href="{% url 'blog_details' blog.slug %}" class="btn btn-sm" style="background:#148255;color:white;border-radius:8px;padding:8px 20px;text-decoration:none;font-weight:600;transition:all 0.3s;">
+                    Read More <i class="fas fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="col-12 text-center py-5">
+            <div style="color:#666;">
+              <i class="fas fa-inbox" style="font-size:4rem;color:#ddd;margin-bottom:20px;"></i>
+              <p style="font-size:1.1rem;">No blogs available at the moment. Check back soon!</p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% if latest_blogs %}
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="{% url 'blogs' %}" class="btn btn-lg" style="background:linear-gradient(135deg,#148255,#1ec28b);color:white;border-radius:50px;padding:15px 40px;font-weight:700;text-decoration:none;box-shadow:0 5px 20px rgba(20,130,85,0.3);transition:all 0.3s;">
+              <i class="fas fa-th-large me-2"></i>View All Blogs
+            </a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Project News Tab -->
+      <div class="tab-pane fade" id="project-news-content" role="tabpanel">
+        <div class="row g-4">
+          {% if project_news %}
+            {% for news_item in project_news %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1|mul:100 }}">
+              <div class="insight-card h-100 rounded-4 overflow-hidden shadow" style="background:white;transition:all 0.3s ease;">
+                {% if news_item.image %}
+                <div class="insight-image" style="height:200px;overflow:hidden;">
+                  <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                </div>
+                {% else %}
+                <div class="insight-image" style="height:200px;background:linear-gradient(135deg,#148255,#1ec28b);display:flex;align-items:center;justify-content:center;">
+                  <i class="fas fa-project-diagram" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+                </div>
+                {% endif %}
+                <div class="insight-content p-4">
+                  <div class="insight-meta mb-2">
+                    <span class="badge" style="background:rgba(20,130,85,0.1);color:#148255;font-size:0.75rem;">
+                      <i class="far fa-calendar me-1"></i>{{ news_item.added_date|date:"M d, Y" }}
+                    </span>
+                    <span class="badge ms-2" style="background:linear-gradient(135deg,#148255,#1ec28b);color:white;font-size:0.75rem;">
+                      <i class="fas fa-project-diagram me-1"></i>Project
+                    </span>
+                  </div>
+                  <h4 class="insight-title mb-3" style="font-size:1.3rem;font-weight:700;color:#148255;line-height:1.4;">
+                    {{ news_item.title|truncatewords:10 }}
+                  </h4>
+                  {% if news_item.excerpt %}
+                  <p class="insight-excerpt mb-3" style="color:#666;font-size:0.9rem;line-height:1.6;">
+                    {{ news_item.excerpt|truncatewords:15 }}
+                  </p>
+                  {% endif %}
+                  <div class="news-meta d-flex align-items-center gap-3 mt-3">
+                    <span style="color:#666;font-size:0.85rem;">
+                      <i class="far fa-clock me-1"></i>{{ news_item.added_date|date:"h:i A" }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="col-12 text-center py-5">
+            <div style="color:#666;">
+              <i class="fas fa-inbox" style="font-size:4rem;color:#ddd;margin-bottom:20px;"></i>
+              <p style="font-size:1.1rem;">No project news available at the moment. Check back soon!</p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% if project_news %}
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="{% url 'news' %}" class="btn btn-lg" style="background:linear-gradient(135deg,#148255,#1ec28b);color:white;border-radius:50px;padding:15px 40px;font-weight:700;text-decoration:none;box-shadow:0 5px 20px rgba(20,130,85,0.3);transition:all 0.3s;">
+              <i class="fas fa-newspaper me-2"></i>View All News
+            </a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Overall News Tab -->
+      <div class="tab-pane fade" id="overall-news-content" role="tabpanel">
+        <div class="row g-4">
+          {% if overall_news %}
+            {% for news_item in overall_news %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1|mul:100 }}">
+              <div class="insight-card h-100 rounded-4 overflow-hidden shadow" style="background:white;transition:all 0.3s ease;">
+                {% if news_item.image %}
+                <div class="insight-image" style="height:200px;overflow:hidden;">
+                  <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                </div>
+                {% else %}
+                <div class="insight-image" style="height:200px;background:linear-gradient(135deg,#1ec28b,#148255);display:flex;align-items:center;justify-content:center;">
+                  <i class="fas fa-newspaper" style="font-size:3rem;color:rgba(255,255,255,0.3);"></i>
+                </div>
+                {% endif %}
+                <div class="insight-content p-4">
+                  <div class="insight-meta mb-2">
+                    <span class="badge" style="background:rgba(30,194,139,0.1);color:#1ec28b;font-size:0.75rem;">
+                      <i class="far fa-calendar me-1"></i>{{ news_item.added_date|date:"M d, Y" }}
+                    </span>
+                    <span class="badge ms-2" style="background:rgba(20,130,85,0.1);color:#148255;font-size:0.75rem;">
+                      <i class="fas fa-bullhorn me-1"></i>News
+                    </span>
+                  </div>
+                  <h4 class="insight-title mb-3" style="font-size:1.3rem;font-weight:700;color:#148255;line-height:1.4;">
+                    {{ news_item.title|truncatewords:10 }}
+                  </h4>
+                  {% if news_item.excerpt %}
+                  <p class="insight-excerpt mb-3" style="color:#666;font-size:0.9rem;line-height:1.6;">
+                    {{ news_item.excerpt|truncatewords:15 }}
+                  </p>
+                  {% endif %}
+                  <div class="news-meta d-flex align-items-center gap-3 mt-3">
+                    <span style="color:#666;font-size:0.85rem;">
+                      <i class="far fa-clock me-1"></i>{{ news_item.added_date|date:"h:i A" }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="col-12 text-center py-5">
+            <div style="color:#666;">
+              <i class="fas fa-inbox" style="font-size:4rem;color:#ddd;margin-bottom:20px;"></i>
+              <p style="font-size:1.1rem;">No overall news available at the moment. Check back soon!</p>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        
+        {% if overall_news %}
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <a href="{% url 'news' %}" class="btn btn-lg" style="background:linear-gradient(135deg,#1ec28b,#148255);color:white;border-radius:50px;padding:15px 40px;font-weight:700;text-decoration:none;box-shadow:0 5px 20px rgba(30,194,139,0.3);transition:all 0.3s;">
+              <i class="fas fa-newspaper me-2"></i>View All News
+            </a>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .insight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+  }
+  
+  .insight-card:hover .insight-image img {
+    transform: scale(1.1);
+  }
+  
+  .insight-card .btn:hover {
+    background: #0f6b45 !important;
+    transform: translateX(5px);
+  }
+  
+  #insightsTabs .nav-link {
+    cursor: pointer;
+  }
+  
+  #insightsTabs .nav-link:hover {
+    background: #148255 !important;
+    color: white !important;
+  }
+  
+  #insightsTabs .nav-link.active {
+    background: #148255 !important;
+    color: white !important;
+  }
+  
+  @media (max-width: 768px) {
+    #insightsTabs {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    #insightsTabs .nav-link {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+</style>
+<!-- ========================================== End Latest Insights & Updates Section ================================================ -->
+
+<!-- SEO Optimized Content Section -->
+<div style="display: none; visibility: hidden; height: 0; overflow: hidden;">
+    <h1>About Das And Partners - Premier Engineering Consultancy Dubai & Abu Dhabi</h1>
+    <h2>Leading Multidisciplinary Engineering Consultancy UAE</h2>
+    <p>Das And Partners is a premier engineering consultancy Dubai and Abu Dhabi, recognized as one of the top engineering consultants UAE. We provide comprehensive civil engineering consultancy Dubai, structural engineering consultancy Abu Dhabi, MEP consultant Dubai, and MEP consultant Abu Dhabi services across the United Arab Emirates.</p>
+    <p>Our multidisciplinary engineering consultancy UAE specializes in authority approvals engineering consultant Dubai, engineering design consultant Dubai, engineering services Abu Dhabi, and BIM engineering consultancy Dubai. We are the best engineering consultancy in Dubai and Abu Dhabi, offering expert oil & gas engineering consultants UAE, infrastructure engineering consultancy Dubai, and power & energy engineering consultants Dubai services.</p>
+    <p>Das And Partners delivers comprehensive process plant engineering consultant UAE, offshore oil & gas engineering consultants Abu Dhabi, petrochemical engineering consultancy UAE, and renewable energy engineering consultants Dubai solutions. Our team includes marine engineering consultancy UAE, offshore structural engineering consultant Dubai, and jetty & port engineering consultant Abu Dhabi specialists.</p>
+    <p>We provide roads & bridges engineering consultants Abu Dhabi, heavy civil engineering consultants UAE, bridge engineering consultants Abu Dhabi, tunnel design engineering consultants UAE, and smart city infrastructure consultants Abu Dhabi services. Our utilities engineering consultants UAE team delivers district cooling plant engineering consultancy Dubai, water & wastewater engineering Abu Dhabi, and pipeline engineering consultants UAE solutions.</p>
+    <p>Contact Das And Partners for expert project management consultancy Abu Dhabi, FEED & EPCM consultant Dubai, digital twin engineering UAE, and substation design consultants Dubai services. We are the premier engineering consultancy for high rise building engineering consultancy Dubai, coastal & marine infrastructure engineering Dubai, and offshore platform design consultants UAE projects.</p>
+</div>{% endblock %}

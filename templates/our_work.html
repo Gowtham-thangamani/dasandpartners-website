@@ -4,6 +4,67 @@
 {% load static %}
 {% block content %}
 
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/our-work.css' %}">
+
+<!-- Increase Main Image Frame Size -->
+<style>
+/* Increase main image container height for better display */
+.main-image {
+    height: 350px !important; /* Increased from default 250px */
+    min-height: 350px !important;
+}
+
+.featured-signing-img-wrap {
+    height: 300px !important; /* Increased from default 250px */
+    min-height: 300px !important;
+}
+
+/* Ensure images show fully without cropping */
+.main-image .project-image,
+.featured-signing-img {
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #f8f9fa !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Container backgrounds */
+.main-image,
+.featured-signing-img-wrap {
+    background: #f8f9fa !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-image {
+        height: 280px !important;
+        min-height: 280px !important;
+    }
+    
+    .featured-signing-img-wrap {
+        height: 250px !important;
+        min-height: 250px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-image {
+        height: 250px !important;
+        min-height: 250px !important;
+    }
+    
+    .featured-signing-img-wrap {
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+}
+</style>
+
 <!-- ======================================================================================================================================================== -->
 
 
@@ -16,7 +77,7 @@
                     <div class="bread-content">
                         <h1 class="breadcumb-title">Our Work</h1>
                         <ul class="breadcumb-menu">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{% url 'home' %}">Home</a></li>
                             <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
                             <li>Our Work</li>
                         </ul>
@@ -27,65 +88,2216 @@
     </section>
     <!-- ============== end-breadcumb-area =============== -->
 
-<section class="project-page-area section-padding pt-0">
+
+
+<!-- ============== Featured Project Signings Cards =============== -->
+<section class="featured-signings-area section-padding" style="background:linear-gradient(120deg,#f8f9fa 60%,#e6f2ec 100%);">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title mb-2 amazing-featured-heading" style="font-weight:900;letter-spacing:2px;font-size:2.3rem;">
+          <span class="amazing-featured-icon"><i class="fas fa-handshake"></i></span>
+          Featured Project Signings
+        </h2>
+        <div class="amazing-featured-underline mx-auto mb-3"></div>
+        <p class="section-description" style="color:#377f4b;font-size:1.15rem;max-width:700px;margin:0 auto 1.5rem auto;">Celebrating our recent collaborations and project milestones with industry leaders and partners.</p>
+      </div>
+    </div>
+    
+    <!-- Featured Signings Cards Grid -->
+    <div class="row justify-content-center">
+        <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/4.jpeg' %}" alt="Project Signing with Mr. Wasim Samy" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project Signing with Emdad Energy</h4>
+            <div class="featured-signing-meta">General Manager - Emdad Energy</div>
+            <div class="featured-signing-desc">Celebrating a key partnership for energy sector innovation and growth.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/5.jpeg' %}" alt="Collaboration with Hasna Energy" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Collaboration with Hasna Energy</h4>
+            <div class="featured-signing-meta">Strategic Energy Collaboration</div>
+            <div class="featured-signing-desc">A new milestone in sustainable energy solutions and joint ventures.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/6.jpeg' %}" alt="Project Signing with Mr. Shamsudeen" class="featured-signing-img">
+              <div class="img-overlay"></div>
+          </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project Signing with Al Awal Bakery, Abu Dhabi</h4>
+            <div class="featured-signing-meta">Managing Director - Al Awal Bakery, Abu Dhabi</div>
+                  <div class="featured-signing-desc">Project: Consultancy Service for Design and Supervision of Proposed Construction of Al Awal Bakery Manufacturing Plant, Mussafah, Abu Dhabi</div>
+                </div>
+              </div>
+            </div>
+      
+        <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/7.jpeg' %}" alt="Project Signing with Mr. Loway Amir" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project Signing with Deerfields Mall, Abu Dhabi</h4>
+            <div class="featured-signing-meta">Operation Manager - Deerfields Mall, Abu Dhabi</div>
+            <div class="featured-signing-desc">A significant collaboration for retail and commercial development in Abu Dhabi.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/8.jpeg' %}" alt="Project Signing with Mr. Jignesh Doshi" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project Signing with Petrofac International Limited</h4>
+            <div class="featured-signing-meta">Vice President - Petrofac International Limited</div>
+            <div class="featured-signing-desc">EPSCC of Propane De-Hydrogenation & Polypropylene Plant, Arzew, Algeria. PMC: Wood. EPC Contractor: Petrofac International Limited, UK & HQC, China IJV. Engineering Design Consultant: Das And Partners Engineering Consultancy</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 6 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/9.jpeg' %}" alt="Project Meeting with Mr. Brian Plawecki" class="featured-signing-img">
+              <div class="img-overlay"></div>
+          </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project Meeting with CAPEX Delivery Hazardous Waste Management</h4>
+            <!--<div class="featured-signing-meta">Operation Manager CAPEX Delivery Hazardous Waste Management</div>-->
+            <div class="featured-signing-meta">Client name - Magma Environment Service, Veolia</div>
+            <div class="featured-signing-desc">Project: Road Marking, and Civil Works at Norm & BeAAT Plant, Magma Waste Treatment Facilities, Ruwais, Western Region of Abu Dhabi</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 7 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/1.jpeg' %}" alt="Project signing with Rotary Engineering, Singapore" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project signing with Rotary Engineering, Singapore</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Rotary Engineering, Singapore</div>
+            <div class="featured-signing-desc">A significant collaboration for engineering excellence and international project partnerships.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 8 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/2.jpeg' %}" alt="Project signing with Yas Asset Management" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project signing with Yas Asset Management</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Yas Asset Management</div>
+            <div class="featured-signing-desc">A key collaboration for asset management and real estate development excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 9 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/3.jpeg' %}" alt="Project signing with St. George Orthodox Church Committee" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project signing with St. George Orthodox Church Committee</h4>
+            <div class="featured-signing-meta">Strategic Partnership - St. George Orthodox Church Committee</div>
+            <div class="featured-signing-desc">A meaningful collaboration for community development and religious infrastructure excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 10 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/10.jpeg' %}" alt="Project Signing with Etihad Airways" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project Signing with Etihad Airways</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Etihad Airways</div>
+            <div class="featured-signing-desc">A prestigious collaboration for aviation infrastructure and engineering excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 11 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/11.jpeg' %}" alt="Project signing with HQC (China Huanqiu Contracting & Engineering Corporation), China" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project signing with HQC (China Huanqiu Contracting & Engineering Corporation), China</h4>
+            <div class="featured-signing-meta">Strategic Partnership - HQC (China Huanqiu Contracting & Engineering Corporation), China</div>
+            <div class="featured-signing-desc">A significant international collaboration for engineering contracting and construction excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 12 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/12.jpeg' %}" alt="Project collaboration with Mr. Yusuf Ali, Lulu International Group Chairman" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project collaboration with Mr. Yusuf Ali, Lulu International Group Chairman</h4>
+            <div class="featured-signing-meta">Prominent UAE Businessman, Ex-Vice Chairman of the Abu Dhabi Chamber of Commerce & Industry</div>
+            <div class="featured-signing-desc">A prestigious collaboration with one of the UAE's most prominent business leaders and retail industry pioneers.</div>
+          </div>
+        </div>
+      </div>
+      
+          <!-- Card 13 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/13.jpeg' %}" alt="Project signing with the Pyxis" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project signing with the Pyxis</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Pyxis</div>
+            <div class="featured-signing-desc">A key collaboration for engineering excellence and project development.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 14 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/14.jpeg' %}" alt="Collaboration with the Tabreed for District cooling plant projects" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Collaboration with the Tabreed for District cooling plant projects</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Tabreed</div>
+            <div class="featured-signing-desc">A significant collaboration for district cooling plant projects and sustainable energy solutions.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 15 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/15.jpeg' %}" alt="Project signing with the Etihad Rails" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Project signing with the Etihad Rails</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Etihad Rails</div>
+            <div class="featured-signing-desc">A prestigious collaboration for railway infrastructure and transportation engineering excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 16 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/16.jpeg' %}" alt="Collaboration with ADNOC projects" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Collaboration with ADNOC projects</h4>
+            <div class="featured-signing-meta">Strategic Partnership - ADNOC</div>
+            <div class="featured-signing-desc">A significant collaboration for energy sector projects and oil & gas industry excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card 17 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="featured-signing-card">
+            <div class="featured-signing-img-wrap">
+              <img src="{% static 'assets/images/pro/17.jpeg' %}" alt="Collaboration with Danube" class="featured-signing-img">
+              <div class="img-overlay"></div>
+                </div>
+          <div class="featured-signing-info">
+            <h4 class="featured-signing-title">Collaboration with Danube</h4>
+            <div class="featured-signing-meta">Strategic Partnership - Danube</div>
+            <div class="featured-signing-desc">A key collaboration for construction and building materials industry excellence.</div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</section>
+<!-- ============== end-featured-signings-area =============== -->
+
+
+<!-- ============== Our Projects Section =============== -->
+<section class="our-projects-area section-padding" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
-                <div class="team-title">
-                    <h6 class="sub-title"><span class=""></span>Our Work &nbsp;&nbsp; <span class=""></span></h6>
-                    <h2 class="title">We Provide The Best Services</h2>
+            <div class="col-12 text-center mb-5">
+                <div class="projects-header">
+                    <h6 class="section-subtitle">Our Projects</h6>
+                    <h2 class="section-title">Engineering Excellence in Action</h2>
+                    <p class="section-description">Showcasing our flagship projects that demonstrate our commitment to quality, innovation, and client satisfaction</p>
                 </div>
             </div>
         </div>
-        <div class="row gy-4 filter-active" style="position: relative; height: 848px;">
-            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 460px; top: 0px;">
-                <div class="project-card-item">
-                    <div class="project-card-img">
-                        <img src={% static "assets/images/our_expertise/structural-engineering.jpg"%} alt="">
+        
+        <div class="row justify-content-center">
+            <!-- Project Card 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/1/1.jpeg' %}" alt="Project 1 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/1/2.jpeg' %}" alt="Project 1 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/1/7.jpeg' %}" alt="Project 1 - View 3" class="thumbnail">
+                        </div>
                     </div>
-                    <div class="project-card-details">
-                        <h4 class="project-title"><a>Commercial</a></h4>
-                        <p class="project-sub-title"><span>Building</span></p>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>ADNOC HQ Complex Development Project</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Consultancy Service for Proposed Modification works of ADNOC HQ Complex 72 floor new HQ Building, 12 floor old HQ Building, Mosque, Inderground Parking, Welcome Center, Park, Recreational centers and ancillary facilities, Corniche, Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">ADNOC</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">Adeeb Group</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn" onclick="toggleProjectDetails(this)">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="btn-text">View Details</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 460px; top: 0px;">
-                <div class="project-card-item">
-                    <div class="project-card-img">
-                        <img src={% static "assets/images/our_expertise/leed-consultant.jpg"%} alt="">
+            <!-- Project Card 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/2/4.jpeg' %}" alt="Project 2 - Main View" class="project-image">
+                        </div>
+                        <!--<div class="image-thumbnails">-->
+                        <!--    <img src="{% static 'assets/images/work/2/4.jpeg' %}" alt="Project 2 - View 2" class="thumbnail">-->
+                        <!--</div>-->
                     </div>
-                    <div class="project-card-details">
-                        <h4 class="project-title"><a>Commercial</a></h4>
-                        <p class="project-sub-title"><span>Structure</span></p>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>ADNOC SKEC (Sheikh Khalifa Energy Complex) Development</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Consultancy Service for Design, Approval and Supervision of Proposed Modification Works of ADNOC SKEC (Sheikh Khalifa Energy Complex) Tower 1, 2, 3, 4 (2 no. Towers 26 Floors - G+M+26 nos. Floors+Penthouse & 2 nos. Tower 20 Floors G+M+19F+Penthouse), Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Ejadah</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy, Abu Dhabi</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">Ejadah</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-tools"></i>
+                                    <span>Sub Contractor:</span>
+                                </div>
+                                <div class="info-value">Honeywell, GISCO</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn" onclick="toggleProjectDetails(this)">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="btn-text">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Project Card 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="project-card-no-hover">
+            <div class="project-image-gallery">
+                <div class="main-image">
+                  <img src="{% static 'assets/images/work/3/5.jpeg' %}" alt="Project 3 - Main View" class="project-image">
+                </div>
+                <div class="image-thumbnails">
+                  <img src="{% static 'assets/images/work/3/Unknown-1.jpeg' %}" alt="Project 3 - View 1" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-2.jpeg' %}" alt="Project 3 - View 2" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-3.jpeg' %}" alt="Project 3 - View 3" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-4.jpeg' %}" alt="Project 3 - View 4" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-5.jpeg' %}" alt="Project 3 - View 5" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-6.jpeg' %}" alt="Project 3 - View 6" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-7.jpeg' %}" alt="Project 3 - View 7" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-8.jpeg' %}" alt="Project 3 - View 8" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/Unknown-9.jpeg' %}" alt="Project 3 - View 9" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/10.jpeg' %}" alt="Project 3 - View 10" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/42.jpeg' %}" alt="Project 3 - View 11" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/44.jpeg' %}" alt="Project 3 - View 12" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/55.jpeg' %}" alt="Project 3 - View 13" class="thumbnail">
+                  <img src="{% static 'assets/images/work/3/66.jpeg' %}" alt="Project 3 - View 14" class="thumbnail">
+                </div>
+              </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>B+G+25Typ. Floors+R+UR Construction, Muroor, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Consultancy Service for Design, Approval and Supervision for new Proposed Construction of B+G+25Typ. Floors+R+UR, Muroor, Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Project Construction Value:</span>
+                                </div>
+                                <div class="info-value">125 Million AED</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy, Abu Dhabi</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Project Card 4 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="project-card-no-hover">
+            <div class="project-image-gallery">
+                <div class="main-image">
+                  <img src="{% static 'assets/images/work/4/6.jpeg' %}" alt="Project 4 - Main View" class="project-image">
+                </div>
+                <div class="image-thumbnails">
+                  <img src="{% static 'assets/images/work/4/6.jpeg' %}" alt="Project 4 - View 1" class="thumbnail">
+                  <img src="{% static 'assets/images/work/4/Unknown-7-1.jpeg' %}" alt="Project 4 - View 2" class="thumbnail">
+                  <img src="{% static 'assets/images/work/4/Unknown-8.jpeg' %}" alt="Project 4 - View 3" class="thumbnail">
+                  <img src="{% static 'assets/images/work/4/Unknown-9.jpeg' %}" alt="Project 4 - View 4" class="thumbnail">
+                  <img src="{% static 'assets/images/work/4/Unknown-10.jpeg' %}" alt="Project 4 - View 5" class="thumbnail">
+                  <img src="{% static 'assets/images/work/4/Unknown-11.jpeg' %}" alt="Project 4 - View 6" class="thumbnail">
+                </div>
+              </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>3B+G+M+24Floors+Roof, TCA, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Consultancy Service for Design of 3B+G+M+24Floors+Roof, TCA, Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Design Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/5/1.jpeg' %}" alt="Project 5 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/5/2.jpeg' %}" alt="Project 5 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/5/3.jpeg' %}" alt="Project 5 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/5/4.jpeg' %}" alt="Project 5 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/5/5.jpeg' %}" alt="Project 5 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/5/6.jpeg' %}" alt="Project 5 - View 6" class="thumbnail">
+                            <img src="{% static 'assets/images/work/5/7.jpeg' %}" alt="Project 5 - View 7" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Multiple District Cooling & Development Projects across UAE</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Multiple District Cooling & Development Projects across UAE
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-list"></i>
+                                    <span>Project Portfolio:</span>
+                                </div>
+                                <div class="info-value">
+                                    Project 01: Khor Al Raha Beach Development Eastern Precincts, Abu Dhabi, UAE<br>
+                                    Project 02: District Cooling Plant DCP-3 on Plot No.P7, Sector SDN8, Al Saadiyat Island, Abu Dhabi, UAE<br>
+                                    Project 03: Manarat Al Sadiyat SDN8-P1 (MAS) Saadiyat Island, Abu Dhabi, UAE<br>
+                                    Project 04: SISPA (NEW CAMP) External chilled water network& ETS Works TM-007 Zayed Military City 7 Abu Dhabi UAE<br>
+                                    Project 05: Expansion of Tabreed District cooling Plant TB07- Zayed Military City, Abu Dhabi<br>
+                                    Project 06: AD23 Tabreed Plant Expansion Phase II,Saadiyat Island, Abu Dhabi<br>
+                                    Project 07: DDCP2, Design, Supply, Installation of 04 Chiller Mod - Downtown, Dubai, UAE
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Project Card 6 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="project-card-no-hover">
+            <div class="project-image-gallery">
+                <div class="main-image">
+                  <img src="{% static 'assets/images/work/6/54.jpeg' %}" alt="Project 6 - Main View" class="project-image">
+                </div>
+                <div class="image-thumbnails">
+                  <img src="{% static 'assets/images/work/6/1.jpeg' %}" alt="Project 6 - View 1" class="thumbnail">
+                  <img src="{% static 'assets/images/work/6/7.jpeg' %}" alt="Project 6 - View 2" class="thumbnail">
+                </div>
+              </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Norm & BeAAT Plant Expansion Phase 2, Ruwais, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Consultancy Service for Design & Supervision of Norm & BeAAT Plant Expansion Phase 2, Ruwais, Western Region of Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Veolia / Magma Waste Treatment</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 7 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/7/65.jpeg' %}" alt="Project 7 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/7/1.jpeg' %}" alt="Project 7 - View 1" class="thumbnail">
+                            <img src="{% static 'assets/images/work/7/2.jpeg' %}" alt="Project 7 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/7/3.jpeg' %}" alt="Project 7 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/7/4.jpeg' %}" alt="Project 7 - View 4" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Landing Logistics - Taz'iz Development, Ruwais, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Landing Logistics - Taz'iz Development, Industrial Chemical Zone, Ruwais, Western Region of Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">ADNOC, ADQ</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Project Value:</span>
+                                </div>
+                                <div class="info-value">7 Billion AED</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>FEED & NOC Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>EPC Contractor:</span>
+                                </div>
+                                <div class="info-value">Rotary Engineering, Singapore</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Project Card 8 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="project-card-no-hover">
+            <div class="project-image-gallery">
+                <div class="main-image">
+                  <img src="{% static 'assets/images/work/8/1.jpeg' %}" alt="Project 8 - Main View" class="project-image">
+                </div>
+                <div class="image-thumbnails">
+                  <!-- Only one image available for project 8 -->
+                </div>
+              </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Propane De-hydrogenation & Polypropylene Plant, Arzew, Algeria</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    PROPANE DE-HYDROGENATION AND POLYPROPYLENE PLANT, ARZEW, ALGERIA
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Project Value:</span>
+                                </div>
+                                <div class="info-value">5.5 Billion AED</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Step Polymers SPA</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>PMC:</span>
+                                </div>
+                                <div class="info-value">Wood, UK</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>EPC Contractors:</span>
+                                </div>
+                                <div class="info-value">Petrofac International Ltd - UK & HQC China – IJV</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Engineering Design Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Project Card 9 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+          <div class="project-card-no-hover">
+            <div class="project-image-gallery">
+                <div class="main-image">
+                  <img src="{% static 'assets/images/work/9/1.jpeg' %}" alt="Project 9 - Main View" class="project-image">
+                </div>
+                <div class="image-thumbnails">
+                  <!-- Only one image available for project 9 -->
+                </div>
+              </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Road and Infrastructure Works, Baniyas Development, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Road and Infrastructure Works, Baniyas Development, Phase 3A and 3B, Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Abu Dhabi Housing Authority</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Project Construction Value:</span>
+                                </div>
+                                <div class="info-value">2.24 Billion AED</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>Master Developer:</span>
+                                </div>
+                                <div class="info-value">Aldar</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Mott MacDonald</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractors:</span>
+                                </div>
+                                <div class="info-value">China State Construction & Trojan Holding</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>BIM Specialist Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultant</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 10 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/10/1.jpeg' %}" alt="Project 10 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/10/2.jpeg' %}" alt="Project 10 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/10/3.jpeg' %}" alt="Project 10 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/10/4.jpeg' %}" alt="Project 10 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/10/5.jpeg' %}" alt="Project 10 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/10/6.jpeg' %}" alt="Project 10 - View 6" class="thumbnail">
+                    
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>St. George Orthodox Church, Al Bateen, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Consultancy Service for Design, Approval and Supervision of St. George Orthodox Church, Al Bateen, Abu Dhabi
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Church Committee Trustee</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>Project Value:</span>
+                                </div>
+                                <div class="info-value">45 Million AED</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 11 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/11/Unknown.jpeg' %}" alt="Project 11 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <!-- Single image project - no thumbnails -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>VELA VIENTO 2B + G + P +41 STOREY + ROOF RETAIL / RESIDENTIAL TOWER</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    VELA VIENTO 2B + G + P +41 STOREY + ROOF RETAIL / RESIDENTIAL TOWER ON PLOT 3460761 BUSINESS BAY, DUBAI
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Client Name:</span>
+                                </div>
+                                <div class="info-value">CREEK RESIDENCES 23 HOLDING LIMITED</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>International Architect:</span>
+                                </div>
+                                <div class="info-value">FOSTER + PARTNERS</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>BIM Specialist Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultants</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 12 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/12/Unknown-2.jpeg' %}" alt="Project 12 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <!-- Single image project - no thumbnails -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>G+3 Nad Al Sheba School Phase 2</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    G+3 Nad Al Sheba School Phase 2 at Plot No.6170164
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>D&B Consultant:</span>
+                                </div>
+                                <div class="info-value">e. Construct FZ-LLC</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">Engineering Contracting company</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>BIM Specialist Consultant:</span>
+                                </div>
+                                <div class="info-value">Das and Partners engineering consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-tools"></i>
+                                    <span>MEP Contractor:</span>
+                                </div>
+                                <div class="info-value">United Masters Electromechanical LLC</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 13 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/13/Unknown-5.jpeg' %}" alt="Project 13 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/13/Unknown-2.jpeg' %}" alt="Project 13 - View 1" class="thumbnail">
+                            <img src="{% static 'assets/images/work/13/Unknown-3.jpeg' %}" alt="Project 13 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/13/Unknown-4.jpeg' %}" alt="Project 13 - View 3" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>ELARA Jumeirah Living, Dubai</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    ELARA Jumeirah living, Dubai
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Dubai Holding</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">RSP architects planner & Engineers (PTE) LTD</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>BIM Specialist Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And partners Engineering Consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">Al Sahel contracting company</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 14 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/14/Edit(1).png' %}" alt="Project 14 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <!-- Single image project - no thumbnails -->
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Majlis with Underground Multi-Use Facilities - Um Al Mader</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Majlis with underground multi-use-facilities-um al mader
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>BIM Specialist Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">AVIC INNO China National Aero-Technology International Engineering Corporation-Abu Dhabi</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Capital Engineering Consultancy</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 15 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/15/Unknown.jpeg' %}" alt="Project 15 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/15/Unknown-2.jpeg' %}" alt="Project 15 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/15/Unknown-3.jpeg' %}" alt="Project 15 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/15/Unknown-4.jpeg' %}" alt="Project 15 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/15/77.jpeg' %}" alt="Project 15 - View 5" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Mixed Use Proposed Building 3B+G+M+18+R+UR</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Mixed Use Proposed Building 3B+G+M+18+R+UR
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">Heirs of Ismaeil Abbas Alkhoori</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das and Partners Engineering Consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Constructor:</span>
+                                </div>
+                                <div class="info-value">Vision Catalyst</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 16 -->
+             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/16/1.jpg' %}" alt="Project 16 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/16/2.jpg' %}" alt="Project 16 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/3.jpg' %}" alt="Project 16 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/4.jpg' %}" alt="Project 16 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/5.jpg' %}" alt="Project 16 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/6.jpg' %}" alt="Project 16 - View 6" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/7.jpg' %}" alt="Project 16 - View 7" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/8.jpg' %}" alt="Project 16 - View 8" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/9.jpg' %}" alt="Project 16 - View 9" class="thumbnail">
+                            <img src="{% static 'assets/images/work/16/10.jpg' %}" alt="Project 16 - View 10" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>XTREME BOWLING, DEERFIELDS MALL, ABU DHABI</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    XTREME BOWLING
+                                </div>
+                            </div>
+
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">DEERFIELDS MALL</div>
+                            </div>
+                            
+
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Client Name:</span>
+                                </div>
+                                <div class="info-value">AL OTHALM ENTERTAINMENT</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Lead Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">FIBREX</div>
+                            </div>
+                            
+                            <!-- <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Capital Engineering Consultancy</div>
+                            </div> -->
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Card 17 -->
+             <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/17/3.jpg' %}" alt="Project 17 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/17/2.jpg' %}" alt="Project 17 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/17/1.jpg' %}" alt="Project 17 - View 3" class="thumbnail">
+                   
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>G+2P+14FLOORS+16FLOORS+ROOF Residential & Commercial Apartments</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    G+2P+14FLOORS+16FLOORS+ROOF Residential & Commercial Apartments
+                                </div>
+                            </div>
+
+                            <!--<div class="project-info-item">-->
+                            <!--    <div class="info-label">-->
+                            <!--        <i class="fas fa-crown"></i>-->
+                            <!--        <span>Project Owner:</span>-->
+                            <!--    </div>-->
+                            <!--    <div class="info-value">DEERFIELDS MALL</div>-->
+                            <!--</div>-->
+                            
+
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Client Name:</span>
+                                </div>
+                                <div class="info-value">NSHAMA DEVELOPMENT L.L.C</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Symphony Engineering Consultant L.L.C</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-cube"></i>
+                                    <span>BIM Specialist Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Main Contractor:</span>
+                                </div>
+                                <div class="info-value">ECC</div>
+                            </div>
+                            
+                            <!-- <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Capital Engineering Consultancy</div>
+                            </div> -->
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Project Card 18 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/18/1.png' %}" alt="Project 18 - On-Grid Solar PV System Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/18/2.jpg' %}" alt="Project 18 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/18/3.jpg' %}" alt="Project 18 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/18/4.jpg' %}" alt="Project 18 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/18/5.jpg' %}" alt="Project 18 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/18/6.jpg' %}" alt="Project 18 - View 6" class="thumbnail">
+                            <img src="{% static 'assets/images/work/18/7.jpg' %}" alt="Project 18 - View 7" class="thumbnail">
+                            <img src="{% static 'assets/images/work/18/8.jpg' %}" alt="Project 18 - View 8" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Design and Supervision of Proposed On-Grid Solar PV System Installation, new block construction, ancillary facilities modification at Warehouse, DIP, Dubai</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    On-Grid Solar PV System
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">PERFECT FOOD</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Client:</span>
+                                </div>
+                                <div class="info-value">AL OTHALM ENTERTAINMENT</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultancy</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Contractor:</span>
+                                </div>
+                                <div class="info-value">TECHNOMETER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">DUBAI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 460px; top: 424px;">
-                <div class="project-card-item">
-                    <div class="project-card-img">
-                        <img src={% static "assets/images/our_expertise/architectural-engineering.jpg"%} alt="">
+             <!-- Project Card 19 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/19/1.jpg' %}" alt="Project 19 - ROOFTOP SOLAR PV PLAN Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/19/2.jpg' %}" alt="Project 19 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/19/3.jpg' %}" alt="Project 19 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/19/4.jpg' %}" alt="Project 19 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/19/5.jpg' %}" alt="Project 19 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/19/6.jpg' %}" alt="Project 19 - View 6" class="thumbnail">
+                            <img src="{% static 'assets/images/work/19/7.jpg' %}" alt="Project 19 - View 7" class="thumbnail">
+                        </div>
                     </div>
-                    <div class="project-card-details">
-                        <h4 class="project-title"><a>Architecture</a></h4>
-                        <p class="project-sub-title"><span>Best Engineering</span></p>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Design and Supervision of Proposed Rooftop Solar PV Installation Works at Schlumberger Warehouse Facilities, ICAD, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    ROOFTOP SOLAR PV PLAN
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">SCHLUMBERGER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Client:</span>
+                                </div>
+                                <div class="info-value">SCHLUMBERGER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Contractor:</span>
+                                </div>
+                                <div class="info-value">TECHNOMETER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">ICAD ABUDHABI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-6 col-md-12 filter-item cat1" style="position: absolute; left: 920px; top: 424px;">
-                <div class="project-card-item project-top">
-                    <div class="project-card-img">
-                        <img src={% static "assets/images/our_expertise/project-management.jpg"%} alt="">
+             <!-- Project Card 20 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/20/1.jpg' %}" alt="Project 20 - ROOFTOP SOLAR PV PLAN (Shamkha) Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/20/2.jpg' %}" alt="Project 20 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/20/3.jpg' %}" alt="Project 20 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/20/4.jpg' %}" alt="Project 20 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/20/5.jpg' %}" alt="Project 20 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/20/6.jpg' %}" alt="Project 20 - View 6" class="thumbnail">
+                        </div>
                     </div>
-                    <div class="project-card-details">
-                        <h4 class="project-title"><a>Architecture</a></h4>
-                        <p class="project-sub-title"><span>Engineering</span></p>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Design and Supervision of Proposed RoofTop Solar PV Installation & Ancillary Facilities Modification works at Warehouse, P1 Samkha, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    ROOFTOP SOLAR PV PLAN
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">SCHLUMBERGER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Client:</span>
+                                </div>
+                                <div class="info-value">SCHLUMBERGER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Contractor:</span>
+                                </div>
+                                <div class="info-value">TECHNOMETER</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">SHAMKHA ABUDHABI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
                     </div>
                 </div>
+            </div>
+             <!-- Project Card 21 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/21/4.jpg' %}" alt="Project 21 - AL AWAL BAKERY Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/21/2.jpg' %}" alt="Project 21 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/3.jpg' %}" alt="Project 21 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/1.jpg' %}" alt="Project 21 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/5.jpg' %}" alt="Project 21 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/6.jpg' %}" alt="Project 21 - View 6" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/7.jpg' %}" alt="Project 21 - View 7" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/8.jpg' %}" alt="Project 21 - View 8" class="thumbnail">
+                            <img src="{% static 'assets/images/work/21/9.jpg' %}" alt="Project 21 - View 9" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Design and Supervision of Proposed Construction of Al Awal Bakery Processing Unit, Manufacturing Plant with Warehouse Facility, Mussafah m-37, Abu Dhabi</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    AL AWAL BAKERY
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Project Owner:</span>
+                                </div>
+                                <div class="info-value">MOHAMED IBRAHIM EL SAID MOHAMMED ELAZAB</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Client:</span>
+                                </div>
+                                <div class="info-value">SAEED KHALFAN HUMAID FRAIH ALQUBASISI</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-building"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">Das And Partners Engineering Consultant</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-hard-hat"></i>
+                                    <span>Contractor:</span>
+                                </div>
+                                <div class="info-value">RAS CONSTRUCTION MANAGEMENT</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">SHAMKHA ABUDHABI</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Project Card 22 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/22/1.jpg' %}" alt="Project 22 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/22/2.jpg' %}" alt="Project 22 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/22/3.jpg' %}" alt="Project 22 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/22/4.jpg' %}" alt="Project 22 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/22/5.jpg' %}" alt="Project 22 - View 5" class="thumbnail">
+                            <img src="{% static 'assets/images/work/22/6.jpg' %}" alt="Project 22 - View 6" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Proposed Harmony Mosque</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Proposed Harmony Mosque
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Owner:</span>
+                                </div>
+                                <div class="info-value">MR. SAEED HASSANI</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">DAS AND PARTNERS ENGINEERING CONSULTANCY</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">ALAIN</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 23 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/23/1.jpg' %}" alt="Project 23 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/23/2.jpg' %}" alt="Project 23 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/23/3.jpg' %}" alt="Project 23 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/23/4.jpg' %}" alt="Project 23 - View 4" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Proposed Grand Palace Villas</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Proposed Grand Palace Villas
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Owner:</span>
+                                </div>
+                                <div class="info-value">MR. EISA SALEM</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">DAS AND PARTNERS ENGINEERING CONSULTANCY</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">ALAIN</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 24 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/24/1.jpg' %}" alt="Project 24 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/24/2.jpg' %}" alt="Project 24 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/24/3.jpg' %}" alt="Project 24 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/24/4.jpg' %}" alt="Project 24 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/24/5.jpg' %}" alt="Project 24 - View 5" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Proposed Mosque</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Proposed Mosque
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Owner:</span>
+                                </div>
+                                <div class="info-value">MR. ALI SALAM AL HASSANI</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">DAS AND PARTNERS ENGINEERING CONSULTANCY</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">ALAIN</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 25 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="project-card-no-hover">
+                    <div class="project-image-gallery">
+                        <div class="main-image">
+                            <img src="{% static 'assets/images/work/25/1.jpg' %}" alt="Project 25 - Main View" class="project-image">
+                        </div>
+                        <div class="image-thumbnails">
+                            <img src="{% static 'assets/images/work/25/2.jpg' %}" alt="Project 25 - View 2" class="thumbnail">
+                            <img src="{% static 'assets/images/work/25/3.jpg' %}" alt="Project 25 - View 3" class="thumbnail">
+                            <img src="{% static 'assets/images/work/25/4.jpg' %}" alt="Project 25 - View 4" class="thumbnail">
+                            <img src="{% static 'assets/images/work/25/5.jpg' %}" alt="Project 25 - View 5" class="thumbnail">
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <div class="project-name-display">
+                            <h4>Residential Villa</h4>
+                        </div>
+                        
+                        <div class="project-info-grid">
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <span>Project Name:</span>
+                                </div>
+                                <div class="info-value">
+                                    Residential Villa
+                                </div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Client:</span>
+                                </div>
+                                <div class="info-value">MR. SALEM SULTHAN ALHEMRI</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Consultant:</span>
+                                </div>
+                                <div class="info-value">DAS AND PARTNERS ENGINEERING CONSULTANCY</div>
+                            </div>
+                            
+                            <div class="project-info-item">
+                                <div class="info-label">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Location:</span>
+                                </div>
+                                <div class="info-value">ALAMRIYA, ALAIN</div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <button class="btn btn-primary project-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</section>
+<!-- ============== end-our-projects-area =============== -->
+
+<!-- Image Modal Popup -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Project Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Project Image" class="img-fluid modal-project-image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-</section> 
+</div>
+
+<!-- JavaScript for Image Modal -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all project images and thumbnails
+    const projectImages = document.querySelectorAll('.project-image, .thumbnail');
+    
+    // Add click event to each image
+    projectImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+            const imageSrc = this.src;
+            const imageAlt = this.alt;
+            
+            // Set modal image source and alt text
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalImage').alt = imageAlt;
+            document.getElementById('imageModalLabel').textContent = imageAlt;
+            
+            // Show the modal
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        });
+        
+        // Add cursor pointer to indicate clickable
+        image.style.cursor = 'pointer';
+    });
+});
+
+// Function to toggle project details
+function toggleProjectDetails(button) {
+    const projectCard = button.closest('.project-card-no-hover');
+    const detailsGrid = projectCard.querySelector('.project-info-grid');
+    const nameDisplay = projectCard.querySelector('.project-name-display');
+    const btnText = button.querySelector('.btn-text');
+    const icon = button.querySelector('i');
+    
+    console.log('Toggle clicked:', detailsGrid, nameDisplay); // Debug log
+    
+    if (!detailsGrid.classList.contains('show')) {
+        // Show details
+        detailsGrid.classList.add('show');
+        if (nameDisplay) {
+            nameDisplay.style.display = 'none';
+            console.log('Hiding name display');
+        }
+        btnText.textContent = 'Hide Details';
+        icon.className = 'fas fa-eye-slash';
+        button.classList.add('details-expanded');
+        console.log('Details shown');
+    } else {
+        // Hide details
+        detailsGrid.classList.remove('show');
+        if (nameDisplay) {
+            nameDisplay.style.display = 'block';
+            console.log('Showing name display');
+        }
+        btnText.textContent = 'View Details';
+        icon.className = 'fas fa-info-circle';
+        button.classList.remove('details-expanded');
+        console.log('Details hidden');
+    }
+}
+
+// Auto-update all project card buttons
+function updateAllProjectButtons() {
+    const projectButtons = document.querySelectorAll('.project-btn');
+    
+    projectButtons.forEach(button => {
+        // Add onclick if not already present
+        if (!button.getAttribute('onclick')) {
+            button.setAttribute('onclick', 'toggleProjectDetails(this)');
+        }
+        
+        // Add btn-text span if not present
+        if (!button.querySelector('.btn-text')) {
+            const text = button.textContent.trim();
+            button.innerHTML = `<i class="fas fa-info-circle"></i><span class="btn-text">${text}</span>`;
+        }
+    });
+}
+
+// Run when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    updateAllProjectButtons();
+});
+</script>
 
 {% endblock %}

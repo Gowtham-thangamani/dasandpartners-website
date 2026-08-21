@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- News List Page -->
+<section class="content-portal-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); min-height: 100vh;">
+    <div class="container">
+        <!-- Header -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h1 class="display-5 fw-bold mb-3" style="color: #148255;">
+                            <i class="fas fa-newspaper me-3"></i>News Management
+                        </h1>
+                        <p class="lead text-muted">Manage all news articles</p>
+                    </div>
+                    <div>
+                        <a href="{% url 'add_news' %}" class="btn btn-primary me-2">
+                            <i class="fas fa-plus me-2"></i>Add News
+                        </a>
+                        <a href="{% url 'content_dashboard' %}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News List -->
+        <div class="row">
+            <div class="col-12">
+                <div class="content-list-card">
+                    {% if news %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Type</th>
+                                        <th>Frequency</th>
+                                        <th>Created Date</th>
+                                        <th>Added Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for news_item in news %}
+                                    <tr>
+                                        <td>
+                                            {% if news_item.image %}
+                                                <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="img-thumbnail" style="width: 60px; height: 60px; object-fit: cover;">
+                                            {% else %}
+                                                <div class="no-image-placeholder" style="width: 60px; height: 60px; background: #f8f9fa; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
+                                                    <i class="fas fa-image text-muted"></i>
+                                                </div>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <strong>{{ news_item.title }}</strong>
+                                        </td>
+                                        <td>
+                                            {% if news_item.news_type == 'project' %}
+                                                <span class="badge" style="background:#148255;color:white;">
+                                                    <i class="fas fa-project-diagram me-1"></i>Project
+                                                </span>
+                                            {% else %}
+                                                <span class="badge" style="background:#1ec28b;color:white;">
+                                                    <i class="fas fa-bullhorn me-1"></i>Overall
+                                                </span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if news_item.frequency == 'daily' %}
+                                                <span class="badge" style="background:#4CAF50;color:white;">
+                                                    <i class="fas fa-calendar-day me-1"></i>Daily
+                                                </span>
+                                            {% elif news_item.frequency == 'weekly' %}
+                                                <span class="badge" style="background:#2196F3;color:white;">
+                                                    <i class="fas fa-calendar-week me-1"></i>Weekly
+                                                </span>
+                                            {% else %}
+                                                <span class="badge" style="background:#FF9800;color:white;">
+                                                    <i class="fas fa-calendar-alt me-1"></i>Monthly
+                                                </span>
+                                            {% endif %}
+                                        </td>
+                                        <td>{{ news_item.created_date|date:"M d, Y" }}</td>
+                                        <td>{{ news_item.added_date|date:"M d, Y" }}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <a href="{% url 'edit_news' news_item.id %}" class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-edit"></i> Edit
+                                                </a>
+                                                <a href="{% url 'delete_news' news_item.id %}" class="btn btn-sm btn-outline-danger">
+                                                    <i class="fas fa-trash"></i> Delete
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Pagination -->
+                        {% if news.has_other_pages %}
+                        <nav aria-label="News pagination">
+                            <ul class="pagination justify-content-center">
+                                {% if news.has_previous %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page=1">First</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ news.previous_page_number }}">Previous</a>
+                                    </li>
+                                {% endif %}
+
+                                <li class="page-item active">
+                                    <span class="page-link">
+                                        Page {{ news.number }} of {{ news.paginator.num_pages }}
+                                    </span>
+                                </li>
+
+                                {% if news.has_next %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ news.next_page_number }}">Next</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ news.paginator.num_pages }}">Last</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                        {% endif %}
+                    {% else %}
+                        <div class="text-center py-5">
+                            <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
+                            <h4 class="text-muted">No news articles found</h4>
+                            <p class="text-muted">Start by adding your first news article.</p>
+                            <a href="{% url 'add_news' %}" class="btn btn-primary">
+                                <i class="fas fa-plus me-2"></i>Add News
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.content-list-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #148255;
+}
+
+.btn-group .btn {
+    margin-right: 5px;
+}
+
+.no-image-placeholder {
+    border: 1px solid #dee2e6;
+}
+</style>
+
+{% endblock %}
+

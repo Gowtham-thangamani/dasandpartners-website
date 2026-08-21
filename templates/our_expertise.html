@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
-{% block title %}Home Page{% endblock %}
+{% block title %}Our Expertise{% endblock %}
 
 {% load static %}
 {% block content %}
-
 
 <!-- ============== start-breadcumb-area =============== -->
 <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg' %});">
@@ -14,7 +13,7 @@
                 <div class="bread-content">
                     <h1 class="breadcumb-title">Our Expertise</h1>
                     <ul class="breadcumb-menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
                         <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
                         <li>Our Expertise</li>
                     </ul>
@@ -25,294 +24,714 @@
 </section>
 <!-- ============== end-breadcumb-area =============== -->
 
-<!-- ================================================== Start Blog Post Area ====================================================== -->
-<section class="blog-post-area-section home-two-blog-area section-padding pt-0">
+<!-- ============== start-services-section =============== -->
+<section class="services-section section-padding">
+    <!-- Floating Elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
-                <div class="team-title">
-                    <h6 class="sub-title"><span class=""></span>Our Services &nbsp;&nbsp; <span class=""></span></h6>
-                    <h2 class="title">We Provide The Best Services</h2>
+            <div class="col-12 text-center mb-5">
+                <h2>Our Services</h2>
+                <p class="subtitle">Discover our comprehensive range of engineering and consultancy services</p>
+            </div>
+        </div>
+
+                                <!-- Services Grid -->
+        <div class="row">
+            <!-- Lead Consultant -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/1.png' %}" alt="Lead Engineering Consultant Dubai Abu Dhabi UAE">
+                        <div class="service-category">Consultancy</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'lead_consultant' %}">Lead Consultant</a>
+                        </h4>
+                        <p class="service-card-description">Strategic leadership and expert consultation for complex projects.</p>
+                        <a href="{% url 'lead_consultant' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
-                <div class="row">
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'architectural_engineering' %}"><img src={% static "assets/images/our_expertise/architectural-engineering.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'architectural_engineering' %}">Architectural Engineering</a></h5>
-                                <p>At Das And Partners (DAP) Engineering Consultancy, We blend artistry with precision engineering to create spaces...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'architectural_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'architect_of_record' %}"><img src={% static "assets/images/our_expertise/architect-of-record.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'architect_of_record' %}">Architect Of Record (AOR)</a></h5>
-                                <p>The Architect of Record (AOR) is the licensed architect or architectural firm officially designated...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'architect_of_record' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'oil_and_gas_engineering' %}"><img src={% static "assets/images/our_expertise/oil-and-gas-engineering.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'oil_and_gas_engineering' %}">Oil And Gas Engineering</a></h5>
-                                <p>Das And Partners (DAP) Engineering Consultancy may conduct feasibility studies to assess the viability of oil and gas projects...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'oil_and_gas_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'structural_engineering' %}"><img src={% static "assets/images/our_expertise/structural-engineering.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'structural_engineering' %}">Structural Engineering</a></h5>
-                                <p>Structural Engineering involves the analysis, design, and construction of structures to ensure they can withstand applied...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'structural_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Design & Supervision Consultancy -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/2.png' %}" alt="Design Supervision Engineering Consultancy Dubai Abu Dhabi">
+                        <div class="service-category">Consultancy</div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'infrastructure' %}"><img src={% static "assets/images/our_expertise/infrastructure.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'infrastructure' %}">Infrastructure</a></h5>
-                                <p>Infrastructure services encompass a broad range of essential facilities and systems that support societal functions...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'infrastructure' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="#">Design & Supervision Consultancy</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive design and supervision services for project excellence.</p>
+                        <a href="#" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'construction_engineering' %}"><img src={% static "assets/images/our_expertise/constrution-engineering.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'construction_engineering' %}">Constrution Engineering</a></h5>
-                                <p>In Das And Partners (DAP) Engineering Consultancy Abu Dhabi, our construction engineering services ensure precise, efficient...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'construction_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'mep_engineering' %}"><img src={% static "assets/images/our_expertise/mep-engineering.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'mep_engineering' %}">MEP Engineering</a></h5>
-                                <p>MEP (Mechanical, Electrical, and Plumbing) engineering is a crucial aspect of building design and construction...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'mep_engineering' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Authority Approval / NOC Permitting Consultant -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/3.png' %}" alt="Authority Approval NOC Permitting Engineering Consultant UAE">
+                        <div class="service-category">Consultancy</div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'project_management' %}"><img src={% static "assets/images/our_expertise/project-management.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'project_management' %}">Project Management</a></h5>
-                                <p>At DAP Engineering Consultants, we specialize in delivering top-notch project management services in the architectural...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'project_management' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="#">Authority Approval / NOC Permitting Consultant</a>
+                        </h4>
+                        <p class="service-card-description">Expert guidance through regulatory approvals and permitting processes.</p>
+                        <a href="#" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'villa_design_abu_dhabi' %}"><img src={% static "assets/images/our_expertise/luxury-villa-design.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'villa_design_abu_dhabi' %}">Villa Design</a></h5>
-                                <p>At Das And Partners (DAP), we specialize in creating luxurious, tailored environments that reflect your unique style and preferences...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'villa_design_abu_dhabi' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'villa_design' %}"><img src={% static "assets/images/our_expertise/villa-design.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'villa_design' %}">Villa Design in Abu Dhabi</a></h5>
-                                <p>When it comes to villa design in Abu Dhabi, Das And Partners (DAP) Engineering Consultancy stands as a beacon of innovation and excellence...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'villa_design' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+            <!-- BIM Specialist Consultant -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/4.png' %}" alt="BIM Engineering Consultancy Dubai Abu Dhabi">
+                        <div class="service-category">Modeling</div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'interior_design' %}"><img src={% static "assets/images/our_expertise/interior-design.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'interior_design' %}">Interior Design</a></h5>
-                                <p>Transforming spaces into personalized havens through innovative design solutions. From conceptualization to execution,...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'interior_design' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a>BIM Specialist Consultant</a>
+                        </h4>
+                        <p class="service-card-description">Advanced Building Information Modeling for project visualization.</p>
+                        <a href="{% url 'bim_services' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'building_information_modeling' %}"><img src={% static "assets/images/our_expertise/building-information-modeling.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'building_information_modeling' %}">Building Information Modeling</a></h5>
-                                <p>By leveraging advanced digital technology, BIM allows architects, engineers, and construction professionals...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'building_information_modeling' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
-                    
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'lead_consultant' %}"><img src={% static "assets/images/our_expertise/lead-consultant.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'lead_consultant' %}">Lead Consultant</a></h5>
-                                <p>As the cornerstone of our architectural team, our Lead Consultant brings a unique blend of creativity...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'lead_consultant' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Architectural Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/5.png' %}" alt="Architectural Engineering Consultancy Dubai Abu Dhabi UAE">
+                        <div class="service-category">Design</div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'contract_cost_consultancy' %}"><img src={% static "assets/images/our_expertise/contract-cost-consultancy.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'contract_cost_consultancy' %}">Contract & Cost Consultancy</a></h5>
-                                <p>We specialize in providing comprehensive Contracts and Cost Consultancy services tailored to meet the unique needs of our clients...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'contract_cost_consultancy' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'architectural_engineering' %}">Architectural Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Blending artistry with precision engineering for innovative solutions.</p>
+                        <a href="{% url 'architectural_engineering' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'facilities_management_consultancy' %}"><img src={% static "assets/images/our_expertise/facilities-management-consultancy.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'facilities_management_consultancy' %}">Facilities Management</a></h5>
-                                <p>From strategic planning to operational excellence, we provide tailored solutions that maximize value and enhance the overall...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'facilities_management_consultancy' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Architect of Record -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/6.png' %}" alt="Architect of Record">
+                        <div class="service-category">Design</div>
                     </div>
-                                      
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'renewable_energy_consultants' %}"><img src={% static "assets/images/our_expertise/renewable-energy-consultants.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'renewable_energy_consultants' %}">Renewable Energy Consultants</a></h5>
-                                <p>Renewable Energy Consultants provide expert guidance and strategic solutions to organizations seeking to adopt renewable energy...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'renewable_energy_consultants' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'architect_of_record' %}">Architect of Record</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive architectural oversight and project coordination services.</p>
+                        <a href="{% url 'architect_of_record' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'mall_management_consultants' %}"><img src={% static "assets/images/our_expertise/mall-management-consultants.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'mall_management_consultants' %}">Mall Management Consultants</a></h5>
-                                <p>At Das And Partners (DAP) Engineering Consultancy, we specialize in optimizing mall operations, enhancing visitor experiences...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'mall_management_consultants' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Structural Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/7.png' %}" alt="Structural Engineering Consultancy Dubai Abu Dhabi UAE">
+                        <div class="service-category">Engineering</div>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'leed_consultants' %}"><img src={% static "assets/images/our_expertise/leed-consultant.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'leed_consultants' %}">Leed Consultants</a></h5>
-                                <p>LEED (Leadership in Energy and Environmental Design) Consultants are experts in sustainable building practices...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'leed_consultants' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'structural_engineering' %}">Structural Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive structural analysis and design for safety and durability.</p>
+                        <a href="{% url 'structural_engineering' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="col-xxl-4 col-xl-4 pb-4">
-                        <div class="recent-post-thumb-wrap">
-                            <div class="thumb">
-                                <a href="{% url 'electrical_engineering_consultancy' %}"><img src={% static "assets/images/our_expertise/electrical-engineering-consultancy.jpg" %} alt=""></a>
-                            </div>
-                            <div class="author-deatils">
-                                <h5><a href="{% url 'electrical_engineering_consultancy' %}">Electrical Engineering</a></h5>
-                                <p>At Das And Partners (DAP) Engineering Consultancy, our Electrical Engineering Consultancy services are designed to deliver innovative solutions...</p>
-                                <div class="usersdate">
-                                    <a href="{% url 'electrical_engineering_consultancy' %}"><i class="fa fa-link" aria-hidden="true"></i> Read More</a>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+            <!-- MEP Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/8.png' %}" alt="MEP Engineering Consultancy Dubai Abu Dhabi UAE">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'mep_engineering' %}">MEP Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Integrated mechanical, electrical & plumbing solutions for optimal performance.</p>
+                        <a href="{% url 'mep_engineering' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electrical Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/9.png' %}" alt="Electrical Engineering Consultancy Dubai Abu Dhabi UAE">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'electrical_engineering_consultancy' %}">Electrical Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Innovative electrical solutions designed for optimal performance and efficiency.</p>
+                        <a href="{% url 'electrical_engineering_consultancy' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construction Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/10.png' %}" alt="Construction Engineering">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'construction_engineering' %}">Construction Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Advanced construction techniques and project management for complex builds.</p>
+                        <a href="{% url 'construction_engineering' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Utilities & Infrastructure -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/11.png' %}" alt="Utilities & Infrastructure">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'infrastructure' %}">Utilities & Infrastructure</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive infrastructure solutions supporting societal functions and development.</p>
+                        <a href="{% url 'infrastructure' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oil & Gas Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/12.png' %}" alt="Oil Gas Engineering Consultancy Dubai Abu Dhabi UAE">
+                        <div class="service-category">Energy</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'oil_and_gas_engineering' %}">Oil & Gas Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Specialized engineering solutions for oil and gas projects with focus on safety.</p>
+                        <a href="{% url 'oil_and_gas_engineering' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Management -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/13.png' %}" alt="Project Management">
+                        <div class="service-category">Management</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'project_management' %}">Project Management</a>
+                        </h4>
+                        <p class="service-card-description">End-to-end project management ensuring timely delivery and quality standards.</p>
+                        <a href="{% url 'project_management' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contract Cost Consultancy -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/14.png' %}" alt="Contract Cost Consultancy">
+                        <div class="service-category">Consultancy</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'contract_cost_consultancy' %}">Contract Cost Consultancy</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive contract management and cost optimization services.</p>
+                        <a href="{% url 'contract_cost_consultancy' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities Management -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/15.png' %}" alt="Facilities Management">
+                        <div class="service-category">Management</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'facilities_management_consultancy' %}">Facilities Management</a>
+                        </h4>
+                        <p class="service-card-description">Strategic planning and operational excellence for facilities management.</p>
+                        <a href="{% url 'facilities_management_consultancy' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEED Consultants -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/16.png' %}" alt="LEED Consultants">
+                        <div class="service-category">Sustainability</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'leed_consultants' %}">LEED Consultants</a>
+                        </h4>
+                        <p class="service-card-description">Expert guidance in sustainable building practices and LEED certification.</p>
+                        <a href="{% url 'leed_consultants' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Renewable Energy -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/17.png' %}" alt="Renewable Energy">
+                        <div class="service-category">Sustainability</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'renewable_energy_consultants' %}">Renewable Energy</a>
+                        </h4>
+                        <p class="service-card-description">Sustainable energy solutions and renewable technology implementation.</p>
+                        <a href="{% url 'renewable_energy_consultants' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mall Management -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/18.png' %}" alt="Mall Management">
+                        <div class="service-category">Management</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'mall_management_consultants' %}">Mall Management</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive mall management and retail performance optimization.</p>
+                        <a href="{% url 'mall_management_consultants' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Building Information Modeling -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/19.png' %}" alt="Building Information Modeling">
+                        <div class="service-category">Modeling</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'building_information_modeling' %}">Building Information Modeling</a>
+                        </h4>
+                        <p class="service-card-description">Advanced digital technology for collaborative design and construction management.</p>
+                        <a href="{% url 'building_information_modeling' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interior Design -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/20.png' %}" alt="Interior Design">
+                        <div class="service-category">Design</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'interior_design' %}">Interior Design</a>
+                        </h4>
+                        <p class="service-card-description">Transform spaces into personalized havens through innovative design solutions.</p>
+                        <a href="{% url 'interior_design' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Civil, Structural, and Architectural -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/21.png' %}" alt="Civil, Structural, and Architectural">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a>Civil, Structural, and Architectural</a>
+                        </h4>
+                        <p class="service-card-description">Civil, structural, and architectural services for comprehensive project delivery.</p>
+                        <a href="{% url 'csa_services' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telecommunications Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/22.png' %}" alt="Telecommunications Engineering">
+                        <div class="service-category">Technology</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a>Telecommunications Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Cutting-edge telecommunications solutions for modern connectivity needs.</p>
+                        <a href="{% url 'eit_services' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instrumentation & Control Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/23.png' %}" alt="Instrumentation & Control Engineering">
+                        <div class="service-category">Technology</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a>Instrumentation & Control Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Advanced instrumentation and control systems for industrial applications.</p>
+                        <a href="{% url 'eit_services' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineer of Record -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/24.png' %}" alt="Engineer of Record">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a>Engineer of Record</a>
+                        </h4>
+                        <p class="service-card-description">Professional engineering oversight and project responsibility services.</p>
+                        <a href="{% url 'eit_services' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safety & Environment Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/25.png' %}" alt="Safety & Environment Engineering">
+                        <div class="service-category">Safety</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a>Safety & Environment Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Health, safety, security, and environmental management services.</p>
+                        <a href="{% url 'hsse_services' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contract Administration -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/26.png' %}" alt="Contract Administration">
+                        <div class="service-category">Management</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'contract_administration' %}">Contract Administration</a>
+                        </h4>
+                        <p class="service-card-description">Professional contract administration and project documentation services.</p>
+                        <a href="{% url 'contract_administration' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highways & Bridges -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/27.png' %}" alt="Highways & Bridges">
+                        <div class="service-category">Infrastructure</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'highways_bridges' %}">Highways & Bridges</a>
+                        </h4>
+                        <p class="service-card-description">Building tomorrow's transportation networks with safety and efficiency.</p>
+                        <a href="{% url 'highways_bridges' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transport Planning -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/28.png' %}" alt="Transport Planning">
+                        <div class="service-category">Planning</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'transport_planning' %}">Transport Planning</a>
+                        </h4>
+                        <p class="service-card-description">Designing smart transportation systems for sustainable mobility.</p>
+                        <a href="{% url 'transport_planning' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landscaping & Public Realm -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/29.png' %}" alt="Landscaping & Public Realm">
+                        <div class="service-category">Design</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'landscaping_public_realm' %}">Landscaping & Public Realm</a>
+                        </h4>
+                        <p class="service-card-description">Creating beautiful and functional public spaces that enhance community life.</p>
+                        <a href="{% url 'landscaping_public_realm' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Urban and Master Planning -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/30.png' %}" alt="Urban and Master Planning">
+                        <div class="service-category">Planning</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'urban_master_planning' %}">Urban and Master Planning</a>
+                        </h4>
+                        <p class="service-card-description">Shaping sustainable urban futures through comprehensive planning.</p>
+                        <a href="{% url 'urban_master_planning' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environmental -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/31.png' %}" alt="Environmental">
+                        <div class="service-category">Sustainability</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'environmental' %}">Environmental</a>
+                        </h4>
+                        <p class="service-card-description">Protecting our planet through sustainable engineering solutions.</p>
+                        <a href="{% url 'environmental' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industrial Design -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/32.png' %}" alt="Industrial Design">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'industrial_design' %}">Industrial Design</a>
+                        </h4>
+                        <p class="service-card-description">Optimizing industrial processes and facilities for maximum efficiency.</p>
+                        <a href="{% url 'industrial_design' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infrastructure & Transport -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/33.png' %}" alt="Infrastructure & Transport">
+                        <div class="service-category">Infrastructure</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'infrastructure_transport' %}">Infrastructure & Transport</a>
+                        </h4>
+                        <p class="service-card-description">Building the infrastructure of tomorrow with comprehensive solutions.</p>
+                        <a href="{% url 'infrastructure_transport' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Landscape -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/34.png' %}" alt="Landscape">
+                        <div class="service-category">Design</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'landscape' %}">Landscape</a>
+                        </h4>
+                        <p class="service-card-description">Creating beautiful and sustainable landscapes that harmonize with nature.</p>
+                        <a href="{% url 'landscape' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Land Surveying -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/35.png' %}" alt="Land Surveying">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'land_surveying' %}">Land Surveying</a>
+                        </h4>
+                        <p class="service-card-description">Accurate land measurement and mapping services for successful projects.</p>
+                        <a href="{% url 'land_surveying' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Process Engineering -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/45.jpg' %}" alt="Process Engineering">
+                        <div class="service-category">Engineering</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'process_engineering' %}">Process Engineering</a>
+                        </h4>
+                        <p class="service-card-description">Comprehensive process engineering solutions for industrial and manufacturing systems.</p>
+                        <a href="{% url 'process_engineering' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luxurious Villa Design -->
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="service-card">
+                    <div class="service-card-image">
+                        <img src="{% static 'assets/images/experts/36.png' %}" alt="Luxurious Villa Design">
+                        <div class="service-category">Design</div>
+                    </div>
+                    <div class="service-card-content">
+                        <h4 class="service-card-title">
+                            <a href="{% url 'villa_design' %}">Luxurious Villa Design</a>
+                        </h4>
+                        <p class="service-card-description">Luxurious and personalized villa designs for your lifestyle.</p>
+                        <a href="{% url 'villa_design' %}" class="service-card-button">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+<!-- ============== end-services-section =============== -->
+
+<!-- ============== start-why-choose-us-section =============== -->
+<section class="why-choose-us-section section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>Why Choose Us</h2>
+                <p>With over 10+ years of experience Team, we've built a reputation for delivering exceptional engineering solutions that exceed expectations.</p>
+                
+                <div>
+                    <div>
+                        <div>
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div>
+                            <h5>Proven Excellence</h5>
+                            <p>5+ years of successful project delivery across diverse sectors</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div>
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h5>Expert Team</h5>
+                            <p>Multidisciplinary team of certified professionals and industry experts</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div>
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h5>Timely Delivery</h5>
+                            <p>Commitment to meeting deadlines without compromising quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'assets/images/about/1752898799508.jpg' %}" alt="Why Choose Us">
+                <div class="ceo-info" style="text-align: center; margin-top: 20px; padding: 15px; background: rgba(255, 255, 255, 0.95); border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                    <h4 style="color: #148255; font-weight: 600; margin-bottom: 5px; font-size: 1.4rem;">Sudarshan Das</h4>
+                    <p style="color: #666; font-size: 1.1rem; margin: 0; font-weight: 500;">CEO</p>
+                </div>            </div>
+        </div>
     </div>
 </section>
+<!-- ============== end-why-choose-us-section =============== -->
 
-{% endblock %}
+<!-- SEO Optimized Content Section -->
+<div style="display: none; visibility: hidden; height: 0; overflow: hidden;">
+    <h1>Our Engineering Expertise - Premier Engineering Consultancy Dubai & Abu Dhabi</h1>
+    <h2>Comprehensive Engineering Services UAE - Das And Partners</h2>
+    <p>Das And Partners offers comprehensive engineering consultancy Dubai and engineering consultancy Abu Dhabi services. As top engineering consultants UAE, we provide civil engineering consultancy Dubai, structural engineering consultancy Abu Dhabi, MEP consultant Dubai, and MEP consultant Abu Dhabi solutions across the region.</p>
+    <p>Our multidisciplinary engineering consultancy UAE specializes in authority approvals engineering consultant Dubai, engineering design consultant Dubai, engineering services Abu Dhabi, and BIM engineering consultancy Dubai. We are recognized as the best engineering consultancy in Dubai and Abu Dhabi, delivering expert oil & gas engineering consultants UAE, infrastructure engineering consultancy Dubai, and power & energy engineering consultants Dubai services.</p>
+    <p>Das And Partners provides comprehensive process plant engineering consultant UAE, offshore oil & gas engineering consultants Abu Dhabi, petrochemical engineering consultancy UAE, and renewable energy engineering consultants Dubai solutions. Our team includes marine engineering consultancy UAE, offshore structural engineering consultant Dubai, and jetty & port engineering consultant Abu Dhabi specialists.</p>
+    <p>We deliver roads & bridges engineering consultants Abu Dhabi, heavy civil engineering consultants UAE, bridge engineering consultants Abu Dhabi, tunnel design engineering consultants UAE, and smart city infrastructure consultants Abu Dhabi services. Our utilities engineering consultants UAE team provides district cooling plant engineering consultancy Dubai, water & wastewater engineering Abu Dhabi, and pipeline engineering consultants UAE solutions.</p>
+    <p>Contact Das And Partners for expert project management consultancy Abu Dhabi, FEED & EPCM consultant Dubai, digital twin engineering UAE, and substation design consultants Dubai services. We are the premier engineering consultancy for high rise building engineering consultancy Dubai, coastal & marine infrastructure engineering Dubai, and offshore platform design consultants UAE projects.</p>
+</div>{% endblock %}

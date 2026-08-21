@@ -61,6 +61,10 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
+# Media files (uploaded content)
+media/
+!media/.gitkeep
+
 # Flask stuff:
 instance/
 .webassets-cache
@@ -130,11 +134,21 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.venv_run/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Collected static output (regenerated on the server via collectstatic)
+staticfiles/
+
+# Local scratch / runtime artifacts
+tmp/
+.DS_Store
+__MACOSX/
+dasandpartners-django-main/
 
 # Spyder project settings
 .spyderproject

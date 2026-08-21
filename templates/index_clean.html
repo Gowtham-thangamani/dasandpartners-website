@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-area-wrapper">
+    <!-- Dynamic Background with Multiple Layers -->
+    <div class="hero-slider parallax-bg">
+        
+        <!-- Animated Background Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Animated Geometric Shapes -->
+        <div class="hero-geometric-shapes">
+            <div class="geometric-shape"></div>
+            <div class="geometric-shape"></div>
+            <div class="geometric-shape"></div>
+            <div class="geometric-shape"></div>
+        </div>
+        
+        <!-- Floating Particles -->
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <!-- Main Content Container -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 col-lg-11 col-md-12 mx-auto">
+                    <div class="hero-single text-center">
+                        
+                        <!-- Welcome Badge -->
+                        <div class="hero-badge hero-animate-fade-in-up">
+                            <i class="fas fa-star"></i>
+                            Welcome to Das And Partners (DAP) Engineering Consultancy
+                        </div>
+                        
+                        <!-- Main Title with Shimmer Effect -->
+                        <h1 class="hero-title hero-animate-fade-in-up">
+                            Engineering Consultancy Excellence
+                        </h1>
+                        
+                        <!-- Subtitle with Wave Animation -->
+                        <p class="hero-subtitle hero-animate-fade-in-up">
+                            <span class="hero-animate-wave">Where expertise meets innovation.</span> 
+                            <br>Explore our tailored engineering solutions designed to propel your projects to new heights.
+                        </p>
+                        
+                        <!-- Action Buttons -->
+                        <div class="hero-buttons hero-animate-fade-in-up">
+                            <a href="{% url 'our_expertise' %}" class="hero-btn-primary hero-animate-pulse">
+                                <span>
+                                    <i class="fas fa-rocket"></i>
+                                    Explore Our Expertise
+                                </span>
+                                <div class="btn-shimmer"></div>
+                            </a>
+                            
+                            <a href="{% url 'our_work' %}" class="hero-btn-secondary">
+                                <span>
+                                    <i class="fas fa-eye"></i>
+                                    View Our Work
+                                </span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Scroll Indicator -->
+        <div class="hero-scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow hero-animate-bounce">
+                <div class="arrow-glow"></div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="hero-stats-section">
+    <!-- Background Pattern -->
+    <div class="stats-bg-pattern"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h6 class="sub-title scroll-animate">Our Achievements</h6>
+                <h2 class="title scroll-animate">Delivering Excellence Across the Globe</h2>
+                <p class="text scroll-animate">Trusted by clients worldwide for innovative engineering solutions</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="stat-card text-center scroll-animate-scale">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number counter-animate" data-count="3879">0</div>
+                    <div class="stat-label">Successful Projects</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="stat-card text-center scroll-animate-scale">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number counter-animate" data-count="150">0</div>
+                    <div class="stat-label">Expert Engineers</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="stat-card text-center scroll-animate-scale">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number counter-animate" data-count="25">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                <div class="stat-card text-center scroll-animate-scale">
+                    <div class="stat-icon animate-float">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-number counter-animate" data-count="50">0</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="future-area-wrapper">
+    <!-- Background Elements -->
+    <div class="services-bg-pattern"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h6 class="sub-title scroll-animate">Our Core Services</h6>
+                <h2 class="title scroll-animate">Comprehensive Engineering Solutions</h2>
+                <p class="text scroll-animate">Delivering excellence across all aspects of engineering consultancy</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="service-card scroll-animate-scale">
+                    <div class="service-image service-image-1">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>CSA</h5>
+                        <p>Civil, Structural, and Architectural services for comprehensive project delivery with cutting-edge technology.</p>
+                        <a href="{% url 'csa_services' %}" class="button-one">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="service-card scroll-animate-scale">
+                    <div class="service-image service-image-2">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>MEP</h5>
+                        <p>Mechanical, Electrical, and Plumbing engineering solutions for modern buildings with sustainable practices.</p>
+                        <a href="{% url 'mep_services' %}" class="button-one">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="service-card scroll-animate-scale">
+                    <div class="service-image service-image-3">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>EIT</h5>
+                        <p>Electrical, Instrumentation, and Telecommunications engineering expertise for advanced systems.</p>
+                        <a href="{% url 'eit_services' %}" class="button-one">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="service-card scroll-animate-scale">
+                    <div class="service-image service-image-1">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>HSSE</h5>
+                        <p>Health, Safety, Security, and Environment services ensuring compliance and protection for your projects.</p>
+                        <a href="{% url 'hsse_services' %}" class="button-one">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="service-card scroll-animate-scale">
+                    <div class="service-image service-image-2">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>BIM</h5>
+                        <p>Building Information Modeling services for digital construction and collaborative project management.</p>
+                        <a href="{% url 'bim_services' %}" class="button-one">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
+                <div class="service-card scroll-animate-scale">
+                    <div class="service-image service-image-3">
+                        <div class="service-overlay"></div>
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="service-content">
+                        <h5>Contract Administration</h5>
+                        <p>Professional contract management and administration services ensuring project success and compliance.</p>
+                        <a href="{% url 'contract_administration' %}" class="button-one">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Counter Animation Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter-animate');
+    
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        const duration = 2000; // 2 seconds
+        const step = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            counter.textContent = Math.floor(current);
+        }, 16);
+    };
+    
+    // Scroll Animation
+    const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-animate-scale');
+    
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <=
+            (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('animate');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+                if (el.classList.contains('counter-animate')) {
+                    animateCounter(el);
+                }
+            }
+        });
+    };
+    
+    // Initial check for elements in view
+    handleScrollAnimation();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // Button hover effects
+    const buttons = document.querySelectorAll('.hero-btn-primary, .hero-btn-secondary, .button-one');
+    
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Service card hover effects
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+</script>
+
+{% endblock %} 

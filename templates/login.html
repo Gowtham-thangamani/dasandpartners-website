@@ -1,77 +1,147 @@
 {% extends 'base.html' %}
-{% block title %}Home Page{% endblock %}
+{% block title %}Login - Content Dashboard{% endblock %}
 
 {% load static %}
 {% block content %}
 
-
-<!-- ================================== Start Contact Page Area Section ================================================ -->
-    <section class="get-in-touch-area home-two-appointment section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-3 col-lg-12 col-md-12"></div>
-
-                <div class="col-xl-6 col-lg-12 col-md-12">
-                    <div class="appoinment-form-wrap team-title">
-                        <div id="error-message" class="alert alert-danger d-none" role="alert">
-                            Invalid credentials. Please try again.
+<!-- Login Page -->
+<section class="login-section" style="min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#148255 0%,#1ec28b 100%);padding:60px 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <!-- Login Card -->
+                <div class="login-card" style="background:white;border-radius:20px;padding:50px;box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+                    
+                    <!-- Logo & Title -->
+                    <div class="text-center mb-4">
+                        <div class="logo-circle" style="width:80px;height:80px;background:linear-gradient(135deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                            <i class="fas fa-lock" style="font-size:2rem;color:white;"></i>
                         </div>
-                        <h2 class="title">Login <span class="sub-title">as</span></h2>
-                        <form id="login_form" method="post">
-                            <div class="mb-4">
-                                {% comment %} <label class="form-label me-3 sub-title">as</label> {% endcomment %}
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="login_as" id="employee" value="employee" required>
-                                    <label class="form-check-label" for="employee">Employee</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="login_as" id="client" value="client" required>
-                                    <label class="form-check-label" for="client">Client</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="login_as" id="management" value="management" required>
-                                    <label class="form-check-label" for="management">Management</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control style" placeholder="Your Email" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control style" placeholder="******" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="about-btn">
-                                    <button type="submit" class="button-one">Login <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        <h2 style="color:#148255;font-weight:800;margin-bottom:10px;">Content Dashboard</h2>
+                        <p style="color:#666;font-size:1.1rem;">Sign in to manage your content</p>
+                    </div>
+
+                    <!-- Messages -->
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert" style="border-radius:10px;">
+                            {% if message.tags == 'error' %}
+                                <i class="fas fa-exclamation-circle me-2"></i>
+                            {% elif message.tags == 'success' %}
+                                <i class="fas fa-check-circle me-2"></i>
+                            {% endif %}
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <!-- Login Form -->
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        
+                        <!-- Username Field -->
+                        <div class="form-group mb-4">
+                            <label for="username" style="font-weight:600;color:#333;margin-bottom:8px;">
+                                <i class="fas fa-user me-2" style="color:#148255;"></i>Username
+                            </label>
+                            <input type="text" 
+                                   name="username" 
+                                   id="username" 
+                                   class="form-control" 
+                                   placeholder="Enter your username" 
+                                   required
+                                   autocomplete="username"
+                                   style="border:2px solid #e9ecef;border-radius:10px;padding:15px;font-size:16px;transition:all 0.3s;">
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group mb-4">
+                            <label for="password" style="font-weight:600;color:#333;margin-bottom:8px;">
+                                <i class="fas fa-lock me-2" style="color:#148255;"></i>Password
+                            </label>
+                            <input type="password" 
+                                   name="password" 
+                                   id="password" 
+                                   class="form-control" 
+                                   placeholder="Enter your password" 
+                                   required
+                                   autocomplete="current-password"
+                                   style="border:2px solid #e9ecef;border-radius:10px;padding:15px;font-size:16px;transition:all 0.3s;">
+                        </div>
+
+                        <!-- Remember Me -->
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="remember" name="remember" style="border:2px solid #148255;">
+                            <label class="form-check-label" for="remember" style="color:#666;">
+                                Remember me for 30 days
+                            </label>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button type="submit" class="btn w-100" style="background:linear-gradient(135deg,#148255,#1ec28b);border:none;padding:15px;font-weight:600;font-size:1.1rem;border-radius:10px;color:white;transition:all 0.3s;">
+                            <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                        </button>
+                    </form>
+
+                    <!-- Additional Info -->
+                    <div class="text-center mt-4" style="padding-top:20px;border-top:1px solid #eee;">
+                        <p style="color:#666;margin-bottom:10px;">
+                            <i class="fas fa-shield-alt me-2" style="color:#148255;"></i>Secure Authentication
+                        </p>
+                        <a href="{% url 'home' %}" style="color:#148255;text-decoration:none;font-weight:600;">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Website
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-lg-12 col-md-12"></div>
-
+                <!-- Help Text -->
+                <div class="text-center mt-4">
+                    <p style="color:white;font-size:0.95rem;">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Need access? Contact your administrator
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-<script>
-    document.getElementById("login_form").addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent real form submission
+<style>
+.login-card .form-control:focus {
+    border-color: #148255;
+    box-shadow: 0 0 0 0.2rem rgba(20, 130, 85, 0.25);
+}
 
-        // Show error message
-        document.getElementById("error-message").classList.remove("d-none");
-    });
-</script>
+.login-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(20, 130, 85, 0.3);
+}
 
+.login-card .form-check-input:checked {
+    background-color: #148255;
+    border-color: #148255;
+}
+
+.logo-circle {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 30px 20px !important;
+    }
+}
+</style>
 
 {% endblock %}

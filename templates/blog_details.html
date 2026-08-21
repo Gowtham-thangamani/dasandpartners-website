@@ -1,90 +1,328 @@
 {% extends 'base.html' %}
-{% block title %}Home Page{% endblock %}
+{% block title %}{{ blog_obj.title }} - Das And Partners{% endblock %}
 
 {% load static %}
+{% load custom_filters %}
 {% block content %}
 
-<!-- ======================================================================================================================================================== -->
+<!-- Reading Progress Bar -->
+<div class="reading-progress-bar" style="position:fixed;top:0;left:0;width:0%;height:4px;background:linear-gradient(90deg,#148255,#1ec28b);z-index:9999;transition:width 0.1s;"></div>
 
-
-    <!-- ============== start-breadcumb-area =============== -->
-    <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg'%});">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bread-content">
-                        <h1 class="breadcumb-title">Blog</h1>
-                        <ul class="breadcumb-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
-                            <li>Blogs</li>
-                        </ul>
-                    </div>
+<!-- Blog Hero Section -->
+<section class="blog-hero-section" style="position:relative;height:60vh;min-height:500px;background:#000;overflow:hidden;">
+    <div class="hero-image" style="position:absolute;top:0;left:0;right:0;bottom:0;">
+        {% if blog_obj.image %}
+        <img src="{{ blog_obj.image.url }}" alt="{{ blog_obj.title }}" style="width:100%;height:100%;object-fit:cover;opacity:0.6;">
+        {% else %}
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#148255,#1ec28b);opacity:0.8;"></div>
+        {% endif %}
+    </div>
+    <div class="hero-overlay" style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom,rgba(0,0,0,0.4),rgba(20,130,85,0.8));"></div>
+    <div class="container h-100" style="position:relative;z-index:2;">
+        <div class="row h-100 align-items-end">
+            <div class="col-lg-10 mx-auto pb-5">
+                <!-- Category & Meta -->
+                <div class="blog-meta mb-4" data-aos="fade-up">
+                    {% if blog_obj.category %}
+                    <span class="badge me-2 px-3 py-2" style="background:rgba(255,255,255,0.2);color:white;font-size:0.9rem;border:2px solid rgba(255,255,255,0.3);backdrop-filter:blur(10px);">
+                        <i class="fas fa-folder me-2"></i>{{ blog_obj.category.name }}
+                    </span>
+                    {% endif %}
+                    {% if blog_obj.featured %}
+                    <span class="badge me-2 px-3 py-2" style="background:rgba(255,215,0,0.3);color:#ffd700;font-size:0.9rem;border:2px solid #ffd700;backdrop-filter:blur(10px);">
+                        <i class="fas fa-star me-2"></i>Featured
+                    </span>
+                    {% endif %}
+                    <span class="badge me-2 px-3 py-2" style="background:rgba(255,255,255,0.2);color:white;font-size:0.9rem;border:2px solid rgba(255,255,255,0.3);backdrop-filter:blur(10px);">
+                        <i class="far fa-calendar me-2"></i>{{ blog_obj.added_date|date:"F d, Y" }}
+                    </span>
+                    <span class="badge px-3 py-2" style="background:rgba(255,255,255,0.2);color:white;font-size:0.9rem;border:2px solid rgba(255,255,255,0.3);backdrop-filter:blur(10px);">
+                        <i class="far fa-clock me-2"></i>{{ blog_obj.read_time }} min read
+                    </span>
                 </div>
+                
+                <!-- Title -->
+                <h1 class="blog-title mb-4" data-aos="fade-up" data-aos-delay="100" style="color:white;font-size:3.5rem;font-weight:900;line-height:1.2;text-shadow:2px 2px 10px rgba(0,0,0,0.5);">
+                    {{ blog_obj.title }}
+                </h1>
+                
+                <!-- Excerpt -->
+                {% if blog_obj.excerpt %}
+                <p class="blog-excerpt lead mb-4" data-aos="fade-up" data-aos-delay="200" style="color:rgba(255,255,255,0.95);font-size:1.3rem;line-height:1.6;text-shadow:1px 1px 5px rgba(0,0,0,0.5);">
+                    {{ blog_obj.excerpt }}
+                </p>
+                {% endif %}
             </div>
         </div>
-    </section>
-    <!-- ============== end-breadcumb-area =============== -->
+    </div>
+</section>
 
-    <section class="blog-post-area section-padding pt-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"> </div>
-
-                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                    <div class="post-details-earpper">
-                        <article>
-                            <div class="single-post-item bg-none">
-                                <div class="post-thumb">
-                                    <img src="{{ blog_obj.image.url }}" alt="">
-                                </div>
-                                <div class="post-content-wrap p-0">
-                                    <div class="post-meta">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{ blog_obj.added_date|date:"d-M-Y" }}</a></li>
-                                        </ul>
+<!-- Blog Content Section -->
+<section class="blog-content-section py-5" style="background:#fff;">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8 mx-auto">
+                <!-- Article Card -->
+                <div class="article-card bg-white rounded-4 shadow-sm p-5 mb-5" style="margin-top:-80px;position:relative;z-index:10;">
+                    <!-- Tags -->
+                    {% if blog_obj.tags %}
+                    <div class="blog-tags mb-4 pb-4" style="border-bottom:2px solid #f0f0f0;">
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                            <span style="color:#666;font-weight:600;margin-right:10px;">
+                                <i class="fas fa-tags me-2"></i>Tags:
+                            </span>
+                            {% for tag in blog_obj.get_tag_list %}
+                            <a href="#" class="tag-badge" style="background:rgba(20,130,85,0.1);color:#148255;padding:8px 16px;border-radius:20px;text-decoration:none;font-size:0.85rem;font-weight:600;transition:all 0.3s;display:inline-block;">
+                                {{ tag }}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    <!-- Article Content -->
+                    <div class="article-content" style="font-size:1.15rem;line-height:1.9;color:#333;">
+                        {{ blog_obj.content|safe }}
+                    </div>
+                    
+                    <!-- Author & Share Section -->
+                    <div class="blog-footer mt-5 pt-5" style="border-top:2px solid #f0f0f0;">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="author-info d-flex align-items-center p-4 rounded-3" style="background:linear-gradient(135deg,rgba(20,130,85,0.05),rgba(30,194,139,0.05));border-left:4px solid #148255;">
+                                    <div class="author-avatar me-3" style="width:60px;height:60px;background:linear-gradient(135deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-user-tie" style="font-size:1.8rem;color:white;"></i>
                                     </div>
-                                    <div class="entry-post-content">
-                                        <h3 class="post-title">{{ blog_obj.title|truncatechars:60 }}</h3>
-                                        <p class="post-excerpt">
-                                            {{ blog_obj.content|safe }}
-                                        </p>
-
-                                        <div class="post-footer-tag">
-                                            <div class="post-tags">
-                                                <h6>Tags</h6>
-                                                {% for tag in blog_obj.get_tag_list %}
-                                                    <a href="#">{{ tag }}</a>
-                                                {% empty %}
-                                                    <span>No tags</span>
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-
-
-                                        <div class="share-media pt-5">
-                                            <ul class="social-share">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/"><i class="fab fa-linkedin"></i></a></li>
-                                                <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
-                                            </ul>
-                                        </div>
+                                    <div>
+                                        <h6 class="mb-1" style="color:#148255;font-weight:700;">Das And Partners</h6>
+                                        <p class="mb-0" style="color:#666;font-size:0.9rem;">Engineering Consultancy</p>
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                            <div class="col-md-6 text-md-end">
+                                <h6 style="color:#148255;font-weight:700;margin-bottom:15px;">
+                                    <i class="fas fa-share-alt me-2"></i>Share this article
+                                </h6>
+                                <div class="social-share d-flex gap-2 justify-content-md-end">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="share-btn" style="width:45px;height:45px;background:#3b5998;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.3s;">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ blog_obj.title }}" target="_blank" class="share-btn" style="width:45px;height:45px;background:#1da1f2;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.3s;">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank" class="share-btn" style="width:45px;height:45px;background:#0077b5;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.3s;">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://wa.me/?text={{ blog_obj.title }}%20{{ request.build_absolute_uri }}" target="_blank" class="share-btn" style="width:45px;height:45px;background:#25d366;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.3s;">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"> </div>
+                <!-- Related Blogs Section -->
+                {% if blog_obj.category %}
+                <div class="related-blogs-section mt-5">
+                    <h3 class="section-title mb-4" style="color:#148255;font-weight:800;font-size:2rem;">
+                        <i class="fas fa-lightbulb me-2"></i>Related Articles
+                    </h3>
+                    <div class="row g-4">
+                        {% for related_blog in blog_obj.category.blogs.all|slice:":3" %}
+                        {% if related_blog.id != blog_obj.id %}
+                        <div class="col-md-4" data-aos="fade-up">
+                            <a href="{% url 'blog_details' related_blog.slug %}" style="text-decoration:none;color:inherit;display:block;">
+                                <div class="related-card rounded-4 overflow-hidden shadow h-100" style="transition:all 0.3s;background:white;">
+                                    {% if related_blog.image %}
+                                    <div class="related-image" style="height:180px;overflow:hidden;">
+                                        <img src="{{ related_blog.image.url }}" alt="{{ related_blog.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                                    </div>
+                                    {% else %}
+                                    <div class="related-image" style="height:180px;background:linear-gradient(135deg,#148255,#1ec28b);display:flex;align-items:center;justify-content:center;">
+                                        <i class="fas fa-blog" style="font-size:2.5rem;color:rgba(255,255,255,0.3);"></i>
+                                    </div>
+                                    {% endif %}
+                                    <div class="p-3">
+                                        <h6 style="color:#148255;font-weight:700;font-size:1rem;line-height:1.4;">{{ related_blog.title|truncatewords:10 }}</h6>
+                                        <p class="mb-0" style="color:#999;font-size:0.85rem;">
+                                            <i class="far fa-clock me-1"></i>{{ related_blog.read_time }} min read
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
 
-                
+                <!-- Back to Blogs Button -->
+                <div class="text-center mt-5 pt-4">
+                    <a href="{% url 'blogs' %}" class="btn btn-lg" style="background:linear-gradient(135deg,#148255,#1ec28b);color:white;border-radius:50px;padding:15px 40px;font-weight:700;text-decoration:none;box-shadow:0 5px 20px rgba(20,130,85,0.3);transition:all 0.3s;">
+                        <i class="fas fa-arrow-left me-2"></i>Back to All Blogs
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- Newsletter CTA Section -->
+<section class="newsletter-cta py-5" style="background:linear-gradient(135deg,#148255,#1ec28b);position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-50px;right:-50px;width:300px;height:300px;background:rgba(255,255,255,0.1);border-radius:50%;"></div>
+    <div style="position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:rgba(255,255,255,0.1);border-radius:50%;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h3 class="mb-3" style="color:white;font-weight:800;font-size:2.2rem;">
+                    <i class="fas fa-envelope-open-text me-3"></i>Stay Updated!
+                </h3>
+                <p class="mb-4" style="color:rgba(255,255,255,0.9);font-size:1.1rem;">
+                    Subscribe to our newsletter for the latest insights and updates from Das And Partners
+                </p>
+                <form method="POST" action="{% url 'subscribe_newsletter' %}" class="newsletter-form" style="max-width:500px;margin:0 auto;">
+                    {% csrf_token %}
+                    <div class="input-group input-group-lg">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" required style="border:none;border-radius:50px 0 0 50px;padding:15px 25px;font-size:1rem;">
+                        <button type="submit" class="btn" style="background:white;color:#148255;border:none;border-radius:0 50px 50px 0;padding:15px 30px;font-weight:700;transition:all 0.3s;">
+                            Subscribe <i class="fas fa-paper-plane ms-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Article Content Styling */
+.article-content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+    color: #148255;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-content h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #148255;
+    padding-bottom: 10px;
+}
+
+.article-content h3 {
+    font-size: 1.6rem;
+}
+
+.article-content ul,
+.article-content ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.article-content li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.article-content blockquote {
+    border-left: 4px solid #148255;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #666;
+    background: rgba(20,130,85,0.05);
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.article-content a {
+    color: #148255;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all 0.3s;
+}
+
+.article-content a:hover {
+    color: #1ec28b;
+}
+
+/* Tag Badge Hover */
+.tag-badge:hover {
+    background: #148255 !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Share Button Hover */
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Related Card Hover */
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+}
+
+.related-card:hover .related-image img {
+    transform: scale(1.1);
+}
+
+/* Reading Progress */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem !important;
+    }
+    
+    .blog-excerpt {
+        font-size: 1rem !important;
+    }
+    
+    .article-content {
+        font-size: 1rem !important;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Newsletter Button Hover */
+.newsletter-form button:hover {
+    background: #f8f9fa !important;
+    transform: translateX(5px);
+}
+</style>
+
+<script>
+// Reading Progress Bar
+window.addEventListener('scroll', function() {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.querySelector('.reading-progress-bar').style.width = scrolled + '%';
+});
+</script>
 
 {% endblock %}

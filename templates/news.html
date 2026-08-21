@@ -14,11 +14,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="bread-content">
-                        <h1 class="breadcumb-title">News</h1>
+                        <h1 class="breadcumb-title">News Room</h1>
                         <ul class="breadcumb-menu">
                             <li><a href="index.html">Home</a></li>
                             <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
-                            <li>News</li>
+                            <li>News Room</li>
                         </ul>
                     </div>
                 </div>
@@ -27,40 +27,282 @@
     </section>
     <!-- ============== end-breadcumb-area =============== -->
 
-  <!-- ================================================== Start Blog Post Area ====================================================== -->
-  <section class="blog-post-area-section home-two-blog-area section-padding pt-0">
+  <!-- ================================================== Das and Partners Daily Section ====================================================== -->
+  <section class="blog-post-area-section section-padding pt-5" style="background:linear-gradient(135deg,#ffffff 0%,#f8f9fa 100%);">
     <div class="container">
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-12 text-center">
-                <div class="team-title">
-                    <h6 class="sub-title"><span class=""></span>Our News &nbsp;&nbsp; <span class=""></span></h6>
-                    <h2 class="title">Read Our Latest News</h2>
+                <div class="section-badge mb-3">
+                    <span class="badge px-4 py-2 rounded-pill" style="background:#4CAF50;color:white;font-size:0.95rem;font-weight:600;">
+                        <i class="fas fa-calendar-day me-2"></i>Latest Updates
+                    </span>
                 </div>
+                <h2 class="section-title mb-4" style="font-size:3rem;font-weight:900;color:#148255;line-height:1.2;">
+                    Das and Partners <span class="text-gradient" style="background:linear-gradient(45deg,#4CAF50,#8BC34A);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Daily</span>
+                </h2>
+                <p class="lead" style="color:#666;font-size:1.1rem;">
+                    Your daily dose of updates from Das and Partners
+                </p>
             </div>
-            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
-                <div class="row">
-                    {% for obj_new in news %}
-                        <div class="col-xxl-3 col-xl-3 pb-4">
-                            <div class="recent-post-thumb-wrap">
-                                <div class="thumb">
-                                    <img src="{{ obj_new.image.url }}" alt="">
+        </div>
+        
+        <div class="row g-4">
+            {% if daily_news %}
+                {% for news_item in daily_news %}
+                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="{% url 'news_details' news_item.slug %}" style="text-decoration:none;color:inherit;display:block;height:100%;">
+                        <div class="news-card h-100 rounded-4 overflow-hidden shadow" style="background:white;transition:all 0.3s ease;cursor:pointer;">
+                            {% if news_item.image %}
+                            <div class="news-image" style="height:220px;overflow:hidden;position:relative;">
+                                <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                                <div class="news-overlay" style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(20,130,85,0);transition:all 0.3s;display:flex;align-items:center;justify-content:center;">
+                                    <span class="read-more-icon" style="background:white;color:#148255;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all 0.3s;transform:scale(0.5);">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
                                 </div>
-                                <div class="author-deatils">
-                                    <div class="usersdate">
-                                        <a><i class="fa fa-calendar" aria-hidden="true"></i> {{ obj_new.added_date|date:"d-M-Y" }}</a>
-                                    </div>
-                                    <strong>{{ obj_new.title|truncatechars:60 }}</strong>
-                                    <div class="usersdate">
-                                    </div>
+                            </div>
+                            {% else %}
+                            <div class="news-image" style="height:220px;background:linear-gradient(135deg,#4CAF50,#8BC34A);display:flex;align-items:center;justify-content:center;">
+                                <i class="fas fa-calendar-day" style="font-size:3.5rem;color:rgba(255,255,255,0.3);"></i>
+                            </div>
+                            {% endif %}
+                            <div class="news-content p-4">
+                                <div class="news-meta mb-3">
+                                    <span class="badge" style="background:#4CAF50;color:white;font-size:0.8rem;">
+                                        <i class="fas fa-calendar-day me-1"></i>Daily
+                                    </span>
+                                    <span class="badge ms-2" style="background:rgba(76,175,80,0.1);color:#4CAF50;font-size:0.8rem;">
+                                        <i class="far fa-calendar me-1"></i>{{ news_item.added_date|date:"M d, Y" }}
+                                    </span>
+                                </div>
+                                <h4 class="news-title mb-3" style="font-size:1.2rem;font-weight:700;color:#148255;line-height:1.4;min-height:3em;">
+                                    {{ news_item.title }}
+                                </h4>
+                                {% if news_item.excerpt %}
+                                <p class="news-excerpt" style="color:#666;font-size:0.9rem;line-height:1.6;margin-bottom:15px;">
+                                    {{ news_item.excerpt|truncatewords:20 }}
+                                </p>
+                                {% endif %}
+                                <div class="news-footer d-flex align-items-center justify-content-between">
+                                    <span style="color:#999;font-size:0.85rem;">
+                                        <i class="far fa-clock me-1"></i>{{ news_item.added_date|date:"h:i A" }}
+                                    </span>
+                                    <span style="color:#148255;font-weight:600;font-size:0.9rem;">
+                                        Read More <i class="fas fa-arrow-right ms-1"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                    </a>
                 </div>
+                {% endfor %}
+            {% else %}
+            <div class="col-12 text-center py-5">
+                <i class="fas fa-calendar-day" style="font-size:5rem;color:#ddd;margin-bottom:20px;"></i>
+                <h4 class="text-muted">No daily news available</h4>
+                <p class="text-muted">Daily updates will appear here</p>
             </div>
+            {% endif %}
         </div>
     </div>
 </section>
 
+  <!-- ================================================== Weekly Updates Section ====================================================== -->
+  <section class="blog-post-area-section section-padding" style="background:linear-gradient(135deg,#f8f9fa 0%,#e3f2fd 100%);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="section-badge mb-3">
+                    <span class="badge px-4 py-2 rounded-pill" style="background:#2196F3;color:white;font-size:0.95rem;font-weight:600;">
+                        <i class="fas fa-calendar-week me-2"></i>Weekly Highlights
+                    </span>
+                </div>
+                <h2 class="section-title mb-4" style="font-size:3rem;font-weight:900;color:#148255;line-height:1.2;">
+                    Weekly <span class="text-gradient" style="background:linear-gradient(45deg,#2196F3,#64B5F6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Updates</span>
+                </h2>
+                <p class="lead" style="color:#666;font-size:1.1rem;">
+                    Week in review: highlights, achievements, and project progress
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% if weekly_news %}
+                {% for news_item in weekly_news %}
+                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="{% url 'news_details' news_item.slug %}" style="text-decoration:none;color:inherit;display:block;height:100%;">
+                        <div class="news-card h-100 rounded-4 overflow-hidden shadow" style="background:white;transition:all 0.3s ease;cursor:pointer;">
+                            {% if news_item.image %}
+                            <div class="news-image" style="height:220px;overflow:hidden;position:relative;">
+                                <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                                <div class="news-overlay" style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(20,130,85,0);transition:all 0.3s;display:flex;align-items:center;justify-content:center;">
+                                    <span class="read-more-icon" style="background:white;color:#148255;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all 0.3s;transform:scale(0.5);">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="news-image" style="height:220px;background:linear-gradient(135deg,#2196F3,#64B5F6);display:flex;align-items:center;justify-content:center;">
+                                <i class="fas fa-calendar-week" style="font-size:3.5rem;color:rgba(255,255,255,0.3);"></i>
+                            </div>
+                            {% endif %}
+                            <div class="news-content p-4">
+                                <div class="news-meta mb-3">
+                                    <span class="badge" style="background:#2196F3;color:white;font-size:0.8rem;">
+                                        <i class="fas fa-calendar-week me-1"></i>Weekly
+                                    </span>
+                                    <span class="badge ms-2" style="background:rgba(33,150,243,0.1);color:#2196F3;font-size:0.8rem;">
+                                        <i class="far fa-calendar me-1"></i>{{ news_item.added_date|date:"M d, Y" }}
+                                    </span>
+                                </div>
+                                <h4 class="news-title mb-3" style="font-size:1.2rem;font-weight:700;color:#148255;line-height:1.4;min-height:3em;">
+                                    {{ news_item.title }}
+                                </h4>
+                                {% if news_item.excerpt %}
+                                <p class="news-excerpt" style="color:#666;font-size:0.9rem;line-height:1.6;margin-bottom:15px;">
+                                    {{ news_item.excerpt|truncatewords:20 }}
+                                </p>
+                                {% endif %}
+                                <div class="news-footer d-flex align-items-center justify-content-between">
+                                    <span style="color:#999;font-size:0.85rem;">
+                                        <i class="far fa-clock me-1"></i>{{ news_item.added_date|date:"h:i A" }}
+                                    </span>
+                                    <span style="color:#148255;font-weight:600;font-size:0.9rem;">
+                                        Read More <i class="fas fa-arrow-right ms-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="col-12 text-center py-5">
+                <i class="fas fa-calendar-week" style="font-size:5rem;color:#ddd;margin-bottom:20px;"></i>
+                <h4 class="text-muted">No weekly updates available</h4>
+                <p class="text-muted">Weekly highlights will appear here</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+  <!-- ================================================== Monthly Updates Section ====================================================== -->
+  <section class="blog-post-area-section section-padding" style="background:linear-gradient(135deg,#ffffff 0%,#fff3e0 100%);">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="section-badge mb-3">
+                    <span class="badge px-4 py-2 rounded-pill" style="background:#FF9800;color:white;font-size:0.95rem;font-weight:600;">
+                        <i class="fas fa-calendar-alt me-2"></i>Monthly Insights
+                    </span>
+                </div>
+                <h2 class="section-title mb-4" style="font-size:3rem;font-weight:900;color:#148255;line-height:1.2;">
+                    Monthly <span class="text-gradient" style="background:linear-gradient(45deg,#FF9800,#FFB74D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Updates</span>
+                </h2>
+                <p class="lead" style="color:#666;font-size:1.1rem;">
+                    Comprehensive monthly summaries and performance highlights
+                </p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% if monthly_news %}
+                {% for news_item in monthly_news %}
+                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="{% url 'news_details' news_item.slug %}" style="text-decoration:none;color:inherit;display:block;height:100%;">
+                        <div class="news-card h-100 rounded-4 overflow-hidden shadow" style="background:white;transition:all 0.3s ease;cursor:pointer;">
+                            {% if news_item.image %}
+                            <div class="news-image" style="height:220px;overflow:hidden;position:relative;">
+                                <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="w-100 h-100" style="object-fit:cover;transition:transform 0.3s;">
+                                <div class="news-overlay" style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,152,0,0);transition:all 0.3s;display:flex;align-items:center;justify-content:center;">
+                                    <span class="read-more-icon" style="background:white;color:#FF9800;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all 0.3s;transform:scale(0.5);">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="news-image" style="height:220px;background:linear-gradient(135deg,#FF9800,#FFB74D);display:flex;align-items:center;justify-content:center;">
+                                <i class="fas fa-calendar-alt" style="font-size:3.5rem;color:rgba(255,255,255,0.3);"></i>
+                            </div>
+                            {% endif %}
+                            <div class="news-content p-4">
+                                <div class="news-meta mb-3">
+                                    <span class="badge" style="background:#FF9800;color:white;font-size:0.8rem;">
+                                        <i class="fas fa-calendar-alt me-1"></i>Monthly
+                                    </span>
+                                    <span class="badge ms-2" style="background:rgba(255,152,0,0.1);color:#FF9800;font-size:0.8rem;">
+                                        <i class="far fa-calendar me-1"></i>{{ news_item.added_date|date:"M d, Y" }}
+                                    </span>
+                                </div>
+                                <h4 class="news-title mb-3" style="font-size:1.2rem;font-weight:700;color:#148255;line-height:1.4;min-height:3em;">
+                                    {{ news_item.title }}
+                                </h4>
+                                {% if news_item.excerpt %}
+                                <p class="news-excerpt" style="color:#666;font-size:0.9rem;line-height:1.6;margin-bottom:15px;">
+                                    {{ news_item.excerpt|truncatewords:20 }}
+                                </p>
+                                {% endif %}
+                                <div class="news-footer d-flex align-items-center justify-content-between">
+                                    <span style="color:#999;font-size:0.85rem;">
+                                        <i class="far fa-clock me-1"></i>{{ news_item.added_date|date:"h:i A" }}
+                                    </span>
+                                    <span style="color:#FF9800;font-weight:600;font-size:0.9rem;">
+                                        Read More <i class="fas fa-arrow-right ms-1"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="col-12 text-center py-5">
+                <i class="fas fa-calendar-alt" style="font-size:5rem;color:#ddd;margin-bottom:20px;"></i>
+                <h4 class="text-muted">No monthly updates available</h4>
+                <p class="text-muted">Monthly summaries will appear here</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<style>
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.1);
+}
+
+.news-card:hover .news-overlay {
+    background: rgba(20,130,85,0.3) !important;
+}
+
+.news-card:hover .read-more-icon {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.section-badge .badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.text-gradient {
+    display: inline-block;
+}
+
+</style>
 
 {% endblock %}

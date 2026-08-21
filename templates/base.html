@@ -5,14 +5,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <title> {% block title %}Das And Partners (DAP)- Engineering Consultants in Abu Dhabi{% endblock %} </title> {% endcomment %}
-    <title> Das And Partners (DAP)- Engineering Consultants in Abu Dhabi </title>
+    {% comment %} <title> {% block title %}Das And Partners Engineering Consultants in Abu Dhabi{% endblock %} </title> {% endcomment %}
+    <title> Das And Partners Engineering Consultants in Abu Dhabi </title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Das And Partners - Leading Engineering Consultants in Abu Dhabi, Dubai, and Sharjah. Specializing in design, supervision, BIM, and NOC permitting services.">
+    <meta name="keywords" content="engineering consultants, Abu Dhabi, Dubai, BIM, NOC permitting, design and supervision">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Das And Partners - Engineering Consultants in Abu Dhabi">
+    <meta property="og:description" content="Leading Engineering Consultants in Abu Dhabi, Dubai, and Sharjah">
+    <meta property="og:image" content="https://www.dasandpartners.com/static/assets/images/favicon.png">
+    <meta property="og:url" content="https://www.dasandpartners.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Das And Partners - Engineering Consultants in Abu Dhabi">
+    <meta name="twitter:description" content="Leading Engineering Consultants in Abu Dhabi, Dubai, and Sharjah">
+    <meta name="twitter:image" content="https://www.dasandpartners.com/static/assets/images/favicon.png">
 
     <!-- google fonts  -->
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&amp;family=Manrope:wght@200..800&amp;family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %} " type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/images/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/images/favicon.png' %}" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'assets/images/favicon.png' %}">
     <!-- bootstrap  -->
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
 
@@ -26,11 +46,581 @@
     <link rel="stylesheet" href="{% static 'assets/css/aos.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
     <!-- custom css  -->
+    <link rel="stylesheet" href="{% static "assets/css/navbar-fix.css" %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/expertise.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/why-choose.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/hero-section.css' %}">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Swiper CSS for slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Inline CSS for Amazing Footer -->
+    <style>
+        .amazing-footer-section {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+            color: #ffffff !important;
+            padding: 50px 0 20px 0 !important;
+            position: relative;
+            overflow: hidden;
+            margin: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        .amazing-footer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(30, 194, 139, 0.03) 0%, rgba(0, 0, 0, 0) 50%, rgba(30, 194, 139, 0.03) 100%);
+            pointer-events: none;
+        }
+        
+        .amazing-footer-section * {
+            color: #ffffff !important;
+        }
+        
+        .amazing-footer-section .footer-widget-area {
+            padding: 0 !important;
+            background: transparent !important;
+            color: #ffffff !important;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .amazing-footer-section .footer-widget-area * {
+            color: #ffffff !important;
+        }
+        
+        .amazing-footer-section .footer-widget {
+            background: transparent !important;
+            color: #ffffff !important;
+            margin-bottom: 30px !important;
+        }
+        
+        .amazing-footer-section .footer-widget * {
+            color: #ffffff !important;
+        }
+        
+        .amazing-footer-section .footer-logo img {
+            max-width: 140px !important;
+            margin-bottom: 15px !important;
+            filter: brightness(0) invert(1) !important;
+        }
+        
+        .amazing-footer-section .description {
+            color: #e0e0e0 !important;
+            font-size: 13px !important;
+            line-height: 1.6 !important;
+            margin-bottom: 20px !important;
+        }
+        
+        .amazing-footer-section .footer-title .title {
+            color: #ffffff !important;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            margin-bottom: 15px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            position: relative !important;
+        }
+        
+        .amazing-footer-section .footer-title .title::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -5px !important;
+            left: 0 !important;
+            width: 30px !important;
+            height: 2px !important;
+            background: #1ec28b !important;
+            border-radius: 1px !important;
+        }
+        
+        .amazing-footer-section .footer-social-link ul {
+            display: flex !important;
+            gap: 12px !important;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .amazing-footer-section .footer-social-link ul li a {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 40px !important;
+            height: 40px !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #ffffff !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            transition: all 0.4s ease !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            backdrop-filter: blur(10px) !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .amazing-footer-section .footer-social-link ul li a::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+            transition: left 0.5s ease !important;
+        }
+        
+        .amazing-footer-section .footer-social-link ul li a:hover::before {
+            left: 100% !important;
+        }
+        
+        .amazing-footer-section .footer-social-link ul li a:hover {
+            background: linear-gradient(135deg, #1ec28b, #148255) !important;
+            color: #ffffff !important;
+            transform: translateY(-5px) scale(1.1) !important;
+            box-shadow: 0 8px 25px rgba(30, 194, 139, 0.4) !important;
+            border-color: #1ec28b !important;
+        }
+        
+        .amazing-footer-section .footer-social-link ul li a i {
+            font-size: 16px !important;
+            position: relative !important;
+            z-index: 2 !important;
+        }
+        
+        .amazing-footer-section ul {
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .amazing-footer-section ul li {
+            margin-bottom: 8px !important;
+        }
+        
+        .amazing-footer-section ul li a {
+            color: #cccccc !important;
+            text-decoration: none !important;
+            font-size: 13px !important;
+            transition: all 0.3s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            padding: 5px 0 !important;
+        }
+        
+        .amazing-footer-section ul li a:hover {
+            color: #1ec28b !important;
+            transform: translateX(5px) !important;
+        }
+        
+        .amazing-footer-section ul li a i {
+            margin-right: 8px !important;
+            color: #1ec28b !important;
+            font-size: 10px !important;
+        }
+        
+        .amazing-footer-section .contact-info {
+            margin-top: 10px !important;
+            margin-left: -15px !important;
+            margin-top: -5px !important;
+        }
+        
+        .amazing-footer-section .contact-grid {
+            display: flex !important;
+            gap: 25px !important;
+            flex-wrap: nowrap !important;
+            margin-left: -10px !important;
+        }
+        
+        .amazing-footer-section .office-locations,
+        .amazing-footer-section .contact-details {
+            flex: 1 !important;
+            min-width: 200px !important;
+            margin-left: -5px !important;
+        }
+        
+        .amazing-footer-section .contact-info h5 {
+            color: #ffffff !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            margin: 15px 0 8px 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+        
+        .amazing-footer-section .contact-info h5:first-child {
+            margin-top: 0 !important;
+        }
+        
+        .amazing-footer-section .contact-info h5 i {
+            color: #1ec28b !important;
+            font-size: 14px !important;
+            width: 16px !important;
+            text-align: center !important;
+        }
+        
+        .amazing-footer-section .contact-info p {
+            color: #cccccc !important;
+            font-size: 12px !important;
+            line-height: 1.5 !important;
+            margin: 5px 0 8px 0 !important;
+        }
+        
+        .amazing-footer-section .contact-info p a {
+            color: #cccccc !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .amazing-footer-section .contact-info p a:hover {
+            color: #1ec28b !important;
+        }
+        
+        .amazing-footer-section .copyuright-area {
+            border-top: 1px solid #333333 !important;
+            padding-top: 15px !important;
+            margin-top: 25px !important;
+            position: relative !important;
+        }
+        
+        .amazing-footer-section .copyuright-area::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: 60px !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent, #1ec28b, transparent) !important;
+        }
+        
+        .amazing-footer-section .footer-copyright p {
+            color: #999999 !important;
+            font-size: 12px !important;
+            margin: 0 !important;
+            text-align: center !important;
+        }
+        
+        .amazing-footer-section .footer-copyright a {
+            color: #1ec28b !important;
+            text-decoration: none !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .amazing-footer-section .footer-copyright a:hover {
+            color: #ffffff !important;
+        }
+        
+        /* Override any green backgrounds in contact cards */
+        .amazing-footer-section .contact-info,
+        .amazing-footer-section .contact-grid,
+        .amazing-footer-section .office-locations,
+        .amazing-footer-section .contact-details {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Override any green backgrounds in all footer elements */
+        .amazing-footer-section .footer-widget,
+        .amazing-footer-section .widget1,
+        .amazing-footer-section .widget2,
+        .amazing-footer-section .widget3 {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Override any green backgrounds in all footer sections */
+        .amazing-footer-section section,
+        .amazing-footer-section div,
+        .amazing-footer-section .section-padding {
+            background: transparent !important;
+        }
+
+        /* Footer Terms and Conditions Button Styling */
+        .footer-links .btn-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            text-decoration: none !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            transition: all 0.3s ease !important;
+            border: none !important;
+            background: transparent !important;
+        }
+
+        .footer-links .btn-link:hover {
+            color: #ffffff !important;
+            text-decoration: underline !important;
+            transform: translateY(-1px) !important;
+        }
+
+        /* Disclaimer Modal Styling */
+        #disclaimerModal .modal-content {
+            border: none !important;
+            border-radius: 15px !important;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        #disclaimerModal .modal-header {
+            background: linear-gradient(135deg, #377f4b, #148255) !important;
+            color: white !important;
+            border-radius: 15px 15px 0 0 !important;
+            border-bottom: none !important;
+            padding: 20px 25px !important;
+        }
+
+        #disclaimerModal .modal-title {
+            font-weight: 700 !important;
+            font-size: 1.3rem !important;
+            margin: 0 !important;
+        }
+
+        #disclaimerModal .btn-close {
+            filter: invert(1) !important;
+            opacity: 0.8 !important;
+        }
+
+        #disclaimerModal .modal-body {
+            padding: 25px !important;
+            background: #ffffff !important;
+        }
+
+        .disclaimer-content .disclaimer-text {
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+            color: #333 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .disclaimer-content .disclaimer-note {
+            background: linear-gradient(135deg, #f8f9fa, #e6f2ec) !important;
+            border-left: 4px solid #377f4b !important;
+            border-radius: 8px !important;
+        }
+
+        .disclaimer-content .disclaimer-note strong {
+            color: #377f4b !important;
+        }
+
+        #disclaimerModal .modal-footer {
+            background: #f8f9fa !important;
+            border-top: 1px solid #e9ecef !important;
+            border-radius: 0 0 15px 15px !important;
+            padding: 20px 25px !important;
+        }
+
+        #disclaimerModal .btn-primary {
+            background: linear-gradient(135deg, #377f4b, #148255) !important;
+            border: none !important;
+            border-radius: 25px !important;
+            padding: 10px 25px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s ease !important;
+        }
+
+        #disclaimerModal .btn-primary:hover {
+            background: linear-gradient(135deg, #148255, #377f4b) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 20px rgba(55, 127, 75, 0.3) !important;
+        }
+
+        /* Responsive Design for Disclaimer Modal */
+        @media (max-width: 768px) {
+            #disclaimerModal .modal-dialog {
+                margin: 20px !important;
+            }
+            
+            #disclaimerModal .modal-header,
+            #disclaimerModal .modal-body,
+            #disclaimerModal .modal-footer {
+                padding: 15px 20px !important;
+            }
+            
+            .disclaimer-content .disclaimer-text {
+                font-size: 15px !important;
+            }
+        }
+        
+        /* Team Member Cards Mobile Optimization */
+        @media (max-width: 768px) {
+            .clean-department-card {
+                margin-bottom: 30px !important;
+            }
+            
+            .clean-image-container {
+                height: 200px !important;
+                min-height: 200px !important;
+            }
+            
+            .clean-dept-img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center top !important;
+            }
+            
+            .clean-icon-wrapper {
+                width: 60px !important;
+                height: 60px !important;
+                margin: 0 auto 15px auto !important;
+            }
+            
+            .clean-icon-wrapper i {
+                font-size: 24px !important;
+                line-height: 60px !important;
+            }
+            
+            .clean-card-title {
+                font-size: 18px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .clean-card-desc {
+                font-size: 14px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 10px !important;
+            }
+            
+            .card-clean-front {
+                padding: 20px 15px !important;
+            }
+            
+            .card-clean-back {
+                padding: 20px 15px !important;
+            }
+            
+            .clean-back-title {
+                font-size: 18px !important;
+                margin-bottom: 8px !important;
+            }
+            
+            .clean-back-role {
+                font-size: 14px !important;
+                margin-bottom: 15px !important;
+            }
+            
+            .clean-social-btn {
+                padding: 10px 15px !important;
+                font-size: 14px !important;
+                margin: 5px !important;
+            }
+            
+            .clean-social-btn i {
+                font-size: 16px !important;
+            }
+        }
+        
+        /* Extra Small Mobile Optimization */
+        @media (max-width: 480px) {
+            .clean-image-container {
+                height: 180px !important;
+                min-height: 180px !important;
+            }
+            
+            .clean-icon-wrapper {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .clean-icon-wrapper i {
+                font-size: 20px !important;
+                line-height: 50px !important;
+            }
+            
+            .clean-card-title {
+                font-size: 16px !important;
+            }
+            
+            .clean-card-desc {
+                font-size: 13px !important;
+            }
+            
+            .clean-back-title {
+                font-size: 16px !important;
+            }
+            
+            .clean-back-role {
+                font-size: 13px !important;
+            }
+            
+            .clean-social-btn {
+                padding: 8px 12px !important;
+                font-size: 13px !important;
+            }
+            
+            .clean-social-btn i {
+                font-size: 14px !important;
+            }
+        }
+        
+        /* Hide hamburger menu on desktop - Comprehensive Override */
+        @media (min-width: 769px) {
+            .das-menu-toggle,
+            .das-menu-wrapper,
+            .modern-mobile-btn,
+            .d-lg-none,
+            .das-menu-toggle.menuShow,
+            .das-menu-toggle.d-inline-block,
+            .das-menu-toggle.d-lg-none,
+            .modern-navbar .das-menu-toggle,
+            .header_menu .das-menu-toggle,
+            .home-two-menubar .das-menu-toggle,
+            button.das-menu-toggle,
+            .das-menu-toggle.menuShow.d-inline-block.d-lg-none.modern-mobile-btn {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                position: absolute !important;
+                left: -9999px !important;
+                width: 0 !important;
+                height: 0 !important;
+                overflow: hidden !important;
+                pointer-events: none !important;
+            }
+        }
+        
+        /* Show hamburger menu only on mobile */
+        @media (max-width: 768px) {
+            .das-menu-toggle,
+            .modern-mobile-btn,
+            .das-menu-toggle.menuShow,
+            .das-menu-toggle.d-inline-block,
+            .das-menu-toggle.d-lg-none,
+            .modern-navbar .das-menu-toggle,
+            .header_menu .das-menu-toggle,
+            .home-two-menubar .das-menu-toggle,
+            button.das-menu-toggle {
+                display: flex !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
+                left: auto !important;
+                width: auto !important;
+                height: auto !important;
+                overflow: visible !important;
+                pointer-events: auto !important;
+            }
+        }
+    </style>
+    </style>
 </head>
 <body>
+
 
     <!--============================ Preloader ======================================== -->
 
@@ -59,19 +649,21 @@
                 <div class="off-canvas-contact-info">
                     <h4 class="info-title"> Contact Info </h4>
                     <ul class="info-list">
-                        <li><i class="fas fa-map-marker-alt"></i>Salam & - Office 1701, 17th Floor, Abdulla Darwish Building - C-1 Hamdan Bin Mohammed St - Junction - E15 - Abu Dhabi</li>
-                        <li> <i aria-hidden="true" class="fas fa-envelope"></i><a href="mailto:info@dasandpartners.com" class="text-lowercase">info@dasandpartners.com</a> </li>
-                        <li> <i aria-hidden="true" class="fas fa-envelope"></i><a href="mailto:hr.energy@dasandpartners.com" class="text-lowercase">hr.energy@dasandpartners.com</a> </li>
-                        <li> <i aria-hidden="true" class="fas fa-phone"></i><a href="tel:028779490">+97128779490</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i><strong>Abu Dhabi:</strong> Office 1303 - 1304, 13th Floor, Addax Tower, Reem Island, Abu Dhabi.</li>
+                        <li><i class="fas fa-map-marker-alt"></i><strong>Dubai:</strong> Office 3409, 34th Floor, The Citadel Tower, Business Bay, Dubai.</li>
+                        <li><i class="fas fa-map-marker-alt"></i><strong>Sharjah:</strong> 10th Floor, City Gate Tower, Al Ittihad Street, Sharjah.</li>
+                        <li> <i aria-hidden="true" class="fas fa-envelope"></i><a href="mailto:info@dasandpartnersengineering.com" class="text-lowercase">info@dasandpartnersengineering.com</a> </li>
+                        <li> <i aria-hidden="true" class="fas fa-envelope"></i><a href="mailto:hr.energy@dasandpartnersengineering.com" class="text-lowercase">hr.energy@dasandpartnersengineering.com</a> </li>
+                        <li> <i aria-hidden="true" class="fas fa-phone"></i><a href="tel:+971542323852">General Inquiry: +971 54 232 3852</a></li>
                     </ul>
                 </div>
                 <div class="off-canvas-social-links">
                     <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/das-and-partners-engineering-consultancy/"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://dasandpartners.com"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://dasandpartners.com"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://dasandpartners.com"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://dasandpartners.com"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://dasandpartners.com"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
                 <div class="close-icon"><h3 class="nav01 side-box-bar">x</h3></div>
@@ -85,24 +677,72 @@
         <div class="das-menu-area text-center">
             <button class="das-menu-toggle"><i class="fas fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="{% url 'home' %}"><img decoding="async" src="{% static 'assets/images/logo_sm_white.png' %}" alt="" title=" DAS-logo"></a>
+                <a href="{% url 'home' %}"><img decoding="async" src="{% static 'assets/images/logo_sm.png' %}" alt="" title=" DAS-logo"></a>
             </div>
             <div class="das-mobile-menu">
                 <ul>
                     <li><a href="{% url 'about' %}">About Us</a></li>
-                    <li><a href="{% url 'our_expertise' %}">Our Expertise</a></li>
+                    <li class="das-item-has-children">
+                        <a href="{% url 'our_expertise' %}">Our Expertise <i class="fas fa-chevron-down"></i></a>
+                                                <ul class="das-submenu">
+                                                    <li><a href="{% url 'lead_consultant' %}" class="dropdown-item">Lead Consultant</a></li>
+                                                    <li><a href="#" class="dropdown-item">Design & Supervision Consultancy</a></li>
+                                                    <li><a href="#" class="dropdown-item">Authority Approval / NOC Permitting Consultant</a></li>
+                                                    <li><a href="{% url 'bim_services' %}" class="dropdown-item">BIM Specialist Consultant</a></li>
+                                                    <li><a href="{% url 'architectural_engineering' %}" class="dropdown-item">Architectural Engineering</a></li>
+                                                    <li><a href="{% url 'architect_of_record' %}" class="dropdown-item">Architect of Record</a></li>
+                                                    <li><a href="{% url 'structural_engineering' %}" class="dropdown-item">Structural Engineering</a></li>
+                                                    <li><a href="{% url 'mep_engineering' %}" class="dropdown-item">MEP Engineering</a></li>
+                                                    <li><a href="{% url 'electrical_engineering_consultancy' %}" class="dropdown-item">Electrical Engineering</a></li>
+                                                    <li><a href="{% url 'construction_engineering' %}" class="dropdown-item">Construction Engineering</a></li>
+                                                    <li><a href="{% url 'infrastructure' %}" class="dropdown-item">Utilities & Infrastructure</a></li>
+                                                    <li><a href="{% url 'oil_and_gas_engineering' %}" class="dropdown-item">Oil & Gas Engineering</a></li>
+                                                    <li><a href="{% url 'project_management' %}" class="dropdown-item">Project Management</a></li>
+                                                    <li><a href="{% url 'contract_cost_consultancy' %}" class="dropdown-item">Contract Cost Consultancy</a></li>
+                                                    <li><a href="{% url 'facilities_management_consultancy' %}" class="dropdown-item">Facilities Management</a></li>
+                                                    <li><a href="{% url 'leed_consultants' %}" class="dropdown-item">LEED Consultants</a></li>
+                                                    <li><a href="{% url 'renewable_energy_consultants' %}" class="dropdown-item">Renewable Energy</a></li>
+                                                    <li><a href="{% url 'mall_management_consultants' %}" class="dropdown-item">Mall Management</a></li>
+                                                    <li><a href="{% url 'building_information_modeling' %}" class="dropdown-item">Building Information Modeling</a></li>
+                                                    <li><a href="{% url 'interior_design' %}" class="dropdown-item">Interior Design</a></li>
+                                                    <li><a href="{% url 'csa_services' %}" class="dropdown-item">Civil, Structural, and Architectural </a></li>
+                                                    <li><a href="{% url 'eit_services' %}" class="dropdown-item">Telecommunications Engineering</a></li>
+                                                    <li><a href="{% url 'eit_services' %}" class="dropdown-item">Instrumentation & Control Engineering</a></li>
+                                                    <li><a href="{% url 'eit_services' %}" class="dropdown-item">Engineer of Record</a></li>
+                                                    <li><a href="{% url 'hsse_services' %}" class="dropdown-item">Safety & Environment Engineering</a></li>
+                                                    <li><a href="{% url 'contract_administration' %}" class="dropdown-item">Contract Administration</a></li>
+                                                    <li><a href="{% url 'process_engineering' %}" class="dropdown-item">Process Engineering</a></li>
+                                                    <li><a href="#" class="dropdown-item">3D and 2D Drafting Services</a></li>
+                                                    <li><a href="#" class="dropdown-item">Design and Detail Engineering </a></li>
+                                                    <li><a href="#" class="dropdown-item">Process Design Engineering </a></li>
+                                                    <li><a href="#" class="dropdown-item">Piping Design Engineering </a></li>
+                                                    <li><a href="#" class="dropdown-item">Structural Design Engineering </a></li>
+                                                    <li><a href="#" class="dropdown-item">E&I Design Engineering </a></li>
+                                                    <li><a href="#" class="dropdown-item">Highways & Bridges</a></li>
+                                                    <li><a href="#" class="dropdown-item">Transport Planning</a></li>
+                                                    <li><a href="#" class="dropdown-item">Landscaping & Public Realm</a></li>
+                                                    <li><a href="#" class="dropdown-item">Urban and Master Planning</a></li>
+                                                    <li><a href="#" class="dropdown-item">Environmental</a></li>
+                                                    <li><a href="#" class="dropdown-item">Industrial Design</a></li>
+                                                    <li><a href="#" class="dropdown-item">Infrastructure & Transport</a></li>
+                                                    <li><a href="#" class="dropdown-item">Landscape</a></li>
+                                                    <li><a href="#" class="dropdown-item">Land Surveying</a></li>
+                                                    <li><a href="{% url 'villa_design' %}" class="dropdown-item">Luxurious Villa Design</a></li>
+                        </ul>
+
+                    </li>
                     <li><a href="{% url 'our_work' %}">Our Work</a></li>
-                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'our_people' %}">Our People</a></li>
+                    <li><a href="{% url 'news' %}">News Room</a></li>
                     <li><a href="{% url 'blogs' %}">Blogs</a></li>
-                    <li><a href="{% url 'life_at_dap' %}">Life at DAP</a></li>
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'life_at_dap' %}">Life at Das and Partners</a></li>
                     <li><a href="{% url 'careers' %}">Careers</a></li>
                     <li><a href="{% url 'contact' %}">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="das_btn">
-                <a href="{% url 'login' %}" > <button class="get-btn mob_get_btn">Login</button></a>
-            </div>
+
 
         </div>
     </div>
@@ -122,125 +762,142 @@
     </div>
 
     <!--================== Start Header Area  =======================-->
-    <header id="header_area-wrapper">
-        <!-- <div class="header_top home-two-top-menu">
-            <div class="header_top_left">
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 55 Main Street, 2nd Block, USA</li>
-                    <li><i class="fas fa-envelope" aria-hidden="true"></i> Email us: <a href="#">info@das-ins.com</a></li>
-                </ul>
+    <nav class="fresh-navbar">
+        <div class="navbar-container">
+            <!-- Logo Section -->
+            <div class="navbar-logo">
+                <a href="{% url 'home' %}" class="logo-link">
+                    <img src="{% static 'assets/images/logo_sm.png' %}" alt="DAS & Partners" class="logo-image">
+                    <span class="logo-pulse"></span>
+                </a>
             </div>
-            <div class="header_top_right">
-                <ul>
-                    <li>Follow Us On:</li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-            </div>
-        </div> -->
 
-        <div class="stickey-wrapper">
-            <!-- start header menu  -->
-            <!-- Start header menu  -->
-            <div class="header_menu home-two-menubar">
-                <div class="container-fluid">
-                    <div class="header-two-main-wrapper row">
-                        <div class="col-auto col-xxl-3 col-xl-3 col-lg-3 logo_center all-padding-0">
-                            <div class="brands_logo">
-                                <div class="side-box-icon">
-                                    <a href="#" class="side-box-bar baricon-left"><i class="fas fa-bars"></i></a>
-                                </div>
-                                <a href="{% url 'home' %}" class="barnds"><img src="{% static 'assets/images/logo_sm.png' %}" alt=""></a>
-                                <!-- <a href="{% url 'home' %}" class="barnds"><img src="{% static 'assets/images/logo.png' %}" alt=""></a> -->
+            <!-- Desktop Navigation -->
+            <div class="navbar-menu">
+                <a href="{% url 'about' %}" class="nav-link">
+                    <span class="link-text">About</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <div class="nav-dropdown">
+                    <a href="{% url 'our_expertise' %}" class="nav-link has-dropdown">
+                        <span class="link-text">Expertise</span>
+                        <i class="fas fa-angle-down dropdown-arrow"></i>
+                        <span class="link-underline"></span>
+                    </a>
+                    <div class="mega-dropdown">
+                        <div class="dropdown-grid">
+                            <div class="dropdown-column">
+                                <h4 class="column-title">Core Services</h4>
+                                <a href="{% url 'lead_consultant' %}">Lead Consultant</a>
+                                <a href="#">Design & Supervision Consultancy</a>
+                                <a href="#">Authority Approval / NOC Permitting</a>
+                                <a href="{% url 'bim_services' %}">BIM Specialist Consultant</a>
+                                <a href="{% url 'architectural_engineering' %}">Architectural Engineering</a>
+                                <a href="{% url 'architect_of_record' %}">Architect of Record</a>
+                                <a href="{% url 'structural_engineering' %}">Structural Engineering</a>
+                                <a href="{% url 'mep_engineering' %}">MEP Engineering</a>
+                                <a href="{% url 'electrical_engineering_consultancy' %}">Electrical Engineering</a>
+                                <a href="{% url 'construction_engineering' %}">Construction Engineering</a>
                             </div>
-                        </div>
-                        <div class="col-auto col-xxl-6 col-xl-9 col-lg-9 menu_center text-center all-padding-0">
-                            <div class="main-menu">
-                                <ul>
-                                    <li><a href="{% url 'about' %}">About Us</a></li>
-                                    <li><a href="{% url 'our_expertise' %}">Our Expertise</a></li>
-                                    <li><a href="{% url 'our_work' %}">Our Work</a></li>
-                                    <li><a href="{% url 'news' %}">News</a></li>
-                                    <li><a href="{% url 'blogs' %}">Blogs</a></li>
-                                    <li><a href="{% url 'life_at_dap' %}">Life at DAP</a></li>
-                                    <li><a href="{% url 'careers' %}">Careers</a></li>
-                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
-
-                                <!-- <li>
-                                        <a href="#">Home <i class="fas fa-angle-down"></i></a>
-                                        <ul>
-                                            <li><a href="{% url 'home' %}">Home</a></li>
-                                            <li><a href="{% url 'home' %}">Home Two</a></li>
-                                            <li><a href="home-three.html">Home Three</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Services <i class="fas fa-angle-down"></i></a>
-                                        <ul>
-                                            <li><a href="service.html">Service</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Page <i class="fas fa-angle-down"></i></a>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Project <i class="fas fa-angle-right"></i></a>
-                                                <ul>
-                                                    <li><a href="project.html">Project</a></li>
-                                                    <li><a href="project-details.html">Project Details</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">Team <i class="fas fa-angle-right"></i></a>
-                                                <ul>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="#">Shop <i class="fas fa-angle-right"></i></a>
-                                                <ul>
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="shop-details.html">Shop Details</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="appointment.html">Appointment</a></li>
-                                            <li><a href="404.html">404 page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Blog <i class="fas fa-angle-down"></i></a>
-                                        <ul>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contact.html">Contact</a></li> 
-                                    -->
-                                </ul>
+                            <div class="dropdown-column">
+                                <h4 class="column-title">Infrastructure & Energy</h4>
+                                <a href="{% url 'infrastructure' %}">Utilities & Infrastructure</a>
+                                <a href="{% url 'oil_and_gas_engineering' %}">Oil & Gas Engineering</a>
+                                <a href="{% url 'renewable_energy_consultants' %}">Renewable Energy</a>
+                                <a href="{% url 'process_engineering' %}">Process Engineering</a>
+                                <a href="#">Process Design Engineering</a>
+                                <a href="#">Piping Design Engineering</a>
+                                <a href="#">E&I Design Engineering</a>
+                                <a href="#">Highways & Bridges</a>
+                                <a href="#">Transport Planning</a>
+                                <a href="#">Infrastructure & Transport</a>
                             </div>
-                            <button type="button" class="das-menu-toggle menuShow d-inline-block d-lg-none"><i class="fas fa-bars"></i></button>
-                        </div>
-                        <div class="col-auto col-xxl-3 d-none d-xxl-block all-padding-0 align-items-center ">
-                            <div class="right_menu">
-                                <div class="das_btn">
-                                   <a href="{% url 'login' %}" > <button class="get-btn">Login</button></a>
-                                </div>
+                            <div class="dropdown-column">
+                                <h4 class="column-title">Management & Design</h4>
+                                <a href="{% url 'project_management' %}">Project Management</a>
+                                <a href="{% url 'contract_cost_consultancy' %}">Contract Cost Consultancy</a>
+                                <a href="{% url 'facilities_management_consultancy' %}">Facilities Management</a>
+                                <a href="{% url 'mall_management_consultants' %}">Mall Management</a>
+                                <a href="{% url 'contract_administration' %}">Contract Administration</a>
+                                <a href="{% url 'interior_design' %}">Interior Design</a>
+                                <a href="{% url 'villa_design' %}">Luxurious Villa Design</a>
+                                <a href="#">Industrial Design</a>
+                                <a href="#">Urban and Master Planning</a>
+                                <a href="#">Landscaping & Public Realm</a>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4 class="column-title">Specialized Services</h4>
+                                <a href="{% url 'leed_consultants' %}">LEED Consultants</a>
+                                <a href="{% url 'building_information_modeling' %}">Building Information Modeling</a>
+                                <a href="{% url 'csa_services' %}">Civil, Structural, and Architectural</a>
+                                <a href="{% url 'eit_services' %}">Telecommunications Engineering</a>
+                                <a href="{% url 'eit_services' %}">Instrumentation & Control</a>
+                                <a href="{% url 'eit_services' %}">Engineer of Record</a>
+                                <a href="{% url 'hsse_services' %}">Safety & Environment Engineering</a>
+                                <a href="#">3D and 2D Drafting Services</a>
+                                <a href="#">Design and Detail Engineering</a>
+                                <a href="#">Structural Design Engineering</a>
+                                <a href="#">Landscape</a>
+                                <a href="#">Land Surveying</a>
+                                <a href="#">Environmental</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <a href="{% url 'our_work' %}" class="nav-link">
+                    <span class="link-text">Projects</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <a href="{% url 'our_people' %}" class="nav-link">
+                    <span class="link-text">Team</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <a href="{% url 'news' %}" class="nav-link">
+                    <span class="link-text">News</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <a href="{% url 'blogs' %}" class="nav-link">
+                    <span class="link-text">Blog</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <a href="{% url 'gallery' %}" class="nav-link">
+                    <span class="link-text">Gallery</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <a href="{% url 'life_at_dap' %}" class="nav-link">
+                    <span class="link-text">Life</span>
+                    <span class="link-underline"></span>
+                </a>
+                
+                <a href="{% url 'careers' %}" class="nav-link">
+                    <span class="link-text">Careers</span>
+                    <span class="link-underline"></span>
+                </a>
             </div>
+
+            <!-- Contact Button -->
+            <div class="navbar-actions">
+                <a href="{% url 'contact' %}" class="btn-contact">
+                    <span class="btn-text">Contact Us</span>
+                    <span class="btn-shine"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" aria-label="Toggle Menu">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
         </div>
-    </header>
+    </nav>
 
 
 
@@ -252,50 +909,28 @@
 <!-- ======================================================================================================================================================== -->
 
 
-    <a href="https://api.whatsapp.com/send?phone=971505983733&text=Hi.. Das And Partners (DAP) Engineering Consultancy" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    <a href="https://api.whatsapp.com/send?phone=971542323854&text=Hi.. Das And Partners Engineering Consultancy" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
         <img src="{% static 'assets/images/whatsapp.png' %}" alt="WhatsApp">
     </a>
 
-
-    
-    <!-- ============================= Start Footer Area Section =============================================== -->
-    <section class="footer-bg-img footer_section" style="background: url({% static 'assets/images/footer_bg.png' %})">
-        <!-- <div class="footer-menu-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer-menu-wrap">
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Mission</a></li>
-                                <li><a href="#">Update</a></li>
-                                <li><a href="#">Inside</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">History</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+    <!-- ============================= Start Amazing Footer Area Section =============================================== -->
+    <section class="amazing-footer-section">
         <div class="footer-widget-area section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-6 col-md-6 col-12">
                         <div class="footer-widget widget1">
                             <div class="footer-logo">
-                                <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo_sm_white.png' %}" alt=""></a>
+                                <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo_sm_white.png' %}" alt="DAS & Partners"></a>
                             </div>
-                            <p class="text">Discover how Das And Partners (DAP) Engineering Consultancy turns your ideas into reality. Our collaborative approach and cutting-edge technologies ensure that your vision becomes a successful, sustainable reality.</p>
+                            <p class="description">UAE's Top 5 Design & Supervision / Lead Consultant Ranked # 1 Authority Approval / NOC Permitting Consultant and Ranked # 1 BIM Specialist Consultant for Building, Road and Infrastructure Works and Petrochemical, Oil & Gas Projects</p>
                             <div class="footer-social-link">
                                 <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/daspartnersdap"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://www.instagram.com/dasandpartners/"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/"><i class="fab fa-linkedin"></i></a></li>
-                                    <li><a href="https://youtube.com/@DAPEngineeringConsultancy?si=6RPuKXrXsddjtoA2"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://dasandpartners.com"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://dasandpartners.com"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://dasandpartners.com"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://dasandpartners.com"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="https://dasandpartners.com"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -306,35 +941,55 @@
                                 <h3 class="title">Useful Links</h3>
                             </div>
                             <ul>
-                                <li><a href="{% url 'about' %}"><i class="fas fa-angle-double-right"></i> About Us</a></li>
-                                <li><a href="{% url 'our_expertise' %}"><i class="fas fa-angle-double-right"></i> Our Expertise</a></li>
-                                <li><a href="{% url 'our_work' %}"><i class="fas fa-angle-double-right"></i> Our Work</a></li>
+                                <li><a href="{% url 'home' %}"><i class="fas fa-angle-double-right"></i> Home</a></li>
+                                <li><a href="{% url 'about' %}"><i class="fas fa-angle-double-right"></i> About</a></li>
+                                <li><a href="{% url 'our_expertise' %}"><i class="fas fa-angle-double-right"></i> Expertise</a></li>
+                                <li><a href="{% url 'our_work' %}"><i class="fas fa-angle-double-right"></i> Projects</a></li>
+                                <li><a href="{% url 'our_people' %}"><i class="fas fa-angle-double-right"></i> Team</a></li>
+                                <li><a href="{% url 'news' %}"><i class="fas fa-angle-double-right"></i> News</a></li>
+                                <li><a href="{% url 'blogs' %}"><i class="fas fa-angle-double-right"></i> Blog</a></li>
+                                <li><a href="{% url 'gallery' %}"><i class="fas fa-angle-double-right"></i> Gallery</a></li>
+                                <li><a href="{% url 'life_at_dap' %}"><i class="fas fa-angle-double-right"></i> Life</a></li>
+                                <li><a href="{% url 'careers' %}"><i class="fas fa-angle-double-right"></i> Careers</a></li>
+                                <li><a href="{% url 'contact' %}"><i class="fas fa-angle-double-right"></i> Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-6 col-12">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-12">
                         <div class="footer-widget widget3">
                             <div class="footer-title">
-                                <h3 class="title">Useful Links</h3>
+                                <h3 class="title">Contact Information</h3>
                             </div>
-                            <ul>
-                                <li><a href="{% url 'news' %}"><i class="fas fa-angle-double-right"></i> News</a></li>
-                                <li><a href="{% url 'blogs' %}"><i class="fas fa-angle-double-right"></i> Blogs</a></li>
-                                <li><a href="{% url 'careers' %}"><i class="fas fa-angle-double-right"></i> careers</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-12">
-                        <div class="footer-widget widget4">
-                            <div class="footer-title">
-                                <h3 class="title">Newsletter</h3>
+                            <div class="contact-info">
+                                <div class="contact-grid">
+                                    <div class="office-locations">
+                                        <h5><i class="fas fa-map-marker-alt"></i> Abu Dhabi Corporate Office</h5>
+                                        <p>Office 1303 - 1304, 13th Floor, Addax Tower, Reem Island, Abu Dhabi.</p>
+
+                                        <h5><i class="fas fa-map-marker-alt"></i> Dubai Corporate Office</h5>
+                                        <p>Office 3409, 34th Floor, The Citadel Tower, Business Bay, Dubai.</p>
+
+                                        <h5><i class="fas fa-map-marker-alt"></i> Sharjah Corporate Office</h5>
+                                        <p>10th Floor, City Gate Tower, Al Ittihad Street, Sharjah.</p>
+
+                                        <h5><i class="fas fa-map-marker-alt"></i> DAS International — USA</h5>
+                                        <p>1712 Pioneer Ave, Suite 101, Cheyenne, WY 82001, United States</p>
+                                    </div>
+
+                                    <div class="contact-details">
+                                        <h5><i class="fas fa-envelope"></i> Email Addresses</h5>
+                                        <p><a href="mailto:info@dasandpartnersengineering.com">info@dasandpartnersengineering.com</a></p>
+                                        <p><a href="mailto:careers@dasandpartnersengineering.com">careers@dasandpartnersengineering.com</a></p>
+                                        <p><a href="mailto:tender@dasandpartnersengineering.com">tender@dasandpartnersengineering.com</a></p>
+
+                                        <h5><i class="fas fa-phone"></i> Phone Numbers</h5>
+                                        <p><a href="tel:+971542323852">General Inquiry: +971 54 232 3852</a></p>
+                                        <p><a href="tel:+97125464741">Abu Dhabi Corporate: +971 2 546 4741</a></p>
+                                        <p><a href="tel:+97142851590">Dubai: +971 4 285 1590</a></p>
+                                        <p><a href="tel:+97165610096">Sharjah: +971 6 561 0096</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="text">Subscribe to our newsletter to get the latest updates.</p>
-                            <form class="newsletter" action="/subscribe/" method="post">
-                                {% csrf_token %}
-                                <input type="email" name="email" placeholder="Enter your email address" required>
-                                <button class="button-one border-0" type="submit">Subscribe now</button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -346,6 +1001,11 @@
                     <div class="col-12">
                         <div class="footer-copyright text-center">
                             <p class="mb-0">&copy; 2025 <a href="{% url 'home' %}">DAS And Partners</a> All rights reserved.</p>
+                            <div class="footer-links mt-2">
+                                <button type="button" class="btn btn-link text-white p-0 me-3" data-bs-toggle="modal" data-bs-target="#disclaimerModal">
+                                    Terms and Conditions
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -353,6 +1013,7 @@
         </div>
     </section>
 
+    
 
     {% if messages %}
         {% for message in messages %}
@@ -379,6 +1040,38 @@
   </div>
 </div>
 
+<!-- Disclaimer Modal -->
+<div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="disclaimerModalLabel">
+          <i class="fas fa-exclamation-triangle text-warning me-2"></i>
+          Disclaimer
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="disclaimer-content">
+          <p class="disclaimer-text">
+            All materials, content, and resources used on this website are authorized and legally obtained. If you come across anything that appears suspicious or unauthorized, please report it to us immediately at 
+            <a href="mailto:legal@dasandpartnersengineering.com" class="text-primary fw-bold">legal@dasandpartnersengineering.com</a>.
+          </p>
+          <div class="disclaimer-note mt-3 p-3 bg-light rounded">
+            <i class="fas fa-info-circle text-info me-2"></i>
+            <strong>Note:</strong> This website is maintained by DAS And Partners Engineering Consultancy. We are committed to maintaining the highest standards of integrity and legal compliance in all our digital content.
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          <i class="fas fa-check me-2"></i>
+          I Understand
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
@@ -388,7 +1081,21 @@
     <script src="{% static 'assets/js/jquery-magnific-popup-min.js' %}"></script>
     <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
     <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.AOS) {
+          AOS.init({
+            once: true,
+            duration: 800,
+            offset: 120,
+          });
+        }
+      });
+    </script>
     <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/js/expertise.js' %}"></script>
+    <script src="{% static 'assets/js/navbar-enhanced.js' %}"></script>
 
     
     <script>
@@ -414,9 +1121,105 @@
             const modal = new bootstrap.Modal(document.getElementById('successModal'));
             modal.show();
             }
+            
+            // Fallback to hide preloader if jQuery fails to load
+            setTimeout(function() {
+                const preloader = document.querySelector('.preloader');
+                if (preloader && preloader.style.display !== 'none') {
+                    preloader.style.display = 'none';
+                }
+            }, 3000); // Hide after 3 seconds if jQuery doesn't work
             });
             </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-toggle');
+    const mobileMenu = document.querySelector('.das-menu-wrapper');
+    const mobileMenuToggle = document.querySelector('.das-menu-toggle');
+    const body = document.body;
+    
+    // Toggle mobile menu
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.add('das-body-visible');
+        body.style.overflow = 'hidden';
+        mobileMenuBtn.classList.add('active');
+      });
+    }
+    
+    // Close mobile menu
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileMenu.classList.remove('das-body-visible');
+        body.style.overflow = '';
+        if (mobileMenuBtn) {
+          mobileMenuBtn.classList.remove('active');
+        }
+      });
+    }
+    
+    // Close mobile menu when clicking outside
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.remove('das-body-visible');
+          body.style.overflow = '';
+          if (mobileMenuBtn) {
+            mobileMenuBtn.classList.remove('active');
+          }
+        }
+      });
+    }
+    
+    // Mobile submenu toggle
+    const mobileSubmenuItems = document.querySelectorAll('.das-item-has-children');
+    console.log('Found mobile submenu items:', mobileSubmenuItems.length);
+    
+    mobileSubmenuItems.forEach(function(item) {
+      const link = item.querySelector('a');
+      const submenu = item.querySelector('.das-submenu');
+      
+      console.log('Processing item:', item, 'Link:', link, 'Submenu:', submenu);
+      
+      if (link && submenu) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('Submenu clicked, toggling active class');
+          item.classList.toggle('active');
+          console.log('Active class toggled, current classes:', item.className);
+        });
+      }
+    });
+    
+    // Close mobile menu on window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 992) {
+        if (mobileMenu) {
+          mobileMenu.classList.remove('das-body-visible');
+        }
+        if (body) {
+          body.style.overflow = '';
+        }
+        if (mobileMenuBtn) {
+          mobileMenuBtn.classList.remove('active');
+        }
+      }
+    });
+    
+    // Side menu functionality (existing)
+    var menuBtn = document.querySelector('.side-box-bar.baricon-left.modern-menu-btn');
+    if(menuBtn) {
+      menuBtn.addEventListener('click', function() {
+        console.log('Side menu button clicked!');
+      });
+    }
+      });
+</script>
+
+<!-- Swiper JavaScript for slider -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 </html>

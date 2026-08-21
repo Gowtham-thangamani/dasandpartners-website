@@ -1,0 +1,18 @@
+# Django Settings
+SECRET_KEY=your-secret-key-here
+DEBUG=False
+ALLOWED_HOSTS=dasandpartners.com,www.dasandpartners.com
+
+# Database Settings (PostgreSQL on VPS)
+DB_NAME=dasandpartners_db
+DB_USER=dasandpartners_user
+DB_PASSWORD=your-secure-database-password
+DB_HOST=localhost
+DB_PORT=5432
+
+# Email Settings
+EMAIL_HOST=findmejoinme.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=no-reply@findmejoinme.com
+EMAIL_HOST_PASSWORD=your-email-password
+

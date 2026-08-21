@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% block content %}
+
+<!-- ======================================================================================================================================================== -->
+
+
+    <!-- ============== start-breadcumb-area =============== -->
+    <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/contact/hr-banner.jpeg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-content">
+                        <h1 class="breadcumb-title">Careers</h1>
+                        <ul class="breadcumb-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
+                            <li>Careers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================== Start About US Section Area ========================== -->
+
+    <section class="about-company-area section-padding pt-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-12">
+                    <div class="about-thumb">
+                        <div class="img-hover-wrapper">
+                            <!-- <img src={% static "assets/images/contact/hr-image.jpeg"%} alt=""> -->
+                            <img src={% static "assets/images/about/dr-group.jpg"%} alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-12">
+                    <div class="lets-discuss team-title home-three-title">
+                        <h2 class="title">Please contact <span>us at</span>.</h2>
+                        <div class="hr-email-section" style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 8px 25px rgba(55, 127, 75, 0.1); border-left: 4px solid #148255; margin: 25px 0;">
+                            <h5 style="color: #148255; font-weight: 600; margin-bottom: 15px;">
+                                <i class="fas fa-envelope" style="margin-right: 10px;"></i>HR Department
+                            </h5>
+                            <p style="font-size: 1.1rem; line-height: 1.7; color: #333; margin-bottom: 0;">
+                                <strong>Email:</strong> <a href="mailto:hr.energy@dasandpartners.com" style="color: #148255; text-decoration: none; font-weight: 600;">hr.energy@dasandpartners.com</a>
+                            </p>
+                            <p style="font-size: 0.95rem; color: #666; margin-top: 8px; margin-bottom: 0;">
+                                Send your CV and cover letter to this email address
+                            </p>
+                        </div>
+                        
+                        <div class="recruitment-note mt-4" style="background: #ffffff; padding: 25px; border-radius: 12px; box-shadow: 0 8px 25px rgba(55, 127, 75, 0.1); border-left: 4px solid #148255; margin-top: 30px;">
+                            <h5 style="color: #148255; font-weight: 600; margin-bottom: 15px;">
+                                <i class="fas fa-users" style="margin-right: 10px;"></i>Our Recruitment Process
+                            </h5>
+                            <p style="font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 0;">
+                                Our recruitment team carefully reviews every application in collaboration with the relevant department to ensure the best fit for each role. If you're not selected this time, don't worry — your profile is saved in our talent pool and may be reconsidered for future opportunities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+{% endblock %}

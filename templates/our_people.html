@@ -1,0 +1,2816 @@
+{% extends 'base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% load static %}
+{% load custom_filters %}
+{% block content %}
+
+
+    <!-- ============== start-breadcumb-area =============== -->
+    <section class="breadcumb-wrapper-area section-padding banner_green_layer" style="background: url({% static 'assets/images/about/banner.jpg' %});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bread-content">
+                        <h1 class="breadcumb-title">Our People</h1>
+                        <ul class="breadcumb-menu">
+                            <li><a href="#">Home</a></li>
+                            <li class="breadcumb-icon"><i class="fas fa-angle-right"></i></li>
+                            <li>Our People</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== end-breadcumb-area =============== -->
+
+
+   
+    <style>
+      .client-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #148255, #1ec28b);
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 15px rgba(20, 130, 85, 0.2);
+        transition: all 0.3s ease;
+      }
+      .client-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(20, 130, 85, 0.3);
+      }
+      .location-badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+      .location-badge:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+      .badge-green {
+        display: inline-block;
+        background: #148255;
+        color: white;
+        padding: 12px 25px;
+        margin: 8px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1rem;
+        box-shadow: 0 4px 15px rgba(20, 130, 85, 0.2);
+      }
+      .sector-item {
+        display: block;
+        padding: 10px 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        color: #666;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-left: 3px solid #148255;
+        transition: all 0.3s ease;
+      }
+      .sector-item:hover {
+        background: rgba(20, 130, 85, 0.05);
+        transform: translateX(5px);
+      }
+      .structure-category ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .structure-category ul li {
+        padding: 5px 0;
+        padding-left: 25px;
+        position: relative;
+      }
+      .structure-category ul li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #148255;
+        font-weight: bold;
+      }
+    </style>
+    <!-- ========================================== End Company Overview Section ================================================ -->
+
+   
+
+
+<!-- DEPARTMENTS AT Das and Partners - CLEAN PROFESSIONAL VERSION -->
+
+<!-- ========================================== Leadership Team Section ================================================ -->
+<section class="leadership-team-section py-5 position-relative" style="background:linear-gradient(120deg,#f8f9fa 60%,#e6f2ec 100%);">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Leadership Heading Above Divider (Stylish) -->
+        <div class="leadership-heading-wrap mb-4 mt-5 text-center animate__animated animate__fadeInDown" style="position:relative;z-index:2;">
+          <div class="leadership-heading-icon mb-2" style="font-size:2.5rem;">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="#148255" fill-opacity="0.12"/><path d="M24 12L26.4721 19.5279L34 22L26.4721 24.4721L24 32L21.5279 24.4721L14 22L21.5279 19.5279L24 12Z" fill="#148255"/></svg>
+          </div>
+          <h3 class="section-title mb-2 leadership-gradient-text" style="font-weight:900;letter-spacing:2px;font-size:2.3rem;line-height:1.1;display:inline-block;">
+            Our Leadership Team
+            <span class="leadership-underline"></span>
+          </h3>
+          <p class="section-description mb-0 animate__animated animate__fadeInUp" style="color:#3a5d4c;font-size:1.18rem;max-width:650px;margin:0 auto 0.5rem auto;letter-spacing:0.2px;">Meet the visionaries driving Das & Partners's excellence and innovation</p>
+        </div>
+        <!-- Wavy SVG Divider -->
+        <!-- <div class="leadership-section-divider" style="margin-bottom:-2.5rem;">
+          <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:90px;display:block;"><path d="M0 60 Q 360 0 720 60 T 1440 60 V90 H0V60Z" fill="url(#leadershipWave)"/><defs><linearGradient id="leadershipWave" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#148255"/><stop offset="1" stop-color="#1ec28b"/></linearGradient></defs></svg>
+        </div>
+
+        <div class="col-xl-12 col-lg-12"> -->
+          <!-- <section class="leadership-team-section p-0 bg-transparent position-relative" style="background:linear-gradient(120deg,#f8f9fa 60%,#e6f2ec 100%);border-radius:2rem;padding:2.5rem 1rem 2rem 1rem;"> -->
+            
+            
+            <div class="departments-clean-grid">
+              <!-- Chairman -->
+              <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card-clean-inner">
+                  <div class="card-clean-front">
+                    <div class="clean-image-container">
+                      <img src="{% static 'assets/images/user/user_img.png' %}" alt="Chairman" class="clean-dept-img">
+                      <div class="clean-image-overlay">
+                        <div class="clean-overlay-content">
+                          <i class="fas fa-crown"></i>
+                          <span>Chairman</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clean-card-content">
+                      <div class="clean-icon-wrapper">
+                        <i class="fas fa-crown"></i>
+                      </div>
+                      <h3 class="clean-card-title">Mohammad</h3>
+                      <p class="clean-card-desc">Chairman</p>
+                      <p class="clean-card-desc">"Engineering professional with 30+ years of experience in EPC and FEED projects across oil & gas (onshore/offshore) and infrastructure sectors. Skilled in managing brownfield/greenfield developments, engineering management, contract review, procurement, and leading multidisciplinary teams."</p>
+                    </div>
+                  </div>
+                  <div class="card-clean-back" style="background-image: url('{% static 'assets/images/user/user_img.png' %}'); opacity: 0.6;">
+                    <div class="clean-back-content">
+                      <h4 class="clean-back-title">Mohammad</h4>
+                      <p class="clean-back-role">Chairman</p>
+                      <div class="clean-back-buttons">
+                        <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+                          <i class="fab fa-linkedin"></i>
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+                          <i class="fab fa-youtube"></i>
+                          <span>YouTube</span>
+                        </a>
+                      </div>
+                      <div class="clean-back-features">
+                        <div class="clean-back-features">
+                          <span><i class="fas fa-check"></i> Senior Engineering Leader</span>
+                          <span><i class="fas fa-check"></i> 30+ Years EPC & FEED Experience</span>
+                          <span><i class="fas fa-check"></i> Oil & Gas and Infrastructure Sector</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- COO -->
+              <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card-clean-inner">
+                  <div class="card-clean-front">
+                    <div class="clean-image-container">
+                      <img src="{% static 'assets/images/dir/3.png' %}" alt="COO" class="clean-dept-img">
+                      <div class="clean-image-overlay">
+                        <div class="clean-overlay-content">
+                          <i class="fas fa-user-tie"></i>
+                          <span>COO</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clean-card-content">
+                      <div class="clean-icon-wrapper">
+                        <i class="fas fa-user-tie"></i>
+                      </div>
+                      <h3 class="clean-card-title">Sudarshan Das</h3>
+                      <p class="clean-card-desc">COO</p>
+                      <p class="clean-card-desc">"Structural Engineer with 10+ years' experience in designing and supervising major UAE infrastructure projects, including bridges, tunnels, utilities, and oil & gas structures. Skilled in leadership, consultancy, and project management with a strong focus on business growth and executive engagement."</p>
+                    </div>
+                  </div>
+                  <div class="card-clean-back" style="background-image: url('{% static 'assets/images/dir/3.png' %}'); opacity: 0.6;">
+                    <div class="clean-back-content">
+                      <h4 class="clean-back-title">Sudarshan Das</h4>
+                      <p class="clean-back-role">COO</p>
+                      <div class="clean-back-buttons">
+                        <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+                          <i class="fab fa-linkedin"></i>
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+                          <i class="fab fa-youtube"></i>
+                          <span>YouTube</span>
+                        </a>
+                      </div>
+                      <div class="clean-back-features">
+                        <span><i class="fas fa-check"></i> Structural Engineer</span>
+                        <span><i class="fas fa-check"></i> 10+ Years Experience</span>
+                        <span><i class="fas fa-check"></i> UAE Infrastructure Projects</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Director -->
+              <!--<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="300">-->
+              <!--  <div class="card-clean-inner">-->
+              <!--    <div class="card-clean-front">-->
+              <!--      <div class="clean-image-container">-->
+              <!--        <img src="{% static 'assets/images/dir/2.png' %}" alt="Director" class="clean-dept-img">-->
+              <!--        <div class="clean-image-overlay">-->
+              <!--          <div class="clean-overlay-content">-->
+              <!--            <i class="fas fa-cogs"></i>-->
+              <!--            <span>Director</span>-->
+              <!--          </div>-->
+              <!--        </div>-->
+              <!--      </div>-->
+              <!--      <div class="clean-card-content">-->
+              <!--        <div class="clean-icon-wrapper">-->
+              <!--          <i class="fas fa-cogs"></i>-->
+              <!--        </div>-->
+              <!--        <h3 class="clean-card-title">Riyaz Ahmed</h3>-->
+              <!--        <p class="clean-card-desc">Director-Engineering</p>-->
+              <!--        <p class="clean-card-desc">"Experienced Engineering Manager and BIM Specialist with over 20+ years of expertise in implementing and managing BIM methodologies across large-scale projects. Proven ability to lead multidisciplinary teams, enhance collaboration, and drive innovation throughout the project lifecycle."</p>-->
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/dir/2.png' %}'); opacity: 0.6;">-->
+              <!--      <div class="clean-back-content">-->
+              <!--        <h4 class="clean-back-title">Riyaz Ahmed</h4>-->
+              <!--        <p class="clean-back-role">Director-Engineering</p>-->
+              <!--        <div class="clean-back-buttons">-->
+              <!--          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">-->
+              <!--            <i class="fab fa-linkedin"></i>-->
+              <!--            <span>LinkedIn</span>-->
+              <!--          </a>-->
+              <!--          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">-->
+              <!--            <i class="fab fa-youtube"></i>-->
+              <!--            <span>YouTube</span>-->
+              <!--          </a>-->
+              <!--        </div>-->
+              <!--        <div class="clean-back-features">-->
+              <!--          <span><i class="fas fa-check"></i> Engineering Manager</span>-->
+              <!--          <span><i class="fas fa-check"></i> BIM Specialist</span>-->
+              <!--          <span><i class="fas fa-check"></i> 20+ Years Experience</span>-->
+              <!--        </div>-->
+              <!--      </div>-->
+              <!--    </div>-->
+              <!--  </div>-->
+              <!--</div>-->
+              
+              <!-- Prabhu Ponnuswamy -->
+              <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card-clean-inner">
+                  <div class="card-clean-front">
+                    <div class="clean-image-container">
+                      <img src="{% static 'assets/images/team/8.png' %}" alt="Technical Director" class="clean-dept-img">
+                      <div class="clean-image-overlay">
+                        <div class="clean-overlay-content">
+                          <i class="fas fa-building"></i>
+                          <span>Technical Director</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clean-card-content">
+                      <div class="clean-icon-wrapper">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <h3 class="clean-card-title">Prabhu Ponnuswamy</h3>
+                      <p class="clean-card-desc">Technical Director (Member of Board of Directors)</p>
+                      <p class="clean-card-desc">"Sr. Structural Engineer with 20+ years of UAE experience in AEC and oil & gas sectors. Skilled in steel and concrete design, including blast-resistant buildings, substations, and foundations. Delivers safe, cost-effective, and code-compliant solutions."</p>
+                    </div>
+                  </div>
+                  <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/8.png' %}'); opacity: 0.6;">
+                    <div class="clean-back-content">
+                      <h4 class="clean-back-title">Prabhu Ponnuswamy</h4>
+                      <p class="clean-back-role">Technical Director (Member of Board of Directors)</p>
+                      <div class="clean-back-buttons">
+                        <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+                          <i class="fab fa-linkedin"></i>
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+                          <i class="fab fa-youtube"></i>
+                          <span>YouTube</span>
+                        </a>
+                      </div>
+                      <div class="clean-back-features">
+                        <span><i class="fas fa-check"></i> Technical Director</span>
+                        <span><i class="fas fa-check"></i> Board of Directors Member</span>
+                        <span><i class="fas fa-check"></i> Sr. Structural Engineer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Prakash Suresh -->
+              <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="card-clean-inner">
+                  <div class="card-clean-front">
+                    <div class="clean-image-container">
+                      <img src="{% static 'assets/images/team/7.png' %}" alt="Technical Manager" class="clean-dept-img">
+                      <div class="clean-image-overlay">
+                        <div class="clean-overlay-content">
+                          <i class="fas fa-bolt"></i>
+                          <span>Technical Manager</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clean-card-content">
+                      <div class="clean-icon-wrapper">
+                        <i class="fas fa-bolt"></i>
+                      </div>
+                      <h3 class="clean-card-title">Prakash Suresh</h3>
+                      <p class="clean-card-desc">Technical Manager - MEP / EIT</p>
+                      <p class="clean-card-desc">"Results-driven Sr. Mechanical Design Engineer with 10+ years of UAE experience in infrastructure, industrial, and petrochemical projects. Specialized in wet utilities, pumping stations, ETS, substations, manufacturing units. Proven track record of delivering efficient, innovative engineering solutions."</p>
+                    </div>
+                  </div>
+                  <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/7.png' %}'); opacity: 0.6;">
+                    <div class="clean-back-content">
+                      <h4 class="clean-back-title">Prakash Suresh</h4>
+                      <p class="clean-back-role">Technical Manager - MEP / EIT</p>
+                      <div class="clean-back-buttons">
+                        <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+                          <i class="fab fa-linkedin"></i>
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+                          <i class="fab fa-youtube"></i>
+                          <span>YouTube</span>
+                        </a>
+                      </div>
+                      <div class="clean-back-features">
+                        <span><i class="fas fa-check"></i> Technical Manager</span>
+                        <span><i class="fas fa-check"></i> MEP / EIT</span>
+                        <span><i class="fas fa-check"></i> Sr. Mechanical Engineer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Chanda Waseem -->
+              <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+                <div class="card-clean-inner">
+                  <div class="card-clean-front">
+                    <div class="clean-image-container">
+                      <img src="{% static 'assets/images/team/222.jpeg' %}" alt="HR Manager" class="clean-dept-img">
+                      <div class="clean-image-overlay">
+                        <div class="clean-overlay-content">
+                          <i class="fas fa-users"></i>
+                          <span>HR Manager</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clean-card-content">
+                      <div class="clean-icon-wrapper">
+                        <i class="fas fa-users"></i>
+                      </div>
+                      <h3 class="clean-card-title">Chanda Waseem</h3>
+                      <p class="clean-card-desc">Talent Acquisition Lead & HR Manager</p>
+                      <p class="clean-card-desc">"As a Talent Acquisition Lead and HR Manager, I've seen firsthand how Das and Partners invests in its people. It's a company that values talent, fosters growth, and builds a truly collaborative culture."</p>
+                    </div>
+                  </div>
+                  <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/222.jpeg' %}'); opacity: 0.6;">
+                    <div class="clean-back-content">
+                      <h4 class="clean-back-title">Chanda Waseem</h4>
+                      <p class="clean-back-role">Talent Acquisition Lead & HR Manager</p>
+                      <div class="clean-back-buttons">
+                        <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+                          <i class="fab fa-linkedin"></i>
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+                          <i class="fab fa-youtube"></i>
+                          <span>YouTube</span>
+                        </a>
+                      </div>
+                      <div class="clean-back-features">
+                        <span><i class="fas fa-check"></i> Talent Acquisition Lead</span>
+                        <span><i class="fas fa-check"></i> HR Manager</span>
+                        <span><i class="fas fa-check"></i> People Development</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Muhammad Haider Waheed -->
+             
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ========================================== End Leadership Team Section ================================================ -->
+
+<!-- EXCELLENCE STYLE SECTION TITLE -->
+<div id="what-our-people-says" class="row mb-5">
+  <div class="col-12">
+    <div class="excellence-feature text-center animate__animated animate__fadeInDown" data-aos="fade-down">
+      <div class="excellence-icon mx-auto mb-3">
+        <i class="fas fa-users"></i>
+        <div class="icon-glow"></div>
+      </div>
+      <h3 class="excellence-title mb-3 leadership-gradient-text" style="font-weight:900;letter-spacing:2px;font-size:2.1rem;">What Our People Says</h3>
+      <p class="excellence-text mb-4" style="color:#3a5d4c;font-size:1.13rem;max-width:700px;margin:0 auto;">Hear from our team members about their expertise and contributions to Das & Partners's success. Our dedicated professionals share their insights and commitment to excellence.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CLEAN DEPARTMENTS GRID -->
+<div class="departments-clean-grid">
+  <!-- CSA Department -->
+  
+  
+  <!-- MEP Department -->
+  
+  
+  <!-- P&ID Department -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="300">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/3.png' %}" alt="P&ID Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-project-diagram"></i>
+              <span>P&ID</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3 class="clean-card-title">Khushal Gaikwad</h3>
+          <p class="clean-card-desc">Sr. Piping Stress & Layout Engineer - Abu Dhabi</p>
+          <p class="clean-card-desc">"As a Sr. Piping Stress & Layout Engineer, working at Das and Partners has given me the opportunity to tackle complex engineering challenges with a strong and supportive team. It's a place where precision and teamwork truly matter."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/3.png' %}'); opacity: 0.6;">
+
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Khushal Gaikwad</h4>
+          <p class="clean-back-role">Sr. Piping Stress & Layout Engineer</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="700">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/2.png' %}" alt="Information and Technology Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-laptop-code"></i>
+              <span>IT</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="clean-card-title">Muhammad Haider Waheed</h3>
+          <p class="clean-card-desc">IT Manager - Abu Dhabi</p>
+          <p class="clean-card-desc">"As the IT Manager, I'm proud to be part of Das and Partners' digital transformation. The company encourages innovation, values technology, and supports continuous improvement."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/2.png' %}'); opacity: 0.6;">
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Muhammad Haider Waheed</h4>
+          <p class="clean-back-role">IT Manager</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Legal Department -->    
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="500">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/6.png' %}" alt="Legal Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-balance-scale"></i>
+              <span>LEGAL</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="clean-card-title">Mohamed Elbaz </h3>
+          <p class="clean-card-desc">Legal Advisor & Contract Administrator - Abu Dhabi</p>
+          <p class="clean-card-desc">"As a Legal Advisor and Contract Administrator at Das and Partners, I appreciate the company's commitment to transparency and professionalism. It's a place where legal expertise supports strong, successful projects."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/6.png' %}'); opacity: 0.6;">
+
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Mohamed Elbaz </h4>
+          <p class="clean-back-role">Legal Advisor & Contract Administrator</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Regional manager -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="400">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/444.jpeg' %}" alt="BIM Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-user-tie"></i>
+              <span>Regional Manager</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="clean-card-title">Mohammed Yusha Siddiqui</h3>
+          <p class="clean-card-desc">Regional Manager - Strategic Expansion - Dubai</p>
+          <p class="clean-card-desc">"As the Regional Manager - Strategic Expansion, I'm proud to lead a team that drives growth and innovation. Das and Partners is a company that values collaboration, integrity, and a commitment to excellence."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/444.jpeg' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Mohammed Yusha Siddiqui</h4>
+          <p class="clean-back-role">Regional Manager - Strategic Expansion</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+       
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sr Architect -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="500">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/011.png' %}" alt="Legal Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-drafting-compass"></i>
+              <span>Sr. Architect</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="clean-card-title">Hafiz Suleman</h3>
+          <p class="clean-card-desc">Sr. Architect - Abu Dhabi</p>
+          <p class="clean-card-desc">"As a Sr. Architect at Das and Partners, I'm proud to be part of a team that creates beautiful, functional spaces. The company's focus on quality and client satisfaction is evident in every project we undertake."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/011.png' %}'); opacity: 0.6;">
+
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Hafiz Suleman</h4>
+          <p class="clean-back-role">Sr. Architect</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Sr. Infrastructure Engineer -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/12.png' %}" alt="HR Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-road"></i>
+              <span>Sr. Infrastructure Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-road"></i>
+          </div>
+          <h3 class="clean-card-title">SHAIKH MOHAMMAD</h3>
+          <p class="clean-card-desc">Sr. Infrastructure & Utilities Draftsman - Abu Dhabi</p>
+          <p class="clean-card-desc">"As a Sr. Infrastructure Engineer at Das and Partners, I enjoy working with a skilled team to deliver reliable and innovative infrastructure solutions that support our projects' success."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/12.png' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">SHAIKH MOHAMMAD</h4>
+          <p class="clean-back-role">Sr. Infrastructure Engineer</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+          
+          </div>
+        </div>
+      </div>
+             </div>
+   </div>
+   
+ <!-- Infrastructure NOC Coordinator -->
+ <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/19.png' %}" alt="HR Department" class="clean-dept-img">
+        <div class="clean-image-overlay">
+          <div class="clean-overlay-content">
+            <i class="fas fa-network-wired"></i>
+            <span>Infrastructure NOC Coordinator</span>
+          </div>
+        </div>
+      </div>
+      <div class="clean-card-content">
+        <div class="clean-icon-wrapper">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <h3 class="clean-card-title">Nikhil Thathambi Sudharman</h3>
+        <p class="clean-card-desc">Infrastructure NOC Coordinator - Abu Dhabi</p>
+        <p class="clean-card-desc">"As an Infrastructure NOC Coordinator at Das and Partners, I ensure seamless network operations and rapid response to issues, supporting the reliability and performance that our projects depend on."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/19.png' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Nikhil Thathambi Sudharman</h4>
+        <p class="clean-back-role">Infrastructure NOC Coordinator</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+ 
+  <!-- Sr. Document Controller & Porject Coordinator-->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/27.jpg' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+          <div class="clean-overlay-content">
+            <i class="fas fa-file-alt"></i>
+            <span>Sr. Document Controller & Project Coordinator</span>
+          </div>
+        </div>
+      </div>
+      <div class="clean-card-content">
+        <div class="clean-icon-wrapper">
+          <i class="fas fa-file-alt"></i>
+          </div>
+          <h3 class="clean-card-title">Lakshmi</h3>
+          <p class="clean-card-desc">Sr. Document Controller & Project Coordinator - Abu Dhabi</p>
+          <p class="clean-card-desc">"As a Sr. Document Controller & Project Coordinator at Das and Partners, I ensure that every detail is tracked, organized, and delivered on time—supporting project success through precision and coordination."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/27.jpg' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Lakshmi</h4>
+          <p class="clean-back-role">Sr. Document Controller & Project Coordinator</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+          
+          </div>
+        </div>
+      </div>
+             </div>
+   </div>
+    
+
+
+<!-- Civil Site Engineer-Abu Dhabi-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/28.jpeg' %}" alt="HR Department" class="clean-dept-img">
+        <div class="clean-image-overlay">
+          <div class="clean-overlay-content">
+            <i class="fas fa-hard-hat"></i>
+            <span>Civil Site Engineer-Abu Dhabi</span>
+          </div>
+        </div>
+      </div>
+      <div class="clean-card-content">
+        <div class="clean-icon-wrapper">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <h3 class="clean-card-title">Gokulkrishna Suresh Babu </h3>
+        <p class="clean-card-desc">Civil Site Engineer-Abu Dhabi</p>
+        <p class="clean-card-desc">"As a Civil Site Engineer at Das and Partners, I take pride in turning plans into reality on-site, ensuring quality, safety, and efficiency in every phase of construction."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/28.jpeg' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Gokulkrishna Suresh Babu </h4>
+        <p class="clean-back-role">Civil Site Engineer-Abu Dhabi</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+ <!-- Asst. Design Architect-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/31.jpg' %}" alt="HR Department" class="clean-dept-img">
+        <div class="clean-image-overlay">
+          <div class="clean-overlay-content">
+            <i class="fas fa-drafting-compass"></i>
+            <span>Asst. Design Architect</span>
+          </div>
+        </div>
+      </div>
+      <div class="clean-card-content">
+        <div class="clean-icon-wrapper">
+          <i class="fas fa-drafting-compass"></i>
+        </div>
+        <h3 class="clean-card-title">Tasnim</h3>
+        <p class="clean-card-desc">Asst. Design Architect - Abu Dhabi</p>
+        <p class="clean-card-desc">"As an Assistant Design Architect at Das and Partners, I’m inspired by the opportunity to contribute creative ideas to impactful projects, growing every day in a culture that values design excellence."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/31.jpg' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Tasnim</h4>
+        <p class="clean-back-role">Asst. Desgin Architect</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+   <!-- Asst. design Architect -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="700">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/13.png' %}" alt="Information and Technology Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+                          <div class="clean-overlay-content">
+            <i class="fas fa-drafting-compass"></i>
+            <span>Asst. design Architect</span>
+          </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-drafting-compass"></i>
+          </div>
+          <h3 class="clean-card-title">Sherin Naseer</h3>
+          <p class="clean-card-desc">Asst. design Architect - Abu Dhabi</p>
+          <p class="clean-card-desc">"Working as an Assistant Design Architect at Das and Partners has allowed me to develop my skills while contributing to meaningful projects. The supportive team inspires creativity and excellence every day."</p>
+        </div>
+      </div>
+            <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/13.png' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Sherin Naseer</h4>
+          <p class="clean-back-role">Asst. design Architect</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+     <!-- Asst. design Architect -->
+   <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="100">
+     <div class="card-clean-inner">
+       <div class="card-clean-front">
+         <div class="clean-image-container">
+           <img src="{% static 'assets/images/team/14.png' %}" alt="CSA Department" class="clean-dept-img">
+           <div class="clean-image-overlay">
+             <div class="clean-overlay-content">
+               <i class="fas fa-drafting-compass"></i>
+               <span>Asst. design Architect</span>
+             </div>
+           </div>
+         </div>
+         <div class="clean-card-content">
+           <div class="clean-icon-wrapper">
+             <i class="fas fa-drafting-compass"></i>
+           </div>
+           <h3 class="clean-card-title">Iman Samir Abdelhamid </h3>
+           <p class="clean-card-desc">Asst. design Architect - Abu Dhabi</p>
+           <p class="clean-card-desc">"At Das and Partners, as an Assistant Design Architect, I'm empowered to turn ideas into impactful designs alongside a talented and inspiring team. It's a place where creativity meets real-world solutions."</p>
+         </div>
+       </div>
+               <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/14.png' %}'); opacity: 0.6;">
+        <!-- <div class="clean-back-overlay"></div> -->
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Iman Samir Abdelhamid</h4>
+          <p class="clean-back-role">Asst. design Architect</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+     <!-- Asst. BIM Modeller -->
+    <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card-clean-inner">
+        <div class="card-clean-front">
+          <div class="clean-image-container">
+            <img src="{% static 'assets/images/team/4.png' %}" alt="MEP Department" class="clean-dept-img">
+            <div class="clean-image-overlay">
+              <div class="clean-overlay-content">
+                <i class="fas fa-cube"></i>
+                <span>Asst. BIM Modeller</span>
+              </div>
+            </div>
+          </div>
+          <div class="clean-card-content">
+            <div class="clean-icon-wrapper">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h3 class="clean-card-title">Shilpa Merin Chacko</h3>
+            <p class="clean-card-desc">Asst. BIM Modeller - Abu Dhabi</p>
+            <p class="clean-card-desc">"As an Assistant BIM Modeller at Das and Partners, I'm excited to work with cutting-edge technology and a supportive team that values precision and innovation in every project."</p>
+
+          </div>
+        </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/4.png' %}'); opacity: 0.6;">
+        <!-- <div class="clean-back-overlay"></div> -->
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Shilpa Merin Chacko</h4>
+          <p class="clean-back-role">Asst. BIM Modeller</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <!-- Asst. Structural Design Engineer-->
+    <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+      <div class="card-clean-inner">
+        <div class="card-clean-front">
+          <div class="clean-image-container">
+            <img src="{% static 'assets/images/team/15.png' %}" alt="HR Department" class="clean-dept-img">
+            <div class="clean-image-overlay">
+              <div class="clean-overlay-content">
+                <i class="fas fa-building"></i>
+                <span>Asst. Structural Design Engineer</span>
+              </div>
+            </div>
+          </div>
+          <div class="clean-card-content">
+            <div class="clean-icon-wrapper">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="clean-card-title">Karthi Jayan Jayakumar</h3>
+            <p class="clean-card-desc">Asst. Structural Design Engineer - Abu Dhabi</p>
+            <p class="clean-card-desc">"Being an Assistant Structural Design Engineer at Das and Partners gives me the chance to contribute to meaningful projects while developing practical skills in a dynamic and supportive environment."</p>
+          </div>
+        </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/15.png' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Karthi Jayan Jayakumar</h4>
+          <p class="clean-back-role">Asst. Structural Design Engineer</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+     <!-- HVAC Design Engineer -->
+    <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card-clean-inner">
+        <div class="card-clean-front">
+          <div class="clean-image-container">
+            <img src="{% static 'assets/images/team/16.png' %}" alt="P&ID Department" class="clean-dept-img">
+            <div class="clean-image-overlay">
+              <div class="clean-overlay-content">
+                <i class="fas fa-snowflake"></i>
+                <span>HVAC Design Engineer</span>
+              </div>
+            </div>
+          </div>
+          <div class="clean-card-content">
+            <div class="clean-icon-wrapper">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <h3 class="clean-card-title">Sana Ur Rahman</h3>
+            <p class="clean-card-desc">HVAC Design Engineer - Abu Dhabi</p>
+            <p class="clean-card-desc">"As an HVAC Design Engineer at Das and Partners, I'm proud to create efficient and sustainable solutions, working with a team that drives innovation and quality in every project."</p>
+          </div>
+        </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/16.png' %}'); opacity: 0.6;">
+
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Sana Ur Rahman</h4>
+          <p class="clean-back-role">HVAC Design Engineer</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+ <!-- Receptionist -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/17.png' %}" alt="HR Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-road"></i>
+              <span>Secretary Executive</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+              <i class="fas fa-user-tie"></i>
+            </div>
+          <h3 class="clean-card-title">Mary Ann V. Severa</h3>
+          <p class="clean-card-desc">Receptionist cum Secretary Executive - Abu Dhabi</p>
+          <p class="clean-card-desc">"As a Secretary Executive at Das and Partners, I take pride in being the backbone of our team's operations, ensuring seamless communication and organization that help drive the company's success every day."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/17.png' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Mary Ann V. Severa</h4>
+          <p class="clean-back-role">Receptionist cum Secretary Executive - Abu Dhabi</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+          
+          </div>
+        </div>
+      </div>
+             </div>
+   </div>
+   
+   
+   <!-- Receptionist -->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/18.png' %}" alt="HR Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-road"></i>
+              <span>Secretary Executive</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+         <div class="clean-icon-wrapper">
+              <i class="fas fa-user-tie"></i>
+            </div>
+          <h3 class="clean-card-title">Ala'a Gamal Alsayyad</h3>
+          <p class="clean-card-desc">Receptionist cum Secretary Executive - Dubai</p>
+          <p class="clean-card-desc">"As a Secretary Executive at Das and Partners, I play a key role in keeping our workflows smooth and efficient, helping the team stay focused and successful in every project."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/18.png' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Mary Ann V. Severa</h4>
+          <p class="clean-back-role">Receptionist cum Secretary Executive - Abu Dhabi</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+          
+          </div>
+        </div>
+      </div>
+             </div>
+   </div>
+
+  <!-- Assit. Graphic Designer-->
+  <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="card-clean-inner">
+      <div class="card-clean-front">
+        <div class="clean-image-container">
+          <img src="{% static 'assets/images/team/29.png' %}" alt="HR Department" class="clean-dept-img">
+          <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-palette"></i>
+              <span>Asst. Graphic Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="clean-card-title">Lynn</h3>
+          <p class="clean-card-desc">Asst. Graphic Designer - Abu Dhabi</p>
+          <p class="clean-card-desc">"As an Assistant Graphics Designer at Das and Partners, I get to bring concepts to life visually, supporting our brand and projects with designs that communicate, inspire, and stand out."</p>
+        </div>
+      </div>
+      <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/29.png' %}'); opacity: 0.6;">
+        
+        <div class="clean-back-content">
+          <h4 class="clean-back-title">Lynn</h4>
+          <p class="clean-back-role">Asst. Graphic Designer</p>
+          <div class="clean-back-buttons">
+            <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+          <div class="clean-back-features">
+          
+          </div>
+        </div>
+      </div>
+             </div>
+   </div>
+  
+<!-- Assit. Graphic Designer-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/555.jpeg' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-palette"></i>
+              <span>Asst. Graphic Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="clean-card-title">Joel Joy John</h3>
+        <p class="clean-card-desc">Asst. Graphic Designer - Dubai</p>
+        <p class="clean-card-desc">"As an Assistant Graphics Designer at Das and Partners, I get to bring concepts to life visually, supporting our brand and projects with designs that communicate, inspire, and stand out."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/555.jpeg' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Joel Joy John</h4>
+        <p class="clean-back-role">Asst. Graphic Designer</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+ <!-- Assit. Graphic Designer-->
+ <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/23.png' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-palette"></i>
+              <span>Asst. Graphic Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="clean-card-title">Munawar</h3>
+        <p class="clean-card-desc">Asst. Graphic Designer - Abu Dhabi</p>
+        <p class="clean-card-desc">"As an Assistant Graphics Designer at Das and Partners, I get to bring concepts to life visually, supporting our brand and projects with designs that communicate, inspire, and stand out."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/23.png' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Munawar</h4>
+        <p class="clean-back-role">Asst. Graphic Designer</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+<!-- Assit. Document Controller-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/30.png' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-file-alt"></i>
+              <span>Asst. Document Controller</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3 class="clean-card-title">Suleikha</h3>
+        <p class="clean-card-desc">Asst. Document Controller - Abu Dhabi</p>
+        <p class="clean-card-desc">"As an Assistant Document Controller at Das and Partners, I support the smooth flow of information by maintaining accurate records and documentation, helping teams stay organized and on track."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/30.png' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Suleikha</h4>
+        <p class="clean-back-role">Asst. Document Controller</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+<!-- Assit. Document Controller-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/666.jpeg' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-file-alt"></i>
+              <span>Asst. Document Controller</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3 class="clean-card-title">Vrinda Varghese James</h3>
+        <p class="clean-card-desc">Asst. Document Controller - Dubai</p>
+        <p class="clean-card-desc">"As an Assistant Document Controller at Das and Partners, I contribute to project efficiency by ensuring every document is managed with accuracy and care, supporting seamless coordination across all departments."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/666.jpeg' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">VRINDA VARGHESE JAMES</h4>
+        <p class="clean-back-role">Asst. Document Controller</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+ <!-- Assit. Document Controller-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/22.png' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-file-alt"></i>
+              <span>Asst. Document Controller</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3 class="clean-card-title">Zainab</h3>
+        <p class="clean-card-desc">Asst. Document Controller - Abu Dhabi</p>
+        <p class="clean-card-desc">"Being an Assistant Document Controller at Das and Partners means playing a vital role behind the scenes—keeping information clear, organized, and always ready when it’s needed."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/22.png' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Zainab</h4>
+        <p class="clean-back-role">Asst. Document Controller</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+ <!-- Assit. Document Controller-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/22.png' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-file-alt"></i>
+              <span>Junior Civil Engineer</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-road"></i>
+          </div>
+          <h3 class="clean-card-title">Sukanya Sisupalan</h3>
+        <p class="clean-card-desc">Junior Civil Engineer - Abu Dhabi</p>
+        <p class="clean-card-desc">"Being a Junior Civil Engineer at Das and Partners means contributing to the foundation of every project—supporting designs, ensuring quality, and helping turn plans into reality on-site."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/22.png' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Sukanya Sisupalan</h4>
+        <p class="clean-back-role">Junior Civil Engineer - Abu Dhabi</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+ <!-- Assit. SEO Specialist-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/24.png' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-search"></i>
+              <span>Asst. SEO Specialist</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3 class="clean-card-title">Vishwa</h3>
+        <p class="clean-card-desc">Assit. SEO Specialist - Abu Dhabi</p>
+        <p class="clean-card-desc">"As an SEO Specialist at Das and Partners, I help boost our digital presence by turning strategy into visibility—ensuring our work reaches the right audience at the right time."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/24.png' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Vishwa</h4>
+        <p class="clean-back-role">Asst. SEO Specialist</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+<!-- Administrative Assistant-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/111.jpeg' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-user-cog"></i>
+              <span>Administrative Assistant</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3 class="clean-card-title">Hiba</h3>
+        <p class="clean-card-desc">Administrative Assistant - Abu Dhabi</p>
+        <p class="clean-card-desc">"As an Administrative Assistant at Das and Partners, I ensure smooth operations by managing schedules, coordinating meetings, and supporting team needs with efficiency and professionalism."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/111.jpeg' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Hiba</h4>
+        <p class="clean-back-role">Administrative Assistant</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+
+
+ <!-- Administrative Assistant-->
+<div class="clean-department-card" data-aos="zoom-in" data-aos-delay="600">
+  <div class="card-clean-inner">
+    <div class="card-clean-front">
+      <div class="clean-image-container">
+        <img src="{% static 'assets/images/team/333.jpeg' %}" alt="HR Department" class="clean-dept-img">
+                  <div class="clean-image-overlay">
+            <div class="clean-overlay-content">
+              <i class="fas fa-user-cog"></i>
+              <span>Administrative Assistant</span>
+            </div>
+          </div>
+        </div>
+        <div class="clean-card-content">
+          <div class="clean-icon-wrapper">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3 class="clean-card-title">Mariel</h3>
+        <p class="clean-card-desc">Administrative Assistant - Dubai</p>
+        <p class="clean-card-desc">"As an Administrative Assistant at Das and Partners, I ensure smooth operations by managing schedules, coordinating meetings, and supporting team needs with efficiency and professionalism."</p>
+      </div>
+    </div>
+    <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/333.jpeg' %}'); opacity: 0.6;">
+      
+      <div class="clean-back-content">
+        <h4 class="clean-back-title">Mariel</h4>
+        <p class="clean-back-role">Administrative Assistant</p>
+        <div class="clean-back-buttons">
+          <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+        <div class="clean-back-features">
+        
+        </div>
+      </div>
+    </div>
+           </div>
+ </div>
+
+ <!-- Secretary Executive -->
+ <!--   <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="700">-->
+ <!--     <div class="card-clean-inner">-->
+ <!--       <div class="card-clean-front">-->
+ <!--         <div class="clean-image-container">-->
+ <!--           <img src="{% static 'assets/images/team/17.png' %}" alt="Information and Technology Department" class="clean-dept-img">-->
+ <!--           <div class="clean-image-overlay">-->
+ <!--             <div class="clean-overlay-content">-->
+ <!--               <i class="fas fa-user-tie"></i>-->
+ <!--               <span>Secretary Executive</span>-->
+ <!--             </div>-->
+ <!--           </div>-->
+ <!--         </div>-->
+ <!--         <div class="clean-card-content">-->
+ <!--           <div class="clean-icon-wrapper">-->
+ <!--             <i class="fas fa-user-tie"></i>-->
+ <!--           </div>-->
+ <!--           <h3 class="clean-card-title">Mary Ann V. Severa</h3>-->
+ <!--           <p class="clean-card-desc">Receptionist cum Secretary Executive - Abu Dhabi</p>-->
+ <!--           <p class="clean-card-desc">"As a Secretary Executive at Das and Partners, I take pride in being the backbone of our team's operations, ensuring seamless communication and organization that help drive the company's success every day."</p>-->
+ <!--         </div>-->
+ <!--       </div>-->
+ <!--     <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/17.png' %}'); opacity: 0.6;">-->
+ <!--       <div class="clean-back-content">-->
+ <!--         <h4 class="clean-back-title">Mary Ann V. Severa</h4>-->
+ <!--         <p class="clean-back-role">Secretary Executive - AUH Office</p>-->
+ <!--         <div class="clean-back-buttons">-->
+ <!--           <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">-->
+ <!--             <i class="fab fa-linkedin"></i>-->
+ <!--             <span>LinkedIn</span>-->
+ <!--           </a>-->
+ <!--           <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">-->
+ <!--             <i class="fab fa-youtube"></i>-->
+ <!--             <span>YouTube</span>-->
+ <!--           </a>-->
+ <!--         </div>-->
+ <!--         <div class="clean-back-features">-->
+            
+       
+ <!--         </div>-->
+ <!--       </div>-->
+ <!--     </div>-->
+ <!--   </div>-->
+ <!-- </div>-->
+ <!-- Secretary Executive-->    
+ <!--   <div class="clean-department-card" data-aos="zoom-in" data-aos-delay="500">-->
+ <!--     <div class="card-clean-inner">-->
+ <!--       <div class="card-clean-front">-->
+ <!--         <div class="clean-image-container">-->
+ <!--           <img src="{% static 'assets/images/team/18.png' %}" alt="Legal Department" class="clean-dept-img">-->
+ <!--           <div class="clean-image-overlay">-->
+ <!--             <div class="clean-overlay-content">-->
+ <!--               <i class="fas fa-user-tie"></i>-->
+ <!--               <span>Secretary Executive</span>-->
+ <!--             </div>-->
+ <!--           </div>-->
+ <!--         </div>-->
+ <!--         <div class="clean-card-content">-->
+ <!--           <div class="clean-icon-wrapper">-->
+ <!--             <i class="fas fa-user-tie"></i>-->
+ <!--           </div>-->
+ <!--           <h3 class="clean-card-title">Ala'a Gamal Alsayyad</h3>-->
+ <!--           <p class="clean-card-desc">Receptionist cum Secretary Executive - Dubai</p>-->
+ <!--           <p class="clean-card-desc">"As a Secretary Executive at Das and Partners, I play a key role in keeping our workflows smooth and efficient, helping the team stay focused and successful in every project."</p>-->
+ <!--         </div>-->
+ <!--       </div>-->
+ <!--     <div class="card-clean-back" style="background-image: url('{% static 'assets/images/team/18.png' %}'); opacity: 0.6;">-->
+
+ <!--       <div class="clean-back-content">-->
+ <!--         <h4 class="clean-back-title">Ala'a Gamal Alsayyad</h4>-->
+ <!--         <p class="clean-back-role">Secretary Executive - Dubai</p>-->
+ <!--         <div class="clean-back-buttons">-->
+ <!--           <a href="https://www.linkedin.com/company/das-and-partners-dap-engineering-consultancy-abudhabi/" target="_blank" class="clean-social-btn linkedin-btn">-->
+ <!--             <i class="fab fa-linkedin"></i>-->
+ <!--             <span>LinkedIn</span>-->
+ <!--           </a>-->
+ <!--           <a href="https://www.youtube.com/@DasAndPartners-Das and PartnersEngineer-s2t/featured" target="_blank" class="clean-social-btn youtube-btn">-->
+ <!--             <i class="fab fa-youtube"></i>-->
+ <!--             <span>YouTube</span>-->
+ <!--           </a>-->
+ <!--         </div>-->
+ <!--         <div class="clean-back-features">-->
+         
+ <!--         </div>-->
+ <!--       </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<!-- ========================================== End ISO Certification Section ================================================ -->
+
+<link rel="stylesheet" href="{% static 'assets/css/life_at_dap.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/departments.css' %}">
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Ensure social media links are clickable on card flip
+  const socialButtons = document.querySelectorAll('.clean-social-btn');
+  
+  socialButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent card flip when clicking links
+    });
+    
+    // Additional mobile click handler
+    if (isMobile()) {
+      button.addEventListener('touchend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Simulate click for mobile
+        this.click();
+      }, { passive: false });
+    }
+  });
+  
+  // Add click event to card backs to ensure they're interactive
+  const cardBacks = document.querySelectorAll('.card-clean-back');
+  cardBacks.forEach(cardBack => {
+    cardBack.addEventListener('click', function(e) {
+      // Allow clicks to pass through to links
+      if (e.target.closest('.clean-social-btn')) {
+        return;
+      }
+    });
+  });
+  
+  // Device-specific auto-flip functionality
+  function isMobile() {
+    return window.innerWidth <= 1023; // Include tablets for auto-flip
+  }
+  
+  function isTablet() {
+    return window.innerWidth >= 768 && window.innerWidth <= 1023;
+  }
+  
+  function isPhone() {
+    return window.innerWidth <= 767;
+  }
+  
+  // Auto-flip cards on scroll for mobile only
+  function handleMobileScroll() {
+    if (!isMobile()) return;
+    
+    const cards = document.querySelectorAll('.clean-department-card');
+    const windowHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+    
+    cards.forEach((card, index) => {
+      const cardTop = card.offsetTop;
+      const cardHeight = card.offsetHeight;
+      const cardCenter = cardTop + cardHeight / 2;
+      const scrollCenter = scrollY + windowHeight / 2;
+      
+      // Check if card is in viewport center
+      if (Math.abs(cardCenter - scrollCenter) < windowHeight / 3) {
+        // Add delay based on card index for staggered effect
+        setTimeout(() => {
+          card.classList.add('auto-flip');
+        }, index * 200);
+      } else {
+        card.classList.remove('auto-flip');
+      }
+    });
+  }
+  
+  // Throttle scroll events for better performance
+  let scrollTimeout;
+  function throttledScroll() {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => {
+      handleMobileScroll();
+      scrollTimeout = null;
+    }, 100);
+  }
+  
+  // Add scroll listener for mobile
+  if (isMobile()) {
+    window.addEventListener('scroll', throttledScroll);
+    // Initial check
+    handleMobileScroll();
+  }
+  
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    if (isMobile()) {
+      window.addEventListener('scroll', throttledScroll);
+      handleMobileScroll();
+    } else {
+      window.removeEventListener('scroll', throttledScroll);
+      // Remove auto-flip class on desktop
+      document.querySelectorAll('.clean-department-card').forEach(card => {
+        card.classList.remove('auto-flip');
+      });
+    }
+  });
+  
+  // Initialize based on current screen size
+  if (isMobile()) {
+    window.addEventListener('scroll', throttledScroll);
+    handleMobileScroll();
+  }
+  
+  // Handle image loading errors
+  const images = document.querySelectorAll('.clean-dept-img');
+  images.forEach(img => {
+    img.addEventListener('error', function() {
+      this.style.background = 'linear-gradient(135deg, #148255, #1a5f3a)';
+      this.style.display = 'flex';
+      this.style.alignItems = 'center';
+      this.style.justifyContent = 'center';
+      this.style.color = 'white';
+      this.style.fontSize = '2rem';
+      this.innerHTML = '👤';
+    });
+  });
+  
+  // Ensure proper mobile touch behavior for buttons
+  if (isMobile()) {
+    const socialButtons = document.querySelectorAll('.clean-social-btn');
+    socialButtons.forEach(button => {
+      button.addEventListener('touchstart', function(e) {
+        // Allow touch events on buttons
+        e.stopPropagation();
+      }, { passive: true });
+      
+      button.addEventListener('touchend', function(e) {
+        // Ensure click works on touch devices
+        e.stopPropagation();
+      }, { passive: true });
+    });
+  }
+});
+</script>
+
+<style>
+/* ABOUT US STORY SECTION ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #148255, #1ec28b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(20,130,85,0.15);
+}
+
+.about-story-image:hover .image-wrapper {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.floating-badge {
+  animation: float 4s ease-in-out infinite;
+}
+
+.experience-badge {
+  animation: float 5s ease-in-out infinite reverse;
+}
+
+/* CLEAN PROFESSIONAL DEPARTMENTS SECTION STYLES */
+
+/* Clean Background */
+.departments-clean-section {
+  position: relative;
+  min-height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Clean Section Title */
+.clean-section-title {
+  position: relative;
+  z-index: 10;
+}
+
+.title-brand-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.clean-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  color: #148255;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.clean-main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  position: relative;
+  color: #148255;
+}
+
+.clean-description {
+  color: #666;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Clean Departments Grid */
+.departments-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Grid for All Devices */
+
+/* Large Tablets (iPad Pro, etc.) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .departments-clean-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .clean-department-card {
+    height: 500px;
+  }
+  
+  .clean-image-container {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.6rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 1rem;
+  }
+}
+
+/* Medium Tablets (iPad, etc.) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .departments-clean-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .clean-department-card {
+    height: 450px;
+  }
+  
+  .clean-image-container {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.5rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Tablets and Large Phones */
+@media (min-width: 576px) and (max-width: 767px) {
+  .departments-clean-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .clean-department-card {
+    height: 420px;
+    margin-bottom: 1rem;
+  }
+  
+  .clean-image-container {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.4rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 575px) {
+  .departments-clean-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .clean-department-card {
+    height: 380px;
+  }
+  
+  .clean-image-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .clean-card-title {
+    font-size: 1.3rem;
+  }
+  
+  .clean-card-desc {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* Clean Department Cards */
+.clean-department-card {
+  position: relative;
+  height: 550px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.card-clean-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.clean-department-card:hover .card-clean-inner {
+  transform: rotateY(180deg);
+}
+
+/* Auto-flip for mobile and tablets */
+@media (max-width: 1023px) {
+  .clean-department-card.auto-flip .card-clean-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Disable hover flip on mobile and tablets */
+  .clean-department-card:hover .card-clean-inner {
+    transform: none;
+  }
+}
+
+.card-clean-front, .card-clean-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+}
+
+.card-clean-front {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+.clean-image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 3px solid #148255;
+  box-shadow: 0 5px 15px rgba(20, 130, 85, 0.2);
+  aspect-ratio: 1 / 1;
+}
+
+.clean-dept-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+/* Fallback for broken images */
+.clean-dept-img:not([src]), 
+.clean-dept-img[src=""],
+.clean-dept-img[src*="no-pic"] {
+  background: linear-gradient(135deg, #148255, #1a5f3a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.clean-dept-img:not([src])::after, 
+.clean-dept-img[src=""]::after,
+.clean-dept-img[src*="no-pic"]::after {
+  content: "👤";
+  font-size: 2rem;
+}
+
+.clean-department-card:hover .clean-dept-img {
+  transform: scale(1.1);
+}
+
+.clean-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 130, 85, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.clean-department-card:hover .clean-image-overlay {
+  opacity: 1;
+}
+
+.clean-overlay-content {
+  color: white;
+  text-align: center;
+}
+
+.clean-overlay-content i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.clean-overlay-content span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.clean-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clean-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #148255;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 5px 15px rgba(20, 130, 85, 0.3);
+}
+
+/* Responsive icon wrapper sizes */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .clean-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .clean-icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .clean-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .clean-icon-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .clean-icon-wrapper i {
+    font-size: 1.4rem;
+  }
+}
+
+.clean-icon-wrapper i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.clean-card-title {
+  color: #148255;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.clean-card-desc {
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.card-clean-back {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 8px 32px rgba(20, 130, 85, 0.3);
+  position: relative;
+  pointer-events: auto;
+}
+
+.card-clean-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.clean-back-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 130, 85, 0.9), rgba(26, 95, 58, 0.9));
+  z-index: 2;
+}
+
+.card-clean-back > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Crazy Image Container */
+.crazy-image-container {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(20, 130, 85, 0.2);
+}
+
+.crazy-dept-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.crazy-department-card:hover .crazy-dept-img {
+  transform: scale(1.1);
+}
+
+.crazy-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(20, 130, 85, 0.8), rgba(26, 95, 58, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.crazy-department-card:hover .crazy-image-overlay {
+  opacity: 1;
+}
+
+.crazy-overlay-content {
+  text-align: center;
+  color: white;
+}
+
+.crazy-overlay-content i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Crazy Card Content */
+.crazy-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.crazy-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #148255, #1a5f3a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: icon-rotate 3s linear infinite;
+  box-shadow: 0 4px 16px rgba(20, 130, 85, 0.3);
+}
+
+.crazy-icon-wrapper i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+@keyframes icon-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.crazy-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #148255;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(20, 130, 85, 0.3);
+}
+
+.crazy-card-desc {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Crazy Back Content */
+.crazy-back-content h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.crazy-back-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.crazy-back-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.crazy-back-features span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.crazy-back-features i {
+  color: #ffff00;
+}
+
+/* Crazy Card Effects */
+.crazy-card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(20, 130, 85, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.crazy-department-card:hover .crazy-card-glow {
+  width: 300px;
+  height: 300px;
+}
+
+.crazy-card-sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #148255;
+  border-radius: 50%;
+  animation: sparkle-animation 2s ease-in-out infinite;
+}
+
+.sparkle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 60%; right: 20%; animation-delay: 0.5s; }
+.sparkle:nth-child(3) { bottom: 30%; left: 50%; animation-delay: 1s; }
+
+@keyframes sparkle-animation {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Clean Back Content Styles */
+.clean-back-content {
+  pointer-events: auto;
+  z-index: 5;
+  position: relative;
+}
+
+.clean-back-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  text-shadow: 0 2px 4px rgba(255,255,255,0.8);
+}
+
+.clean-back-role {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.8);
+}
+
+.clean-back-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.clean-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+}
+
+.clean-social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.clean-social-btn:hover::before {
+  left: 100%;
+}
+
+.linkedin-btn {
+  background: linear-gradient(135deg, #0077b5, #005885);
+  color: white;
+  border: 2px solid #0077b5;
+}
+
+.linkedin-btn:hover {
+  background: linear-gradient(135deg, #005885, #003d5a);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.4);
+}
+
+.youtube-btn {
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: white;
+  border: 2px solid #ff0000;
+}
+
+.youtube-btn:hover {
+  background: linear-gradient(135deg, #cc0000, #990000);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+.clean-social-btn i {
+  font-size: 1.1rem;
+}
+
+.clean-social-btn span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+/* Responsive improvements for all devices */
+
+/* Tablets and Mobile */
+@media (max-width: 1023px) {
+  .clean-back-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .clean-social-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 120px;
+  }
+  
+  .clean-back-title {
+    font-size: 1.5rem;
+  }
+  
+  .clean-back-role {
+    font-size: 0.9rem;
+  }
+  
+  /* Additional improvements */
+  .clean-department-card {
+    margin-bottom: 2rem;
+  }
+  
+  .clean-card-content {
+    padding: 1rem;
+  }
+  
+  .clean-back-content {
+    padding: 1rem;
+  }
+  
+  /* Ensure images load properly */
+  .clean-dept-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 767px) {
+  .crazy-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .departments-crazy-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .crazy-department-card {
+    height: 350px;
+  }
+  
+  .crazy-image-container {
+    width: 180px;
+    height: 135px;
+  }
+  
+  .crazy-card-title {
+    font-size: 1.3rem;
+  }
+  
+  /* Enhanced mobile button styling */
+  .clean-social-btn {
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+    min-height: 48px;
+    min-width: 140px;
+    margin: 0.25rem 0;
+  }
+  
+  .clean-back-buttons {
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .crazy-main-title {
+    font-size: 2rem;
+  }
+  
+  .crazy-department-card {
+    height: 300px;
+  }
+  
+  .crazy-image-container {
+    width: 160px;
+    height: 120px;
+  }
+  
+  .clean-back-buttons {
+    gap: 0.5rem;
+  }
+  
+  .clean-social-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .clean-back-title {
+    font-size: 1.3rem;
+  }
+  
+  .clean-back-role {
+    font-size: 0.85rem;
+  }
+}
+</style>
+
+<style>
+  .insight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+  }
+  
+  .insight-card:hover .insight-image img {
+    transform: scale(1.1);
+  }
+  
+  .insight-card .btn:hover {
+    background: #0f6b45 !important;
+    transform: translateX(5px);
+  }
+  
+  #insightsTabs .nav-link {
+    cursor: pointer;
+  }
+  
+  #insightsTabs .nav-link:hover {
+    background: #148255 !important;
+    color: white !important;
+  }
+  
+  #insightsTabs .nav-link.active {
+    background: #148255 !important;
+    color: white !important;
+  }
+  
+  @media (max-width: 768px) {
+    #insightsTabs {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    #insightsTabs .nav-link {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+</style>
+<!-- ========================================== End Latest Insights & Updates Section ================================================ -->
+
+<!-- SEO Optimized Content Section -->
+<div style="display: none; visibility: hidden; height: 0; overflow: hidden;">
+    <h1>About Das And Partners - Premier Engineering Consultancy Dubai & Abu Dhabi</h1>
+    <h2>Leading Multidisciplinary Engineering Consultancy UAE</h2>
+    <p>Das And Partners is a premier engineering consultancy Dubai and Abu Dhabi, recognized as one of the top engineering consultants UAE. We provide comprehensive civil engineering consultancy Dubai, structural engineering consultancy Abu Dhabi, MEP consultant Dubai, and MEP consultant Abu Dhabi services across the United Arab Emirates.</p>
+    <p>Our multidisciplinary engineering consultancy UAE specializes in authority approvals engineering consultant Dubai, engineering design consultant Dubai, engineering services Abu Dhabi, and BIM engineering consultancy Dubai. We are the best engineering consultancy in Dubai and Abu Dhabi, offering expert oil & gas engineering consultants UAE, infrastructure engineering consultancy Dubai, and power & energy engineering consultants Dubai services.</p>
+    <p>Das And Partners delivers comprehensive process plant engineering consultant UAE, offshore oil & gas engineering consultants Abu Dhabi, petrochemical engineering consultancy UAE, and renewable energy engineering consultants Dubai solutions. Our team includes marine engineering consultancy UAE, offshore structural engineering consultant Dubai, and jetty & port engineering consultant Abu Dhabi specialists.</p>
+    <p>We provide roads & bridges engineering consultants Abu Dhabi, heavy civil engineering consultants UAE, bridge engineering consultants Abu Dhabi, tunnel design engineering consultants UAE, and smart city infrastructure consultants Abu Dhabi services. Our utilities engineering consultants UAE team delivers district cooling plant engineering consultancy Dubai, water & wastewater engineering Abu Dhabi, and pipeline engineering consultants UAE solutions.</p>
+    <p>Contact Das And Partners for expert project management consultancy Abu Dhabi, FEED & EPCM consultant Dubai, digital twin engineering UAE, and substation design consultants Dubai services. We are the premier engineering consultancy for high rise building engineering consultancy Dubai, coastal & marine infrastructure engineering Dubai, and offshore platform design consultants UAE projects.</p>
+</div>{% endblock %}

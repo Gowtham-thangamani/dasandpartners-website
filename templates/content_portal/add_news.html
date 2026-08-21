@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Load CKEditor -->
+{{ form.media }}
+
+<!-- Add News Page -->
+<section class="content-portal-section py-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); min-height: 100vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bold mb-3" style="color: #148255;">
+                        <i class="fas fa-newspaper me-3"></i>Add News Article
+                    </h1>
+                    <p class="lead text-muted">Create a new news article for your website</p>
+                </div>
+
+                <!-- Form Card -->
+                <div class="form-card">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <!-- Basic Information -->
+                        <div class="form-section">
+                            <h5 class="section-title">
+                                <i class="fas fa-info-circle me-2"></i>Basic Information
+                            </h5>
+                            <div class="row">
+                                <div class="col-md-8 mb-3">
+                                    <label for="{{ form.title.id_for_label }}" class="form-label">Title *</label>
+                                    {{ form.title }}
+                                    {% if form.title.errors %}
+                                        <div class="text-danger">{{ form.title.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="{{ form.news_type.id_for_label }}" class="form-label">News Type *</label>
+                                    {{ form.news_type }}
+                                    <div class="form-text">Project or Overall</div>
+                                    {% if form.news_type.errors %}
+                                        <div class="text-danger">{{ form.news_type.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="{{ form.frequency.id_for_label }}" class="form-label">Frequency *</label>
+                                    {{ form.frequency }}
+                                    <div class="form-text">Daily, Weekly, or Monthly</div>
+                                    {% if form.frequency.errors %}
+                                        <div class="text-danger">{{ form.frequency.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="{{ form.slug.id_for_label }}" class="form-label">Slug</label>
+                                    {{ form.slug }}
+                                    <div class="form-text">Leave blank to auto-generate from title</div>
+                                    {% if form.slug.errors %}
+                                        <div class="text-danger">{{ form.slug.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="{{ form.excerpt.id_for_label }}" class="form-label">Excerpt</label>
+                                    {{ form.excerpt }}
+                                    <div class="form-text">Brief description (max 300 characters) - shown in preview cards</div>
+                                    {% if form.excerpt.errors %}
+                                        <div class="text-danger">{{ form.excerpt.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="date-picker-wrapper p-4 rounded-4" style="background:linear-gradient(135deg,rgba(20,130,85,0.05),rgba(30,194,139,0.05));border:2px dashed #148255;">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="date-icon me-3" style="width:50px;height:50px;background:linear-gradient(135deg,#148255,#1ec28b);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(20,130,85,0.3);">
+                                                <i class="far fa-calendar-alt" style="font-size:1.5rem;color:white;"></i>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <label for="{{ form.added_date.id_for_label }}" class="form-label mb-1" style="color:#148255;font-weight:700;font-size:1.1rem;">
+                                                    <i class="fas fa-clock me-2"></i>Publication Date & Time
+                                                </label>
+                                                <p class="mb-0" style="color:#666;font-size:0.85rem;font-style:italic;">
+                                                    📅 Choose when this news should appear on your website
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{ form.added_date }}
+                                        <div class="form-text mt-2" style="background:white;padding:10px 15px;border-radius:8px;border-left:3px solid #1ec28b;">
+                                            <i class="fas fa-info-circle me-2" style="color:#1ec28b;"></i>
+                                            <strong>Pro Tip:</strong> Set a past date to backdate content, or future date to schedule publishing!
+                                        </div>
+                                        {% if form.added_date.errors %}
+                                            <div class="text-danger mt-2">{{ form.added_date.errors }}</div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image & Content Section -->
+                        <div class="form-section">
+                            <h5 class="section-title">
+                                <i class="fas fa-image me-2"></i>Image & Content
+                            </h5>
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label for="{{ form.image.id_for_label }}" class="form-label">News Image *</label>
+                                    {{ form.image }}
+                                    <div class="form-text">Upload an image for this news article</div>
+                                    {% if form.image.errors %}
+                                        <div class="text-danger">{{ form.image.errors }}</div>
+                                    {% endif %}
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="{{ form.content.id_for_label }}" class="form-label">Full Content</label>
+                                    {{ form.content }}
+                                    <div class="form-text">Write the full news article content</div>
+                                    {% if form.content.errors %}
+                                        <div class="text-danger">{{ form.content.errors }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-save me-2"></i>Create News Article
+                            </button>
+                            <a href="{% url 'content_dashboard' %}" class="btn btn-outline-secondary btn-lg">
+                                <i class="fas fa-arrow-left me-2"></i>Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.date-picker-wrapper:hover {
+    border-color: #1ec28b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(20,130,85,0.1);
+    transition: all 0.3s ease;
+}
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.section-title {
+    color: #148255;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #148255;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #148255;
+    box-shadow: 0 0 0 0.2rem rgba(20, 130, 85, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: #148255;
+    border-color: #148255;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #148255, #1a8c5a);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(20, 130, 85, 0.3);
+}
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background: #6c757d;
+    border-color: #6c757d;
+    transform: translateY(-2px);
+}
+</style>
+
+{% endblock %}
