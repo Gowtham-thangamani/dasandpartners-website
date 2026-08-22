@@ -635,6 +635,8 @@
     <script>
         if (sessionStorage.getItem('dapVisited')) {
             document.querySelector('.preloader').style.display = 'none';
+        } else {
+            sessionStorage.setItem('dapVisited', '1');
         }
     </script>
     <!--========== Preloader ======================== -->

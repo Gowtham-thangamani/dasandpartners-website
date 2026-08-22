@@ -24,7 +24,6 @@
     /*---------- 01 On Load Function ----------*/
     $(window).on("load", function () {
         $(".preloader").fadeOut(1000);
-        sessionStorage.setItem('dapVisited', '1');
     });
 
     /*---------- 02 Preloader ----------*/
