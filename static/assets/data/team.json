@@ -1,0 +1,489 @@
+[
+  {
+    "id": 1,
+    "name": "Abu Ali Al-Hashmi",
+    "role": "Chairman",
+    "bio": "A distinguished Civil Engineer with 30+ years (UAE & Europe) of extensive experience in EPC and FEED projects across the Oil & Gas (Onshore & Offshore), Infrastructure, and Industrial sectors. Proven expertise in leading brownfield and greenfield developments, engineering management, project execution, contract review, procurement, and multidisciplinary team leadership. An experienced strategic leader with strong technical and commercial acumen, supporting complex projects from engineering through execution. Approved Practicing Civil Engineer with Abu Dhabi Municipality, ADNOC and Sharjah Municipality.",
+    "image": "images/team/abu-ali-al-hashmi.png"
+  },
+  {
+    "id": 2,
+    "name": "Sudarshan Das",
+    "role": "Chief Executive Officer",
+    "bio": "A dynamic Structural Engineer with 15+ years of UAE experience across complex EPC, FEED, and Engineering Consultancy projects. Extensive expertise in structural analysis, design, detailing, and construction supervision, covering bridges, viaducts, interchanges, tunnels, utilities, hydraulic structures, hydrocarbon tanks, horizontal vessels, pipe rack foundations, buildings, and villas. Proven track record in building and leading multidisciplinary technical teams, managing complex projects, and delivering innovative engineering solutions across diverse sectors. Recognized for strong technical leadership, project management capabilities, and the ability to engage, influence, and collaborate effectively with C-level executives and key stakeholders. Approved Practicing Structural Engineer with Abu Dhabi Municipality, Dubai Municipality, Dubai Development Authority, Trakhees, Nakheel, JAFZA, RTA, Sharjah Municipality, and SRTA.",
+    "image": "images/team/sudarshan.png"
+  },
+  {
+    "id": 62,
+    "name": "Medhat Elmoursy",
+    "role": "General Manager",
+    "bio": "Experienced General Manager with 25+ years (UAE) extensive expertise across Legal, Finance, Auditing, Commercial, Regulatory, and Corporate Affairs functions. Proven track record in contract management, regulatory compliance, financial governance, risk management, corporate governance, and stakeholder relations, providing strategic legal and business guidance to support organizational objectives. Highly skilled in navigating complex legal, financial, and regulatory environments while aligning business objectives with robust governance and compliance frameworks. Adept at identifying and mitigating legal, financial, and operational risks, strengthening corporate governance, managing corporate affairs, and ensuring regulatory compliance to enable seamless business operations and sustainable organizational growth. CPA (USA) – Approved Professional.",
+    "image": "images/team/morcy.png"
+  },
+  {
+    "id": 63,
+    "name": "Jessica Morgan",
+    "role": "Principal Architect & Associate Design Head",
+    "bio": "An accomplished Principal Architect and Associate Design Head with 15+ years (USA) experience, specializing in architecture, concept design, design development, urban planning, landscape design, and interior design. Proven ability to lead high-profile residential, commercial, mixed-use, and high-class living projects, creating iconic architectural marvels that blend innovation, functionality, aesthetics, and sustainability. A Registered Professional Engineer in New York City, with expertise in leading multidisciplinary teams and delivering landmark projects aligned with global design standards, regulatory requirements, and client expectations.",
+    "image": "images/team/jessica-morgan.png"
+  },
+  {
+    "id": 4,
+    "name": "Prabhu Ponnuswamy",
+    "role": "Technical Director (Member of Board of Directors)",
+    "bio": "A highly experienced Structural Engineer with 20+ years (UAE) experience across the Architecture, Engineering & Construction (AEC) and EPC industries, specializing in high-rise buildings, industrial facilities, critical infrastructure, Oil & Gas, petrochemical, and energy projects across the UAE and Middle East. Approved Practicing Structural Engineer with Abu Dhabi Municipality, Dubai Municipality, Dubai Development Authority, Trakhees, Nakheel, JAFZA, ADNOC. Proven expertise in blast-resistant structures, protective buildings, process facilities, pipe racks, equipment structures, industrial steel and reinforced concrete structures, foundations, power facilities, and high-rise residential and commercial developments.",
+    "image": "images/team/prabhu.png"
+  },
+  {
+    "id": 5,
+    "name": "Prakash Suresh",
+    "role": "Technical Manager - MEP / EIT",
+    "bio": "A results-driven Engineering Manager with 15+ years (UAE) experience across high-rise buildings, utilities and infrastructure, residential, industrial, and energy projects. Proven expertise in leading multidisciplinary engineering teams and managing complex design and engineering projects across Oil & Gas, petrochemical, power, chemicals & fuels, and conventional and low-carbon energy sectors. Strong technical leadership in wet utility networks, pumping stations, Energy Transfer Stations (ETS), substations, and manufacturing facilities, with strong knowledge of local authority approvals. An Approved Practicing Mechanical Engineer with Abu Dhabi Municipality, Dubai Municipality, Dubai Civil Defense, Abu Dhabi Civil Defense, and ADNOC, focused on delivering safe, efficient, and practical engineering solutions aligned with project requirements, international standards, and client expectations.",
+    "image": "images/team/prakash.png"
+  },
+  {
+    "id": 6,
+    "name": "Chanda Waseem",
+    "role": "Talent Acquisition Lead & HR Manager",
+    "bio": "A strategic HR Manager with 20+ years (UAE) experience across multinational organizations, specializing in talent acquisition, high-performing team development, employee engagement, and organizational growth. Proven expertise in workforce planning, payroll management, employee relations, compensation & benefits, performance management, and employee welfare. Strong knowledge of HR policies, compliance with UAE Labour Laws, and office administration, with a proven ability to strengthen HR operations, retain top talent, and drive operational excellence through effective people leadership.",
+    "image": "images/team/chanda-waseem.png"
+  },
+  {
+    "id": 8,
+    "name": "Muhammad Haider Waheed",
+    "role": "IT Manager",
+    "bio": "IT professional with 10+ years of experience managing infrastructure, networks, systems, and digital operations. Skilled in cybersecurity, system optimization, and delivering reliable technology solutions that support business growth. Committed to implementing innovative technologies that improve efficiency, security, and overall business operations.",
+    "image": "images/team/haider.png"
+  },
+  {
+    "id": 64,
+    "name": "Shaji Sampath",
+    "role": "Finance Manager",
+    "bio": "A seasoned Finance Manager with 25+ years (UAE) extensive experience across Finance, Accounting, Audit, Taxation, Budgeting, and Financial Reporting & Controls. Proven expertise in managing financial operations across the Oil & Gas, Energy, Engineering, and Industrial sectors, with strong capabilities in financial planning, cost control, compliance, and risk management. Skilled in strengthening financial governance, optimizing business performance, and providing strategic financial insights to support sound decision-making, operational efficiency, and sustainable organizational growth.",
+    "image": "images/team/shaji-sampath.png"
+  },
+  {
+    "id": 7,
+    "name": "Khushal Gaikwad",
+    "role": "Piping Engineer",
+    "bio": "Working at Das and Partners has given me the opportunity to tackle complex engineering challenges with a strong and supportive team. It's a place where precision and teamwork truly matter.",
+    "image": "images/team/kushal.png"
+  },
+  {
+    "id": 9,
+    "name": "Mohamed Elbaz",
+    "role": "Legal Advisor & Contract Administrator",
+    "bio": "I appreciate the company's commitment to transparency and professionalism. It's a place where legal expertise supports strong, successful projects.",
+    "image": "images/team/6.png"
+  },
+  {
+    "id": 10,
+    "name": "Mohammed Yusha Siddiqui",
+    "role": "Regional Manager - Strategic Expansion",
+    "bio": "I'm proud to lead a team that drives growth and innovation. Das and Partners is a company that values collaboration, integrity, and a commitment to excellence.",
+    "image": "images/team/444.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Hafiz Suleman",
+    "role": "Senior Design Architect",
+    "bio": "I'm proud to be part of a team that creates beautiful, functional spaces. The company's focus on quality and client satisfaction is evident in every project we undertake.",
+    "image": "images/team/suleman.png"
+  },
+  {
+    "id": 12,
+    "name": "Ghulam Mohammad Shaikh",
+    "role": "Senior Draftsman Infrastructure / Modeler",
+    "bio": "I enjoy working with a skilled team to deliver reliable and innovative infrastructure solutions that support our projects' success.",
+    "image": "images/team/shaikh-mohammad.png"
+  },
+  {
+    "id": 13,
+    "name": "Nikhil Thathambi Sudharman",
+    "role": "Infrastructure NOC Coordinator",
+    "bio": "I ensure seamless network operations and rapid response to issues, supporting the reliability and performance that our projects depend on.",
+    "image": "images/team/19.png"
+  },
+  {
+    "id": 14,
+    "name": "Lakshmi",
+    "role": "Electrical Design Engineer",
+    "bio": "Electrical Design Engineer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/lakshmi.png"
+  },
+  {
+    "id": 15,
+    "name": "Gokulkrishna Suresh Babu",
+    "role": "Civil Site Engineer",
+    "bio": "I take pride in turning plans into reality on-site, ensuring quality, safety, and efficiency in every phase of construction.",
+    "image": "images/team/gokulkrishna.png"
+  },
+  {
+    "id": 16,
+    "name": "Tasnim",
+    "role": "Asst. Design Architect",
+    "bio": "I'm inspired by the opportunity to contribute creative ideas to impactful projects, growing every day in a culture that values design excellence.",
+    "image": "images/team/tasnim.png"
+  },
+  {
+    "id": 17,
+    "name": "Sherin Naseer",
+    "role": "Asst. Design Architect",
+    "bio": "Working as an Assistant Design Architect has allowed me to develop my skills while contributing to meaningful projects. The supportive team inspires creativity and excellence every day.",
+    "image": "images/team/13.png"
+  },
+  {
+    "id": 18,
+    "name": "Iman Samir Abdelhamid",
+    "role": "Asst. Design Architect",
+    "bio": "I'm empowered to turn ideas into impactful designs alongside a talented and inspiring team. It's a place where creativity meets real-world solutions.",
+    "image": "images/team/14.png"
+  },
+  {
+    "id": 19,
+    "name": "Shilpa Merin Chacko",
+    "role": "Asst. BIM Modeller",
+    "bio": "I'm excited to work with cutting-edge technology and a supportive team that values precision and innovation in every project.",
+    "image": "images/team/4.png"
+  },
+  {
+    "id": 20,
+    "name": "Karthi Jayan Jayakumar",
+    "role": "Junior Structural Design Engineer",
+    "bio": "Junior Structural Design Engineer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/karthi.png"
+  },
+  {
+    "id": 21,
+    "name": "Mohammad Zesanur Rahman",
+    "role": "HVAC Design Engineer",
+    "bio": "I'm proud to create efficient and sustainable solutions, working with a team that drives innovation and quality in every project.",
+    "image": "images/team/sana-ur.png"
+  },
+  {
+    "id": 22,
+    "name": "Mary Ann V. Severa",
+    "role": "HR Admin Assistant",
+    "bio": "I take pride in being the backbone of our team's operations, ensuring seamless communication and organization that help drive the company's success every day.",
+    "image": "images/team/ann.png"
+  },
+  {
+    "id": 23,
+    "name": "Ala'a Gamal Alsayyad",
+    "role": "Receptionist cum Secretary Executive",
+    "bio": "I play a key role in keeping our workflows smooth and efficient, helping the team stay focused and successful in every project.",
+    "image": "images/team/18.png"
+  },
+  {
+    "id": 24,
+    "name": "Lynn",
+    "role": "Asst. Graphic Designer",
+    "bio": "I get to bring concepts to life visually, supporting our brand and projects with designs that communicate, inspire, and stand out.",
+    "image": "images/team/29.png"
+  },
+  {
+    "id": 25,
+    "name": "Joel Joy John",
+    "role": "Assistant Graphic Designer",
+    "bio": "I get to bring concepts to life visually, supporting our brand and projects with designs that communicate, inspire, and stand out.",
+    "image": "images/team/joel.png"
+  },
+  {
+    "id": 26,
+    "name": "Munawar",
+    "role": "Asst. Graphic Designer",
+    "bio": "I get to bring concepts to life visually, supporting our brand and projects with designs that communicate, inspire, and stand out.",
+    "image": "images/team/23.png"
+  },
+  {
+    "id": 27,
+    "name": "Suleikha",
+    "role": "Asst. Document Controller",
+    "bio": "I support the smooth flow of information by maintaining accurate records and documentation, helping teams stay organized and on track.",
+    "image": "images/team/30.png"
+  },
+  {
+    "id": 28,
+    "name": "Vrinda Varghese James",
+    "role": "Asst. Document Controller",
+    "bio": "I contribute to project efficiency by ensuring every document is managed with accuracy and care, supporting seamless coordination across all departments.",
+    "image": "images/team/666.jpeg"
+  },
+  {
+    "id": 29,
+    "name": "Umme Zainab",
+    "role": "HR Assistant",
+    "bio": "HR Assistant at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/22.png"
+  },
+  {
+    "id": 30,
+    "name": "Vishwa",
+    "role": "Assistant SEO Specialist",
+    "bio": "I help boost our digital presence by turning strategy into visibility — ensuring our work reaches the right audience at the right time.",
+    "image": "images/team/vishwa.png"
+  },
+  {
+    "id": 31,
+    "name": "Hiba",
+    "role": "Administrative Assistant",
+    "bio": "I ensure smooth operations by managing schedules, coordinating meetings, and supporting team needs with efficiency and professionalism.",
+    "image": "images/team/25.png"
+  },
+  {
+    "id": 32,
+    "name": "Mariel",
+    "role": "Administrative Assistant",
+    "bio": "I ensure smooth operations by managing schedules, coordinating meetings, and supporting team needs with efficiency and professionalism.",
+    "image": "images/team/266.png"
+  },
+  {
+    "id": 34,
+    "name": "Mahesh Shibu",
+    "role": "Electrical BIM Modeler",
+    "bio": "Electrical BIM Modeler at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/mahesh.png"
+  },
+  {
+    "id": 35,
+    "name": "Kamran Mahtab",
+    "role": "Public Relations Officer",
+    "bio": "Public Relations Officer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/kamran.png"
+  },
+  {
+    "id": 36,
+    "name": "Waqas Ahmed Qazi",
+    "role": "Assistant Digital Marketer",
+    "bio": "Assistant Digital Marketer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/waqas.png"
+  },
+  {
+    "id": 37,
+    "name": "Gowtham Thangamani",
+    "role": "Web Developer",
+    "bio": "Web Developer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/gowtham.png"
+  },
+  {
+    "id": 38,
+    "name": "Muhammed Anas Aniyoth",
+    "role": "Assistant Graphic Designer",
+    "bio": "Assistant Graphic Designer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/anas.png"
+  },
+  {
+    "id": 39,
+    "name": "Dana Al Araj",
+    "role": "Authority Approval - Civil Engineer",
+    "bio": "Authority Approval at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/dana.png"
+  },
+  {
+    "id": 40,
+    "name": "Yogendra Kumar Ram",
+    "role": "Site Supervisor",
+    "bio": "Site Supervisor at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/1.png"
+  },
+  {
+    "id": 41,
+    "name": "Nidhi Neduvottu Poyyil",
+    "role": "Junior Structural Engineer",
+    "bio": "Junior Structural Engineer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/1.png"
+  },
+  {
+    "id": 42,
+    "name": "Sara Esam Mohd",
+    "role": "Junior Design Architect",
+    "bio": "Junior Design Architect at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/sara.png"
+  },
+  {
+    "id": 43,
+    "name": "Bhavika Deepak Dewani",
+    "role": "Assistant Document Controller",
+    "bio": "Assistant Document Controller at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/1.png"
+  },
+  {
+    "id": 44,
+    "name": "Vijayakumar Narayanaperumal",
+    "role": "Civil Site Engineer",
+    "bio": "Civil Site Engineer at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/1.png"
+  },
+  {
+    "id": 45,
+    "name": "Shonima Ann Varghese",
+    "role": "Executive Secretary",
+    "bio": "Executive Secretary at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/shonima.png"
+  },
+  {
+    "id": 46,
+    "name": "Imen Boularouk",
+    "role": "Executive Secretary",
+    "bio": "Executive Secretary at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/imen.png"
+  },
+  {
+    "id": 47,
+    "name": "Simran Sardar Singh",
+    "role": "Assistant Document Controller",
+    "bio": "Assistant Document Controller at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/simran.png"
+  },
+  {
+    "id": 48,
+    "name": "Mahmoud Nazeeh",
+    "role": "IT Support",
+    "bio": "IT Support at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/mahmoud-nazeeh.png"
+  },
+  {
+    "id": 49,
+    "name": "Ayet Muhammad Wassem",
+    "role": "Executive Secretary",
+    "bio": "Executive Secretary at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/ayat.png"
+  },
+  {
+    "id": 50,
+    "name": "Honey Grace Da",
+    "role": "Receptionist",
+    "bio": "Receptionist at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/grace.png"
+  },
+  {
+    "id": 51,
+    "name": "Sama Mohamed Fadl",
+    "role": "Executive Secretary",
+    "bio": "Executive Secretary at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/sama.png"
+  },
+  {
+    "id": 52,
+    "name": "Bushra Akl Mariam",
+    "role": "Executive Secretary",
+    "bio": "Executive Secretary at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/bushra.png"
+  },
+  {
+    "id": 53,
+    "name": "Mahammed Nabeel Thadathinath",
+    "role": "Tekla Modeler",
+    "bio": "Tekla Modeler at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/nabeel.png"
+  },
+  {
+    "id": 57,
+    "name": "Mohammad Wazid",
+    "role": "Mechanical BIM Modeler",
+    "bio": "Mechanical BIM Modeler at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/wazid.png"
+  },
+  {
+    "id": 58,
+    "name": "Muhammad Azan",
+    "role": "Assistant Logistics Supervisor",
+    "bio": "Assistant Logistics Supervisor at Das And Partners, coordinating logistics and supporting day-to-day operations and team mobility.",
+    "image": "images/team/azan.png"
+  },
+  {
+    "id": 59,
+    "name": "Mohamed Mahmoud Elsayed",
+    "role": "Site Supervisor",
+    "bio": "Site Supervisor at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/1.png"
+  },
+  {
+    "id": 61,
+    "name": "Mohammad Ashraf",
+    "role": "Mechanical BIM Modeler",
+    "bio": "Mechanical BIM Modeler at Das And Partners, contributing to project delivery and engineering excellence.",
+    "image": "images/team/ashraf.png"
+  },
+  {
+    "id": 65,
+    "name": "Rinshad Mohamed",
+    "role": "Design Architect",
+    "image": "images/team/rinshad-mohamed.png",
+    "location": "Sharjah",
+    "joinedDate": "2026-10-28",
+    "bio": "Rinshad develops architectural concepts and detailed designs, translating client briefs into functional, code-compliant buildings across the UAE."
+  },
+  {
+    "id": 66,
+    "name": "Vishnu Prasad Ramdas",
+    "role": "Mechanical Design Engineer",
+    "image": "images/team/vishnu-prasad-ramdas.png",
+    "location": "Sharjah",
+    "joinedDate": "2026-10-28",
+    "bio": "Vishnu focuses on mechanical and building-services design, supporting coordinated, efficient MEP solutions from concept through to detailed design."
+  },
+  {
+    "id": 67,
+    "name": "Mohammed Jafran Abdul Rasheethu",
+    "role": "IT Support Specialist",
+    "image": "images/team/mohammed-jafran.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-28",
+    "bio": "Mohammed keeps the team's technology running smoothly, supporting systems, hardware and day-to-day IT needs so projects stay on track."
+  },
+  {
+    "id": 68,
+    "name": "Richu K Shaji",
+    "role": "Graphic Designer",
+    "image": "images/team/richu-k-shaji.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-28",
+    "bio": "Richu shapes the firm's visual identity, creating graphics and brand materials that bring projects and communications to life."
+  },
+  {
+    "id": 69,
+    "name": "Jazeel Ahmed",
+    "role": "Assistant Design Architect",
+    "image": "images/team/jazeel-ahmed.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-30",
+    "bio": "Jazeel supports the architecture team with concept development, drawing production and design detailing across building projects."
+  },
+  {
+    "id": 70,
+    "name": "Razan Ahmed Ibrahim",
+    "role": "Senior Authority Architect",
+    "image": "images/team/razan-ahmed-ibrahim.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-30",
+    "bio": "Razan manages authority submissions and approvals, coordinating with UAE municipalities and authorities to keep projects compliant and on schedule."
+  },
+  {
+    "id": 71,
+    "name": "Syed Adnan Pasha",
+    "role": "Assistant Design Architect",
+    "image": "images/team/syed-adnan-pasha.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-30",
+    "bio": "Syed contributes to concept design, drawing production and project coordination within the design architecture team."
+  },
+  {
+    "id": 72,
+    "name": "Haripriya C",
+    "role": "Junior Electrical Design Engineer",
+    "image": "images/team/haripriya-c.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-30",
+    "bio": "Haripriya supports electrical design with layouts, load calculations and MEP coordination across the firm's building projects."
+  },
+  {
+    "id": 73,
+    "name": "Punithavathi G",
+    "role": "Junior Structural Engineer",
+    "image": "images/team/punithavathi-g.png",
+    "location": "Abu Dhabi",
+    "joinedDate": "2026-10-30",
+    "bio": "Punithavathi contributes to structural analysis and design, supporting safe, efficient structures across the firm's projects."
+  }
+]

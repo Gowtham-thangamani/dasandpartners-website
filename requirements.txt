@@ -5,6 +5,7 @@ whitenoise==6.6.0
 python-decouple==3.8
 Pillow==10.1.0
 python-dotenv==1.0.0
+requests>=2.31,<3
 django-simple-captcha==0.6.0
 django-admin-interface==0.26.0
 django-cloudinary-storage==0.3.0

@@ -23,6 +23,47 @@ class HomePageForm(forms.Form):
     subject = forms.CharField(max_length=200, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Subject'}))
     message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 5, 'placeholder': 'Your Message'}))
 
+
+# Project enquiry — forwarded to the dasandpartnersengineering.com admin panel.
+class ProjectEnquiryForm(forms.Form):
+    PROJECT_TYPE_CHOICES = [
+        ('', 'Project Type'),
+        ('Architectural / Building', 'Architectural / Building'),
+        ('Structural Engineering', 'Structural Engineering'),
+        ('MEP Engineering', 'MEP Engineering'),
+        ('Infrastructure', 'Infrastructure'),
+        ('Oil & Gas / Industrial', 'Oil & Gas / Industrial'),
+        ('Authority Approval / NOC', 'Authority Approval / NOC'),
+        ('BIM Services', 'BIM Services'),
+        ('Other', 'Other'),
+    ]
+    EMIRATE_CHOICES = [
+        ('', 'Emirate'),
+        ('Abu Dhabi', 'Abu Dhabi'), ('Dubai', 'Dubai'), ('Sharjah', 'Sharjah'),
+        ('Ajman', 'Ajman'), ('Ras Al Khaimah', 'Ras Al Khaimah'),
+        ('Fujairah', 'Fujairah'), ('Umm Al Quwain', 'Umm Al Quwain'), ('Other', 'Other'),
+    ]
+    name = forms.CharField(max_length=120)
+    email = forms.EmailField()
+    phone = forms.CharField(max_length=40, required=False)
+    company = forms.CharField(max_length=120, required=False)
+    project_type = forms.ChoiceField(choices=PROJECT_TYPE_CHOICES, required=False)
+    emirate = forms.ChoiceField(choices=EMIRATE_CHOICES, required=False)
+    message = forms.CharField(widget=forms.Textarea, required=False)
+
+
+# Job application — forwarded (with resume) to the engineering admin panel.
+class JobApplicationForm(forms.Form):
+    name = forms.CharField(max_length=120)
+    email = forms.EmailField()
+    phone = forms.CharField(max_length=40, required=False)
+    job = forms.CharField(max_length=160)
+    location = forms.CharField(max_length=80, required=False)
+    current_salary = forms.CharField(max_length=40, required=False)
+    expected_salary = forms.CharField(max_length=40, required=False)
+    cover = forms.CharField(widget=forms.Textarea, required=False)
+    cv = forms.FileField(required=False)
+
 # Content Portal Forms
 class NewsForm(forms.ModelForm):
     class Meta:

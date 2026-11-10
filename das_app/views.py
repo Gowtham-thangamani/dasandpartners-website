@@ -1,11 +1,14 @@
 from django.utils import timezone
 
+import os
+import json
+from django.core.cache import cache
 from django.shortcuts import redirect, render, get_object_or_404
 from django.core.mail import send_mail
 from django.conf import settings
-from das_app.forms import ContactForm, HomePageForm, NewsForm, BlogForm
+from das_app.forms import ContactForm, HomePageForm, NewsForm, BlogForm, ProjectEnquiryForm, JobApplicationForm
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.core.paginator import Paginator
 from django.contrib.auth import authenticate, logout
 from django.contrib.auth import login as auth_login
@@ -13,6 +16,7 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Blogs, News, Subscriber
 from .expertise_data import EXPERTISE_DATA
+from .ingest import forward_contact, forward_application
 
 # Create your views here.
 def home(request):
@@ -145,39 +149,117 @@ def news_details(request, slug):
     return render(request, 'news_details.html', context)
     
 def careers(request):
-    
+
     return render(request, 'careers.html')
+
+
+def jobs_feed(request):
+    """Live vacancy list pulled from the dasandpartnersengineering.com site so every
+    job posted there shows on this careers page automatically. Cached for 5 minutes;
+    falls back to the bundled static jobs.json if the engineering site is unreachable."""
+    data = cache.get('eng_jobs')
+    if data is None:
+        try:
+            import requests
+            r = requests.get(getattr(settings, 'ENGINEERING_JOBS_URL', ''), timeout=6)
+            if r.status_code == 200:
+                j = r.json()
+                if isinstance(j, list):
+                    data = j
+                    cache.set('eng_jobs', data, 300)
+        except Exception:
+            data = None
+    if data is None:
+        try:
+            p = os.path.join(str(settings.BASE_DIR), 'static', 'assets', 'data', 'jobs.json')
+            with open(p, encoding='utf-8') as fh:
+                data = json.load(fh)
+        except Exception:
+            data = []
+    resp = JsonResponse(data, safe=False)
+    resp['Cache-Control'] = 'public, max-age=300'
+    return resp
 
 def contact(request):
 
     if request.method == 'POST':
-        # return HttpResponse("Contact Page")
         form = ContactForm(request.POST)
-        # return HttpResponse(form)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            type = form.cleaned_data['type']
-            subject = form.cleaned_data['subject']
-            message = form.cleaned_data['message']
-            # return HttpResponse("dd")
-            subject = f'New ({type}) Contact Form Submission from {name}'
-            body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
-
-            send_mail(
-                subject,
-                body,
-                settings.EMAIL_HOST_USER,      # From email
-                ['noumannazir99@gmail.com'],      # To email (your receiving address)
-                fail_silently=False,
-            )
-            messages.success(request, "Your message has been sent successfully.")
+            cd = form.cleaned_data
+            # Forward into the dasandpartnersengineering.com admin panel (one place
+            # for every lead). Map the contact fields onto the admin's schema.
+            message = cd['message']
+            if cd.get('subject'):
+                message = f"Subject: {cd['subject']}\n\n{message}"
+            payload = {
+                'name': cd['name'],
+                'email': cd['email'],
+                'service': cd.get('type', ''),
+                'message': message,
+                'source': 'dasandpartners.com-contact',
+            }
+            forward_contact(payload)  # saves locally if the remote is briefly down
+            # The submission is captured either way (remote or local fallback).
+            messages.success(request, "Thank you — your message has been received. Our team will get back to you shortly.")
             form = ContactForm()
         else:
             messages.error(request, "Please correct the errors below.")
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
+
+
+def project_enquiry(request):
+    """Project enquiry form -> forwarded to the dasandpartnersengineering.com admin."""
+    if request.method != 'POST':
+        return redirect('contact')
+    form = ProjectEnquiryForm(request.POST)
+    if not form.is_valid():
+        return JsonResponse({'ok': False, 'errors': form.errors}, status=400)
+    cd = form.cleaned_data
+    payload = {
+        'name': cd['name'],
+        'email': cd['email'],
+        'phone': cd.get('phone', ''),
+        'company': cd.get('company', ''),
+        'service': cd.get('project_type', ''),
+        'project_type': cd.get('project_type', ''),
+        'emirate': cd.get('emirate', ''),
+        'message': cd.get('message', ''),
+        'source': 'dasandpartners.com-enquiry',
+    }
+    forward_contact(payload)
+    return JsonResponse({'ok': True})
+
+
+def apply(request):
+    """Job application form (with resume) -> forwarded to the engineering admin."""
+    if request.method != 'POST':
+        return redirect('careers')
+    form = JobApplicationForm(request.POST, request.FILES)
+    if not form.is_valid():
+        return JsonResponse({'ok': False, 'errors': form.errors}, status=400)
+    cd = form.cleaned_data
+    cv = request.FILES.get('cv')
+    if cv:
+        if cv.size > 10 * 1024 * 1024:
+            return JsonResponse({'ok': False, 'error': 'Resume is too large (max 10 MB).'}, status=400)
+        ext = os.path.splitext(cv.name)[1].lower()
+        if ext not in ('.pdf', '.doc', '.docx'):
+            return JsonResponse({'ok': False, 'error': 'Resume must be a PDF or Word document.'}, status=400)
+    payload = {
+        'name': cd['name'],
+        'email': cd['email'],
+        'phone': cd.get('phone', ''),
+        'job': cd['job'],
+        'location': cd.get('location', ''),
+        'current_salary': cd.get('current_salary', ''),
+        'expected_salary': cd.get('expected_salary', ''),
+        'cover': cd.get('cover', ''),
+        'source': 'dasandpartners.com-careers',
+    }
+    forward_application(payload, cv)
+    return JsonResponse({'ok': True})
 
 
 

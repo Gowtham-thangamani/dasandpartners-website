@@ -124,6 +124,18 @@ STATIC_ROOT = os.getenv('STATIC_ROOT', '/home/cdas/public_html/static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.getenv('MEDIA_ROOT', '/home/cdas/public_html/media')
 
+# ─── Cross-site lead ingest → dasandpartnersengineering.com admin panel ───
+# Public forms on this (dasandpartners.com) site forward their submissions into the
+# engineering site's admin via its /api/ingest/* endpoints (see das_app/ingest.py).
+# INGEST_TOKEN must match the value set on the engineering site. Leave it blank and
+# submissions are saved to LEADS_FALLBACK_DIR (replay with: manage.py replay_leads).
+ENGINEERING_INGEST_URL = os.getenv('ENGINEERING_INGEST_URL', 'https://www.dasandpartnersengineering.com')
+INGEST_TOKEN = os.getenv('INGEST_TOKEN', '')
+LEADS_FALLBACK_DIR = os.getenv('LEADS_FALLBACK_DIR', os.path.join(BASE_DIR, 'leads_fallback'))
+# Live vacancy feed: the careers page pulls jobs from the engineering site so every
+# vacancy there appears here automatically (falls back to the bundled jobs.json).
+ENGINEERING_JOBS_URL = os.getenv('ENGINEERING_JOBS_URL', ENGINEERING_INGEST_URL.rstrip('/') + '/api/jobs')
+
 # ManifestStaticFilesStorage fingerprints filenames (e.g. style.a3f1c9.css) so
 # browsers can cache them indefinitely; WhiteNoise only issues long-lived
 # Cache-Control headers for storages that do this hashing. The Lenient
