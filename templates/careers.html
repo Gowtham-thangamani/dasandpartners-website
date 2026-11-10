@@ -34,8 +34,14 @@
                 <div class="col-xl-6 col-lg-12">
                     <div class="about-thumb">
                         <div class="img-hover-wrapper">
-                            <!-- <img src={% static "assets/images/contact/hr-image.jpeg"%} alt=""> -->
-                            <img src={% static "assets/images/about/dr-group.jpg"%} alt="">
+                            <!-- real DAS & Partners office tour (autoplay, muted, loops); poster shows if video can't play -->
+                            <video autoplay muted loop playsinline preload="metadata"
+                                   poster="{% static 'assets/images/about/office-tour-poster.jpg' %}"
+                                   style="width:100%;height:auto;display:block;">
+                                <source src="{% static 'assets/videos/office-tour-abu-dhabi.mp4' %}" type="video/mp4">
+                                <img src="{% static 'assets/images/about/office-tour-poster.jpg' %}" alt="DAS & Partners office" style="width:100%;height:auto;display:block;">
+                            </video>
+                            <!-- previous: <img src={% static "assets/images/about/dr-group.jpg"%} alt=""> -->
                         </div>
                     </div>
                 </div>
