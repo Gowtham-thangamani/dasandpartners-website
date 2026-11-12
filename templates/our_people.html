@@ -515,7 +515,7 @@
       function buildCards(listArr, withCategory, withBio){
         var html = '';
         listArr.forEach(function(m, i){
-          var imgPath = IMG_BASE + (m.image || 'images/team/1.png') + '?v=1';
+          var imgPath = IMG_BASE + (m.image || 'images/team/1.webp') + '?v=2';
           var cat = withCategory ? (' data-category="' + m._cat + '"') : '';
           var bio = withBio && m.bio;
           html += '<div class="team-member-card' + (bio ? ' bio-card' : '') + (m.joinedDate ? ' tm-cutout' : '') + '"' + cat +
