@@ -329,12 +329,6 @@ def life_at_dap(request):
             'caption': 'Team Collaboration'
         },
         {
-            'img': 'assets/images/life/WhatsApp Image 2025-07-17 at 6.26.12 PM.jpeg',
-            'alt': 'Innovation Hub',
-            'icon': 'fas fa-lightbulb',
-            'caption': 'Innovation Hub'
-        },
-        {
             'img': 'assets/images/life/WhatsApp Image 2025-07-17 at 6.34.46 PM.jpeg',
             'alt': 'Work Environment',
             'icon': 'fas fa-building',
