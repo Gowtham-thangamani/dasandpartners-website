@@ -448,8 +448,6 @@ def gallery(request):
             {'src': 'assets/images/relevents/Unknown-25.jpeg', 'title': 'Cultural Event 1'},
             {'src': 'assets/images/relevents/Unknown-26.jpeg', 'title': 'Cultural Event 2'},
             {'src': 'assets/images/relevents/Unknown-27.jpeg', 'title': 'Cultural Event 3'},
-            {'src': 'assets/images/relevents/Unknown-28.jpeg', 'title': 'Cultural Event 4'},
-            {'src': 'assets/images/relevents/Unknown-29.jpeg', 'title': 'Cultural Event 5'},
             {'src': 'assets/images/relevents/Unknown-30.jpeg', 'title': 'Cultural Event 6'},
             # {'src': 'assets/images/relevents/Unknown-31.jpeg', 'title': 'Cultural Event 7'},
             {'src': 'assets/images/relevents/Unknown-32.jpeg', 'title': 'Cultural Event 8'},
