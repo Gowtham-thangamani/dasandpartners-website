@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-your-secret-key-here-chang
 # Hosts
 ALLOWED_HOSTS = os.getenv(
     'ALLOWED_HOSTS',
-    'dasandpartners.com,www.dasandpartners.com,68.178.168.194,127.0.0.1,localhost'
+    'dasandpartners.com,www.dasandpartners.com,132.148.229.4,68.178.168.194,127.0.0.1,localhost'
 ).split(',')
 
 # Application definition

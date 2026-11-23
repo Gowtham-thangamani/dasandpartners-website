@@ -1,10 +1,10 @@
-
 import os, sys
 
-# Add the virtualenv to the Python path
-sys.path.insert(0, '/home/cdas/virtualenv/dap/3.9/lib/python3.9/site-packages')
-sys.path.insert(0, '/home/cdas/dap')
-sys.path.insert(0, '/home/cdas/dap/das_project')
+# Works in any cPanel account/folder: the app folder is where this file lives.
+# (cPanel "Setup Python App" runs this with the app's own virtualenv, so no site-packages path is needed.)
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, APP_DIR)
+sys.path.insert(0, os.path.join(APP_DIR, 'das_project'))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'das_project.settings')
 
