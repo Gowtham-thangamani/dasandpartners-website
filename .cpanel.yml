@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=$HOME/dap/
-    - /usr/bin/rsync -rlt --delete --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --exclude='.git' --exclude='.env' --exclude='db.sqlite3' --exclude='media/' --exclude='staticfiles/' --exclude='tmp/' --exclude='Passengerfile.json' --exclude='restart.txt' --exclude='.venv/' --exclude='.venv_run/' --exclude='venv/' --exclude='__pycache__/' --exclude='__MACOSX/' ./ $DEPLOYPATH
-    - source $(ls -d $HOME/virtualenv/dap/*/bin/activate | tail -1) && cd $DEPLOYPATH && python manage.py collectstatic --noinput
-    - source $(ls -d $HOME/virtualenv/dap/*/bin/activate | tail -1) && cd $DEPLOYPATH && python manage.py migrate --noinput
+    - export DEPLOYPATH=$HOME/public_html/dasandpartners.com/dap/
+    - /usr/bin/rsync -rlt --delete --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --exclude='.git' --exclude='.env' --exclude='db.sqlite3' --exclude='media/' --exclude='staticfiles/' --exclude='tmp/' --exclude='Passengerfile.json' --exclude='restart.txt' --exclude='public/' --exclude='setup_helper.py' --exclude='setup-log.txt' --exclude='.venv/' --exclude='.venv_run/' --exclude='venv/' --exclude='__pycache__/' --exclude='__MACOSX/' ./ $DEPLOYPATH
+    - source $(ls -d $HOME/virtualenv/public_html/dasandpartners.com/dap/*/bin/activate | tail -1) && cd $DEPLOYPATH && python manage.py collectstatic --noinput
+    - source $(ls -d $HOME/virtualenv/public_html/dasandpartners.com/dap/*/bin/activate | tail -1) && cd $DEPLOYPATH && python manage.py migrate --noinput
     - mkdir -p $DEPLOYPATH/tmp && touch $DEPLOYPATH/tmp/restart.txt

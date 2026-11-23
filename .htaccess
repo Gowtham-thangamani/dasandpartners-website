@@ -1,0 +1,3 @@
+# The app folder sits inside the website folder (public_html/dasandpartners.com/dap).
+# Nothing in it may be downloaded over the web (.env, db.sqlite3, code) - the site is served by Passenger.
+Require all denied
